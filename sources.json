@@ -38,6 +38,14 @@
       "limit": 113
     },
     {
+      "id": "ca-tvpassport-ottawa",
+      "region": "CA",
+      "files": [
+        "ottawa-ota.channels.xml"
+      ],
+      "limit": 100
+    },
+    {
       "id": "fr-sfr",
       "region": "FR",
       "files": [

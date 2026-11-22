@@ -10,6 +10,7 @@ on:
       - 'sources.json'
       - 'scripts/**'
       - 'patches/**'
+      - 'lineups/**'
 permissions:
   contents: read
 concurrency:
@@ -18,7 +19,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 105
     permissions:
       contents: read
       pages: read
@@ -35,6 +36,8 @@ jobs:
           persist-credentials: false
       - name: Disable optional DStv programme-detail requests
         run: git -C epg-grabber apply "$GITHUB_WORKSPACE/patches/dstv-schedules-only.patch"
+      - name: Install the verified Ottawa broadcast lineup
+        run: cp lineups/ottawa-ota.channels.xml epg-grabber/sites/
       - uses: actions/setup-node@v4
         with:
           node-version: '24'

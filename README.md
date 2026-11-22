@@ -11,7 +11,8 @@ Edit `sources.json` before running if you want different regions or channels:
 | Selection | Maintained source | Maximum | Selected with the pinned catalog |
 | --- | --- | ---: | ---: |
 | US | tvguide.com, mapped .us channels in English | 151 | 151 |
-| Canada | tvpassport.com, mapped .ca channels, English/French | 113 | 113 |
+| Canada | TV Passport national channels, English/French | 113 | 113 |
+| Canada, Ottawa | TV Passport Ottawa over-the-air lineup | 100 | 45 |
 | France | tv.sfr.fr, mapped .fr channels in French | 211 | 211 |
 | UK | sky.com, mapped .uk channels in English | 322 | 322 |
 | MENA | bein.com Arabic list | 80 | 48 |
@@ -19,22 +20,26 @@ Edit `sources.json` before running if you want different regions or channels:
 | MENA | elcinema.com Arabic list | 102 | 102 |
 | South Africa | dstv.com South Africa list only | 60 | 42 |
 
-The pinned catalog supplies 1,003 selected mappings, including overlapping channel IDs across sources. Some mappings may have zero upcoming programmes.
+The pinned catalog supplies 1,048 selected mappings, including overlapping channel IDs across sources. Some mappings may have zero upcoming programmes.
 
 Duplicates within a source are removed using the canonical XMLTV ID before applying its cap. Empty/unmapped XMLTV IDs are excluded. Default selections follow the maintained file's order; they are not a curated recommendation of the best channels. Add an `xmltv_ids` array to a source to select the exact channels from your playlist. Limits can be changed from 1 to 500 per source. For another supported European country, add its maintained list and corresponding country/language filters; this kit does not promise all Europe by default.
 
+The Ottawa list is a snapshot of the [TV Passport Ottawa broadcast lineup](https://www.tvpassport.com/lineups/browse/ca/on/12088/ottawa). It captures 45 distinct XMLTV IDs from 46 station entries and includes nearby U.S. affiliates listed by TV Passport. The workflow fetches current schedules from the individual station pages. Entries without an upstream XMLTV ID use a stable `TVPassport.<station number>` ID. Update the checked-in list when the provider changes its lineup.
+
 MENA sources are regional lineups, so a foreign broadcaster carried there may still be included. Broadcaster domicile and delivery-region lineup are distinct concepts. Source lists/regions should be checked against your actual playlist.
+
+The UK schedules use Sky and the French schedules use SFR. The elCinema adapter fetches channel schedules from elCinema’s Arabic site.
 
 ## Run on GitHub
 
 1. Set **Settings → Pages → Build and deployment → Source → GitHub Actions**. A private repository needs a GitHub plan that supports private-repository Pages.
-2. Open **Actions → Update Zayla TV Multi-Region EPG → Run workflow**. Changes to the workflow, source list, scripts or patches on `main` also run it.
+2. Open **Actions → Update Zayla TV Multi-Region EPG → Run workflow**. Changes to the workflow, source list, scripts, lineup files or patches on `main` also run it.
 3. After deployment, use the Pages URL shown by GitHub with `/guide.xml.gz` in Zayla TV. The site also serves `/guide.xml` and `/status.json`.
 4. Use the run's **epg-guide** artifact to download the compressed guide and coverage report while Pages setup is pending.
 
 The workflow uses Node 24, Python 3.11, and a reviewed pinned upstream revision. It applies the DStv patch to the pinned checkout. Its `npm ci --ignore-scripts` install is followed explicitly by `npm run api:load` to obtain public metadata required by the grabber. Update the upstream commit deliberately after reviewing/testing changes; a pinned version does not receive site-module fixes automatically.
 
-Each source uses a generated bounded `--channels` list, two days of schedules, at most two concurrent requests, a 15-second per-request override and a ten-minute whole-source process-group budget. The 90-minute job is an outer limit. Stopping a source also stops the npm-launched child process group. Actual schedules and runtime depend on source availability and per-programme requests; ten minutes is not a guarantee a source will finish.
+Each source uses a generated bounded `--channels` list, two days of schedules, at most two concurrent requests, a 15-second per-request override and a ten-minute whole-source process-group budget. The 105-minute job is an outer limit. Stopping a source also stops the npm-launched child process group. Actual schedules and runtime depend on source availability and per-programme requests; ten minutes is not a guarantee a source will finish.
 
 It runs daily at 11:17 UTC and manually. Scheduled Actions can be delayed or disabled after 60 days without public-repository activity. Monitor Actions; scheduled execution is not a guaranteed service.
 
@@ -59,6 +64,7 @@ For an authenticated copy, add the contents of your rclone configuration as the 
 
 ```sh
 python3 -m unittest discover -s scripts -p 'test_*.py'
+cp lineups/ottawa-ota.channels.xml /path/to/iptv-org-epg/sites/
 python3 scripts/select_channels.py /path/to/iptv-org-epg sources.json selected
 ```
 

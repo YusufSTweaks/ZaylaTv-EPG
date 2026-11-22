@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="tvpassport.com" site_id="global-ciii-ontario/6" lang="en" xmltv_id="TVPassport.6">Global (CIII) Ontario</channel>
+  <channel site="tvpassport.com" site_id="cbc-cbot-ottawa-on/49" lang="en" xmltv_id="CBOTDT.ca@SD">CBC (CBOT) Ottawa, ON</channel>
+  <channel site="tvpassport.com" site_id="nbc-wptz-plattsburg-ny-hd/4527" lang="en" xmltv_id="WPTZ51.us@HD">NBC (WPTZ) Plattsburg, NY HD</channel>
+  <channel site="tvpassport.com" site_id="cw-wnnedt2-plattsburg-ny/6758" lang="en" xmltv_id="TVPassport.6758">CW (WNNE-DT2) Plattsburg, NY</channel>
+  <channel site="tvpassport.com" site_id="story-wptz2-plattsburgh-ny/37093" lang="en" xmltv_id="TVPassport.37093">Story (WPTZ2) Plattsburgh, NY</channel>
+  <channel site="tvpassport.com" site_id="metv-wptz3-plattsburgh-ny/14116" lang="en" xmltv_id="TVPassport.14116">MeTV (WPTZ3) Plattsburgh, NY</channel>
+  <channel site="tvpassport.com" site_id="defy-wptz4-plattsburgh-ny/36697" lang="en" xmltv_id="TVPassport.36697">Defy (WPTZ4) Plattsburgh, NY</channel>
+  <channel site="tvpassport.com" site_id="global-ciiitv6-ottawa-hd/13611" lang="en" xmltv_id="TVPassport.13611">Global (CIII-TV-6) Ottawa HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-wwnycd2-massena-ny/5325" lang="en" xmltv_id="WWNYCD282.us@HD">CBS (WWNY-CD2) Massena, NY</channel>
+  <channel site="tvpassport.com" site_id="cbs-wwny-watertown-ny-hd/30" lang="en" xmltv_id="WWNYTV71.us@HD">CBS (WWNY) Watertown, NY HD</channel>
+  <channel site="tvpassport.com" site_id="fox-wwnytv2-watertown-ny/5052" lang="en" xmltv_id="WWNYTV72.us@HD">FOX (WWNY-TV2) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="ion-plus-wwnytv3-watertown-ny/38827" lang="en" xmltv_id="TVPassport.38827">ION Plus (WWNY-TV3) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="outlaw-wwnytv4-watertown-ny/38828" lang="en" xmltv_id="TVPassport.38828">Outlaw (WWNY-TV4) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="oxygen-wwnytv5-watertown-ny/38829" lang="en" xmltv_id="TVPassport.38829">Oxygen (WWNY-TV5) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="metv-wwnytv6-watertown-ny/38830" lang="en" xmltv_id="TVPassport.38830">MeTV (WWNY-TV6) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="ici-cboft-ottawa-on-hd/6768" lang="fr" xmltv_id="IciRadioCanadaTele.ca@CBOFTDT">ICI (CBOFT) Ottawa, ON HD</channel>
+  <channel site="tvpassport.com" site_id="chch-hamilton-on-hd/5870" lang="en" xmltv_id="TVPassport.5870">CHCH Hamilton, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-ottawa-cjoh-on-hd/7174" lang="en" xmltv_id="CTV.ca@CJOHDT">CTV Ottawa (CJOH), ON HD</channel>
+  <channel site="tvpassport.com" site_id="omni2-cjmtdt2-ottawa/13571" lang="en" xmltv_id="TVPassport.13571">OMNI.2 (CJMT-DT-2) Ottawa</channel>
+  <channel site="tvpassport.com" site_id="yes-tv-citsdt1-ottawa-on/13878" lang="en" xmltv_id="TVPassport.13878">Yes TV (CITS-DT-1) Ottawa, ON</channel>
+  <channel site="tvpassport.com" site_id="pbs-wpbs-watertown-ny/29" lang="en" xmltv_id="WPBSTV161.us@HD">PBS (WPBS) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="create-wpbsdt2-watertown-ny/5321" lang="en" xmltv_id="TVPassport.5321">Create (WPBS-DT2) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="pbs-world-wpbsdt3-watertown-ny/5323" lang="en" xmltv_id="TVPassport.5323">PBS World (WPBS-DT3) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="pbs-wnpi-watertown-ny/2823" lang="en" xmltv_id="TVPassport.2823">PBS (WNPI) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="create-wnpidt2-watertown-ny/11365" lang="en" xmltv_id="TVPassport.11365">Create (WNPI-DT2) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="pbs-world-wnpidt3-watertown-ny/11321" lang="en" xmltv_id="TVPassport.11321">PBS World (WNPI-DT3) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="pbs-kids-247-wnpidt4-watertown-ny/33322" lang="en" xmltv_id="TVPassport.33322">PBS Kids 24/7 (WNPI-DT4) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="tvo-tv-ontario/18" lang="en" xmltv_id="CICADT.ca@SD">TVO (TV Ontario)</channel>
+  <channel site="tvpassport.com" site_id="fox-wnyf-massena-ny/441" lang="en" xmltv_id="WNYFCD281.us@HD">FOX (WNYF) Massena, NY</channel>
+  <channel site="tvpassport.com" site_id="metv-wnyfcd2-watertown-ny/19439" lang="en" xmltv_id="WNYFCD282.us@SD">MeTV (WNYF-CD2) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="telequebec-civo-hull/1141" lang="fr" xmltv_id="TVPassport.1141">Tele-Quebec (CIVO) Hull</channel>
+  <channel site="tvpassport.com" site_id="cw-wnne-hanover-nh-hd/6496" lang="en" xmltv_id="TVPassport.6496">CW+ (WNNE) Hanover, NH HD</channel>
+  <channel site="tvpassport.com" site_id="tva-chot-gatineau-qc-hd/31494" lang="fr" xmltv_id="TVPassport.31494">TVA (CHOT) Gatineau, QC HD</channel>
+  <channel site="tvpassport.com" site_id="noovo-cfgs-gatineau-qc/5" lang="fr" xmltv_id="TVPassport.5">Noovo (CFGS) Gatineau, QC</channel>
+  <channel site="tvpassport.com" site_id="global-ckws-kingston-on/24" lang="en" xmltv_id="TVPassport.24">Global (CKWS) Kingston, ON</channel>
+  <channel site="tvpassport.com" site_id="ctv2-chrodt43-ottawa-on/13791" lang="en" xmltv_id="CTV2.ca@CHRODT">CTV2 (CHRO-DT-43) Ottawa, ON</channel>
+  <channel site="tvpassport.com" site_id="abc-wwti-watertown-ny/469" lang="en" xmltv_id="WWTI501.us@HD">ABC (WWTI) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="cw-wwti2-watertown-ny/9819" lang="en" xmltv_id="TVPassport.9819">CW+ (WWTI2) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="laff-wwti3-watertown-ny/30852" lang="en" xmltv_id="TVPassport.30852">Laff (WWTI3) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="ion-mystery-wwti4-watertown-ny/30853" lang="en" xmltv_id="TVPassport.30853">ION Mystery (WWTI4) Watertown, NY</channel>
+  <channel site="tvpassport.com" site_id="pbs-wcfe-plattsburgh-ny/109" lang="en" xmltv_id="TVPassport.109">PBS (WCFE) Plattsburgh, NY</channel>
+  <channel site="tvpassport.com" site_id="nhk-world-wcfedt2-plattsburgh-ny/7259" lang="en" xmltv_id="TVPassport.7259">NHK World (WCFE-DT2) Plattsburgh, NY</channel>
+  <channel site="tvpassport.com" site_id="pbs-kids-wcfetv3-plattsburgh-ny/5975" lang="en" xmltv_id="TVPassport.5975">PBS Kids (WCFE-TV3) Plattsburgh, NY</channel>
+  <channel site="tvpassport.com" site_id="omni1-television/41" lang="en" xmltv_id="TVPassport.41">OMNI.1 Television</channel>
+  <channel site="tvpassport.com" site_id="citydt3-ottawa-on/13870" lang="en" xmltv_id="TVPassport.13870">CITY-DT-3 Ottawa, ON</channel>
+</channels>
