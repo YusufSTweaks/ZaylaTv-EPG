@@ -181,7 +181,7 @@
       "files": [
         "programtv.onet.pl/programtv.onet.pl.channels.xml"
       ],
-      "limit": 200
+      "limit": 80
     },
     {
       "id": "pt-meo",
@@ -190,14 +190,6 @@
         "meo.pt/meo.pt.channels.xml"
       ],
       "limit": 210
-    },
-    {
-      "id": "se-tvnu",
-      "region": "SE",
-      "files": [
-        "tv.nu/tv.nu.channels.xml"
-      ],
-      "limit": 180
     },
     {
       "id": "ro-programetv",
