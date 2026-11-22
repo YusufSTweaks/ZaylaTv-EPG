@@ -17,15 +17,19 @@ Edit `sources.json` before running if you want different regions or channels:
 | France, fallback | SFR, mapped .fr channels in French | 211 | 211 |
 | UK | sky.com, mapped .uk channels in English | 322 | 322 |
 | MENA | bein.com Arabic list | 80 | 48 |
-| MENA sports | beinsports.com MENA Arabic list only | 30 | 14 |
+| MENA sports | beinsports.com MENA Arabic list | 30 | 14 |
+| MENA | bein.com English list | 46 | 46 |
+| beIN SPORTS international | Official regional beIN SPORTS grids | 48 | 48 |
 | MENA | elcinema.com Arabic list | 102 | 102 |
 | South Africa | dstv.com South Africa list only | 60 | 42 |
 
-The pinned catalog supplies 1,177 selected mappings, including overlapping channel IDs across sources. Some mappings may have zero upcoming programmes.
+The pinned catalog supplies 1,271 selected mappings, including overlapping channel IDs across sources. Some mappings may have zero upcoming programmes.
 
 Duplicates within a source are removed using the canonical XMLTV ID before applying its cap. Empty/unmapped XMLTV IDs are excluded. Default selections follow the maintained file's order; they are not a curated recommendation of the best channels. Add an `xmltv_ids` array to a source to select the exact channels from your playlist. Limits can be changed from 1 to 500 per source. For another supported European country, add its maintained list and corresponding country/language filters; this kit does not promise all Europe by default.
 
 The Ottawa list is a snapshot of the [TV Passport Ottawa broadcast lineup](https://www.tvpassport.com/lineups/browse/ca/on/12088/ottawa). It captures 45 distinct XMLTV IDs from 46 station entries and includes nearby U.S. affiliates listed by TV Passport. The workflow fetches current schedules from the individual station pages. Entries without an upstream XMLTV ID use a stable `TVPassport.<station number>` ID. Update the checked-in list when the provider changes its lineup.
+
+The beIN SPORTS international list combines the pinned MENA, France, U.S., Australia, and Malaysia mappings. Earlier beIN sources retain priority for matching channel IDs. The pinned New Zealand list has no mapped IDs.
 
 MENA sources are regional lineups, so a foreign broadcaster carried there may still be included. Broadcaster domicile and delivery-region lineup are distinct concepts. Source lists/regions should be checked against your actual playlist.
 

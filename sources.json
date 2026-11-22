@@ -111,6 +111,25 @@
       "limit": 30
     },
     {
+      "id": "mena-bein-english",
+      "region": "MENA",
+      "files": [
+        "bein.com/bein.com_en.channels.xml"
+      ],
+      "languages": [
+        "en"
+      ],
+      "limit": 46
+    },
+    {
+      "id": "bein-sports-international",
+      "region": "SPORTS",
+      "files": [
+        "beinsports.com/*.channels.xml"
+      ],
+      "limit": 48
+    },
+    {
       "id": "mena-elcinema",
       "region": "MENA",
       "files": [
