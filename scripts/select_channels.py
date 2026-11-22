@@ -1,0 +1,30 @@
+import copy,json,sys,xml.etree.ElementTree as ET
+from pathlib import Path
+
+def select(upstream,config,out):
+ upstream=Path(upstream);out=Path(out);out.mkdir(parents=True,exist_ok=True)
+ manifest=[]
+ for index,source in enumerate(config['sources']):
+  seen=set();channels=[];requested=set(source.get('xmltv_ids',[]))
+  for pattern in source['files']:
+   for file in sorted((upstream/'sites').glob(pattern)):
+    for ch in ET.parse(file).getroot().findall('channel'):
+     cid=ch.get('xmltv_id','').strip();country=cid.split('@')[0].rsplit('.',1)[-1]
+     if not cid or not ch.get('site') or not ch.get('site_id') or not ch.text:continue
+     if source.get('countries') and country not in source['countries']:continue
+     if source.get('languages') and ch.get('lang') not in source['languages']:continue
+     if requested and cid not in requested:continue
+     if cid in seen:continue
+     seen.add(cid);channels.append(copy.deepcopy(ch))
+  limit=int(source.get('limit',80))
+  if not 1<=limit<=500:raise ValueError('Source limit must be between 1 and 500')
+  # Explicit IDs preserve their requested order; otherwise use the upstream list.
+  if requested:
+   rank={cid:i for i,cid in enumerate(source['xmltv_ids'])};channels.sort(key=lambda ch:rank[ch.get('xmltv_id')])
+  channels=channels[:limit];root=ET.Element('channels');root.extend(channels)
+  name=f'{index:02d}-{source["id"]}';path=out/(name+'.channels.xml');ET.indent(root)
+  path.write_bytes(ET.tostring(root,encoding='utf-8',xml_declaration=True))
+  manifest.append({'id':source['id'],'region':source['region'],'channels_file':str(path.resolve()),'output':name+'.xml','selected_channels':len(channels)})
+ (out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');return manifest
+if __name__=='__main__':
+ print(json.dumps(select(sys.argv[1],json.loads(Path(sys.argv[2]).read_text()),sys.argv[3]),indent=2))

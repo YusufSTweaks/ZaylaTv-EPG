@@ -1,0 +1,50 @@
+diff --git a/sites/dstv.com/dstv.com.config.js b/sites/dstv.com/dstv.com.config.js
+index 852758e..1bfb429 100644
+--- a/sites/dstv.com/dstv.com.config.js
++++ b/sites/dstv.com/dstv.com.config.js
+@@ -28,16 +28,12 @@ module.exports = {
+       'YYYY-MM-DD'
+     )}${packageName}&country=${region}`
+   },
+-  async parser({ content, channel }) {
++  parser({ content, channel }) {
+     let programs = []
+     const items = parseItems(content, channel)
+     for (const item of items) {
+-      const details = await loadProgramDetails(item)
+       programs.push({
+         title: item.Title,
+-        description: parseDescription(details),
+-        image: parseImage(details),
+-        category: parseCategory(details),
+         start: parseTime(item.StartTime, channel),
+         stop: parseTime(item.EndTime, channel)
+       })
+@@ -174,27 +170,6 @@ function parseTime(time, channel) {
+   return dayjs.tz(time, 'YYYY-MM-DDTHH:mm:ss', tz[region])
+ }
+ 
+-function parseDescription(details) {
+-  return details ? details.Synopsis : null
+-}
+-
+-function parseImage(details) {
+-  return details ? details.ThumbnailUri : null
+-}
+-
+-function parseCategory(details) {
+-  return details ? details.SubGenres : null
+-}
+-
+-async function loadProgramDetails(item) {
+-  const url = `${API_ENDPOINT}/GetProgramme?id=${item.Id}`
+-
+-  return axios
+-    .get(url)
+-    .then(r => r.data)
+-    .catch(console.error)
+-}
+-
+ function parseItems(content, channel) {
+   const [, channelId] = channel.site_id.split('#')
+   const data = JSON.parse(content)

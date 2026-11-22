@@ -1,0 +1,110 @@
+{
+  "required_regions": [
+    "US",
+    "CA",
+    "FR",
+    "UK",
+    "MENA",
+    "ZA"
+  ],
+  "sources": [
+    {
+      "id": "us-tvguide",
+      "region": "US",
+      "files": [
+        "tvguide.com/*.channels.xml"
+      ],
+      "countries": [
+        "us"
+      ],
+      "languages": [
+        "en"
+      ],
+      "limit": 80
+    },
+    {
+      "id": "ca-tvpassport",
+      "region": "CA",
+      "files": [
+        "tvpassport.com/*.channels.xml"
+      ],
+      "countries": [
+        "ca"
+      ],
+      "languages": [
+        "en",
+        "fr"
+      ],
+      "limit": 60
+    },
+    {
+      "id": "fr-sfr",
+      "region": "FR",
+      "files": [
+        "tv.sfr.fr/*.channels.xml"
+      ],
+      "countries": [
+        "fr"
+      ],
+      "languages": [
+        "fr"
+      ],
+      "limit": 80
+    },
+    {
+      "id": "uk-sky",
+      "region": "UK",
+      "files": [
+        "sky.com/*.channels.xml"
+      ],
+      "countries": [
+        "uk"
+      ],
+      "languages": [
+        "en"
+      ],
+      "limit": 80
+    },
+    {
+      "id": "mena-bein",
+      "region": "MENA",
+      "files": [
+        "bein.com/bein.com_ar.channels.xml"
+      ],
+      "languages": [
+        "ar"
+      ],
+      "limit": 80
+    },
+    {
+      "id": "mena-beinsports",
+      "region": "MENA",
+      "files": [
+        "beinsports.com/beinsports.com_mena-ar.channels.xml"
+      ],
+      "languages": [
+        "ar"
+      ],
+      "limit": 30
+    },
+    {
+      "id": "mena-elcinema",
+      "region": "MENA",
+      "files": [
+        "elcinema.com/elcinema.com_ar.channels.xml"
+      ],
+      "languages": [
+        "ar"
+      ],
+      "limit": 80
+    },
+    {
+      "id": "za-dstv",
+      "region": "ZA",
+      "files": [
+        "dstv.com/dstv.com_za.channels.xml"
+      ],
+      "limit": 60
+    }
+  ]
+}

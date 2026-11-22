@@ -1,0 +1,111 @@
+name: Update Zayla TV Multi-Region EPG
+on:
+  schedule:
+    - cron: '17 11 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/update-epg.yml']
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      pages: read
+    outputs:
+      pages_ready: ${{ steps.pages.outcome == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout reviewed upstream
+        uses: actions/checkout@v4
+        with:
+          repository: iptv-org/epg
+          ref: 1c3f51bb5958e24acf0dcb235d69d5635002a2d4
+          path: epg-grabber
+          persist-credentials: false
+      - name: Disable optional DStv programme-detail requests
+        run: git -C epg-grabber apply "$GITHUB_WORKSPACE/patches/dstv-schedules-only.patch"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install upstream and its public API data
+        working-directory: epg-grabber
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run api:load
+      - name: Test validation and selection
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Select bounded regional channels
+        run: python3 scripts/select_channels.py epg-grabber sources.json selected
+      - name: Grab selected channels
+        run: python3 scripts/run_grabs.py epg-grabber selected/manifest.json grabbed
+      - name: Validate required regions before publication
+        run: python3 scripts/merge_xmltv.py grabbed selected/manifest.json sources.json public
+      - name: Save validated XMLTV guide
+        uses: actions/upload-artifact@v4
+        with:
+          name: epg-guide
+          path: |
+            public/guide.xml.gz
+            public/status.json
+          if-no-files-found: error
+      - name: Save diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: epg-diagnostics
+          path: |
+            grabbed/grab-results.json
+            selected/manifest.json
+          if-no-files-found: ignore
+      - name: Optional Google Drive copy
+        continue-on-error: true
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+          GDRIVE_REMOTE_PATH: ${{ vars.GDRIVE_REMOTE_PATH }}
+        run: |
+          if [ -z "$RCLONE_CONF" ]; then
+            echo "No Drive sync configured."
+            exit 0
+          fi
+          sudo apt-get update && sudo apt-get install -y rclone
+          RCLONE_CONFIG_FILE=$(mktemp)
+          trap 'rm -f "$RCLONE_CONFIG_FILE"' EXIT
+          printf '%s' "$RCLONE_CONF" > "$RCLONE_CONFIG_FILE"
+          TARGET="${GDRIVE_REMOTE_PATH:-gdrive:ZaylaTV-EPG}"
+          rclone --config "$RCLONE_CONFIG_FILE" copyto public/guide.xml "${TARGET}/guide.xml"
+          rclone --config "$RCLONE_CONFIG_FILE" copyto public/guide.xml.gz "${TARGET}/guide.xml.gz"
+      - name: Check GitHub Pages configuration
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+      - name: Report when Pages is unavailable
+        if: steps.pages.outcome == 'failure'
+        run: |
+          echo 'GitHub Pages could not be configured. The validated guide is available in the epg-guide artifact.' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outcome == 'success'
+        with:
+          path: public
+  deploy:
+    needs: build
+    if: needs.build.outputs.pages_ready == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
