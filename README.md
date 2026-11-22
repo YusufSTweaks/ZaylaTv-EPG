@@ -24,9 +24,8 @@ Edit `sources.json` before running if you want different regions or channels:
 | Italy (optional) | Sky Italy (`sky.com`) | 220 | Italian channels (incl. Sky Sport IT) |
 | Spain (optional) | El País TV Guide (`programacion-tv.elpais.com`) | 120 | 101 Spanish channels |
 | Netherlands (optional) | Ziggo GO (`ziggogo.tv`) | 160 | 148 Dutch channels (incl. NPO & ESPN NL) |
-| Poland (optional) | Onet Program TV (`programtv.onet.pl`) | 200 | 200 Polish channels |
+| Poland (optional) | Onet Program TV (`programtv.onet.pl`) | 80 | 80 Polish channels |
 | Portugal (optional) | MEO (`meo.pt`) | 210 | 210 Portuguese channels |
-| Sweden (optional) | TV.nu (`tv.nu`) | 180 | 180 Swedish channels |
 | Romania (optional) | ProgrameTV (`programetv.ro`) | 160 | 160 Romanian channels |
 | MENA | bein.com Arabic list | 80 | 48 |
 | MENA sports | beIN SPORTS official Opta API (`ar-mena`) | — | ~30 active MENA channels |

@@ -253,7 +253,7 @@ class OfficialAdapterTests(unittest.TestCase):
   self.assertEqual(stats['skipped_junk'],2)
   self.assertGreaterEqual(stats['deduplicated_simulcasts'],1)
  def test_dstv_za_canonical_and_unmapped_sast_times(self):
-  from grab_dstv_za import build_guide_data as build_dstv_za
+  from grab_dstv_za import build_guide_data as build_dstv_za, write_guide as write_dstv_za
   canonical={'191':('SABC1.za@SD','SABC 1')}
   payload=[
    {'Number':'191','Name':'SABC 1','Programmes':[{'Title':'Uzalo','StartTime':'2030-01-01T18:00:00','EndTime':'2030-01-01T18:30:00'}]},
@@ -263,6 +263,14 @@ class OfficialAdapterTests(unittest.TestCase):
   self.assertEqual(channels['SABC1.za@SD'],['SABC 1'])
   self.assertEqual(channels['DStvZA.404.za'],['SABC News'])
   self.assertIn(('SABC1.za@SD',dt.datetime(2030,1,1,16,0,tzinfo=dt.timezone.utc),dt.datetime(2030,1,1,16,30,tzinfo=dt.timezone.utc)),programmes)
+  # Verify automatic fallback when direct DStv API fails
+  fallback_xml=b'<tv><channel id="191.dstv_com"><display-name>SABC 1</display-name></channel><programme channel="191.dstv_com" start="20300101150000 +0000" stop="20300101160000 +0000"><title>Fallback Show</title></programme></tv>'
+  with tempfile.TemporaryDirectory() as d:
+   out=Path(d)/'za.xml'
+   with patch('grab_dstv_za.fetch_day',side_effect=OSError('HTTP 404')), patch('grab_dstv_za.fetch_fallback_xml',return_value=fallback_xml):
+    c,pr=write_dstv_za(out,now=self.SAMPLE_NOW)
+    self.assertEqual((c,pr),(1,1))
+    self.assertEqual(ET.parse(out).find('channel').get('id'),'DStvZA.191.za')
  def test_beinsports_canonical_and_region_ids(self):
   from grab_beinsports import build_guide_data as build_beinsports
   canonical={'uuid-1':('beINSports1.qa@MENA','beIN SPORTS 1','ar')}
