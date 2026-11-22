@@ -10,12 +10,12 @@ if __name__=='__main__':
    try:
     command=['npm','run','grab','--','--channels='+source['channels_file'],'--days=2','--timeout=15000','--maxConnections=2','--output='+str(out/source['output'])]
     proc=subprocess.Popen(command,cwd=upstream,start_new_session=True)
-    try:result['exit_code']=proc.wait(timeout=420)
+    try:result['exit_code']=proc.wait(timeout=600)
     except subprocess.TimeoutExpired:
      os.killpg(proc.pid,signal.SIGTERM)
      try:proc.wait(timeout=5)
      except subprocess.TimeoutExpired:os.killpg(proc.pid,signal.SIGKILL);proc.wait()
-     result.update(exit_code=None,error='Source exceeded seven-minute budget; process group stopped')
+     result.update(exit_code=None,error='Source exceeded ten-minute budget; process group stopped')
    except OSError as e:result.update(exit_code=None,error=str(e))
   results.append(result);(out/'grab-results.json').write_text(json.dumps(results,indent=2)+'\n')
  # Merge validates actual rows and required regional coverage, not just exit codes.

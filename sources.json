@@ -20,7 +20,7 @@
       "languages": [
         "en"
       ],
-      "limit": 80
+      "limit": 151
     },
     {
       "id": "ca-tvpassport",
@@ -35,7 +35,7 @@
         "en",
         "fr"
       ],
-      "limit": 60
+      "limit": 113
     },
     {
       "id": "fr-sfr",
@@ -49,7 +49,7 @@
       "languages": [
         "fr"
       ],
-      "limit": 80
+      "limit": 211
     },
     {
       "id": "uk-sky",
@@ -63,7 +63,7 @@
       "languages": [
         "en"
       ],
-      "limit": 80
+      "limit": 322
     },
     {
       "id": "mena-bein",
@@ -96,7 +96,7 @@
       "languages": [
         "ar"
       ],
-      "limit": 80
+      "limit": 102
     },
     {
       "id": "za-dstv",

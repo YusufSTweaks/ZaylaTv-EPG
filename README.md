@@ -2,22 +2,24 @@
 
 GitHub Actions downloads schedules from maintained iptv-org/epg adapters, validates future coverage, and publishes XMLTV to GitHub Pages when Pages is configured. The validated guide and coverage report are also available as an Actions artifact.
 
-The live check on November 22, 2026 found 12,933 upcoming programmes across 327 channels in all six required regions. That run used SFR for France and skipped DStv's optional programme-detail requests. The DStv patch retains provider titles and airtimes. The six Python tests also passed.
+The published [coverage report](https://yusufstweaks.github.io/ZaylaTv-EPG/status.json) shows how many channels and programmes passed validation.
 
 ## Regional selection
 
 Edit `sources.json` before running if you want different regions or channels:
 
-| Selection | Maintained source | Maximum | Selected in this review |
+| Selection | Maintained source | Maximum | Selected with the pinned catalog |
 | --- | --- | ---: | ---: |
-| US | tvguide.com, mapped .us channels in English | 80 | 80 |
-| Canada | tvpassport.com, mapped .ca channels, English/French | 60 | 60 |
-| France | tv.sfr.fr, mapped .fr channels in French | 80 | 80 |
-| UK | sky.com, mapped .uk channels in English | 80 | 80 |
+| US | tvguide.com, mapped .us channels in English | 151 | 151 |
+| Canada | tvpassport.com, mapped .ca channels, English/French | 113 | 113 |
+| France | tv.sfr.fr, mapped .fr channels in French | 211 | 211 |
+| UK | sky.com, mapped .uk channels in English | 322 | 322 |
 | MENA | bein.com Arabic list | 80 | 48 |
 | MENA sports | beinsports.com MENA Arabic list only | 30 | 14 |
-| MENA | elcinema.com Arabic list | 80 | 80 |
+| MENA | elcinema.com Arabic list | 102 | 102 |
 | South Africa | dstv.com South Africa list only | 60 | 42 |
+
+The pinned catalog supplies 1,003 selected mappings, including overlapping channel IDs across sources. Some mappings may have zero upcoming programmes.
 
 Duplicates within a source are removed using the canonical XMLTV ID before applying its cap. Empty/unmapped XMLTV IDs are excluded. Default selections follow the maintained file's order; they are not a curated recommendation of the best channels. Add an `xmltv_ids` array to a source to select the exact channels from your playlist. Limits can be changed from 1 to 500 per source. For another supported European country, add its maintained list and corresponding country/language filters; this kit does not promise all Europe by default.
 
@@ -26,13 +28,13 @@ MENA sources are regional lineups, so a foreign broadcaster carried there may st
 ## Run on GitHub
 
 1. Set **Settings → Pages → Build and deployment → Source → GitHub Actions**. A private repository needs a GitHub plan that supports private-repository Pages.
-2. Open **Actions → Update Zayla TV Multi-Region EPG → Run workflow**. Changes to the workflow on `main` also run it.
+2. Open **Actions → Update Zayla TV Multi-Region EPG → Run workflow**. Changes to the workflow, source list, scripts or patches on `main` also run it.
 3. After deployment, use the Pages URL shown by GitHub with `/guide.xml.gz` in Zayla TV. The site also serves `/guide.xml` and `/status.json`.
 4. Use the run's **epg-guide** artifact to download the compressed guide and coverage report while Pages setup is pending.
 
 The workflow uses Node 24, Python 3.11, and a reviewed pinned upstream revision. It applies the DStv patch to the pinned checkout. Its `npm ci --ignore-scripts` install is followed explicitly by `npm run api:load` to obtain public metadata required by the grabber. Update the upstream commit deliberately after reviewing/testing changes; a pinned version does not receive site-module fixes automatically.
 
-Each source uses a generated bounded `--channels` list, two days of schedules, at most two concurrent requests, a 15-second per-request override and a seven-minute whole-source process-group budget. The 90-minute job is an outer limit. Stopping a source also stops the npm-launched child process group. Actual schedules and runtime depend on source availability and per-programme requests; seven minutes is not a guarantee a source will finish.
+Each source uses a generated bounded `--channels` list, two days of schedules, at most two concurrent requests, a 15-second per-request override and a ten-minute whole-source process-group budget. The 90-minute job is an outer limit. Stopping a source also stops the npm-launched child process group. Actual schedules and runtime depend on source availability and per-programme requests; ten minutes is not a guarantee a source will finish.
 
 It runs daily at 11:17 UTC and manually. Scheduled Actions can be delayed or disabled after 60 days without public-repository activity. Monitor Actions; scheduled execution is not a guaranteed service.
 
