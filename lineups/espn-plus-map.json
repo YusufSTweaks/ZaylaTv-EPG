@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "notes": "Explicitly map ESPN+ broadcasts to verified playlist streams before automatic matching. Never assume synthetic numbered slots (e.g. ESPN+ 01) match a provider's stream numbers. Each mapping entry requires channel_id, display_name, and a non-empty match object (airing_id, event_id, feed, language, title_contains, league, or sport).",
+  "mappings": []
+}

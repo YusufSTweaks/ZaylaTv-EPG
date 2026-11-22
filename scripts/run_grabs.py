@@ -28,12 +28,20 @@ def run_grab(source, upstream, output):
     if source.get('adapter') == 'espn':
         try:
             include_espn_plus = bool(source.get('include_espn_plus', False))
-            channels, programmes = write_espn_guide(
+            channels, programmes, stats = write_espn_guide(
                 output / source['output'],
                 include_espn_plus=include_espn_plus,
+                espn_plus_map=source.get('espn_plus_map'),
             )
-            print(f'ESPN official schedule: {channels} channel feeds and {programmes} programmes', flush=True)
-            return {'exit_code': 0, 'selected_channels': channels}
+            print(
+                f'ESPN official schedule: {channels} channel feeds and {programmes} programmes '
+                f'(ESPN+: collected={stats["espn_plus_collected"]}, '
+                f'deduplicated={stats["espn_plus_deduplicated"]}, '
+                f'mapped={stats["espn_plus_mapped"]}, '
+                f'unmapped={stats["espn_plus_unmapped"]})',
+                flush=True,
+            )
+            return {'exit_code': 0, 'selected_channels': channels, 'stats': stats}
         except (OSError, ValueError) as error:
             message = f'Official ESPN schedule failed: {error}'
             print(message, flush=True)
