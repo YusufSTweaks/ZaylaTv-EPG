@@ -63,6 +63,17 @@
       "limit": 100
     },
     {
+      "id": "ca-tvhebdo",
+      "region": "CA",
+      "files": [
+        "tvhebdo.com/tvhebdo.com.channels.xml"
+      ],
+      "countries": [
+        "ca"
+      ],
+      "limit": 120
+    },
+    {
       "id": "fr-programme-tv",
       "region": "FR",
       "files": [
@@ -83,9 +94,6 @@
       "files": [
         "tv.sfr.fr/*.channels.xml"
       ],
-      "countries": [
-        "fr"
-      ],
       "languages": [
         "fr"
       ],
@@ -98,12 +106,28 @@
         "sky.com/*.channels.xml"
       ],
       "countries": [
-        "uk"
+        "uk",
+        "ie"
       ],
       "languages": [
         "en"
       ],
       "limit": 500
+    },
+    {
+      "id": "eu-sky-de",
+      "region": "DE",
+      "files": [
+        "sky.com/*.channels.xml"
+      ],
+      "countries": [
+        "de",
+        "at"
+      ],
+      "languages": [
+        "de"
+      ],
+      "limit": 300
     },
     {
       "id": "eu-blue",
@@ -120,6 +144,68 @@
         "de"
       ],
       "limit": 220
+    },
+    {
+      "id": "eu-sky-it",
+      "region": "IT",
+      "files": [
+        "sky.com/*.channels.xml"
+      ],
+      "countries": [
+        "it"
+      ],
+      "languages": [
+        "it"
+      ],
+      "limit": 220
+    },
+    {
+      "id": "es-elpais",
+      "region": "ES",
+      "files": [
+        "programacion-tv.elpais.com/programacion-tv.elpais.com.channels.xml"
+      ],
+      "limit": 120
+    },
+    {
+      "id": "nl-ziggogo",
+      "region": "NL",
+      "files": [
+        "ziggogo.tv/ziggogo.tv.channels.xml"
+      ],
+      "limit": 160
+    },
+    {
+      "id": "pl-onet",
+      "region": "PL",
+      "files": [
+        "programtv.onet.pl/programtv.onet.pl.channels.xml"
+      ],
+      "limit": 200
+    },
+    {
+      "id": "pt-meo",
+      "region": "PT",
+      "files": [
+        "meo.pt/meo.pt.channels.xml"
+      ],
+      "limit": 210
+    },
+    {
+      "id": "se-tvnu",
+      "region": "SE",
+      "files": [
+        "tv.nu/tv.nu.channels.xml"
+      ],
+      "limit": 180
+    },
+    {
+      "id": "ro-programetv",
+      "region": "RO",
+      "files": [
+        "programetv.ro/programetv.ro.channels.xml"
+      ],
+      "limit": 160
     },
     {
       "id": "mena-bein",
@@ -211,6 +297,19 @@
         "startimestv.com/startimestv.com.channels.xml"
       ],
       "limit": 80
+    },
+    {
+      "id": "au-fast",
+      "region": "AU",
+      "adapter": "fast",
+      "catalogs": [
+        "i.mjh.nz_au.channels.xml",
+        "i.mjh.nz_foxtel.channels.xml"
+      ],
+      "feeds": [
+        "au/Sydney/epg",
+        "Foxtel/epg"
+      ]
     },
     {
       "id": "fast-streaming",
