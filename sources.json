@@ -21,6 +21,20 @@
       "adapter": "tvguide"
     },
     {
+      "id": "us-tvpassport",
+      "region": "US",
+      "files": [
+        "tvpassport.com/*.channels.xml"
+      ],
+      "countries": [
+        "us"
+      ],
+      "languages": [
+        "en"
+      ],
+      "limit": 250
+    },
+    {
       "id": "ca-tsn-official",
       "region": "CA",
       "adapter": "tsn"
@@ -186,14 +200,6 @@
       "limit": 20
     },
     {
-      "id": "mena-snrt",
-      "region": "MENA",
-      "files": [
-        "snrt.ma/snrt.ma.channels.xml"
-      ],
-      "limit": 20
-    },
-    {
       "id": "za-dstv",
       "region": "ZA",
       "adapter": "dstv_za"
@@ -205,6 +211,31 @@
         "startimestv.com/startimestv.com.channels.xml"
       ],
       "limit": 80
+    },
+    {
+      "id": "fast-streaming",
+      "region": "FAST",
+      "adapter": "fast"
+    },
+    {
+      "id": "in-airtel",
+      "region": "IN",
+      "files": [
+        "airtelxstream.in/airtelxstream.in.channels.xml"
+      ],
+      "limit": 250
+    },
+    {
+      "id": "latam-mitv",
+      "region": "BR",
+      "files": [
+        "mi.tv/mi.tv_br.channels.xml",
+        "mi.tv/mi.tv_mx.channels.xml",
+        "mi.tv/mi.tv_cl.channels.xml",
+        "mi.tv/mi.tv_pe.channels.xml",
+        "mi.tv/mi.tv_co.channels.xml"
+      ],
+      "limit": 250
     }
   ]
 }

@@ -7,7 +7,7 @@ def select(upstream,config,out,config_dir=None):
  manifest=[]
  for index,source in enumerate(config['sources']):
   name=f'{index:02d}-{source["id"]}'
-  if source.get('adapter') in {'tsn','espn','tvguide','dstv_za','beinsports'}:
+  if source.get('adapter') in {'tsn','espn','tvguide','dstv_za','beinsports','fast'}:
    entry={'id':source['id'],'region':source['region'],'adapter':source['adapter'],'output':name+'.xml','selected_channels':None}
    if source['adapter']=='espn':
     entry['include_espn_plus']=bool(source.get('include_espn_plus',False))
@@ -22,6 +22,13 @@ def select(upstream,config,out,config_dir=None):
    elif source['adapter']=='beinsports':
     if source.get('regions'):
      entry['regions']=list(source['regions'])
+   elif source['adapter']=='fast':
+    if source.get('feeds'):
+     entry['feeds']=list(source['feeds'])
+    if source.get('catalogs'):
+     entry['catalogs']=list(source['catalogs'])
+    if source.get('max_channels') is not None:
+     entry['max_channels']=int(source['max_channels'])
    manifest.append(entry)
    continue
   seen=set();channels=[];requested=set(source.get('xmltv_ids',[]))
