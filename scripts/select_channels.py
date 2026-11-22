@@ -1,13 +1,20 @@
 import copy,json,sys,xml.etree.ElementTree as ET
 from pathlib import Path
 
-def select(upstream,config,out):
+def select(upstream,config,out,config_dir=None):
  upstream=Path(upstream);out=Path(out);out.mkdir(parents=True,exist_ok=True)
+ base_dir=Path(config_dir).resolve() if config_dir else Path.cwd()
  manifest=[]
  for index,source in enumerate(config['sources']):
   name=f'{index:02d}-{source["id"]}'
-  if source.get('adapter')=='tsn':
-   manifest.append({'id':source['id'],'region':source['region'],'adapter':'tsn','output':name+'.xml','selected_channels':None})
+  if source.get('adapter') in {'tsn','espn'}:
+   entry={'id':source['id'],'region':source['region'],'adapter':source['adapter'],'output':name+'.xml','selected_channels':None}
+   if source['adapter']=='espn':
+    entry['include_espn_plus']=bool(source.get('include_espn_plus',False))
+    if source.get('espn_plus_map'):
+     map_path=Path(source['espn_plus_map'])
+     entry['espn_plus_map']=str((map_path if map_path.is_absolute() else base_dir/map_path).resolve())
+   manifest.append(entry)
    continue
   seen=set();channels=[];requested=set(source.get('xmltv_ids',[]))
   for pattern in source['files']:
@@ -34,4 +41,5 @@ def select(upstream,config,out):
   manifest.append(entry)
  (out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');return manifest
 if __name__=='__main__':
- print(json.dumps(select(sys.argv[1],json.loads(Path(sys.argv[2]).read_text()),sys.argv[3]),indent=2))
+ cfg_path=Path(sys.argv[2]).resolve()
+ print(json.dumps(select(sys.argv[1],json.loads(cfg_path.read_text()),sys.argv[3],config_dir=cfg_path.parent),indent=2))

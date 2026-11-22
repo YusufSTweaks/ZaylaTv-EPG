@@ -9,6 +9,13 @@
   ],
   "sources": [
     {
+      "id": "us-espn-official",
+      "region": "US",
+      "adapter": "espn",
+      "include_espn_plus": true,
+      "espn_plus_map": "lineups/espn-plus-map.json"
+    },
+    {
       "id": "us-tvguide",
       "region": "US",
       "files": [

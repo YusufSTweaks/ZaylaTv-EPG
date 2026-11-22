@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.error import URLError
 from urllib.request import urlopen
 
+from grab_espn import write_guide as write_espn_guide
 from grab_tsn import write_guide
 
 
@@ -21,6 +22,28 @@ def run_grab(source, upstream, output):
             return {'exit_code': 0, 'selected_channels': channels}
         except (OSError, ValueError) as error:
             message = f'Official TSN schedule failed: {error}'
+            print(message, flush=True)
+            return {'exit_code': None, 'error': message}
+
+    if source.get('adapter') == 'espn':
+        try:
+            include_espn_plus = bool(source.get('include_espn_plus', False))
+            channels, programmes, stats = write_espn_guide(
+                output / source['output'],
+                include_espn_plus=include_espn_plus,
+                espn_plus_map=source.get('espn_plus_map'),
+            )
+            print(
+                f'ESPN official schedule: {channels} channel feeds and {programmes} programmes '
+                f'(ESPN+: collected={stats["espn_plus_collected"]}, '
+                f'deduplicated={stats["espn_plus_deduplicated"]}, '
+                f'mapped={stats["espn_plus_mapped"]}, '
+                f'unmapped={stats["espn_plus_unmapped"]})',
+                flush=True,
+            )
+            return {'exit_code': 0, 'selected_channels': channels, 'stats': stats}
+        except (OSError, ValueError) as error:
+            message = f'Official ESPN schedule failed: {error}'
             print(message, flush=True)
             return {'exit_code': None, 'error': message}
 
