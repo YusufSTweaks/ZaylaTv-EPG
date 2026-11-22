@@ -9,6 +9,12 @@
   ],
   "sources": [
     {
+      "id": "us-espn-official",
+      "region": "US",
+      "adapter": "espn",
+      "include_espn_plus": false
+    },
+    {
       "id": "us-tvguide",
       "region": "US",
       "files": [

@@ -6,8 +6,11 @@ def select(upstream,config,out):
  manifest=[]
  for index,source in enumerate(config['sources']):
   name=f'{index:02d}-{source["id"]}'
-  if source.get('adapter')=='tsn':
-   manifest.append({'id':source['id'],'region':source['region'],'adapter':'tsn','output':name+'.xml','selected_channels':None})
+  if source.get('adapter') in {'tsn','espn'}:
+   entry={'id':source['id'],'region':source['region'],'adapter':source['adapter'],'output':name+'.xml','selected_channels':None}
+   if source['adapter']=='espn':
+    entry['include_espn_plus']=bool(source.get('include_espn_plus',False))
+   manifest.append(entry)
    continue
   seen=set();channels=[];requested=set(source.get('xmltv_ids',[]))
   for pattern in source['files']:

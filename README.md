@@ -10,6 +10,7 @@ Edit `sources.json` before running if you want different regions or channels:
 
 | Selection | Maintained source | Maximum | Selected with the pinned catalog |
 | --- | --- | ---: | ---: |
+| US, sports | ESPN official public schedule for ESPN linear networks (optional ESPN+ slots) | — | Based on the scheduled events |
 | US | tvguide.com, mapped .us channels in English | 151 | 151 |
 | Canada, sports | TSN official public schedule for TSN1–5 and TSN Premium | — | Based on the scheduled events |
 | Canada | TV Passport national channels, English/French | 113 | 113 |
@@ -24,9 +25,11 @@ Edit `sources.json` before running if you want different regions or channels:
 | MENA | elcinema.com Arabic list | 102 | 102 |
 | South Africa | dstv.com South Africa list only | 60 | 42 |
 
-The pinned catalog supplies 1,271 selected mappings, including overlapping channel IDs across sources. The TSN adapter adds channel IDs from the current schedules. Some mappings may have zero upcoming programmes.
+The pinned catalog supplies 1,271 selected mappings, including overlapping channel IDs across sources. The ESPN and TSN adapters add channel IDs from the current schedules. Some mappings may have zero upcoming programmes.
 
 Duplicates within a source are removed using the canonical XMLTV ID before applying its cap. Empty/unmapped XMLTV IDs are excluded. Default selections follow the maintained file's order; they are not a curated recommendation of the best channels. Add an `xmltv_ids` array to a source to select the exact channels from your playlist. Limits can be changed from 1 to 500 per source. For another supported European country, add its maintained list and corresponding country/language filters; this kit does not promise all Europe by default.
+
+The [ESPN schedule](https://www.espn.com/watch/schedule/_/country/us/redirected/true) adapter queries ESPN’s public Watch schedule feed for linear channels (`ESPN.us@SD`, `ESPN2.us@SD`, `ESPNU.us@SD`, `ESPNews.us@SD`, `SECNetwork.us@SD`, `ACCNetwork.us@SD`, and `ESPNDeportes.us@SD`) ahead of TV Guide so ESPN takes priority for matching channel IDs while TV Guide automatically fills gaps if ESPN has no usable listings. Scheduled end times are preserved when supplied; when a linear programme omits an end time, the stop time is calculated from the next programme’s start on the same channel and marked as an estimate in `<desc>`, while a final programme with no determinable end time is omitted. Synthetic ESPN+ slots (`ESPNPlus.us@NN`, packed into non-overlapping feeds with explicit end times or duration-based estimates) are disabled by default (`"include_espn_plus": false` in `sources.json`) until mapped to playlist streams.
 
 The [TSN schedule](https://www.tsn.ca/live/schedule/) supplies explicit start and end times and separate feed IDs for simultaneous TSN Premium events. The publisher preserves TSN’s linear XMLTV IDs and uses `TSNPlus.ca@NN` for streaming feeds. TV Passport can fill TSN1–5 if the official schedule is unavailable.
 
