@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="tvpassport.com" site_id="qub-hd/7617" lang="en" xmltv_id="QUB.ca@HD">QUB HD</channel>
+  <channel site="tvpassport.com" site_id="aptn-hd/5997" lang="en" xmltv_id="APTN.ca@HD">APTN HD</channel>
+  <channel site="tvpassport.com" site_id="noovo-hd/4884" lang="en" xmltv_id="Noovo.ca@HD">Noovo HD</channel>
+  <channel site="tvpassport.com" site_id="omni2-hd/3624" lang="en" xmltv_id="OMNI2.ca@HD">OMNI.2 HD</channel>
+  <channel site="tvpassport.com" site_id="temoin-hd/9155" lang="en" xmltv_id="Temoin.ca@HD">Témoin HD</channel>
+  <channel site="tvpassport.com" site_id="ae-canada-hd/3886" lang="en" xmltv_id="AECanada.ca@HD">A&amp;E Canada HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-sci-fi-hd/10042" lang="en" xmltv_id="CTVSciFi.ca@HD">CTV Sci-Fi HD</channel>
+  <channel site="tvpassport.com" site_id="tlc-canada-hd/6779" lang="en" xmltv_id="TLCCanada.ca@HD">TLC Canada HD</channel>
+  <channel site="tvpassport.com" site_id="wgn-canada-hd/9530" lang="en" xmltv_id="WGNCanada.ca@HD">WGN Canada HD</channel>
+  <channel site="tvpassport.com" site_id="cnbc-canada-hd/8429" lang="en" xmltv_id="CNBCCanada.ca@HD">CNBC Canada HD</channel>
+  <channel site="tvpassport.com" site_id="amc--canada-hd/8368" lang="en" xmltv_id="AMCCanada.ca@HD">AMC - Canada HD</channel>
+  <channel site="tvpassport.com" site_id="ctv2-alberta-hd/9700" lang="en" xmltv_id="CTV2Alberta.ca@HD">CTV2 Alberta HD</channel>
+  <channel site="tvpassport.com" site_id="outdoor-life-network-canada-hd/9505" lang="en" xmltv_id="BravoCanada.ca@HD">Bravo Canada HD</channel>
+  <channel site="tvpassport.com" site_id="savoir-media-hd/7322" lang="en" xmltv_id="SavoirMedia.ca@HD">Savoir Média HD</channel>
+  <channel site="tvpassport.com" site_id="zee-tv-canada-hd/13657" lang="en" xmltv_id="ZeeTVCanada.ca@HD">Zee TV Canada HD</channel>
+  <channel site="tvpassport.com" site_id="daystar-canada-hd/35543" lang="en" xmltv_id="DaystarCanada.ca@HD">Daystar Canada HD</channel>
+  <channel site="tvpassport.com" site_id="natyf-tv-hd-can/673" lang="en" xmltv_id="NatyfTVCAN.ca@HD">Natyf TV HD (CAN)</channel>
+  <channel site="tvpassport.com" site_id="ctv2-london-on-hd/9701" lang="en" xmltv_id="CTV2LondonON.ca@HD">CTV2 London, ON HD</channel>
+  <channel site="tvpassport.com" site_id="city-calgary-ab-hd/8488" lang="en" xmltv_id="CITYCalgaryAB.ca@HD">CITY Calgary, AB HD</channel>
+  <channel site="tvpassport.com" site_id="city-toronto-on-hd/2825" lang="en" xmltv_id="CITYTorontoON.ca@HD">CITY Toronto, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ctv2-toronto-on-hd/7901" lang="en" xmltv_id="CTV2TorontoON.ca@HD">CTV2 Toronto, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ctv2-windsor-on-hd/9702" lang="en" xmltv_id="CTV2WindsorON.ca@HD">CTV2 Windsor, ON HD</channel>
+  <channel site="tvpassport.com" site_id="history-2-canada-hd/8457" lang="en" xmltv_id="History2Canada.ca@HD">History 2 Canada HD</channel>
+  <channel site="tvpassport.com" site_id="city-edmonton-ab-hd/2813" lang="en" xmltv_id="CITYEdmontonAB.ca@HD">CITY Edmonton, AB HD</channel>
+  <channel site="tvpassport.com" site_id="city-montreal-qc-hd/6603" lang="en" xmltv_id="CITYMontrealQC.ca@HD">CITY Montreal, QC HD</channel>
+  <channel site="tvpassport.com" site_id="city-saskatchewan-hd/11455" lang="en" xmltv_id="CITYSaskatchewan.ca@HD">CITY Saskatchewan HD</channel>
+  <channel site="tvpassport.com" site_id="city-winnipeg-mb-hd/6799" lang="en" xmltv_id="CITYWinnipegMB.ca@HD">CITY Winnipeg. MB HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-comedy--east-hd/10771" lang="en" xmltv_id="CTVComedyEast.ca@HD">CTV Comedy - East HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-vancouver-bc-hd/3905" lang="en" xmltv_id="CTVVancouverBC.ca@HD">CTV Vancouver, BC HD</channel>
+  <channel site="tvpassport.com" site_id="knowledge-network-hd/11147" lang="en" xmltv_id="KnowledgeNetwork.ca@HD">Knowledge Network HD</channel>
+  <channel site="tvpassport.com" site_id="tva-cfcm-quebec-hd/11116" lang="en" xmltv_id="TVACFCMQuebec.ca@HD">TVA (CFCM) Québec HD</channel>
+  <channel site="tvpassport.com" site_id="city-vancouver-bc-hd/3936" lang="en" xmltv_id="CITYVancouverBC.ca@HD">CITY Vancouver, BC HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cjch-halifax-hd/6812" lang="en" xmltv_id="CTVCJCHHalifax.ca@HD">CTV (CJCH) Halifax HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-ckcw-moncton-hd/6814" lang="en" xmltv_id="CTVCKCWMoncton.ca@HD">CTV (CKCW) Moncton HD</channel>
+  <channel site="tvpassport.com" site_id="mlb-network-canada-hd/32975" lang="en" xmltv_id="MLBNetworkCanada.ca@HD">MLB Network Canada HD</channel>
+  <channel site="tvpassport.com" site_id="super-channel-fuse-hd/4838" lang="en" xmltv_id="SuperChannelFuse.ca@HD">Super Channel Fuse HD</channel>
+  <channel site="tvpassport.com" site_id="super-channel-vault-hd/10893" lang="en" xmltv_id="SuperChannelVault.ca@HD">Super Channel Vault HD</channel>
+  <channel site="tvpassport.com" site_id="tva-cfer-rimouski-hd/31497" lang="en" xmltv_id="TVACFERRimouski.ca@HD">TVA (CFER) Rimouski HD</channel>
+  <channel site="tvpassport.com" site_id="cbc-cbkt-regina-sk-hd/6806" lang="en" xmltv_id="CBCCBKTReginaSK.ca@HD">CBC (CBKT) Regina, SK HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-ckck-regina-sk-hd/9660" lang="en" xmltv_id="CTVCKCKReginaSK.ca@HD">CTV (CKCK) Regina, SK HD</channel>
+  <channel site="tvpassport.com" site_id="peachtree-tv-canada-hd/7342" lang="en" xmltv_id="PeachtreeTVCanada.ca@HD">Peachtree TV (Canada) HD</channel>
+  <channel site="tvpassport.com" site_id="tva-chlt-sherbrooke-hd/11117" lang="en" xmltv_id="TVACHLTSherbrooke.ca@HD">TVA (CHLT) Sherbrooke HD</channel>
+  <channel site="tvpassport.com" site_id="ctv2-barrie-on-ckvr-hd/31841" lang="en" xmltv_id="CTV2BarrieONCKVR.ca@HD">CTV2 Barrie, ON (CKVR) HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cfcn-calgary-ab-hd/6454" lang="en" xmltv_id="CTVCFCNCalgaryAB.ca@HD">CTV (CFCN) Calgary, AB HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cfto-toronto-on-hd/2814" lang="en" xmltv_id="CTVCFTOTorontoON.ca@HD">CTV (CFTO) Toronto, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cici-sudbury-on-hd/31846" lang="en" xmltv_id="CTVCICISudburyON.ca@HD">CTV (CICI) Sudbury, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cito-timmins-on-hd/33563" lang="en" xmltv_id="CTVCITOTimminsON.ca@HD">CTV (CITO) Timmins, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cky-winnipeg-mb-hd/7950" lang="en" xmltv_id="CTVCKYWinnipegMB.ca@HD">CTV (CKY) Winnipeg, MB HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cfrn-edmonton-ab-hd/7175" lang="en" xmltv_id="CTVCFRNEdmontonAB.ca@HD">CTV (CFRN) Edmonton, AB HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-montreal-cfcf-qc-hd/7176" lang="en" xmltv_id="CTVMontrealCFCFQC.ca@HD">CTV Montreal (CFCF), QC HD</channel>
+  <channel site="tvpassport.com" site_id="ici-television-quebec-hd/32137" lang="en" xmltv_id="ICITelevisionQuebec.ca@HD">ICI Télévision (Québec) HD</channel>
+  <channel site="tvpassport.com" site_id="noovo-cfap-quebec-qc-hd/5937" lang="en" xmltv_id="NoovoCFAPQuebecQC.ca@HD">Noovo (CFAP) Quebec, QC HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cfqc-saskatoon-sk-hd/9657" lang="en" xmltv_id="CTVCFQCSaskatoonSK.ca@HD">CTV (CFQC) Saskatoon, SK HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-ckco-kitchener-on-hd/9690" lang="en" xmltv_id="CTVCKCOKitchenerON.ca@HD">CTV (CKCO) Kitchener, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-ckny-north-bay-on-hd/31847" lang="en" xmltv_id="CTVCKNYNorthBayON.ca@HD">CTV (CKNY) North Bay, ON HD</channel>
+  <channel site="tvpassport.com" site_id="global-cfre-regina-sk-hd/6429" lang="en" xmltv_id="GlobalCFREReginaSK.ca@HD">Global (CFRE) Regina, SK HD</channel>
+  <channel site="tvpassport.com" site_id="noovo-cfjp-montrealqc-hd/5940" lang="en" xmltv_id="NoovoCFJPMontrealQC.ca@HD">Noovo (CFJP) Montreal,QC HD</channel>
+  <channel site="tvpassport.com" site_id="ctv2-vancouver-island-bc-hd/8379" lang="en" xmltv_id="CTV2VancouverIslandBC.ca@HD">CTV2 Vancouver Island. BC HD</channel>
+  <channel site="tvpassport.com" site_id="global-cict-calgary-ab-hd/6431" lang="en" xmltv_id="GlobalCICTCalgaryAB.ca@HD">Global (CICT) Calgary, AB HD</channel>
+  <channel site="tvpassport.com" site_id="global-citv-edmonton-ab-hd/6436" lang="en" xmltv_id="GlobalCITVEdmontonAB.ca@HD">Global (CITV) Edmonton, AB HD</channel>
+  <channel site="tvpassport.com" site_id="global-cknd-winnipeg-mb-hd/6438" lang="en" xmltv_id="GlobalCKNDWinnipegMB.ca@HD">Global (CKND) Winnipeg, MB HD</channel>
+  <channel site="tvpassport.com" site_id="tva-cimt-riviere-du-loup-hd/31589" lang="en" xmltv_id="TVACIMTRiviereDuLoup.ca@HD">TVA (CIMT) Rivière du Loup HD</channel>
+  <channel site="tvpassport.com" site_id="global-cfsk-saskatoon-sk-hd/6430" lang="en" xmltv_id="GlobalCFSKSaskatoonSK.ca@HD">Global (CFSK) Saskatoon, SK HD</channel>
+  <channel site="tvpassport.com" site_id="global-ciii-dt-41-toronto-hd/13808" lang="en" xmltv_id="GlobalCIIIDT41Toronto.ca@HD">Global (CIII-DT-41) Toronto HD</channel>
+  <channel site="tvpassport.com" site_id="noovo-cfks-sherbrooke-qc-hd/5939" lang="en" xmltv_id="NoovoCFKSSherbrookeQC.ca@HD">Noovo (CFKS) Sherbrooke, QC HD</channel>
+  <channel site="tvpassport.com" site_id="super-channel-heart--home-hd/4839" lang="en" xmltv_id="SuperChannelHeartHome.ca@HD">Super Channel Heart &amp; Home HD</channel>
+  <channel site="tvpassport.com" site_id="global-cisa-lethbridge-ab-hd/6435" lang="en" xmltv_id="GlobalCISALethbridgeAB.ca@HD">Global (CISA) Lethbridge, AB HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-cfcn-dt5-lethbridge-ab-hd/9662" lang="en" xmltv_id="CTVCFCNDT5LethbridgeAB.ca@HD">CTV (CFCN-DT5) Lethbridge, AB HD</channel>
+  <channel site="tvpassport.com" site_id="global-chex-tv-2-durham-on-hd/9696" lang="en" xmltv_id="GlobalCHEXTV2DurhamON.ca@HD">Global (CHEX-TV-2) Durham, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ytv-youth-television--east-hd/8774" lang="en" xmltv_id="YTVYouthTelevisionEast.ca@HD">YTV (Youth Television) - East HD</channel>
+  <channel site="tvpassport.com" site_id="global-chex-peterborough-on-hd/9697" lang="en" xmltv_id="GlobalCHEXPeterboroughON.ca@HD">Global (CHEX) Peterborough, ON HD</channel>
+  <channel site="tvpassport.com" site_id="ctv-chbx-sault-ste-marie-on-hd/33564" lang="en" xmltv_id="CTVCHBXSaultSteMarieON.ca@HD">CTV (CHBX) Sault Ste. Marie, ON HD</channel>
+  <channel site="tvpassport.com" site_id="noovo-cfkm-trois-rivieres-qc-hd/5938" lang="en" xmltv_id="NoovoCFKMTroisRivieresQC.ca@HD">Noovo (CFKM) Trois-Rivieres, QC HD</channel>
+  <channel site="tvpassport.com" site_id="global-cihf-maritimes-nb-only-hd/10695" lang="en" xmltv_id="GlobalCIHFMaritimesNBOnly.ca@HD">Global (CIHF) Maritimes (N.B. only) HD</channel>
+  <channel site="tvpassport.com" site_id="tva-chem-trois-rivieres-mauricie-hd/11118" lang="en" xmltv_id="TVACHEMTroisRivieresMauricie.ca@HD">TVA (CHEM) Trois-Rivières (Mauricie) HD</channel>
+  <channel site="tvpassport.com" site_id="tva-cjpm-saguenay-chicoutimi-qc-hd/31496" lang="en" xmltv_id="TVACJPMSaguenayChicoutimiQC.ca@HD">TVA (CJPM) Saguenay (Chicoutimi), QC HD</channel>
+  <channel site="tvpassport.com" site_id="ntv/33630" lang="en" xmltv_id="NTV.ca@SD">NTV</channel>
+  <channel site="tvpassport.com" site_id="ewtn-canada/619" lang="en" xmltv_id="EWTNCanada.ca@SD">EWTN Canada</channel>
+  <channel site="tvpassport.com" site_id="hpitv-canada/2860" lang="en" xmltv_id="HpitvCanada.ca@SD">HPItv Canada</channel>
+  <channel site="tvpassport.com" site_id="rogers-london/394" lang="en" xmltv_id="RogersLondon.ca@SD">Rogers London</channel>
+  <channel site="tvpassport.com" site_id="meteo-media-montreal/5942" lang="en" xmltv_id="MeteoMediaMontreal.ca@SD">Meteo-Media Montreal</channel>
+  <channel site="tvpassport.com" site_id="nfl-network--canada/37557" lang="en" xmltv_id="NFLNetworkCanada.ca@SD">NFL Network - Canada</channel>
+  <channel site="tvpassport.com" site_id="ctv-cicc-yorkton-sk/2250" lang="en" xmltv_id="CTVCICCYorktonSK.ca@SD">CTV (CICC) Yorkton, SK</channel>
+  <channel site="tvpassport.com" site_id="magnolia-network-canada/2034" lang="en" xmltv_id="MagnoliaNetworkCanada.ca@SD">Magnolia Network Canada</channel>
+  <channel site="tvpassport.com" site_id="ctv-cipa-prince-albert-sk/276" lang="en" xmltv_id="CTVCIPAPrinceAlbertSK.ca@SD">CTV (CIPA) Prince Albert, SK</channel>
+  <channel site="tvpassport.com" site_id="ctv2-civi-dt2-vancouver-bc/13841" lang="en" xmltv_id="CTV2CIVIDT2VancouverBC.ca@SD">CTV2 (CIVI-DT2) Vancouver, BC</channel>
+</channels>

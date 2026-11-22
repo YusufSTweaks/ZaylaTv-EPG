@@ -32,7 +32,7 @@
       "languages": [
         "en"
       ],
-      "limit": 250
+      "limit": 400
     },
     {
       "id": "ca-tsn-official",
@@ -63,6 +63,14 @@
       "limit": 100
     },
     {
+      "id": "ca-tvpassport-extra",
+      "region": "CA",
+      "files": [
+        "canada-extra.channels.xml"
+      ],
+      "limit": 120
+    },
+    {
       "id": "ca-tvhebdo",
       "region": "CA",
       "files": [
@@ -71,7 +79,18 @@
       "countries": [
         "ca"
       ],
-      "limit": 120
+      "limit": 200
+    },
+    {
+      "id": "ca-ontvtonight",
+      "region": "CA",
+      "files": [
+        "ontvtonight.com/ontvtonight.com_ca.channels.xml"
+      ],
+      "countries": [
+        "ca"
+      ],
+      "limit": 100
     },
     {
       "id": "fr-programme-tv",
@@ -115,6 +134,30 @@
       "limit": 500
     },
     {
+      "id": "uk-virginmedia",
+      "region": "UK",
+      "files": [
+        "virgintvgo.virginmedia.com/virgintvgo.virginmedia.com.channels.xml"
+      ],
+      "countries": [
+        "uk",
+        "ie"
+      ],
+      "limit": 200
+    },
+    {
+      "id": "uk-mytelly",
+      "region": "UK",
+      "files": [
+        "mytelly.co.uk/mytelly.co.uk.channels.xml"
+      ],
+      "countries": [
+        "uk",
+        "ie"
+      ],
+      "limit": 350
+    },
+    {
       "id": "eu-sky-de",
       "region": "DE",
       "files": [
@@ -146,6 +189,22 @@
       "limit": 220
     },
     {
+      "id": "ch-teleboy",
+      "region": "CH",
+      "files": [
+        "teleboy.ch/teleboy.ch.channels.xml"
+      ],
+      "limit": 300
+    },
+    {
+      "id": "be-telenet",
+      "region": "BE",
+      "files": [
+        "telenet.tv/telenet.tv.channels.xml"
+      ],
+      "limit": 120
+    },
+    {
       "id": "eu-sky-it",
       "region": "IT",
       "files": [
@@ -166,6 +225,14 @@
         "programacion-tv.elpais.com/programacion-tv.elpais.com.channels.xml"
       ],
       "limit": 120
+    },
+    {
+      "id": "es-movistar",
+      "region": "ES",
+      "files": [
+        "movistarplus.es/movistarplus.es.channels.xml"
+      ],
+      "limit": 150
     },
     {
       "id": "nl-ziggogo",
@@ -198,6 +265,78 @@
         "programetv.ro/programetv.ro.channels.xml"
       ],
       "limit": 160
+    },
+    {
+      "id": "se-tv24",
+      "region": "SE",
+      "files": [
+        "tv24.se/tv24.se.channels.xml"
+      ],
+      "limit": 160
+    },
+    {
+      "id": "cz-mujtvprogram",
+      "region": "CZ",
+      "files": [
+        "mujtvprogram.cz/mujtvprogram.cz.channels.xml"
+      ],
+      "limit": 200
+    },
+    {
+      "id": "tr-tvplus",
+      "region": "TR",
+      "files": [
+        "tvplus.com.tr/tvplus.com.tr.channels.xml"
+      ],
+      "limit": 160
+    },
+    {
+      "id": "gr-cosmote",
+      "region": "GR",
+      "files": [
+        "greece-cosmote.channels.xml"
+      ],
+      "limit": 120
+    },
+    {
+      "id": "gr-digea",
+      "region": "GR",
+      "files": [
+        "greece-digea.channels.xml"
+      ],
+      "limit": 80
+    },
+    {
+      "id": "al-ipko",
+      "region": "AL",
+      "files": [
+        "ipko.tv/ipko.tv.channels.xml"
+      ],
+      "limit": 180
+    },
+    {
+      "id": "balkans-neo",
+      "region": "BALKANS",
+      "files": [
+        "neo.io/neo.io.channels.xml"
+      ],
+      "limit": 230
+    },
+    {
+      "id": "balkans-t2",
+      "region": "BALKANS",
+      "files": [
+        "tv2go.t-2.net/tv2go.t-2.net.channels.xml"
+      ],
+      "limit": 240
+    },
+    {
+      "id": "mt-melita",
+      "region": "MT",
+      "files": [
+        "melita.com/melita.com.channels.xml"
+      ],
+      "limit": 120
     },
     {
       "id": "mena-bein",
@@ -278,6 +417,15 @@
       "limit": 20
     },
     {
+      "id": "mena-osn",
+      "region": "MENA",
+      "files": [
+        "osn.com/osn.com_ar.channels.xml",
+        "osn.com/osn.com_en.channels.xml"
+      ],
+      "limit": 100
+    },
+    {
       "id": "za-dstv",
       "region": "ZA",
       "adapter": "dstv_za"
@@ -296,11 +444,27 @@
       "adapter": "fast",
       "catalogs": [
         "i.mjh.nz_au.channels.xml",
-        "i.mjh.nz_foxtel.channels.xml"
+        "i.mjh.nz_binge.channels.xml"
       ],
       "feeds": [
         "au/Sydney/epg",
-        "Foxtel/epg"
+        "au/Melbourne/epg",
+        "au/Brisbane/epg",
+        "au/Adelaide/epg",
+        "Binge/epg"
+      ]
+    },
+    {
+      "id": "nz-fast",
+      "region": "NZ",
+      "adapter": "fast",
+      "catalogs": [
+        "i.mjh.nz_skygo.channels.xml",
+        "i.mjh.nz_skysportnow.channels.xml"
+      ],
+      "feeds": [
+        "SkyGo/epg",
+        "SkySportNow/epg"
       ]
     },
     {
@@ -314,19 +478,66 @@
       "files": [
         "airtelxstream.in/airtelxstream.in.channels.xml"
       ],
+      "limit": 400
+    },
+    {
+      "id": "in-tataplay",
+      "region": "IN",
+      "files": [
+        "tataplay.com/tataplay.com.channels.xml"
+      ],
+      "limit": 400
+    },
+    {
+      "id": "in-dishtv",
+      "region": "IN",
+      "files": [
+        "dishtv.in/dishtv.in.channels.xml"
+      ],
+      "limit": 350
+    },
+    {
+      "id": "br-mitv",
+      "region": "BR",
+      "files": [
+        "mi.tv/mi.tv_br.channels.xml"
+      ],
       "limit": 250
     },
     {
-      "id": "latam-mitv",
-      "region": "BR",
+      "id": "mx-mitv",
+      "region": "MX",
       "files": [
-        "mi.tv/mi.tv_br.channels.xml",
-        "mi.tv/mi.tv_mx.channels.xml",
+        "mi.tv/mi.tv_mx.channels.xml"
+      ],
+      "limit": 100
+    },
+    {
+      "id": "latam-mitv",
+      "region": "LATAM",
+      "files": [
+        "mi.tv/mi.tv_ar.channels.xml",
+        "mi.tv/mi.tv_co.channels.xml",
         "mi.tv/mi.tv_cl.channels.xml",
-        "mi.tv/mi.tv_pe.channels.xml",
-        "mi.tv/mi.tv_co.channels.xml"
+        "mi.tv/mi.tv_pe.channels.xml"
+      ],
+      "limit": 300
+    },
+    {
+      "id": "latam-gatotv",
+      "region": "LATAM",
+      "files": [
+        "gatotv.com/gatotv.com.channels.xml"
       ],
       "limit": 250
+    },
+    {
+      "id": "latam-siba",
+      "region": "LATAM",
+      "files": [
+        "siba.com.co/siba.com.co.channels.xml"
+      ],
+      "limit": 100
     }
   ]
 }

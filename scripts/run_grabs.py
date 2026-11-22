@@ -5,6 +5,9 @@ import os
 import signal
 import subprocess
 import sys
+import threading
+import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import URLError
@@ -156,12 +159,54 @@ def run_grab(source, upstream, output):
         return {'exit_code': None, 'error': str(error)}
 
 
+def _source_domain_key(source):
+    adapter = source.get('adapter')
+    if adapter:
+        return f'adapter:{adapter}'
+    channels_file = source.get('channels_file')
+    if channels_file:
+        try:
+            first = ET.parse(channels_file).getroot().find('channel')
+            site = (first.get('site') or '').strip().lower() if first is not None else ''
+            if site:
+                return f'site:{site}'
+        except (OSError, ET.ParseError):
+            pass
+    return f'source:{source["id"]}'
+
+
+def run_all_grabs(manifest, upstream, output, max_workers=3):
+    output.mkdir(parents=True, exist_ok=True)
+    domain_locks = {}
+    for source in manifest:
+        key = _source_domain_key(source)
+        domain_locks.setdefault(key, threading.Lock())
+    results = [None] * len(manifest)
+    write_lock = threading.Lock()
+
+    def _run_indexed(index, source):
+        lock = domain_locks[_source_domain_key(source)]
+        with lock:
+            outcome = run_grab(source, upstream, output)
+        entry = source | outcome
+        with write_lock:
+            results[index] = entry
+            completed = [r for r in results if r is not None]
+            (output / 'grab-results.json').write_text(json.dumps(completed, indent=2) + '\n')
+        return entry
+
+    workers = max(1, min(int(max_workers), len(manifest) or 1))
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = [executor.submit(_run_indexed, idx, source) for idx, source in enumerate(manifest)]
+        for future in as_completed(futures):
+            future.result()
+
+    (output / 'grab-results.json').write_text(json.dumps(results, indent=2) + '\n')
+    return results
+
+
 if __name__ == '__main__':
     upstream = Path(sys.argv[1]).resolve()
     manifest = json.loads(Path(sys.argv[2]).read_text())
     output = Path(sys.argv[3]).resolve()
-    output.mkdir(parents=True, exist_ok=True)
-    results = []
-    for source in manifest:
-        results.append(source | run_grab(source, upstream, output))
-        (output / 'grab-results.json').write_text(json.dumps(results, indent=2) + '\n')
+    run_all_grabs(manifest, upstream, output, max_workers=3)
