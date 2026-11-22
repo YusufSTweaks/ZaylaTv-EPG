@@ -253,4 +253,19 @@ class OfficialAdapterTests(unittest.TestCase):
   self.assertIn('beINSports1.qa@MENA',channels)
   self.assertIn('beINSports.mena.202.qa',channels)
   self.assertEqual(len(programmes),2)
+ def test_fast_adapter_extract_and_selector(self):
+  from grab_fast import extract_feed_programmes,load_canonical_fast_map
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   sdir=p/'sites/i.mjh.nz';sdir.mkdir(parents=True)
+   (sdir/'i.mjh.nz_pluto.channels.xml').write_text('<channels><channel site="i.mjh.nz" site_id="PlutoTV/us#abc" lang="en" xmltv_id="PlutoDemo.us@SD">Pluto Demo</channel></channels>')
+   cfg={'sources':[{'id':'fast-streaming','region':'FAST','adapter':'fast','feeds':['PlutoTV/us'],'max_channels':100}]}
+   manifest=select(p,cfg,p/'selected',config_dir=p)
+   self.assertEqual(manifest[0]['adapter'],'fast')
+   self.assertEqual(manifest[0]['feeds'],['PlutoTV/us'])
+   fmap=load_canonical_fast_map(p,catalogs=('i.mjh.nz_pluto.channels.xml',),feeds=('PlutoTV/us',))
+   xml=b'<tv><channel id="abc"><display-name>Pluto Demo Raw</display-name></channel><programme channel="abc" start="20300101150000 +0000" stop="20300101160000 +0000"><title>Fast Show</title></programme></tv>'
+   channels,programmes=extract_feed_programmes(xml,fmap['PlutoTV/us'],self.SAMPLE_NOW)
+   self.assertEqual(channels['PlutoDemo.us@SD'],['Pluto Demo','Pluto Demo Raw'])
+   self.assertEqual(len(programmes),1)
 if __name__=='__main__':unittest.main()

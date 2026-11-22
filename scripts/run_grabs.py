@@ -13,6 +13,7 @@ from urllib.request import urlopen
 from grab_beinsports import write_guide as write_beinsports_guide
 from grab_dstv_za import write_guide as write_dstv_za_guide
 from grab_espn import write_guide as write_espn_guide
+from grab_fast import write_guide as write_fast_guide
 from grab_tsn import write_guide
 from grab_tvguide import write_guide as write_tvguide_guide
 
@@ -94,6 +95,26 @@ def run_grab(source, upstream, output):
             return {'exit_code': 0, 'selected_channels': channels}
         except (OSError, ValueError) as error:
             message = f'Official beIN SPORTS schedule failed: {error}'
+            print(message, flush=True)
+            return {'exit_code': None, 'error': message}
+
+    if source.get('adapter') == 'fast':
+        try:
+            channels, programmes, stats = write_fast_guide(
+                output / source['output'],
+                upstream=upstream,
+                feeds=source.get('feeds'),
+                catalogs=source.get('catalogs'),
+                max_channels=source.get('max_channels'),
+            )
+            print(
+                f'FAST official schedule ({source["id"]}): {channels} channels and {programmes} programmes '
+                f'(feeds_fetched={stats["feeds_fetched"]}, feed_errors={stats["feed_errors"]})',
+                flush=True,
+            )
+            return {'exit_code': 0, 'selected_channels': channels, 'stats': stats}
+        except (OSError, ValueError) as error:
+            message = f'Official FAST schedule failed: {error}'
             print(message, flush=True)
             return {'exit_code': None, 'error': message}
 
