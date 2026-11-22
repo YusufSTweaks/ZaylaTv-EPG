@@ -12,36 +12,42 @@ Edit `sources.json` before running if you want different regions or channels:
 | --- | --- | ---: | --- |
 | US, sports | ESPN official public schedule for ESPN linear networks and ESPN+ events | — | Based on scheduled events |
 | US | TV Guide official multi-lineup JSON API (National, DirecTV, Dish, Spectrum + 9 major metro OTA markets) | — | ~1,900 deduplicated US channels (preserves canonical `tvguide.com` IDs & ESPN priority) |
-| US, fallback | TV Passport US (`tvpassport.com`) | 250 | 250 additional mapped `.us` channels |
+| US, fallback | TV Passport US (`tvpassport.com`) | 400 | Additional mapped `.us` channels |
 | Canada, sports | TSN official public schedule for TSN1–5 and TSN Premium | — | Based on scheduled events |
 | Canada | TV Passport national channels, English/French | 130 | 113 |
 | Canada, Ottawa | TV Passport Ottawa over-the-air lineup | 100 | 45 |
-| Canada, French | TV Hebdo (`tvhebdo.com`) | 120 | Quebec / Canadian French channels |
+| Canada, regional & specialty | Checked-in TV Passport Canada extra lineup (`lineups/canada-extra.channels.xml`) | 120 | 86 regional CBC/CTV/Global/Citytv/Noovo/TVA/specialty stations |
+| Canada, French | TV Hebdo (`tvhebdo.com`) | 200 | 152 mapped Quebec / Canadian French channels |
+| Canada, fallback | OnTVTonight Canada (`ontvtonight.com`) | 100 | 82 mapped `.ca` fallback channels |
 | France, primary | Programme-TV.net public listings | 180 | 129 |
 | France, fallback | SFR (`tv.sfr.fr`, French + European/MENA channels on SFR) | 450 | 438 |
-| UK & Ireland | sky.com, mapped `.uk`/`.ie` channels in English | 500 | UK & Ireland Sky channels |
+| UK & Ireland | Sky (`sky.com`), Virgin Media (`virgintvgo.virginmedia.com`) & MyTelly (`mytelly.co.uk`) | 500 / 200 / 350 | UK & Ireland Sky + Virgin + Freeview/regional coverage |
 | Germany / Austria (optional) | Sky DE/AT (`sky.com`) + Swisscom Blue (`tv.blue.ch`) | 300 / 220 | German & DACH channels |
+| Switzerland (optional) | Teleboy (`teleboy.ch`) | 300 | Swiss German/French/Italian channels |
+| Belgium (optional) | Telenet (`telenet.tv`) | 120 | Belgian channels |
 | Italy (optional) | Sky Italy (`sky.com`) | 220 | Italian channels (incl. Sky Sport IT) |
-| Spain (optional) | El País TV Guide (`programacion-tv.elpais.com`) | 120 | 101 Spanish channels |
+| Spain (optional) | El País (`programacion-tv.elpais.com`) + Movistar Plus+ (`movistarplus.es`) | 120 / 150 | Spanish FTA & Movistar channels |
 | Netherlands (optional) | Ziggo GO (`ziggogo.tv`) | 160 | 148 Dutch channels (incl. NPO & ESPN NL) |
 | Poland (optional) | Onet Program TV (`programtv.onet.pl`) | 80 | 80 Polish channels |
 | Portugal (optional) | MEO (`meo.pt`) | 210 | 210 Portuguese channels |
 | Romania (optional) | ProgrameTV (`programetv.ro`) | 160 | 160 Romanian channels |
-| MENA | bein.com Arabic list | 80 | 48 |
-| MENA sports | beIN SPORTS official Opta API (`ar-mena`) | — | ~30 active MENA channels |
-| MENA | bein.com English list | 60 | 46 |
+| Nordics (optional) | TV24 (`tv24.se`) | 160 | Swedish, Danish & Norwegian channels |
+| Czechia / Slovakia (optional) | MujTVProgram (`mujtvprogram.cz`) | 200 | Czech & Slovak channels |
+| Türkiye (optional) | TV+ (`tvplus.com.tr`) | 160 | 144 Turkish channels |
+| Greece (optional) | Cosmote TV (`lineups/greece-cosmote.channels.xml`) + Digea (`lineups/greece-digea.channels.xml`) | 120 / 80 | 181 Greek pay-TV & FTA channels |
+| Albania / Kosovo (optional) | IPKO (`ipko.tv`) | 180 | 158 Albanian / Kosovo / regional channels |
+| Balkans (optional) | NEO (`neo.io`) + T-2 (`tv2go.t-2.net`) | 230 / 240 | Serbian, Slovenian, Bosnian & Croatian channels |
+| Malta (optional) | Melita (`melita.com`) | 120 | 110 Maltese & regional European channels |
+| MENA | bein.com (AR/EN), beIN SPORTS API (`ar-mena`), elCinema, Shahid/MBC, Rotana & OSN (`osn.com`) | 80–120 | Core Arabic/English MENA & sports schedules |
 | beIN SPORTS international | beIN SPORTS official Opta API (FR, US, AU, MY, HK, PH, NZ) | — | ~28 active international channels |
-| MENA | elcinema.com Arabic list | 120 | 102 |
-| MENA | Shahid / MBC (`shahid.mbc.net`), Arabic list | 80 | 59 (MBC, Al Arabiya, SSC Sports) |
-| MENA | Rotana (`rotana.net`), Arabic list | 20 | 9 |
 | South Africa | DStv South Africa official JSON API (`country=zaf`) | — | All 149 ZA channels (incl. SABC 1/2/3/News & SuperSport) |
 | Africa (optional) | StarTimes (`startimestv.com`) | 80 | 58 |
-| Australia (optional) | Freeview AU & Foxtel (`grab_fast.py` via `i.mjh.nz` canonical IDs) | — | Australian FTA & Foxtel (incl. Fox Sports AU) |
+| Australia & New Zealand (optional) | Freeview AU + Binge (`au-fast`) & Sky Go / Sky Sport Now NZ (`nz-fast`) via `grab_fast.py` | — | Australian & New Zealand schedules |
 | FAST streaming (optional) | Pluto TV, Plex, Roku, Samsung TV Plus & PBS (`grab_fast.py` via `i.mjh.nz` canonical IDs) | — | ~1,000+ canonical FAST/PBS channels |
-| India (optional) | Airtel Xstream (`airtelxstream.in`) | 250 | 250 |
-| Latin America (optional) | Mi.tv (`mi.tv` BR, MX, CL, PE, CO) | 250 | 250 |
+| India (optional) | Airtel Xstream (`airtelxstream.in`), Tata Play (`tataplay.com`) & DishTV (`dishtv.in`) | 400 / 400 / 350 | Indian national, regional & sports channels |
+| Brazil / Mexico / LatAm (optional) | Mi.tv (`br`, `mx`, `ar`/`co`/`cl`/`pe`), GatoTV (`gatotv.com`) & SIBA (`siba.com.co`) | 100–300 | Split per market so Brazil does not crowd out MX & South America |
 
-Duplicates within a source are removed using the canonical XMLTV ID before applying its cap. Empty/unmapped XMLTV IDs are excluded for iptv-org XML catalogs. Custom official JSON/XML adapters (`espn`, `tsn`, `tvguide`, `beinsports`, `dstv_za`, `fast`) preserve canonical `iptv-org` XMLTV IDs where known and assign deterministic country-suffixed IDs for additional official channels. Optional regions (`DE`, `IT`, `ES`, `NL`, `PL`, `PT`, `SE`, `RO`, `AU`, `AF`, `SPORTS`, `FAST`, `IN`, `BR`) are excluded from `required_regions` so an optional regional hiccup never blocks publication of core regions (`US`, `CA`, `FR`, `UK`, `MENA`, `ZA`).
+Duplicates within a source are removed using the canonical XMLTV ID before applying its cap. Empty/unmapped XMLTV IDs are excluded for iptv-org XML catalogs. Custom official JSON/XML adapters (`espn`, `tsn`, `tvguide`, `beinsports`, `dstv_za`, `fast`) preserve canonical `iptv-org` XMLTV IDs where known and assign deterministic country-suffixed IDs for additional official channels. Optional regions (`DE`, `CH`, `BE`, `IT`, `ES`, `NL`, `PL`, `PT`, `RO`, `SE`, `CZ`, `TR`, `GR`, `AL`, `BALKANS`, `MT`, `AU`, `NZ`, `AF`, `SPORTS`, `FAST`, `IN`, `BR`, `MX`, `LATAM`) are excluded from `required_regions` so an optional regional hiccup never blocks publication of core regions (`US`, `CA`, `FR`, `UK`, `MENA`, `ZA`). `scripts/run_grabs.py` runs up to 3 independent target domains concurrently while strictly serializing sources that share a site domain.
 
 The [ESPN schedule](https://www.espn.com/watch/schedule/_/country/us/redirected/true) adapter queries ESPN’s public Watch schedule feed for linear channels (`ESPN.us@SD`, `ESPN2.us@SD`, `ESPNU.us@SD`, `ESPNews.us@SD`, `SECNetwork.us@SD`, `ACCNetwork.us@SD`, and `ESPNDeportes.us@SD`) ahead of TV Guide so ESPN takes priority for matching channel IDs while TV Guide automatically fills any channel where ESPN has no usable listings. Published end times are preserved; missing end times are inferred from the next start only on linear channels (marked as an estimate in `<desc>`, omitting a final programme with no determinable end) and are never inferred across simultaneous ESPN+ events. ESPN+ events are collected and deduplicated by ESPN airing/event ID, broadcast feed (`feedName`), and language while preserving genuinely distinct broadcasts and languages. ESPN+ events are only assigned to playable playlist channels via explicit rules in `lineups/espn-plus-map.json` (never auto-guessed onto synthetic `ESPN+ 01` numbers); unmapped events remain on deterministic, refresh-stable `ESPNPlus.unmapped.*.us` IDs labelled `[Unmapped ESPN+] ...` so they cannot display against an unrelated playable channel.
 

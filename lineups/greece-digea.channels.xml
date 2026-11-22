@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="digea.gr" site_id="3200" lang="el" xmltv_id="SKAI.gr@SD">SKAI</channel>
+  <channel site="digea.gr" site_id="4020" lang="el" xmltv_id="DELTATileorasi.gr@SD">ΔΕΛΤΑ ΤΗΛΕΟΡΑΣΗ</channel>
+  <channel site="digea.gr" site_id="4030" lang="el" xmltv_id="DiktyoTV.gr@SD">ΔΙΚΤΥΟ TV</channel>
+  <channel site="digea.gr" site_id="4050" lang="el" xmltv_id="Epiloges.gr@SD">ΕΠΙΛΟΓΕΣ</channel>
+  <channel site="digea.gr" site_id="4060" lang="el" xmltv_id="ThrakiNET.gr@SD">ΘΡΑΚΗ ΝΕΤ</channel>
+  <channel site="digea.gr" site_id="4070" lang="el" xmltv_id="Orestiada.gr@SD">ΟΡΕΣΤΙΑΔΑ</channel>
+  <channel site="digea.gr" site_id="4080" lang="el" xmltv_id="ALFA.gr@SD">ALFA</channel>
+  <channel site="digea.gr" site_id="4090" lang="el" xmltv_id="CenterTV.gr@SD">CENTER TV</channel>
+  <channel site="digea.gr" site_id="4110" lang="el" xmltv_id="SMILEThrakis.gr@SD">SMILE (Θράκης)</channel>
+  <channel site="digea.gr" site_id="4120" lang="el" xmltv_id="STARVoreioyEllados.gr@SD">STAR ΒOΡΕΙΟΥ ΕΛΛΑΔΟΣ</channel>
+  <channel site="digea.gr" site_id="4170" lang="el" xmltv_id="LYDIA.gr@SD">ΛΥΔΙΑ</channel>
+  <channel site="digea.gr" site_id="4240" lang="el" xmltv_id="Vergina.gr@SD">ΒΕΡΓΙΝΑ</channel>
+  <channel site="digea.gr" site_id="4260" lang="el" xmltv_id="DIONTileorasiKentrikisMakedonias.gr@SD">DION ΤΗΛΕΟΡΑΣΗ Κεντρικής Μακεδονίας</channel>
+  <channel site="digea.gr" site_id="4270" lang="el" xmltv_id="EUROTV.gr@SD">EURO TV</channel>
+  <channel site="digea.gr" site_id="4280" lang="el" xmltv_id="Europe1.gr@SD">EUROPE 1</channel>
+  <channel site="digea.gr" site_id="4290" lang="el" xmltv_id="GNOMITV.gr@SD">GNOMI TV</channel>
+  <channel site="digea.gr" site_id="4300" lang="el" xmltv_id="TV100Thessaloniki.gr@SD">TV100 ΘΕΣΣΑΛΟΝΙΚΗ</channel>
+  <channel site="digea.gr" site_id="4360" lang="el" xmltv_id="AEChannelThessaloniki.gr@SD">AE CHANNEL Thessaloniki</channel>
+  <channel site="digea.gr" site_id="4370" lang="el" xmltv_id="Nickelodeon.gr@SD">NICKELODEON+</channel>
+  <channel site="digea.gr" site_id="4440" lang="el" xmltv_id="Ilektra.gr@SD">ΗΛΕΚΤΡΑ</channel>
+  <channel site="digea.gr" site_id="4450" lang="el" xmltv_id="Lychnos.gr@SD">ΛΥΧΝΟΣ</channel>
+  <channel site="digea.gr" site_id="4460" lang="el" xmltv_id="MesogeiosTileorasi.gr@SD">ΜΕΣΟΓΕΙΟΣ ΤΗΛΕΟΡΑΣΗ</channel>
+  <channel site="digea.gr" site_id="4470" lang="el" xmltv_id="ORTTelevision.gr@SD">ΟΡΤ TELEVISION</channel>
+  <channel site="digea.gr" site_id="4490" lang="el" xmltv_id="ART.gr@SD">ΑRT</channel>
+  <channel site="digea.gr" site_id="4510" lang="el" xmltv_id="BEST.gr@SD">BEST</channel>
+  <channel site="digea.gr" site_id="4520" lang="el" xmltv_id="Ionian.gr@SD">IONIAN</channel>
+  <channel site="digea.gr" site_id="4530" lang="el" xmltv_id="LepantoTileorasi.gr@SD">LEPANTO ΤΗΛΕΟΡΑΣΗ</channel>
+  <channel site="digea.gr" site_id="4560" lang="el" xmltv_id="SUPER.gr@SD">SUPER</channel>
+  <channel site="digea.gr" site_id="4670" lang="el" xmltv_id="ThessaliaTileorasi.gr@SD">ΘΕΣΣΑΛΙΑ ΤΗΛΕΟΡΑΣΗ</channel>
+  <channel site="digea.gr" site_id="4680" lang="el" xmltv_id="ASTRATV.gr@SD">ASTRA TV</channel>
+  <channel site="digea.gr" site_id="4690" lang="el" xmltv_id="SMILE.gr@SD">SMILE +</channel>
+  <channel site="digea.gr" site_id="4700" lang="el" xmltv_id="TRT.gr@SD">TRT</channel>
+  <channel site="digea.gr" site_id="4710" lang="el" xmltv_id="FormediaTV.gr@SD">FORMedia TV</channel>
+  <channel site="digea.gr" site_id="4800" lang="el" xmltv_id="ENATVKE.gr@SD">ENA TV KE</channel>
+  <channel site="digea.gr" site_id="4810" lang="el" xmltv_id="STARKE.gr@SD">STAR K.E.</channel>
+  <channel site="digea.gr" site_id="4830" lang="el" xmltv_id="ETV.gr@SD">E ΤV</channel>
+  <channel site="digea.gr" site_id="4910" lang="el" xmltv_id="ALERT.gr@SD">ALERT</channel>
+  <channel site="digea.gr" site_id="4920" lang="el" xmltv_id="Attica.gr@SD">ATTICA</channel>
+  <channel site="digea.gr" site_id="4930" lang="el" xmltv_id="BLUESKY.gr@SD">BLUE SKY</channel>
+  <channel site="digea.gr" site_id="4950" lang="el" xmltv_id="EXTRA.gr@SD">EXTRA</channel>
+  <channel site="digea.gr" site_id="4990" lang="el" xmltv_id="AEpsilon.gr@SD">A.EPSILON</channel>
+  <channel site="digea.gr" site_id="5010" lang="el" xmltv_id="HIGHTV.gr@SD">HIGH TV</channel>
+  <channel site="digea.gr" site_id="5050" lang="el" xmltv_id="RISETV.gr@SD">RISE TV</channel>
+  <channel site="digea.gr" site_id="5130" lang="el" xmltv_id="AlitheiaTV.gr@SD">ΑΛΗΘΕΙΑ TV</channel>
+  <channel site="digea.gr" site_id="5140" lang="el" xmltv_id="PatridaTV.gr@SD">ΠΑΤΡΙΔΑ TV</channel>
+  <channel site="digea.gr" site_id="5150" lang="el" xmltv_id="Aeolos.gr@SD">AEOLOS</channel>
+  <channel site="digea.gr" site_id="5300" lang="el" xmltv_id="OCIOCNikanor.gr@SD">OCIOC ΝΙΚΑΝΩΡ</channel>
+  <channel site="digea.gr" site_id="5310" lang="el" xmltv_id="Diktyo1.gr@SD">DIKTYO1</channel>
+  <channel site="digea.gr" site_id="5320" lang="el" xmltv_id="FLASHTV.gr@SD">FLASH TV</channel>
+  <channel site="digea.gr" site_id="5330" lang="el" xmltv_id="WEST.gr@SD">WEST</channel>
+  <channel site="digea.gr" site_id="5350" lang="el" xmltv_id="TOPChannel.gr@SD">TOP CHANNEL</channel>
+  <channel site="digea.gr" site_id="5420" lang="el" xmltv_id="Acheloos.gr@SD">ΑΧΕΛΩΟΣ</channel>
+  <channel site="digea.gr" site_id="5430" lang="el" xmltv_id="VIMATileorasi.gr@SD">ΒΗΜΑ ΤΗΛΕΟΡΑΣΗ</channel>
+  <channel site="digea.gr" site_id="5440" lang="el" xmltv_id="IpeirosTV1.gr@SD">ΗΠΕΙΡΟΣ TV1</channel>
+  <channel site="digea.gr" site_id="5450" lang="el" xmltv_id="ARTTV.gr@SD">ART TV</channel>
+  <channel site="digea.gr" site_id="5460" lang="el" xmltv_id="CORFUTV.gr@SD">CORFU TV</channel>
+  <channel site="digea.gr" site_id="5470" lang="el" xmltv_id="ITV.gr@SD">ΙTV</channel>
+  <channel site="digea.gr" site_id="5480" lang="el" xmltv_id="START.gr@SD">START</channel>
+  <channel site="digea.gr" site_id="5570" lang="el" xmltv_id="Telekphth.gr@SD">TeleKPHTH</channel>
+  <channel site="digea.gr" site_id="5590" lang="el" xmltv_id="Krhth1.gr@SD">KΡHTH1</channel>
+  <channel site="digea.gr" site_id="5600" lang="el" xmltv_id="NEATileorasiKritis.gr@SD">ΝΕΑ Τηλεόραση Κρήτης</channel>
+  <channel site="digea.gr" site_id="5610" lang="el" xmltv_id="TVCRETA.gr@SD">TV CRETA</channel>
+  <channel site="digea.gr" site_id="5620" lang="el" xmltv_id="NOTOSTV.gr@SD">NOTOS TV</channel>
+  <channel site="digea.gr" site_id="5630" lang="el" xmltv_id="SITIATV.gr@SD">SITIA TV</channel>
+  <channel site="digea.gr" site_id="5720" lang="el" xmltv_id="Aigaio.gr@SD">ΑΙΓΑΙΟ</channel>
+  <channel site="digea.gr" site_id="5730" lang="el" xmltv_id="SAT.gr@SD">ΣΑΤ</channel>
+  <channel site="digea.gr" site_id="5740" lang="el" xmltv_id="IRIDA.gr@SD">IRIDA</channel>
+  <channel site="digea.gr" site_id="5750" lang="el" xmltv_id="KOSTV.gr@SD">KOS TV</channel>
+  <channel site="digea.gr" site_id="5760" lang="el" xmltv_id="TVKosmos.gr@SD">TV KOSMOS</channel>
+  <channel site="digea.gr" site_id="5770" lang="el" xmltv_id="Tharri.gr@SD">ΘΑΡΡΙ</channel>
+  <channel site="digea.gr" site_id="5850" lang="el" xmltv_id="SYROSTV1.gr@SD">SYROS TV1</channel>
+  <channel site="digea.gr" site_id="5860" lang="el" xmltv_id="Volcano.gr@SD">VOLCANO</channel>
+</channels>

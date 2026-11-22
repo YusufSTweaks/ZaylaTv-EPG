@@ -297,4 +297,32 @@ class OfficialAdapterTests(unittest.TestCase):
    channels,programmes=extract_feed_programmes(xml,fmap['PlutoTV/us'],self.SAMPLE_NOW)
    self.assertEqual(channels['PlutoDemo.us@SD'],['Pluto Demo','Pluto Demo Raw'])
    self.assertEqual(len(programmes),1)
+ def test_checked_in_lineups_and_domain_concurrency(self):
+  from run_grabs import _source_domain_key,run_all_grabs
+  repo=Path(__file__).resolve().parent.parent
+  for lineup in sorted((repo/'lineups').glob('*.channels.xml')):
+   root=ET.parse(lineup).getroot()
+   self.assertEqual(root.tag,'channels')
+   cids=[ch.get('xmltv_id','').strip() for ch in root.findall('channel')]
+   self.assertTrue(len(cids)>0,f'{lineup.name} should not be empty')
+   self.assertEqual(len(cids),len(set(c.lower() for c in cids)),f'Duplicate xmltv_id in {lineup.name}')
+   for ch in root.findall('channel'):
+    self.assertTrue(ch.get('site') and ch.get('site_id') and (ch.text or '').strip())
+  cfg=json.loads((repo/'sources.json').read_text())
+  self.assertEqual(cfg['required_regions'],['US','CA','FR','UK','MENA','ZA'])
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   c1=p/'c1.xml';c1.write_text('<channels><channel site="tvpassport.com" site_id="1" lang="en" xmltv_id="A.ca@SD">A</channel></channels>')
+   c2=p/'c2.xml';c2.write_text('<channels><channel site="tvpassport.com" site_id="2" lang="en" xmltv_id="B.ca@SD">B</channel></channels>')
+   manifest=[
+    {'id':'first','region':'CA','channels_file':str(c1),'output':'00-first.xml','selected_channels':1},
+    {'id':'second','region':'CA','channels_file':str(c2),'output':'01-second.xml','selected_channels':1},
+   ]
+   self.assertEqual(_source_domain_key(manifest[0]),'site:tvpassport.com')
+   self.assertEqual(_source_domain_key(manifest[1]),'site:tvpassport.com')
+   with patch('run_grabs.run_grab',side_effect=lambda src,u,o:{'exit_code':0,'ran':src['id']}):
+    res=run_all_grabs(manifest,p,p/'out',max_workers=2)
+   self.assertEqual([r['id'] for r in res],['first','second'])
+   saved=json.loads((p/'out/grab-results.json').read_text())
+   self.assertEqual([r['id'] for r in saved],['first','second'])
 if __name__=='__main__':unittest.main()

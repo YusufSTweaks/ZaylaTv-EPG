@@ -38,8 +38,8 @@ jobs:
         run: git -C epg-grabber apply "$GITHUB_WORKSPACE/patches/dstv-schedules-only.patch"
       - name: Use public Programme-TV.net listings without a saved cookie
         run: python3 scripts/configure_programme_tv.py epg-grabber
-      - name: Install the verified Ottawa broadcast lineup
-        run: cp lineups/ottawa-ota.channels.xml epg-grabber/sites/
+      - name: Install verified custom channel lineups
+        run: cp lineups/*.channels.xml epg-grabber/sites/
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
