@@ -192,4 +192,65 @@ class EspnTests(unittest.TestCase):
    merge(p,manifest,['US'],p/'public-fallback',now=self.SAMPLE_NOW)
    fallback_titles={el.get('channel'):el.findtext('title') for el in ET.parse(p/'public-fallback/guide.xml').findall('programme')}
    self.assertEqual(fallback_titles,{'ESPN.us@SD':'TV Guide ESPN','ESPN2.us@SD':'TV Guide ESPN2','CNN.us@SD':'CNN News'})
+class OfficialAdapterTests(unittest.TestCase):
+ SAMPLE_NOW=dt.datetime(2030,1,1,12,0,tzinfo=dt.timezone.utc)
+ def test_selector_propagates_new_adapters(self):
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   cfg={'sources':[
+    {'id':'us-tvguide','region':'US','adapter':'tvguide','lineups':['9100001138'],'max_channels':500},
+    {'id':'za-dstv','region':'ZA','adapter':'dstv_za'},
+    {'id':'mena-beinsports','region':'MENA','adapter':'beinsports','regions':['ar-mena']},
+   ]}
+   manifest=select(p,cfg,p/'selected',config_dir=p)
+   self.assertEqual([m['adapter'] for m in manifest],['tvguide','dstv_za','beinsports'])
+   self.assertEqual(manifest[0]['lineups'],['9100001138'])
+   self.assertEqual(manifest[0]['max_channels'],500)
+   self.assertEqual(manifest[2]['regions'],['ar-mena'])
+ def test_tvguide_canonical_dedup_junk_and_local_aliases(self):
+  from grab_tvguide import build_guide_data as build_tvguide
+  st=int(dt.datetime(2030,1,1,15,0,tzinfo=dt.timezone.utc).timestamp())
+  en=int(dt.datetime(2030,1,1,16,0,tzinfo=dt.timezone.utc).timestamp())
+  canonical={'100':('CNN.us@SD','CNN'),'200':('ESPN.us@SD','ESPN')}
+  batch=[
+   {'channel':{'sourceId':100,'fullName':'CNN','name':'CNN'},'programSchedules':[{'title':'CNN News','startTime':st,'endTime':en}]},
+   {'channel':{'sourceId':101,'fullName':'CNN HD','name':'CNNHD'},'programSchedules':[{'title':'CNN News HD','startTime':st,'endTime':en}]},
+   {'channel':{'sourceId':201,'fullName':'ESPN HD','name':'ESPNHD'},'programSchedules':[{'title':'TVG ESPN','startTime':st,'endTime':en}]},
+   {'channel':{'sourceId':300,'fullName':'KTRK-DT Houston, Texas (ABC)','name':'KTRK-DT'},'programSchedules':[{'title':'ABC13 News','startTime':st,'endTime':en}]},
+   {'channel':{'sourceId':400,'fullName':'Music Choice Hit List','name':'MC01'},'programSchedules':[{'title':'Music','startTime':st,'endTime':en}]},
+   {'channel':{'sourceId':401,'fullName':'On Demand Television','name':'OnDmd'},'programSchedules':[{'title':'VOD','startTime':st,'endTime':en}]},
+  ]
+  channels,programmes,stats=build_tvguide([batch],self.SAMPLE_NOW,canonical_map=canonical)
+  self.assertIn('CNN.us@SD',channels)
+  self.assertIn('ESPN.us@SD',channels)
+  self.assertIn('TVGuide.300.us',channels)
+  self.assertEqual(channels['TVGuide.300.us'],['KTRK-DT','KTRK-DT Houston, Texas (ABC)'])
+  self.assertNotIn('TVGuide.101.us',channels)
+  self.assertNotIn('TVGuide.201.us',channels)
+  self.assertNotIn('TVGuide.400.us',channels)
+  self.assertNotIn('TVGuide.401.us',channels)
+  self.assertEqual(stats['skipped_junk'],2)
+  self.assertGreaterEqual(stats['deduplicated_simulcasts'],1)
+ def test_dstv_za_canonical_and_unmapped_sast_times(self):
+  from grab_dstv_za import build_guide_data as build_dstv_za
+  canonical={'191':('SABC1.za@SD','SABC 1')}
+  payload=[
+   {'Number':'191','Name':'SABC 1','Programmes':[{'Title':'Uzalo','StartTime':'2030-01-01T18:00:00','EndTime':'2030-01-01T18:30:00'}]},
+   {'Number':'404','Name':'SABC News','Programmes':[{'Title':'Full View','StartTime':'2030-01-01T18:00:00','EndTime':'2030-01-01T19:00:00'}]},
+  ]
+  channels,programmes=build_dstv_za([payload],self.SAMPLE_NOW,canonical_map=canonical)
+  self.assertEqual(channels['SABC1.za@SD'],['SABC 1'])
+  self.assertEqual(channels['DStvZA.404.za'],['SABC News'])
+  self.assertIn(('SABC1.za@SD',dt.datetime(2030,1,1,16,0,tzinfo=dt.timezone.utc),dt.datetime(2030,1,1,16,30,tzinfo=dt.timezone.utc)),programmes)
+ def test_beinsports_canonical_and_region_ids(self):
+  from grab_beinsports import build_guide_data as build_beinsports
+  canonical={'uuid-1':('beINSports1.qa@MENA','beIN SPORTS 1','ar')}
+  pairs=[
+   ('ar-mena',{'id':'uuid-1','externalId':'101','name':'beIN SPORTS 1'},[{'title':'Match 1','startDate':'2030-01-01T15:00:00Z','endDate':'2030-01-01T17:00:00Z'}]),
+   ('ar-mena',{'id':'uuid-2','externalId':'202','name':'beIN SPORTS MAX 5'},[{'title':'Match 2','startDate':'2030-01-01T15:00:00Z','endDate':'2030-01-01T17:00:00Z'}]),
+  ]
+  channels,programmes=build_beinsports(pairs,self.SAMPLE_NOW,canonical_map=canonical)
+  self.assertIn('beINSports1.qa@MENA',channels)
+  self.assertIn('beINSports.mena.202.qa',channels)
+  self.assertEqual(len(programmes),2)
 if __name__=='__main__':unittest.main()

@@ -18,16 +18,7 @@
     {
       "id": "us-tvguide",
       "region": "US",
-      "files": [
-        "tvguide.com/*.channels.xml"
-      ],
-      "countries": [
-        "us"
-      ],
-      "languages": [
-        "en"
-      ],
-      "limit": 151
+      "adapter": "tvguide"
     },
     {
       "id": "ca-tsn-official",
@@ -47,7 +38,7 @@
         "en",
         "fr"
       ],
-      "limit": 113
+      "limit": 130
     },
     {
       "id": "ca-tvpassport-ottawa",
@@ -69,7 +60,7 @@
       "languages": [
         "fr"
       ],
-      "limit": 129,
+      "limit": 180,
       "probe_url": "https://www.programme-tv.net/programme/chaine/{date}/programme-france-2-6.html"
     },
     {
@@ -84,7 +75,7 @@
       "languages": [
         "fr"
       ],
-      "limit": 211
+      "limit": 450
     },
     {
       "id": "uk-sky",
@@ -98,7 +89,23 @@
       "languages": [
         "en"
       ],
-      "limit": 322
+      "limit": 500
+    },
+    {
+      "id": "eu-blue",
+      "region": "DE",
+      "files": [
+        "tv.blue.ch/tv.blue.ch.channels.xml"
+      ],
+      "countries": [
+        "de",
+        "ch",
+        "at"
+      ],
+      "languages": [
+        "de"
+      ],
+      "limit": 220
     },
     {
       "id": "mena-bein",
@@ -114,13 +121,10 @@
     {
       "id": "mena-beinsports",
       "region": "MENA",
-      "files": [
-        "beinsports.com/beinsports.com_mena-ar.channels.xml"
-      ],
-      "languages": [
-        "ar"
-      ],
-      "limit": 30
+      "adapter": "beinsports",
+      "regions": [
+        "ar-mena"
+      ]
     },
     {
       "id": "mena-bein-english",
@@ -131,15 +135,22 @@
       "languages": [
         "en"
       ],
-      "limit": 46
+      "limit": 60
     },
     {
       "id": "bein-sports-international",
       "region": "SPORTS",
-      "files": [
-        "beinsports.com/*.channels.xml"
-      ],
-      "limit": 48
+      "adapter": "beinsports",
+      "regions": [
+        "fr-fr",
+        "en-us",
+        "es-us",
+        "en-au",
+        "en-my",
+        "en-hk",
+        "en-ph",
+        "en-nz"
+      ]
     },
     {
       "id": "mena-elcinema",
@@ -150,15 +161,50 @@
       "languages": [
         "ar"
       ],
-      "limit": 102
+      "limit": 120
+    },
+    {
+      "id": "mena-shahid",
+      "region": "MENA",
+      "files": [
+        "shahid.mbc.net/shahid.mbc.net_ar.channels.xml"
+      ],
+      "languages": [
+        "ar"
+      ],
+      "limit": 80
+    },
+    {
+      "id": "mena-rotana",
+      "region": "MENA",
+      "files": [
+        "rotana.net/rotana.net_ar.channels.xml"
+      ],
+      "languages": [
+        "ar"
+      ],
+      "limit": 20
+    },
+    {
+      "id": "mena-snrt",
+      "region": "MENA",
+      "files": [
+        "snrt.ma/snrt.ma.channels.xml"
+      ],
+      "limit": 20
     },
     {
       "id": "za-dstv",
       "region": "ZA",
+      "adapter": "dstv_za"
+    },
+    {
+      "id": "af-startimes",
+      "region": "AF",
       "files": [
-        "dstv.com/dstv.com_za.channels.xml"
+        "startimestv.com/startimestv.com.channels.xml"
       ],
-      "limit": 60
+      "limit": 80
     }
   ]
 }
