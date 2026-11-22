@@ -23,6 +23,11 @@
       "limit": 151
     },
     {
+      "id": "ca-tsn-official",
+      "region": "CA",
+      "adapter": "tsn"
+    },
+    {
       "id": "ca-tvpassport",
       "region": "CA",
       "files": [

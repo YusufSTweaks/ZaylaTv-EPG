@@ -11,6 +11,7 @@ Edit `sources.json` before running if you want different regions or channels:
 | Selection | Maintained source | Maximum | Selected with the pinned catalog |
 | --- | --- | ---: | ---: |
 | US | tvguide.com, mapped .us channels in English | 151 | 151 |
+| Canada, sports | TSN official public schedule for TSN1–5 and TSN Premium | — | Based on the scheduled events |
 | Canada | TV Passport national channels, English/French | 113 | 113 |
 | Canada, Ottawa | TV Passport Ottawa over-the-air lineup | 100 | 45 |
 | France, primary | Programme-TV.net public listings | 129 | 129 |
@@ -23,9 +24,11 @@ Edit `sources.json` before running if you want different regions or channels:
 | MENA | elcinema.com Arabic list | 102 | 102 |
 | South Africa | dstv.com South Africa list only | 60 | 42 |
 
-The pinned catalog supplies 1,271 selected mappings, including overlapping channel IDs across sources. Some mappings may have zero upcoming programmes.
+The pinned catalog supplies 1,271 selected mappings, including overlapping channel IDs across sources. The TSN adapter adds channel IDs from the current schedules. Some mappings may have zero upcoming programmes.
 
 Duplicates within a source are removed using the canonical XMLTV ID before applying its cap. Empty/unmapped XMLTV IDs are excluded. Default selections follow the maintained file's order; they are not a curated recommendation of the best channels. Add an `xmltv_ids` array to a source to select the exact channels from your playlist. Limits can be changed from 1 to 500 per source. For another supported European country, add its maintained list and corresponding country/language filters; this kit does not promise all Europe by default.
+
+The [TSN schedule](https://www.tsn.ca/live/schedule/) supplies explicit start and end times and separate feed IDs for simultaneous TSN Premium events. The publisher preserves TSN’s linear XMLTV IDs and uses `TSNPlus.ca@NN` for streaming feeds. TV Passport can fill TSN1–5 if the official schedule is unavailable.
 
 The Ottawa list is a snapshot of the [TV Passport Ottawa broadcast lineup](https://www.tvpassport.com/lineups/browse/ca/on/12088/ottawa). It captures 45 distinct XMLTV IDs from 46 station entries and includes nearby U.S. affiliates listed by TV Passport. The workflow fetches current schedules from the individual station pages. Entries without an upstream XMLTV ID use a stable `TVPassport.<station number>` ID. Update the checked-in list when the provider changes its lineup.
 

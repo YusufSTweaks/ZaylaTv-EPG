@@ -10,8 +10,20 @@ from pathlib import Path
 from urllib.error import URLError
 from urllib.request import urlopen
 
+from grab_tsn import write_guide
+
 
 def run_grab(source, upstream, output):
+    if source.get('adapter') == 'tsn':
+        try:
+            channels, programmes = write_guide(output / source['output'])
+            print(f'TSN official schedule: {channels} channel feeds and {programmes} programmes', flush=True)
+            return {'exit_code': 0, 'selected_channels': channels}
+        except (OSError, ValueError) as error:
+            message = f'Official TSN schedule failed: {error}'
+            print(message, flush=True)
+            return {'exit_code': None, 'error': message}
+
     if not source['selected_channels']:
         return {'exit_code': None, 'error': 'No channels selected'}
 

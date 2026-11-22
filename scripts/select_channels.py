@@ -5,6 +5,10 @@ def select(upstream,config,out):
  upstream=Path(upstream);out=Path(out);out.mkdir(parents=True,exist_ok=True)
  manifest=[]
  for index,source in enumerate(config['sources']):
+  name=f'{index:02d}-{source["id"]}'
+  if source.get('adapter')=='tsn':
+   manifest.append({'id':source['id'],'region':source['region'],'adapter':'tsn','output':name+'.xml','selected_channels':None})
+   continue
   seen=set();channels=[];requested=set(source.get('xmltv_ids',[]))
   for pattern in source['files']:
    for file in sorted((upstream/'sites').glob(pattern)):
@@ -22,7 +26,7 @@ def select(upstream,config,out):
   if requested:
    rank={cid:i for i,cid in enumerate(source['xmltv_ids'])};channels.sort(key=lambda ch:rank[ch.get('xmltv_id')])
   channels=channels[:limit];root=ET.Element('channels');root.extend(channels)
-  name=f'{index:02d}-{source["id"]}';path=out/(name+'.channels.xml');ET.indent(root)
+  path=out/(name+'.channels.xml');ET.indent(root)
   path.write_bytes(ET.tostring(root,encoding='utf-8',xml_declaration=True))
   entry={'id':source['id'],'region':source['region'],'channels_file':str(path.resolve()),'output':name+'.xml','selected_channels':len(channels)}
   if 'probe_url' in source:
