@@ -42,6 +42,27 @@ class MergeTests(unittest.TestCase):
    cfg={'sources':[{'id':'us','region':'US','files':['demo/*.channels.xml'],'countries':['us'],'limit':2}]}
    manifest=select(p,cfg,p/'selected');root=ET.parse(manifest[0]['channels_file']).getroot()
    self.assertEqual([n.get('xmltv_id') for n in root],['a.us','c.us'])
+ def test_per_region_files_and_status_metadata(self):
+  us_xml='<tv><channel id="a.us"><display-name>US A</display-name></channel><channel id="shared.de"><display-name>Shared DE</display-name></channel><programme channel="a.us" start="20300101000000 +0000" stop="20300101010000 +0000"><title>US News</title></programme><programme channel="shared.de" start="20300101000000 +0000" stop="20300101010000 +0000"><title>US Copy</title></programme></tv>'
+  de_xml='<tv><channel id="shared.de"><display-name>Shared DE</display-name></channel><channel id="b.de"><display-name>DE B</display-name></channel><programme channel="shared.de" start="20300101000000 +0000" stop="20300101010000 +0000"><title>DE Native</title></programme><programme channel="b.de" start="20300101000000 +0000" stop="20300101010000 +0000"><title>Tagesschau</title></programme></tv>'
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   (p/'us.xml').write_text(us_xml)
+   (p/'de.xml').write_text(de_xml)
+   report=merge(p,[{'id':'us-src','region':'US','output':'us.xml'},{'id':'de-src','region':'DE','output':'de.xml'}],['US'],p/'public',now=NOW)
+   self.assertIn('regions',report)
+   self.assertEqual(report['regions']['US']['file'],'regions/us.xml.gz')
+   self.assertEqual(report['regions']['DE']['file'],'regions/de.xml.gz')
+   self.assertEqual(report['regions']['DE']['channels'],2)
+   # Verify gzip decompression matches XML and DE file keeps its own native shared.de schedule
+   de_xml_bytes=(p/'public/regions/de.xml').read_bytes()
+   self.assertEqual(de_xml_bytes,gzip.decompress((p/'public/regions/de.xml.gz').read_bytes()))
+   de_titles={el.get('channel'):el.findtext('title') for el in ET.fromstring(de_xml_bytes).findall('programme')}
+   self.assertEqual(de_titles,{'shared.de':'DE Native','b.de':'Tagesschau'})
+   # Index page lists regional files
+   index_html=(p/'public/index.html').read_text()
+   self.assertIn('regions/us.xml.gz',index_html)
+   self.assertIn('regions/de.xml.gz',index_html)
 class EspnTests(unittest.TestCase):
  SAMPLE_NOW=dt.datetime(2030,1,1,12,0,tzinfo=dt.timezone.utc)
  def test_selector_handles_espn_adapter_and_mapping_path(self):

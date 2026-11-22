@@ -1,50 +1,228 @@
-"""Validate and merge actual XMLTV programme data, preserving original timestamps."""
-import copy,datetime as dt,gzip,json,sys,xml.etree.ElementTree as ET
+"""Validate and merge actual XMLTV programme data into combined and per-region feeds."""
+import copy, datetime as dt, gzip, html, json, re, sys, xml.etree.ElementTree as ET
 from pathlib import Path
-UTC=dt.timezone.utc
 
-def ts(v):return dt.datetime.strptime(v.strip(),'%Y%m%d%H%M%S %z').astimezone(UTC)
-def merge(input_dir,manifest,required,out_dir,now=None):
- now=now or dt.datetime.now(UTC);root=ET.Element('tv',{'generator-info-name':'Zayla TV maintained-site EPG merger'});channels={};rows=[];keys=set();owner={};covered=set();reports=[]
- for spec in manifest:
-  info={'source':spec['id'],'region':spec['region'],'accepted':0,'rejected':0};reports.append(info)
-  try:
-   data=(Path(input_dir)/spec['output']).read_bytes()
-   if len(data)>64*1024*1024:raise ValueError('Source exceeds 64 MiB')
-   if b'<!DOCTYPE' in data.upper() or b'<!ENTITY' in data.upper():raise ValueError('DTD/entities unsupported')
-   tree=ET.fromstring(data)
-   if tree.tag!='tv':raise ValueError('Expected XMLTV root')
-   definitions={ch.get('id'):ch for ch in tree.findall('channel') if ch.get('id') and ch.findtext('display-name')}
-   valid=[];upcoming=set()
-   for p in tree.findall('programme'):
-    try:
-     cid=p.get('channel');start=ts(p.get('start',''));stop=ts(p.get('stop',''))
-     if cid not in definitions or not p.findtext('title') or stop<=start:raise ValueError('Invalid programme')
-     valid.append((p,cid,start,stop))
-     if stop>now:upcoming.add(cid)
-    except (ValueError,TypeError):info['rejected']+=1
-   for p,cid,start,stop in valid:
-    if cid not in upcoming:continue
-    if cid in owner and owner[cid]!=spec['id']:continue # one source owns a channel's schedule
-    owner[cid]=spec['id'];channels[cid]=definitions[cid]
-    key=(cid,start,stop)
-    if key in keys:continue
-    keys.add(key);rows.append(copy.deepcopy(p));info['accepted']+=1
-   if info['accepted']:covered.add(spec['region'])
-  except (OSError,ET.ParseError,ValueError) as e:info['error']=str(e)
- missing=set(required)-covered
- report={'generated_at_utc':now.isoformat(),'channels':len(channels),'programmes':len(rows),'covered_regions':sorted(covered),'missing_regions':sorted(missing),'sources':reports}
- if missing or not rows:
-  raise ValueError('Publication stopped: missing usable future coverage '+','.join(sorted(missing))+'. '+json.dumps(report))
- for cid in sorted(channels):root.append(channels[cid])
- rows.sort(key=lambda p:(p.get('channel'),ts(p.get('start'))));root.extend(rows);ET.indent(root)
- payload=ET.tostring(root,encoding='utf-8',xml_declaration=True);ET.fromstring(payload)
- compressed=gzip.compress(payload,compresslevel=9,mtime=0)
- # Nothing is written until all validation and regional requirements pass.
- out=Path(out_dir);out.mkdir(parents=True,exist_ok=True)
- (out/'guide.xml').write_bytes(payload);(out/'guide.xml.gz').write_bytes(compressed)
- (out/'status.json').write_text(json.dumps(report,indent=2)+'\n');(out/'.nojekyll').write_text('')
- (out/'index.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><title>Zayla TV EPG</title><h1>Zayla TV EPG</h1><p><a href="guide.xml.gz">Compressed XMLTV</a> | <a href="guide.xml">XMLTV</a> | <a href="status.json">Coverage report</a></p></html>')
- return report
-if __name__=='__main__':
- print(json.dumps(merge(sys.argv[1],json.loads(Path(sys.argv[2]).read_text()),json.loads(Path(sys.argv[3]).read_text())['required_regions'],sys.argv[4]),indent=2))
+UTC = dt.timezone.utc
+
+
+def ts(v):
+    return dt.datetime.strptime(v.strip(), '%Y%m%d%H%M%S %z').astimezone(UTC)
+
+
+def region_slug(region):
+    cleaned = re.sub(r'[^a-z0-9]+', '-', str(region).strip().lower()).strip('-')
+    if not cleaned:
+        raise ValueError(f'Invalid region identifier: {region!r}')
+    return cleaned
+
+
+def _build_xmltv_payload(channels_map, rows_list):
+    root = ET.Element('tv', {'generator-info-name': 'Zayla TV maintained-site EPG merger'})
+    for cid in sorted(channels_map):
+        root.append(copy.deepcopy(channels_map[cid]))
+    ordered = sorted(rows_list, key=lambda p: (p.get('channel'), ts(p.get('start'))))
+    root.extend(ordered)
+    ET.indent(root)
+    payload = ET.tostring(root, encoding='utf-8', xml_declaration=True)
+    ET.fromstring(payload)
+    compressed = gzip.compress(payload, compresslevel=9, mtime=0)
+    return payload, compressed
+
+
+def _build_index_html(report):
+    rows_html = []
+    for region, info in sorted(report['regions'].items()):
+        kb = info['compressed_bytes'] / 1024
+        size_str = f'{kb / 1024:.2f} MB' if kb >= 1024 else f'{kb:.0f} KB'
+        rows_html.append(
+            f'<tr><td><strong>{html.escape(region)}</strong></td>'
+            f'<td><a href="{html.escape(info["file"])}">{html.escape(info["file"])}</a></td>'
+            f'<td><a href="{html.escape(info["xml_file"])}">XML</a></td>'
+            f'<td>{info["channels"]:,}</td>'
+            f'<td>{info["programmes"]:,}</td>'
+            f'<td>{size_str}</td></tr>'
+        )
+    table = (
+        '<table border="1" cellpadding="6" cellspacing="0">'
+        '<thead><tr><th>Region</th><th>Compressed XMLTV (.xml.gz)</th><th>XML</th>'
+        '<th>Channels</th><th>Programmes</th><th>Size</th></tr></thead>'
+        f'<tbody>{"".join(rows_html)}</tbody></table>'
+    )
+    return (
+        '<!doctype html><html lang="en"><meta charset="utf-8">'
+        '<title>Zayla TV EPG</title>'
+        '<h1>Zayla TV EPG</h1>'
+        f'<p>Combined guide ({report["channels"]:,} channels, {report["programmes"]:,} programmes): '
+        '<a href="guide.xml.gz">guide.xml.gz</a> | '
+        '<a href="guide.xml">guide.xml</a> | '
+        '<a href="status.json">status.json</a></p>'
+        '<h2>Per-Region EPG Files</h2>'
+        f'{table}'
+        '</html>'
+    )
+
+
+def merge(input_dir, manifest, required, out_dir, now=None):
+    now = now or dt.datetime.now(UTC)
+    channels = {}
+    rows = []
+    keys = set()
+    owner = {}
+    covered = set()
+    reports = []
+
+    # Track per-region deduplicated channels/programmes so every regional file is self-contained.
+    region_channels = {}
+    region_rows = {}
+    region_keys = {}
+    region_owner = {}
+
+    for spec in manifest:
+        region = spec['region']
+        info = {'source': spec['id'], 'region': region, 'accepted': 0, 'rejected': 0}
+        reports.append(info)
+        try:
+            data = (Path(input_dir) / spec['output']).read_bytes()
+            if len(data) > 64 * 1024 * 1024:
+                raise ValueError('Source exceeds 64 MiB')
+            if b'<!DOCTYPE' in data.upper() or b'<!ENTITY' in data.upper():
+                raise ValueError('DTD/entities unsupported')
+            tree = ET.fromstring(data)
+            if tree.tag != 'tv':
+                raise ValueError('Expected XMLTV root')
+            definitions = {
+                ch.get('id'): ch
+                for ch in tree.findall('channel')
+                if ch.get('id') and ch.findtext('display-name')
+            }
+            valid = []
+            upcoming = set()
+            for p in tree.findall('programme'):
+                try:
+                    cid = p.get('channel')
+                    start = ts(p.get('start', ''))
+                    stop = ts(p.get('stop', ''))
+                    if cid not in definitions or not p.findtext('title') or stop <= start:
+                        raise ValueError('Invalid programme')
+                    valid.append((p, cid, start, stop))
+                    if stop > now:
+                        upcoming.add(cid)
+                except (ValueError, TypeError):
+                    info['rejected'] += 1
+
+            r_ch = region_channels.setdefault(region, {})
+            r_rows = region_rows.setdefault(region, [])
+            r_keys = region_keys.setdefault(region, set())
+            r_own = region_owner.setdefault(region, {})
+
+            for p, cid, start, stop in valid:
+                if cid not in upcoming:
+                    continue
+                key = (cid, start, stop)
+
+                # Per-region self-contained schedule (first source in this region owns cid).
+                if cid not in r_own or r_own[cid] == spec['id']:
+                    r_own[cid] = spec['id']
+                    r_ch[cid] = definitions[cid]
+                    if key not in r_keys:
+                        r_keys.add(key)
+                        r_rows.append(copy.deepcopy(p))
+
+                # Global combined schedule (first source overall owns cid).
+                if cid in owner and owner[cid] != spec['id']:
+                    continue
+                owner[cid] = spec['id']
+                channels[cid] = definitions[cid]
+                if key in keys:
+                    continue
+                keys.add(key)
+                rows.append(copy.deepcopy(p))
+                info['accepted'] += 1
+
+            if info['accepted'] or r_rows:
+                if info['accepted']:
+                    covered.add(region)
+        except (OSError, ET.ParseError, ValueError) as e:
+            info['error'] = str(e)
+
+    missing = set(required) - covered
+    if missing or not rows:
+        report = {
+            'generated_at_utc': now.isoformat(),
+            'channels': len(channels),
+            'programmes': len(rows),
+            'covered_regions': sorted(covered),
+            'missing_regions': sorted(missing),
+            'sources': reports,
+        }
+        raise ValueError(
+            'Publication stopped: missing usable future coverage '
+            + ','.join(sorted(missing))
+            + '. '
+            + json.dumps(report)
+        )
+
+    # Validate & serialize combined XMLTV plus every per-region XMLTV in memory before writing.
+    payload, compressed = _build_xmltv_payload(channels, rows)
+    region_payloads = {}
+    region_report = {}
+    for region in sorted(region_rows):
+        if not region_rows[region]:
+            continue
+        slug = region_slug(region)
+        r_payload, r_compressed = _build_xmltv_payload(region_channels[region], region_rows[region])
+        region_payloads[slug] = (r_payload, r_compressed)
+        region_report[region] = {
+            'file': f'regions/{slug}.xml.gz',
+            'xml_file': f'regions/{slug}.xml',
+            'channels': len(region_channels[region]),
+            'programmes': len(region_rows[region]),
+            'compressed_bytes': len(r_compressed),
+        }
+
+    report = {
+        'generated_at_utc': now.isoformat(),
+        'channels': len(channels),
+        'programmes': len(rows),
+        'covered_regions': sorted(covered),
+        'missing_regions': sorted(missing),
+        'regions': region_report,
+        'sources': reports,
+    }
+
+    # Nothing is written until all validation and regional requirements pass.
+    out = Path(out_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    regions_dir = out / 'regions'
+    regions_dir.mkdir(parents=True, exist_ok=True)
+    expected_region_files = set()
+    for slug, (r_payload, r_compressed) in region_payloads.items():
+        xml_name = f'{slug}.xml'
+        gz_name = f'{slug}.xml.gz'
+        expected_region_files.update((xml_name, gz_name))
+        (regions_dir / xml_name).write_bytes(r_payload)
+        (regions_dir / gz_name).write_bytes(r_compressed)
+    for stale in regions_dir.iterdir():
+        if stale.is_file() and stale.name not in expected_region_files:
+            stale.unlink()
+
+    (out / 'guide.xml').write_bytes(payload)
+    (out / 'guide.xml.gz').write_bytes(compressed)
+    (out / 'status.json').write_text(json.dumps(report, indent=2) + '\n')
+    (out / '.nojekyll').write_text('')
+    (out / 'index.html').write_text(_build_index_html(report))
+    return report
+
+
+if __name__ == '__main__':
+    print(
+        json.dumps(
+            merge(
+                sys.argv[1],
+                json.loads(Path(sys.argv[2]).read_text()),
+                json.loads(Path(sys.argv[3]).read_text())['required_regions'],
+                sys.argv[4],
+            ),
+            indent=2,
+        )
+    )

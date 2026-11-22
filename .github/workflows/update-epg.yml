@@ -65,6 +65,7 @@ jobs:
           name: epg-guide
           path: |
             public/guide.xml.gz
+            public/regions/*.xml.gz
             public/status.json
           if-no-files-found: error
       - name: Save diagnostics
@@ -93,6 +94,7 @@ jobs:
           TARGET="${GDRIVE_REMOTE_PATH:-gdrive:ZaylaTV-EPG}"
           rclone --config "$RCLONE_CONFIG_FILE" copyto public/guide.xml "${TARGET}/guide.xml"
           rclone --config "$RCLONE_CONFIG_FILE" copyto public/guide.xml.gz "${TARGET}/guide.xml.gz"
+          rclone --config "$RCLONE_CONFIG_FILE" copy public/regions "${TARGET}/regions"
       - name: Check GitHub Pages configuration
         id: pages
         uses: actions/configure-pages@v5
