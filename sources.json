@@ -46,6 +46,21 @@
       "limit": 100
     },
     {
+      "id": "fr-programme-tv",
+      "region": "FR",
+      "files": [
+        "programme-tv.net/programme-tv.net.channels.xml"
+      ],
+      "countries": [
+        "fr"
+      ],
+      "languages": [
+        "fr"
+      ],
+      "limit": 129,
+      "probe_url": "https://www.programme-tv.net/programme/chaine/{date}/programme-france-2-6.html"
+    },
+    {
       "id": "fr-sfr",
       "region": "FR",
       "files": [

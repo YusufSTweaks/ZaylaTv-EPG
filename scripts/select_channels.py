@@ -24,7 +24,10 @@ def select(upstream,config,out):
   channels=channels[:limit];root=ET.Element('channels');root.extend(channels)
   name=f'{index:02d}-{source["id"]}';path=out/(name+'.channels.xml');ET.indent(root)
   path.write_bytes(ET.tostring(root,encoding='utf-8',xml_declaration=True))
-  manifest.append({'id':source['id'],'region':source['region'],'channels_file':str(path.resolve()),'output':name+'.xml','selected_channels':len(channels)})
+  entry={'id':source['id'],'region':source['region'],'channels_file':str(path.resolve()),'output':name+'.xml','selected_channels':len(channels)}
+  if 'probe_url' in source:
+   entry['probe_url']=source['probe_url']
+  manifest.append(entry)
  (out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');return manifest
 if __name__=='__main__':
  print(json.dumps(select(sys.argv[1],json.loads(Path(sys.argv[2]).read_text()),sys.argv[3]),indent=2))
