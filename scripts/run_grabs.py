@@ -10,8 +10,11 @@ from pathlib import Path
 from urllib.error import URLError
 from urllib.request import urlopen
 
+from grab_beinsports import write_guide as write_beinsports_guide
+from grab_dstv_za import write_guide as write_dstv_za_guide
 from grab_espn import write_guide as write_espn_guide
 from grab_tsn import write_guide
+from grab_tvguide import write_guide as write_tvguide_guide
 
 
 def run_grab(source, upstream, output):
@@ -44,6 +47,53 @@ def run_grab(source, upstream, output):
             return {'exit_code': 0, 'selected_channels': channels, 'stats': stats}
         except (OSError, ValueError) as error:
             message = f'Official ESPN schedule failed: {error}'
+            print(message, flush=True)
+            return {'exit_code': None, 'error': message}
+
+    if source.get('adapter') == 'tvguide':
+        try:
+            channels, programmes, stats = write_tvguide_guide(
+                output / source['output'],
+                upstream=upstream,
+                lineups=source.get('lineups'),
+                max_channels=source.get('max_channels'),
+            )
+            print(
+                f'TV Guide official multi-lineup schedule: {channels} channels and {programmes} programmes '
+                f'(deduplicated={stats["deduplicated_simulcasts"]}, skipped_junk={stats["skipped_junk"]}, '
+                f'lineup_errors={stats["lineup_errors"]})',
+                flush=True,
+            )
+            return {'exit_code': 0, 'selected_channels': channels, 'stats': stats}
+        except (OSError, ValueError) as error:
+            message = f'Official TV Guide schedule failed: {error}'
+            print(message, flush=True)
+            return {'exit_code': None, 'error': message}
+
+    if source.get('adapter') == 'dstv_za':
+        try:
+            channels, programmes = write_dstv_za_guide(
+                output / source['output'],
+                upstream=upstream,
+            )
+            print(f'DStv South Africa official schedule: {channels} channels and {programmes} programmes', flush=True)
+            return {'exit_code': 0, 'selected_channels': channels}
+        except (OSError, ValueError) as error:
+            message = f'Official DStv ZA schedule failed: {error}'
+            print(message, flush=True)
+            return {'exit_code': None, 'error': message}
+
+    if source.get('adapter') == 'beinsports':
+        try:
+            channels, programmes = write_beinsports_guide(
+                output / source['output'],
+                upstream=upstream,
+                regions=source.get('regions'),
+            )
+            print(f'beIN SPORTS official schedule ({source["id"]}): {channels} channels and {programmes} programmes', flush=True)
+            return {'exit_code': 0, 'selected_channels': channels}
+        except (OSError, ValueError) as error:
+            message = f'Official beIN SPORTS schedule failed: {error}'
             print(message, flush=True)
             return {'exit_code': None, 'error': message}
 
