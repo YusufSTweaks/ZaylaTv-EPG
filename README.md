@@ -1,8 +1,8 @@
 # ZaylaTv multi-region electronic programme guide
 
-GitHub Actions downloads schedules from maintained iptv-org/epg adapters, validates future coverage, and publishes XMLTV to GitHub Pages when Pages is configured. The validated guide and coverage report are also available as an Actions artifact.
+GitHub Actions downloads schedules from maintained iptv-org/epg adapters and official JSON APIs, validates future coverage, and publishes both **per-region XMLTV files** (`regions/<region>.xml.gz`, e.g. `regions/us.xml.gz`, `regions/ca.xml.gz`, `regions/uk.xml.gz`, `regions/fr.xml.gz`, `regions/mena.xml.gz`, `regions/za.xml.gz`, `regions/fast.xml.gz`) and a combined `guide.xml.gz` to GitHub Pages. All validated guides and the coverage report are also saved in the `epg-guide` Actions artifact.
 
-The published [coverage report](https://yusufstweaks.github.io/ZaylaTv-EPG/status.json) shows how many channels and programmes passed validation.
+The published [index page](https://yusufstweaks.github.io/ZaylaTv-EPG/) and [coverage report](https://yusufstweaks.github.io/ZaylaTv-EPG/status.json) list every per-region file URL along with channel counts, programme counts, and compressed sizes.
 
 ## Regional selection
 
