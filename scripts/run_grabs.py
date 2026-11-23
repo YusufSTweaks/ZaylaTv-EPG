@@ -8,7 +8,7 @@ import sys
 import threading
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.error import URLError
 from urllib.request import urlopen
@@ -19,6 +19,28 @@ from grab_espn import write_guide as write_espn_guide
 from grab_fast import write_guide as write_fast_guide
 from grab_tsn import write_guide
 from grab_tvguide import write_guide as write_tvguide_guide
+
+
+WESTERN_REGION_OFFSETS = {
+    'US': -8,
+    'CA': -8,
+    'MX': -6,
+    'BR': -6,
+    'LATAM': -6,
+}
+
+
+def grab_start_date(source, now=None):
+    """Return the local calendar date (YYYY-MM-DD) for an iptv-org grabber.
+
+    GitHub Actions runs in UTC. Without CURR_DATE, Western Hemisphere grabbers
+    (tvpassport, tvhebdo, ontvtonight, mi.tv, gatotv) roll over to tomorrow's
+    date at 00:00 UTC (7 PM EST / 4 PM PST), leaving an evening blackout until
+    local midnight (04:00-08:00 UTC).
+    """
+    now_utc = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
+    offset_hours = WESTERN_REGION_OFFSETS.get(source.get('region'), 0)
+    return (now_utc + timedelta(hours=offset_hours)).date().isoformat()
 
 
 def run_grab(source, upstream, output):
@@ -124,11 +146,11 @@ def run_grab(source, upstream, output):
     if not source['selected_channels']:
         return {'exit_code': None, 'error': 'No channels selected'}
 
+    curr_date = grab_start_date(source)
     probe_url = source.get('probe_url')
     if probe_url:
-        date = datetime.now(timezone.utc).date().isoformat()
         try:
-            with urlopen(probe_url.format(date=date), timeout=15):
+            with urlopen(probe_url.format(date=curr_date), timeout=15):
                 pass
         except (URLError, TimeoutError) as error:
             message = f'Public schedule probe failed: {error}'
@@ -140,8 +162,10 @@ def run_grab(source, upstream, output):
         '--days=2', '--timeout=15000', '--maxConnections=2',
         f"--output={output / source['output']}",
     ]
+    env = os.environ.copy()
+    env['CURR_DATE'] = curr_date
     try:
-        process = subprocess.Popen(command, cwd=upstream, start_new_session=True)
+        process = subprocess.Popen(command, cwd=upstream, env=env, start_new_session=True)
         try:
             return {'exit_code': process.wait(timeout=600)}
         except subprocess.TimeoutExpired:

@@ -353,4 +353,29 @@ class OfficialAdapterTests(unittest.TestCase):
    self.assertEqual([r['id'] for r in res],['first','second'])
    saved=json.loads((p/'out/grab-results.json').read_text())
    self.assertEqual([r['id'] for r in saved],['first','second'])
+ def test_western_hemisphere_grab_start_date(self):
+  from run_grabs import grab_start_date,run_grab
+  evening_utc=dt.datetime(2026,11,23,3,30,tzinfo=dt.timezone.utc)
+  self.assertEqual(grab_start_date({'region':'CA'},now=evening_utc),'2026-11-22')
+  self.assertEqual(grab_start_date({'region':'US'},now=evening_utc),'2026-11-22')
+  self.assertEqual(grab_start_date({'region':'BR'},now=evening_utc),'2026-11-22')
+  self.assertEqual(grab_start_date({'region':'MX'},now=evening_utc),'2026-11-22')
+  self.assertEqual(grab_start_date({'region':'LATAM'},now=evening_utc),'2026-11-22')
+  self.assertEqual(grab_start_date({'region':'FR'},now=evening_utc),'2026-11-23')
+  daytime_utc=dt.datetime(2026,11,23,14,0,tzinfo=dt.timezone.utc)
+  self.assertEqual(grab_start_date({'region':'CA'},now=daytime_utc),'2026-11-23')
+  captured={}
+  class FakeProc:
+   pid=12345
+   def wait(self,timeout=None):return 0
+  def fake_popen(cmd,cwd=None,env=None,start_new_session=False):
+   captured['env']=env
+   return FakeProc()
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   src={'id':'ca-tvpassport','region':'CA','channels_file':'ca.xml','output':'ca.xml','selected_channels':5}
+   with patch('run_grabs.grab_start_date',return_value='2026-11-22'),patch('run_grabs.subprocess.Popen',side_effect=fake_popen):
+    res=run_grab(src,p,p)
+   self.assertEqual(res['exit_code'],0)
+   self.assertEqual(captured['env']['CURR_DATE'],'2026-11-22')
 if __name__=='__main__':unittest.main()
