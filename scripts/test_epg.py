@@ -361,7 +361,10 @@ class OfficialAdapterTests(unittest.TestCase):
   self.assertEqual(grab_start_date({'region':'BR'},now=evening_utc),'2026-11-22')
   self.assertEqual(grab_start_date({'region':'MX'},now=evening_utc),'2026-11-22')
   self.assertEqual(grab_start_date({'region':'LATAM'},now=evening_utc),'2026-11-22')
-  self.assertEqual(grab_start_date({'region':'FR'},now=evening_utc),'2026-11-23')
+  self.assertEqual(grab_start_date({'region':'FR'},now=evening_utc),'2026-11-22')
+  after_ny_midnight=dt.datetime(2026,11,23,5,30,tzinfo=dt.timezone.utc)
+  self.assertEqual(grab_start_date({'region':'FR'},now=after_ny_midnight),'2026-11-23')
+  self.assertEqual(grab_start_date({'region':'CA'},now=after_ny_midnight),'2026-11-22')
   daytime_utc=dt.datetime(2026,11,23,14,0,tzinfo=dt.timezone.utc)
   self.assertEqual(grab_start_date({'region':'CA'},now=daytime_utc),'2026-11-23')
   captured={}

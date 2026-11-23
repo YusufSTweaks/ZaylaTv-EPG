@@ -21,6 +21,10 @@ from grab_tsn import write_guide
 from grab_tvguide import write_guide as write_tvguide_guide
 
 
+from zoneinfo import ZoneInfo
+
+
+EASTERN_TZ = ZoneInfo('America/New_York')
 WESTERN_REGION_OFFSETS = {
     'US': -8,
     'CA': -8,
@@ -31,16 +35,18 @@ WESTERN_REGION_OFFSETS = {
 
 
 def grab_start_date(source, now=None):
-    """Return the local calendar date (YYYY-MM-DD) for an iptv-org grabber.
+    """Return the calendar date (YYYY-MM-DD) for an iptv-org grabber.
 
-    GitHub Actions runs in UTC. Without CURR_DATE, Western Hemisphere grabbers
-    (tvpassport, tvhebdo, ontvtonight, mi.tv, gatotv) roll over to tomorrow's
-    date at 00:00 UTC (7 PM EST / 4 PM PST), leaving an evening blackout until
-    local midnight (04:00-08:00 UTC).
+    The Zayla TV app converts all guide listings (including France and Europe)
+    to Eastern NY time (America/New_York) by default. Anchor non-Pacific/Central
+    regions to America/New_York so no feed rolls over to tomorrow's date before
+    midnight Eastern time.
     """
     now_utc = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
-    offset_hours = WESTERN_REGION_OFFSETS.get(source.get('region'), 0)
-    return (now_utc + timedelta(hours=offset_hours)).date().isoformat()
+    offset_hours = WESTERN_REGION_OFFSETS.get(source.get('region'))
+    if offset_hours is not None:
+        return (now_utc + timedelta(hours=offset_hours)).date().isoformat()
+    return now_utc.astimezone(EASTERN_TZ).date().isoformat()
 
 
 def run_grab(source, upstream, output):
