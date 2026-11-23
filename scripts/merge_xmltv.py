@@ -69,6 +69,49 @@ def add_channel_aliases(channels, aliases):
     return updated, added
 
 
+_QUALITY = re.compile(r'\b(?:u?hd|fhd|sd|4k|8k|hevc|h265|1080p|720p)\b', re.I)
+_PROVIDER_ID = re.compile(r'^[a-z][a-z0-9]{1,39}\.[a-z]{2}$')
+
+
+def provider_slug(name):
+    folded = normalize('NFKD', name).encode('ascii', 'ignore').decode().lower()
+    folded = folded.replace('&', 'and').replace('+', 'plus')
+    return re.sub(r'[^a-z0-9]', '', folded)
+
+
+def id_country(channel_id):
+    match = re.search(r'\.([A-Za-z]{2})$', channel_id.split('@', 1)[0])
+    return match.group(1).lower() if match else None
+
+
+def derive_provider_id_aliases(channels):
+    """IPTV providers usually send tvg-ids as slug(name).cc (wdr.de, kabel1.de).
+
+    Derive that form from each display name and keep only aliases that point to
+    exactly one channel across the whole guide and do not shadow an existing
+    channel ID base. The app resolves these with a single dictionary lookup.
+    """
+    bases = {cid.split('@', 1)[0].lower() for cid in channels}
+    owners = defaultdict(set)
+    for cid, channel in channels.items():
+        country = id_country(cid)
+        if not country:
+            continue
+        for node in channel.findall('display-name'):
+            text = (node.text or '').strip()
+            if not text or _PROVIDER_ID.match(text.lower()):
+                continue
+            for variant in {text, _QUALITY.sub(' ', text)}:
+                alias = f'{provider_slug(variant)}.{country}'
+                if _PROVIDER_ID.match(alias) and alias not in bases:
+                    owners[alias].add(cid)
+    derived = defaultdict(list)
+    for alias, ids in sorted(owners.items()):
+        if len(ids) == 1:
+            derived[next(iter(ids))].append(alias)
+    return dict(derived)
+
+
 def _build_index_html(report):
     rows_html = []
     for region, info in sorted(report['regions'].items()):
@@ -204,11 +247,22 @@ def merge(input_dir, manifest, required, out_dir, now=None, aliases_by_region=No
         )
 
     # Validate & serialize combined XMLTV plus every per-region XMLTV in memory before writing.
+    # Curated aliases win; derived provider-style IDs never reuse a curated value.
+    curated_values = {
+        normalize('NFKC', value).strip().casefold()
+        for aliases in aliases_by_region.values() for names in aliases.values() for value in names
+    }
+    derived = {
+        cid: [a for a in values if a not in curated_values]
+        for cid, values in derive_provider_id_aliases(channels).items()
+    }
     combined_aliases = defaultdict(list)
     for region, aliases in aliases_by_region.items():
         for channel_id, names in aliases.items():
             if channel_id in region_channels.get(region, {}):
                 combined_aliases[channel_id].extend(names)
+    for channel_id, names in derived.items():
+        combined_aliases[channel_id].extend(names)
     aliased_channels, combined_alias_count = add_channel_aliases(channels, combined_aliases)
     payload, compressed = _build_xmltv_payload(aliased_channels, rows)
     region_payloads = {}
@@ -217,7 +271,12 @@ def merge(input_dir, manifest, required, out_dir, now=None, aliases_by_region=No
         if not region_rows[region]:
             continue
         slug = region_slug(region)
-        r_channels, alias_count = add_channel_aliases(region_channels[region], aliases_by_region.get(region, {}))
+        r_aliases = defaultdict(list)
+        for channel_id, names in aliases_by_region.get(region, {}).items():
+            r_aliases[channel_id].extend(names)
+        for channel_id in region_channels[region]:
+            r_aliases[channel_id].extend(derived.get(channel_id, []))
+        r_channels, alias_count = add_channel_aliases(region_channels[region], r_aliases)
         r_payload, r_compressed = _build_xmltv_payload(r_channels, region_rows[region])
         region_payloads[slug] = (r_payload, r_compressed)
         region_report[region] = {

@@ -8,14 +8,36 @@
     ]
   },
   "CA": {
+    "AECanada.ca@HD": [
+      "aande.ca"
+    ],
+    "AMCCanada.ca@HD": [
+      "amc.ca"
+    ],
+    "AssembleenationaleduQuebec.ca@SD": [
+      "assembleenationale.ca"
+    ],
+    "BNNBloomberg.ca@SD": [
+      "bnn.ca"
+    ],
     "CBATDT.ca@SD": [
       "cbcfredericton.ca"
+    ],
+    "CBCCBKTReginaSK.ca@HD": [
+      "cbcregina.ca"
     ],
     "CBCNewsNetwork.ca@SD": [
       "cbcnews.ca"
     ],
     "CBETDT.ca@SD": [
       "cbcwindsor.ca"
+    ],
+    "CBFTDT.ca@SD": [
+      "iciradiocanadamontreal.ca",
+      "icitelevisionmontreal.ca",
+      "ICI Télé",
+      "ICI Télé Montréal",
+      "ICI Radio-Canada Télé Montréal"
     ],
     "CBHTDT.ca@SD": [
       "cbchalifax.ca"
@@ -32,6 +54,10 @@
     "CBRTDT.ca@SD": [
       "cbccalgary.ca"
     ],
+    "CBUFTDT.ca@SD": [
+      "ICI Radio-Canada Télé Vancouver",
+      "ICI Télé Vancouver"
+    ],
     "CBUTDT.ca@SD": [
       "cbcvancouver.ca"
     ],
@@ -41,8 +67,85 @@
     "CBXTDT.ca@SD": [
       "cbcedmonton.ca"
     ],
+    "CFMTDT.ca@SD": [
+      "omni1.ca",
+      "OMNI 1"
+    ],
+    "CFTMDT.ca@SD": [
+      "tva.ca",
+      "TVA Montréal"
+    ],
+    "CHANDT1.ca@SD": [
+      "globalbc.ca",
+      "Global Vancouver"
+    ],
+    "CHCHDT.ca@SD": [
+      "chch.ca"
+    ],
+    "CHEK.ca@SD": [
+      "chekvancouverisland.ca",
+      "CHEK TV"
+    ],
+    "CHEXDT.ca@SD": [
+      "Global Peterborough"
+    ],
+    "CHLFTV.ca@SD": [
+      "tfo.ca"
+    ],
+    "CHOTDT.ca@SD": [
+      "TVA Hull",
+      "TVA Gatineau"
+    ],
+    "CICADT.ca@SD": [
+      "tvo.ca",
+      "TVO"
+    ],
+    "CIHFDT.ca@SD": [
+      "hlobalhalifaxCIHF.ca",
+      "Global Halifax"
+    ],
+    "CITSDT.ca@SD": [
+      "yestv.ca",
+      "Yes TV"
+    ],
+    "CITYCalgaryAB.ca@HD": [
+      "citytvcalgary.ca"
+    ],
+    "CITYMontrealQC.ca@HD": [
+      "citytvmontrealqc.ca"
+    ],
+    "CITYTorontoON.ca@HD": [
+      "citytvtoronto.ca"
+    ],
+    "CITYVancouverBC.ca@HD": [
+      "citytvvancouverqc.ca"
+    ],
+    "CITYWinnipegMB.ca@HD": [
+      "citytvwinnipeg.ca"
+    ],
+    "CIVMDT.ca@SD": [
+      "telequebec.ca",
+      "Télé-Québec"
+    ],
     "CIVTDT.ca@SD": [
       "ctvvancouver.ca"
+    ],
+    "CJONDT.ca@SD": [
+      "ntvcjon.ca",
+      "NTV St. John's"
+    ],
+    "CKCWDT.ca@SD": [
+      "CTV2 Atlantic"
+    ],
+    "CKMIDT1.ca@SD": [
+      "globalmontreal.ca",
+      "Global Montreal"
+    ],
+    "CP24.ca@SD": [
+      "cp24.ca"
+    ],
+    "CPACEnglish.ca@SD": [
+      "cpac.ca"
     ],
     "CTV.ca@CJOHDT": [
       "ctvottawa.ca"
@@ -52,6 +155,9 @@
     ],
     "CTV2BarrieONCKVR.ca@HD": [
       "ctv2barrie.ca"
+    ],
+    "CTV2CIVIDT2VancouverBC.ca@SD": [
+      "ctv2vancouver.ca"
     ],
     "CTV2LondonON.ca@HD": [
       "ctv2london.ca"
@@ -76,6 +182,9 @@
     ],
     "CTVCHBXSaultSteMarieON.ca@HD": [
       "ctvsaultstemarie.ca"
+    ],
+    "CTVCICCYorktonSK.ca@SD": [
+      "ctvyorkton.ca"
     ],
     "CTVCICISudburyON.ca@HD": [
       "ctvsudbury.ca"
@@ -104,6 +213,103 @@
     "CTVNewsChannel.ca@SD": [
       "ctvnews.ca"
     ],
+    "CTVSciFi.ca@HD": [
+      "space.ca"
+    ],
+    "Casa.ca@SD": [
+      "casatv.ca"
+    ],
+    "CrimePlusInvestigation.ca@SD": [
+      "crimeinvestigation.ca"
+    ],
+    "E.ca@SD": [
+      "eentertainment.ca"
+    ],
+    "Evasion.ca@SD": [
+      "canalevasion.ca"
+    ],
+    "FairchildTV1.ca@East": [
+      "fairchild.ca"
+    ],
+    "FairchildTV2.ca@SD": [
+      "fairchild2.ca"
+    ],
+    "FoodNetwork.ca@SD": [
+      "flavournetwork.ca",
+      "Food Network Canada"
+    ],
+    "GlobalCFREReginaSK.ca@HD": [
+      "globalregina.ca"
+    ],
+    "GlobalCHEXTV2DurhamON.ca@HD": [
+      "globaldurham.ca"
+    ],
+    "GlobalCICTCalgaryAB.ca@HD": [
+      "globalcalgary.ca"
+    ],
+    "GlobalCIIIDT41Toronto.ca@HD": [
+      "globaltoronto.ca"
+    ],
+    "GlobalCITVEdmontonAB.ca@HD": [
+      "globaledmonton.ca"
+    ],
+    "HBO1.ca@SD": [
+      "hbo.ca",
+      "HBO 1"
+    ],
+    "History.ca@SD": [
+      "historychannel.ca"
+    ],
+    "ICITelevisionQuebec.ca@HD": [
+      "ICI Télé Québec",
+      "ICI Radio-Canada Télé Québec"
+    ],
+    "IciARTV.ca@SD": [
+      "artv.ca",
+      "ICI ARTV"
+    ],
+    "IciExplora.ca@SD": [
+      "explora.ca",
+      "ICI Explora"
+    ],
+    "IciRDI.ca@SD": [
+      "rdinews.ca",
+      "ICI RDI"
+    ],
+    "IciRadioCanadaTele.ca@CBOFTDT": [
+      "ICI Radio-Canada Télé Ottawa",
+      "ICI Télé Ottawa-Gatineau"
+    ],
+    "LCN.ca@SD": [
+      "nouvelles.ca"
+    ],
+    "Lifetime.ca@SD": [
+      "lifetimetv.ca"
+    ],
+    "MagnoliaNetworkCanada.ca@SD": [
+      "magnolianetwork.ca"
+    ],
+    "Much.ca@SD": [
+      "muchmusic.ca"
+    ],
+    "NBATVCanada.ca@SD": [
+      "nbatv.ca"
+    ],
+    "NationalGeographic.ca@SD": [
+      "natgeo.ca"
+    ],
+    "NationalGeographicWild.ca@SD": [
+      "natgeowild.ca"
+    ],
+    "NoovoCFJPMontrealQC.ca@HD": [
+      "cfjpmontreal.ca"
+    ],
+    "PeachtreeTVCanada.ca@HD": [
+      "peachtree.ca"
+    ],
+    "SaisonsCanada.ca@SD": [
+      "Seasons"
+    ],
     "Sportsnet.ca@East": [
       "sportsneteast.ca"
     ],
@@ -115,6 +321,60 @@
     ],
     "Sportsnet.ca@West": [
       "sportsnetwest.ca"
+    ],
+    "SuperChannelHeartHome.ca@HD": [
+      "superchannelheartandhome.ca"
+    ],
+    "SuperEcran1.ca@SD": [
+      "superecran.ca"
+    ],
+    "TLCCanada.ca@HD": [
+      "tlc.ca"
+    ],
+    "TPlusE.ca@SD": [
+      "travelxp.ca"
+    ],
+    "TSC.ca@SD": [
+      "theshoppingchannel.ca"
+    ],
+    "TV5QuebecCanada.ca@SD": [
+      "tv5.ca",
+      "TV5 Québec"
+    ],
+    "TVACFCMQuebec.ca@HD": [
+      "TVA Québec City"
+    ],
+    "TVPassport.24": [
+      "Global News Kingston",
+      "Global Kingston"
+    ],
+    "TheWeatherNetwork.ca@SD": [
+      "The Weather Network",
+      "Weather Network Montreal"
+    ],
+    "TreehouseTV.ca@SD": [
+      "treehouse.ca"
+    ],
+    "Unis.ca@SD": [
+      "unistv.ca",
+      "Unis TV"
+    ],
+    "VisionTV.ca@SD": [
+      "vision.ca"
+    ],
+    "WildTV.ca@SD": [
+      "wild.ca"
+    ],
+    "YTV.ca@East": [
+      "ytvwest.ca",
+      "YTV East",
+      "YTV West"
+    ],
+    "Z.ca@SD": [
+      "Z Télé"
+    ],
+    "ZeeTVCanada.ca@HD": [
+      "zeetv.ca"
     ]
   },
   "DE": {
@@ -162,12 +422,12 @@
       "bbcworldnews.us",
       "bbcworldnewsnorthamerica.us"
     ],
+    "ESPNU.us@SD": [
+      "ESPNU College Sports"
+    ],
     "ESPNews.us@SD": [
       "ESPN News",
       "espnnews.us"
-    ],
-    "ESPNU.us@SD": [
-      "ESPNU College Sports"
     ],
     "HBO2.us@East": [
       "HBO 2",
