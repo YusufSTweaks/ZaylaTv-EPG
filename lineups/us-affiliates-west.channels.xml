@@ -379,4 +379,8 @@
   <channel site="tvpassport.com" site_id="uni-ktvw-phoenix-az-hd/7640" lang="en" xmltv_id="KTVW.us@HD">UNI (KTVW) Phoenix, AZ HD</channel>
   <channel site="tvpassport.com" site_id="uni-kwex-san-antonio-tx-hd/9763" lang="en" xmltv_id="KWEX.us@HD">UNI (KWEX) San Antonio, TX HD</channel>
   <channel site="tvpassport.com" site_id="uni-kxln-houston-tx-hd/7905" lang="en" xmltv_id="KXLN.us@HD">UNI (KXLN) Houston, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kob-albuquerque-nm-hd/5108" lang="en" xmltv_id="KOBDT1.us@SD">NBC (KOB) Albuquerque, NM HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kgw-portland-or-hd/3729" lang="en" xmltv_id="KGWDT1.us@SD">NBC (KGW) Portland, OR HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksl-salt-lake-city-ut-hd/4462" lang="en" xmltv_id="KSLDT1.us@SD">NBC (KSL) Salt Lake City, UT HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-khq-spokane-wa-hd/6270" lang="en" xmltv_id="KHQDT1.us@SD">NBC (KHQ) Spokane, WA HD</channel>
 </channels>

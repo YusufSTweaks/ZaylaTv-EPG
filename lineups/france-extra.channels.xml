@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="programme-tv.net" site_id="canalplus-cinema-35" lang="fr" xmltv_id="CanalPlusCinema.fr@SD">Canal+ Cinéma</channel>
+  <channel site="programme-tv.net" site_id="cineplus-famiz-46" lang="fr" xmltv_id="CinePlusFamiz.fr@SD">Ciné+ Famiz</channel>
+  <channel site="programme-tv.net" site_id="rmc-life-206" lang="fr" xmltv_id="RMCLife.fr@SD">RMC Life</channel>
+  <channel site="programme-tv.net" site_id="cartoonito-11510" lang="fr" xmltv_id="CartoonitoFrance.fr@SD">Cartoonito</channel>
+  <channel site="programme-tv.net" site_id="discovery-investigation-488" lang="fr" xmltv_id="DiscoveryInvestigationFrance.fr@SD">Discovery Investigation</channel>
+  <channel site="programme-tv.net" site_id="canalplus-live-1-10503" lang="fr" xmltv_id="CanalPlusLive1.fr@SD">Canal+ Live 1</channel>
+  <channel site="programme-tv.net" site_id="canalplus-live-2-10507" lang="fr" xmltv_id="CanalPlusLive2.fr@SD">Canal+ Live 2</channel>
+  <channel site="programme-tv.net" site_id="canalplus-live-3-10505" lang="fr" xmltv_id="CanalPlusLive3.fr@SD">Canal+ Live 3</channel>
+  <channel site="programme-tv.net" site_id="olympia-tv-479" lang="fr" xmltv_id="OlympiaTV.fr@SD">Olympia TV</channel>
+  <channel site="programme-tv.net" site_id="moselle-tv-239" lang="fr" xmltv_id="MoselleTV.fr@SD">Moselle TV</channel>
+  <channel site="programme-tv.net" site_id="rt-france-480" lang="fr" xmltv_id="RTFrance.fr@SD">RT France</channel>
+  <channel site="programme-tv.net" site_id="gong-355" lang="fr" xmltv_id="Gong.fr@SD">Gong</channel>
+  <channel site="programme-tv.net" site_id="tebesud-5505" lang="fr" xmltv_id="TebeSud.fr@SD">TébéSud</channel>
+  <channel site="programme-tv.net" site_id="ab-3-138" lang="fr" xmltv_id="AB3.be@SD">AB 3</channel>
+  <channel site="programme-tv.net" site_id="mcm-87" lang="fr" xmltv_id="MCM.fr@SD">MCM</channel>
+  <channel site="programme-tv.net" site_id="nautical-channel-109" lang="fr" xmltv_id="NauticalChannel.it@SD">Nautical Channel</channel>
+  <channel site="programme-tv.net" site_id="baby-tv-229" lang="fr" xmltv_id="BabyTV.uk@UK">Baby TV</channel>
+</channels>

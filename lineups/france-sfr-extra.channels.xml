@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="tv.sfr.fr" site_id="4071" lang="fr" xmltv_id="CanalPlusLive4.fr@SD">CANAL+LIVE 4</channel>
+  <channel site="tv.sfr.fr" site_id="4072" lang="fr" xmltv_id="CanalPlusLive5.fr@SD">CANAL+LIVE 5</channel>
+  <channel site="tv.sfr.fr" site_id="4073" lang="fr" xmltv_id="CanalPlusLive6.fr@SD">CANAL+LIVE 6</channel>
+  <channel site="tv.sfr.fr" site_id="4074" lang="fr" xmltv_id="CanalPlusLive7.fr@SD">CANAL+LIVE 7</channel>
+  <channel site="tv.sfr.fr" site_id="1928" lang="fr" xmltv_id="France3Centre.fr@SD">France 3 Centre</channel>
+  <channel site="tv.sfr.fr" site_id="3949" lang="fr" xmltv_id="RMCAlerteSecours.fr@SD">RMC Alerte Secours</channel>
+  <channel site="tv.sfr.fr" site_id="3950" lang="fr" xmltv_id="RMCWOW.fr@SD">RMC WOW</channel>
+  <channel site="tv.sfr.fr" site_id="809" lang="fr" xmltv_id="Weo.fr@SD">Wéo TV</channel>
+  <channel site="tv.sfr.fr" site_id="2013" lang="fr" xmltv_id="PublicSenat2424.fr@SD">Public Sénat 24/24</channel>
+</channels>

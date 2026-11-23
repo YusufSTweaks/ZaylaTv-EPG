@@ -461,4 +461,13 @@
   <channel site="tvpassport.com" site_id="uni-wltv-miami-fl-hd/16257" lang="en" xmltv_id="WLTV.us@HD">UNI (WLTV) Miami, FL HD</channel>
   <channel site="tvpassport.com" site_id="uni-wuvg-atlanta-ga-hd/13593" lang="en" xmltv_id="WUVG.us@HD">UNI (WUVG) Atlanta, GA HD</channel>
   <channel site="tvpassport.com" site_id="uni-wxtv-teaneck-nj-hd/7305" lang="en" xmltv_id="WXTV.us@HD">UNI (WXTV) Teaneck, NJ HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-wwl-new-orleans-la-hd/6732" lang="en" xmltv_id="WWLDT1.us@SD">CBS (WWL) New Orleans, LA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-wjz-baltimore-md-hd/6899" lang="en" xmltv_id="WJZDT1.us@SD">CBS (WJZ) Baltimore, MD HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-wwj-detroit-mi-hd/2812" lang="en" xmltv_id="WWJDT1.us@SD">CBS (WWJ) Detroit, MI HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-whp-harrisburg-pa-hd/6720" lang="en" xmltv_id="WHPDT1.us@SD">CBS (WHP) Harrisburg, PA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kyw-philadelphia-pa-hd/8660" lang="en" xmltv_id="KYWDT1.us@SD">CBS (KYW) Philadelphia, PA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-who-des-moines-ia-hd/6388" lang="en" xmltv_id="WHODT1.us@SD">NBC (WHO) Des Moines, IA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-wis-columbia-sc-hd/4763" lang="en" xmltv_id="WISDT1.us@SD">NBC (WIS) Columbia, SC HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-wmc-memphis-tn-hd/7871" lang="en" xmltv_id="WMCDT1.us@SD">NBC (WMC) Memphis, TN HD</channel>
+  <channel site="tvpassport.com" site_id="fox-wjw-cleveland-oh-hd/3679" lang="en" xmltv_id="WJWDT1.us@SD">FOX (WJW) Cleveland, OH HD</channel>
 </channels>
