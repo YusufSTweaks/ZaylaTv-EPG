@@ -6,6 +6,8 @@ The published [index page](https://yusufstweaks.github.io/ZaylaTv-EPG/) and [cov
 
 ## Regional selection
 
+The publisher adds verified, public station ID aliases from `lineups/channel-id-aliases.json` as extra XMLTV display names. Each alias applies to its configured region and an existing guide channel with usable listings. The original channel ID, display name, and programme references stay intact. The coverage report records the number of aliases added. Keep aliases specific to the station or edition, and use public identifiers only.
+
 Edit `sources.json` before running if you want different regions or channels:
 
 | Selection | Maintained source | Maximum | Selected / behavior |

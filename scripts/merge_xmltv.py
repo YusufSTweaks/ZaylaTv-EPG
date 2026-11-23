@@ -1,6 +1,8 @@
 """Validate and merge actual XMLTV programme data into combined and per-region feeds."""
 import copy, datetime as dt, gzip, html, json, re, sys, xml.etree.ElementTree as ET
+from collections import defaultdict
 from pathlib import Path
+from unicodedata import normalize
 
 UTC = dt.timezone.utc
 
@@ -27,6 +29,41 @@ def _build_xmltv_payload(channels_map, rows_list):
     ET.fromstring(payload)
     compressed = gzip.compress(payload, compresslevel=9, mtime=0)
     return payload, compressed
+
+
+def add_channel_aliases(channels, aliases):
+    """Append unambiguous names without replacing the source label or guide ID."""
+    def key(value):
+        return normalize('NFKC', value).strip().casefold()
+
+    owners = defaultdict(set)
+    existing_names = {}
+    for channel_id, channel in channels.items():
+        names = {key(n.text) for n in channel.findall('display-name') if n.text}
+        existing_names[channel_id] = names
+        for name in names | {key(channel_id)}:
+            owners[name].add(channel_id)
+    for channel_id, values in aliases.items():
+        if channel_id in channels:
+            for value in values:
+                owners[key(value)].add(channel_id)
+
+    updated = dict(channels)
+    added = 0
+    for channel_id, values in aliases.items():
+        if channel_id not in channels:
+            continue
+        names = existing_names[channel_id]
+        for value in values:
+            folded = key(value)
+            if not folded or folded in names or owners[folded] != {channel_id}:
+                continue
+            if updated[channel_id] is channels[channel_id]:
+                updated[channel_id] = copy.deepcopy(channels[channel_id])
+            ET.SubElement(updated[channel_id], 'display-name').text = value
+            names.add(folded)
+            added += 1
+    return updated, added
 
 
 def _build_index_html(report):
@@ -62,8 +99,9 @@ def _build_index_html(report):
     )
 
 
-def merge(input_dir, manifest, required, out_dir, now=None):
+def merge(input_dir, manifest, required, out_dir, now=None, aliases_by_region=None):
     now = now or dt.datetime.now(UTC)
+    aliases_by_region = aliases_by_region or {}
     channels = {}
     rows = []
     keys = set()
@@ -163,19 +201,27 @@ def merge(input_dir, manifest, required, out_dir, now=None):
         )
 
     # Validate & serialize combined XMLTV plus every per-region XMLTV in memory before writing.
-    payload, compressed = _build_xmltv_payload(channels, rows)
+    combined_aliases = defaultdict(list)
+    for region, aliases in aliases_by_region.items():
+        for channel_id, names in aliases.items():
+            if channel_id in region_channels.get(region, {}):
+                combined_aliases[channel_id].extend(names)
+    aliased_channels, combined_alias_count = add_channel_aliases(channels, combined_aliases)
+    payload, compressed = _build_xmltv_payload(aliased_channels, rows)
     region_payloads = {}
     region_report = {}
     for region in sorted(region_rows):
         if not region_rows[region]:
             continue
         slug = region_slug(region)
-        r_payload, r_compressed = _build_xmltv_payload(region_channels[region], region_rows[region])
+        r_channels, alias_count = add_channel_aliases(region_channels[region], aliases_by_region.get(region, {}))
+        r_payload, r_compressed = _build_xmltv_payload(r_channels, region_rows[region])
         region_payloads[slug] = (r_payload, r_compressed)
         region_report[region] = {
             'file': f'regions/{slug}.xml.gz',
             'xml_file': f'regions/{slug}.xml',
             'channels': len(region_channels[region]),
+            'channel_aliases_added': alias_count,
             'programmes': len(region_rows[region]),
             'compressed_bytes': len(r_compressed),
         }
@@ -184,6 +230,7 @@ def merge(input_dir, manifest, required, out_dir, now=None):
         'generated_at_utc': now.isoformat(),
         'channels': len(channels),
         'programmes': len(rows),
+        'channel_aliases_added': combined_alias_count,
         'covered_regions': sorted(covered),
         'missing_regions': sorted(missing),
         'regions': region_report,
@@ -215,13 +262,18 @@ def merge(input_dir, manifest, required, out_dir, now=None):
 
 
 if __name__ == '__main__':
+    config_path = Path(sys.argv[3])
+    config = json.loads(config_path.read_text())
+    alias_path = config.get('channel_id_aliases')
+    aliases = json.loads((config_path.parent / alias_path).read_text()) if alias_path else {}
     print(
         json.dumps(
             merge(
                 sys.argv[1],
                 json.loads(Path(sys.argv[2]).read_text()),
-                json.loads(Path(sys.argv[3]).read_text())['required_regions'],
+                config['required_regions'],
                 sys.argv[4],
+                aliases_by_region=aliases,
             ),
             indent=2,
         )

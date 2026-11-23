@@ -1,0 +1,138 @@
+{
+  "BR": {
+    "TVGloboRiodeJaneiro.br@SD": [
+      "globorj.br"
+    ],
+    "TVGloboSaoPaulo.br@SD": [
+      "globosp.br"
+    ]
+  },
+  "CA": {
+    "CBATDT.ca@SD": [
+      "cbcfredericton.ca"
+    ],
+    "CBCNewsNetwork.ca@SD": [
+      "cbcnews.ca"
+    ],
+    "CBETDT.ca@SD": [
+      "cbcwindsor.ca"
+    ],
+    "CBHTDT.ca@SD": [
+      "cbchalifax.ca"
+    ],
+    "CBLTDT.ca@SD": [
+      "cbctoronto.ca"
+    ],
+    "CBMTDT.ca@SD": [
+      "cbcmontreal.ca"
+    ],
+    "CBOTDT.ca@SD": [
+      "cbcottawa.ca"
+    ],
+    "CBRTDT.ca@SD": [
+      "cbccalgary.ca"
+    ],
+    "CBUTDT.ca@SD": [
+      "cbcvancouver.ca"
+    ],
+    "CBWTDT.ca@SD": [
+      "cbcwinnipeg.ca"
+    ],
+    "CBXTDT.ca@SD": [
+      "cbcedmonton.ca"
+    ],
+    "CIVTDT.ca@SD": [
+      "ctvvancouver.ca"
+    ],
+    "CTV.ca@CJOHDT": [
+      "ctvottawa.ca"
+    ],
+    "CTV2.ca@CHRODT": [
+      "ctv2ottawa.ca"
+    ],
+    "CTV2BarrieONCKVR.ca@HD": [
+      "ctv2barrie.ca"
+    ],
+    "CTV2LondonON.ca@HD": [
+      "ctv2london.ca"
+    ],
+    "CTV2TorontoON.ca@HD": [
+      "ctv2toronto.ca"
+    ],
+    "CTV2WindsorON.ca@HD": [
+      "ctv2windsor.ca"
+    ],
+    "CTVCFCNCalgaryAB.ca@HD": [
+      "ctvcalgary.ca"
+    ],
+    "CTVCFQCSaskatoonSK.ca@HD": [
+      "ctvsaskatchewansaskatoon.ca"
+    ],
+    "CTVCFRNEdmontonAB.ca@HD": [
+      "ctvedmonton.ca"
+    ],
+    "CTVCFTOTorontoON.ca@HD": [
+      "ctvtoronto.ca"
+    ],
+    "CTVCHBXSaultSteMarieON.ca@HD": [
+      "ctvsaultstemarie.ca"
+    ],
+    "CTVCICISudburyON.ca@HD": [
+      "ctvsudbury.ca"
+    ],
+    "CTVCITOTimminsON.ca@HD": [
+      "ctvtimmins.ca"
+    ],
+    "CTVCJCHHalifax.ca@HD": [
+      "ctvhalifax.ca"
+    ],
+    "CTVCKCKReginaSK.ca@HD": [
+      "ctvregina.ca"
+    ],
+    "CTVCKCOKitchenerON.ca@HD": [
+      "ctvkitchener.ca"
+    ],
+    "CTVCKCWMoncton.ca@HD": [
+      "ctvmoncton.ca"
+    ],
+    "CTVCKYWinnipegMB.ca@HD": [
+      "ctvwinnipeg.ca"
+    ],
+    "CTVMontrealCFCFQC.ca@HD": [
+      "ctvmontreal.ca"
+    ],
+    "CTVNewsChannel.ca@SD": [
+      "ctvnews.ca"
+    ],
+    "Sportsnet.ca@East": [
+      "sportsneteast.ca"
+    ],
+    "Sportsnet.ca@Ontario": [
+      "sportsnetontario.ca"
+    ],
+    "Sportsnet.ca@Pacific": [
+      "sportsnetpacific.ca"
+    ],
+    "Sportsnet.ca@West": [
+      "sportsnetwest.ca"
+    ]
+  },
+  "DE": {
+    "ProSieben.de@SD": [
+      "pro7.de"
+    ],
+    "kabeleins.de@SD": [
+      "kabel1.de"
+    ]
+  },
+  "FR": {
+    "France3.fr@Aquitaine": [
+      "france3nouvelleaquitaine.fr"
+    ]
+  },
+  "SE": {
+    "SVTBarn.se@SD": [
+      "svtb.se"
+    ]
+  }
+}

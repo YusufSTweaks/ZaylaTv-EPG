@@ -1,4 +1,5 @@
 {
+  "channel_id_aliases": "lineups/channel-id-aliases.json",
   "required_regions": [
     "US",
     "CA",

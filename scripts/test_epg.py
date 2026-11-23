@@ -35,6 +35,26 @@ class MergeTests(unittest.TestCase):
    p=Path(d);(p/'a.xml').write_text(GOOD);(p/'b.xml').write_text(GOOD.replace('News','Alternate'))
    r=merge(p,[{'id':'one','region':'US','output':'a.xml'},{'id':'two','region':'US','output':'b.xml'}],['US'],p/'public',now=NOW)
    self.assertEqual(r['programmes'],1);self.assertEqual(ET.parse(p/'public/guide.xml').findtext('programme/title'),'News')
+ def test_channel_aliases_follow_regional_membership(self):
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   (p/'a.xml').write_text(GOOD.replace('<display-name>A</display-name>','<display-name>Original A</display-name>'))
+   aliases={'CA':{'a':['station.ca','STATION.CA'],'missing':['missing.ca']},'US':{'a':['station.us']}}
+   manifest=[{'id':'ca','region':'CA','output':'a.xml'},{'id':'us','region':'US','output':'a.xml'}]
+   report=merge(p,manifest,['CA'],p/'public',now=NOW,aliases_by_region=aliases)
+   for path,expected in [('regions/ca.xml',['station.ca']),('regions/us.xml',['station.us']),('guide.xml',['station.ca','station.us'])]:
+    root=ET.parse(p/'public'/path).getroot()
+    self.assertEqual([x.text for x in root.findall('channel/display-name')],['Original A',*expected])
+    self.assertEqual(root.find('programme').get('channel'),'a')
+   self.assertEqual(report['channel_aliases_added'],2)
+   self.assertEqual(report['regions']['CA']['channel_aliases_added'],1)
+ def test_channel_alias_does_not_shadow_another_station(self):
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   (p/'a.xml').write_text(GOOD.replace('</tv>', GOOD.removeprefix('<tv>').replace('id="a"','id="b"').replace('channel="a"','channel="b"').replace('>A<','>Original B<')))
+   aliases={'US':{'a':['Original B','shared.us'],'b':['shared.US']}}
+   report=merge(p,[{'id':'us','region':'US','output':'a.xml'}],['US'],p/'public',now=NOW,aliases_by_region=aliases)
+   self.assertEqual(report['channel_aliases_added'],0)
  def test_selector_scopes_deduplicates_and_caps(self):
   with tempfile.TemporaryDirectory() as d:
    p=Path(d);site=p/'sites/demo';site.mkdir(parents=True)
