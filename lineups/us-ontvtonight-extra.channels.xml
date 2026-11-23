@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="ontvtonight.com" site_id="us#15143494946/chicago-sports-network" lang="en" xmltv_id="ChicagoSportsNetwork.us@HD">Chicago Sports Network</channel>
+  <channel site="ontvtonight.com" site_id="us#647284101/dogtv" lang="en" xmltv_id="DOGTV.us@HD">DOGTV</channel>
+  <channel site="ontvtonight.com" site_id="us#9192516135/nbc-news-now-hdtv" lang="en" xmltv_id="NBCNewsNow.us@HD">NBC News Now</channel>
+  <channel site="ontvtonight.com" site_id="us#69023187/wzdx-fox54-hdtv" lang="en" xmltv_id="WZDX54.us@HD">FOX (WZDX) Huntsville, AL HD</channel>
+  <channel site="ontvtonight.com" site_id="us#69030290/kpsp-hdtv" lang="en" xmltv_id="KPSP2.us@HD">CBS (KPSP) Palm Springs, CA HD</channel>
+  <channel site="ontvtonight.com" site_id="us#69031225/krxi-nbc" lang="en" xmltv_id="KRXIDT2.us@HD">NBC (KRXI-DT2) Reno, NV</channel>
+  <channel site="ontvtonight.com" site_id="us#69034012/kaja-telemundo-hdtv" lang="es" xmltv_id="KAJA.us@HD">Telemundo (KAJA) Corpus Christi, TX HD</channel>
+</channels>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="tvhebdo.com" site_id="mtvc/MTVC" lang="fr" xmltv_id="MTVCanada.ca@SD">MTV Canada</channel>
+  <channel site="tvhebdo.com" site_id="bet/BET" lang="fr" xmltv_id="BETCanada.ca@SD">BET Canada</channel>
+  <channel site="tvhebdo.com" site_id="ownh/OWN" lang="fr" xmltv_id="OWNCanada.ca@SD">OWN Canada</channel>
+  <channel site="tvhebdo.com" site_id="cook/COOK" lang="fr" xmltv_id="CookingChannelCanada.ca@SD">Cooking Channel Canada</channel>
+  <channel site="tvhebdo.com" site_id="yoo/YOOPA" lang="fr" xmltv_id="YoopaCanada.ca@SD">Yoopa</channel>
+  <channel site="tvhebdo.com" site_id="beis/BEIS" lang="fr" xmltv_id="beINSportsCanada.ca@SD">beIN Sports Canada</channel>
+</channels>

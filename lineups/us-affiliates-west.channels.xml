@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="tvpassport.com" site_id="abc-kaal-austin-mn-hd/7869" lang="en" xmltv_id="KAAL61.us@HD">ABC (KAAL) Austin, MN HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kabb-san-antonio-tx-hd/9767" lang="en" xmltv_id="KABB291.us@HD">FOX (KABB) San Antonio, TX HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kacv-amarillo-tx-hd/17164" lang="en" xmltv_id="KACV.us@HD">PBS (KACV) Amarillo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kaet-phoenix-az-hd/6330" lang="en" xmltv_id="KAET.us@HD">PBS (KAET) Phoenix, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kaft-fayetteville-ar-hd/8076" lang="en" xmltv_id="KAFT.us@HD">PBS (KAFT) Fayetteville, AR HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kags-bryan-tx-hd/11425" lang="en" xmltv_id="KAGSLD231.us@HD">NBC (KAGS) Bryan, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kait-jonesboro-ar-hd/7873" lang="en" xmltv_id="KAIT81.us@HD">ABC (KAIT) Jonesboro, AR HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kake-wichita-ks-hd/5753" lang="en" xmltv_id="KAKE101.us@HD">ABC (KAKE) Wichita, KS HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kalb-alexandria-la/2455" lang="en" xmltv_id="KALBTV51.us@HD">NBC (KALB) Alexandria, LA</channel>
+  <channel site="tvpassport.com" site_id="cbs-kalb-tv2-alexandria-la-hd/32334" lang="en" xmltv_id="KALBDT2.us@HD">CBS (KALB-TV2) Alexandria, LA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kamc-lubbock-tx-hd/6146" lang="en" xmltv_id="KAMC281.us@HD">ABC (KAMC) Lubbock, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kamr-amarillo-tx-hd/6261" lang="en" xmltv_id="KAMRTV41.us@HD">NBC (KAMR) Amarillo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kard-monroe-la-hd/7899" lang="en" xmltv_id="KARD141.us@HD">FOX (KARD) Monroe, LA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kare-minneapolis-mn-hd/4774" lang="en" xmltv_id="KARE111.us@HD">NBC (KARE) Minneapolis, MN HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kark-little-rock-ar-hd/6262" lang="en" xmltv_id="KARKTV41.us@HD">NBC (KARK) Little Rock, AR HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kasa-albuquerque-nm-hd/6103" lang="en" xmltv_id="KASA.us@HD">Telemundo (KASA) Albuquerque, NM HD</channel>
+  <channel site="tvpassport.com" site_id="abc-katc-lafayette-la-hd/5779" lang="en" xmltv_id="KATC31.us@HD">ABC (KATC) Lafayette, LA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kath-juneau-ak/5100" lang="en" xmltv_id="KATHLD21.us@HD">NBC (KATH) Juneau, AK</channel>
+  <channel site="tvpassport.com" site_id="abc-katu-portland-or-hd/3727" lang="en" xmltv_id="KATU321.us@HD">ABC (KATU) Portland, OR HD</channel>
+  <channel site="tvpassport.com" site_id="abc-katv-little-rock-ar-hd/5745" lang="en" xmltv_id="KATV71.us@HD">ABC (KATV) Little Rock, AR HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kauz-wichita-falls-tx-hd/4726" lang="en" xmltv_id="KAUZTV61.us@HD">CBS (KAUZ) Wichita Falls, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kavu-victoria-tx-hd/6642" lang="en" xmltv_id="KAVUTV251.us@HD">ABC (KAVU) Victoria, TX HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kawb-brainerd-mn-hd/10020" lang="en" xmltv_id="KAWB.us@HD">PBS (KAWB) Brainerd, MN HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kayu-spokane-wa-hd/3910" lang="en" xmltv_id="KAYUTV281.us@HD">FOX (KAYU) Spokane, WA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kbak-bakersfield-ca-hd/7565" lang="en" xmltv_id="KBAKTV291.us@HD">CBS (KBAK) Bakersfield, CA HD</channel>
+  <channel site="tvpassport.com" site_id="pbs12-kbdi-denver-co-hd/32403" lang="en" xmltv_id="KBDI.us@HD">PBS12 (KBDI) Denver, CO HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kbfx-bakersfield-ca-hd/7564" lang="en" xmltv_id="KBFXCD581.us@HD">FOX (KBFX) Bakersfield, CA HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kbin-council-bluffs-ia-hd/10180" lang="en" xmltv_id="KBIN.us@HD">PBS (KBIN) Council Bluffs, IA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kbjr-duluth-mn-hd/6263" lang="en" xmltv_id="KBJRTV61.us@HD">NBC (KBJR) Duluth, MN HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kbmt-beaumont-tx-hd/6643" lang="en" xmltv_id="KBMT121.us@HD">ABC (KBMT) Beaumont, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kbmt-dt2-beaumont-tx-hd/6999" lang="en" xmltv_id="KBMT122.us@HD">NBC (KBMT-DT2) Beaumont, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kbmy-bismarck-nd-hd/8335" lang="en" xmltv_id="KBMY171.us@HD">ABC (KBMY) Bismarck, ND HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kbnz-bend-or-hd/8224" lang="en" xmltv_id="KBNZLD71.us@HD">CBS (KBNZ) Bend, OR HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kboi-boise-id-hd/10383" lang="en" xmltv_id="KBOITV21.us@HD">CBS (KBOI) Boise, ID HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kbsi-cape-girardeau-mo-hd/6153" lang="en" xmltv_id="KBSI231.us@HD">FOX (KBSI) Cape Girardeau, MO HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kbtc-tacoma-wa-hd/19149" lang="en" xmltv_id="KBTC.us@HD">PBS (KBTC) Tacoma, WA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kbtx-bryan-tx-hd/11424" lang="en" xmltv_id="KBTXTV31.us@HD">CBS (KBTX) Bryan, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kbvu-eureka-ca-hd/7008" lang="en" xmltv_id="KBVU281.us@HD">FOX (KBVU) Eureka, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kcau-sioux-city-ia-hd/4648" lang="en" xmltv_id="KCAUTV91.us@HD">ABC (KCAU) Sioux City, IA HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kcba-salinas-ca-hd/13480" lang="en" xmltv_id="KCBA.us@HD">CW+ (KCBA) Salinas, CA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kcbd-lubbock-tx-hd/6148" lang="en" xmltv_id="KCBD111.us@HD">NBC (KCBD) Lubbock, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kcci-des-moines-ia-hd/6377" lang="en" xmltv_id="KCCI81.us@HD">CBS (KCCI) Des Moines, IA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kcen-temple-tx-hd/5849" lang="en" xmltv_id="KCENTV61.us@HD">NBC (KCEN) Temple, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kcit-amarillo-tx-hd/17133" lang="en" xmltv_id="KCIT141.us@HD">FOX (KCIT) Amarillo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kclo-sioux-falls-sd-hd/6673" lang="en" xmltv_id="KCLOTV151.us@HD">CBS (KCLO) Sioux Falls, SD HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kcnc-denver-co-hd/6674" lang="en" xmltv_id="KCNCTV41.us@HD">CBS (KCNC) Denver, CO HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kcoy-santa-maria-ca-hd/6675" lang="en" xmltv_id="KCOY.us@HD">Telemundo (KCOY) Santa Maria, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kcpq-tacoma-wa-hd/32825" lang="en" xmltv_id="KCPQ.us@HD">FOX (KCPQ) Tacoma, WA HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kcpt-kansas-city-mo-hd/4844" lang="en" xmltv_id="KCPT.us@HD">PBS (KCPT) Kansas City, MO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kcra-sacramento-ca-hd/6260" lang="en" xmltv_id="KCRATV581.us@HD">NBC (KCRA) Sacramento, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kcrg-cedar-rapids-ia-hd/5761" lang="en" xmltv_id="KCRGTV91.us@HD">ABC (KCRG) Cedar Rapids, IA HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kcso-sacramento-ca-hd/9308" lang="en" xmltv_id="KCSO.us@HD">Telemundo (KCSO) Sacramento, CA HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kcts-seattle-wa/190" lang="en" xmltv_id="KCTSTV91.us@HD">PBS (KCTS) Seattle, WA</channel>
+  <channel site="tvpassport.com" site_id="cbs-kctv-kansas-city-mo-hd/6676" lang="en" xmltv_id="KCTV621.us@HD">CBS (KCTV) Kansas City, MO HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kcvu-chico-ca-hd/9010" lang="en" xmltv_id="KCVU201.us@HD">FOX (KCVU) Chico, CA HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kcwc-lander-wy-hd/7450" lang="en" xmltv_id="KCWC.us@HD">PBS (KCWC) Lander, WY HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kcwe-kansas-city-mo-hd/7269" lang="en" xmltv_id="KCWE.us@HD">CW (KCWE) Kansas City, MO HD</channel>
+  <channel site="tvpassport.com" site_id="mnt-kcwx-austin-tx-hd/10617" lang="en" xmltv_id="KCWX.us@HD">MNT (KCWX) Austin, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kcwy-casper-wy-hd/6264" lang="en" xmltv_id="KCWYDT131.us@HD">NBC (KCWY) Casper, WY HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kcyu-tri-cities-wa-hd/7986" lang="en" xmltv_id="KCYULD411.us@HD">FOX (KCYU) Tri-Cities, WA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kdbc-el-paso-tx-hd/5196" lang="en" xmltv_id="KDBCTV41.us@HD">CBS (KDBC) El Paso, TX HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kden-longmont-co/5862" lang="en" xmltv_id="KDEN.us@HD">Telemundo (KDEN) Longmont, CO</channel>
+  <channel site="tvpassport.com" site_id="fox-kdfx-palm-springs-ca-hd/4935" lang="en" xmltv_id="KDFXCD391.us@HD">FOX (KDFX) Palm Springs, CA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kdka-pittsburgh-pa-hd/3712" lang="en" xmltv_id="KDKATV21.us@HD">CBS (KDKA) Pittsburgh, PA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kdlt-sioux-falls-sd-hd/6265" lang="en" xmltv_id="KDLTTV461.us@HD">NBC (KDLT) Sioux Falls, SD HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kdnl-st-louis-mo-hd/5726" lang="en" xmltv_id="KDNLTV301.us@HD">ABC (KDNL) St. Louis. MO HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kdrv-medford--klamath-falls-or-hd/5806" lang="en" xmltv_id="KDRV121.us@HD">ABC (KDRV) Medford - Klamath Falls, OR HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kdsm-des-moines-ia-hd/6400" lang="en" xmltv_id="KDSMTV81.us@HD">FOX (KDSM) Des Moines, IA HD</channel>
+  <channel site="tvpassport.com" site_id="unimas-kdtf-san-diego-ca-hd/11110" lang="en" xmltv_id="KDTF.us@HD">UniMás (KDTF) San Diego, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kdvr-denver-co-hd/6401" lang="en" xmltv_id="KDVR311.us@HD">FOX (KDVR) Denver, CO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-keci-missoula-mt-hd/8924" lang="en" xmltv_id="KECITV131.us@HD">NBC (KECI) Missoula, MT HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kecy-yuma-az-hd/6403" lang="en" xmltv_id="KECYTV91.us@HD">FOX (KECY) Yuma, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kecy-dt2-yuma-az-hd/6646" lang="en" xmltv_id="KECYTV92.us@HD">ABC (KECY-DT2) Yuma, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kedt-corpus-christi-tx-hd/4751" lang="en" xmltv_id="KEDT.us@HD">PBS (KEDT) Corpus Christi, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kelo-sioux-falls-sd-hd/6707" lang="en" xmltv_id="KELOTV111.us@HD">CBS (KELO) Sioux Falls, SD HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kens-san-antonio-tx-hd/4887" lang="en" xmltv_id="KENS51.us@HD">CBS (KENS) San Antonio, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kero-bakersfield-ca-hd/5781" lang="en" xmltv_id="KEROTV231.us@HD">ABC (KERO) Bakersfield, CA HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kese-lp-yuma-az/5705" lang="en" xmltv_id="KESE.us@HD">Telemundo (KESE-LP) Yuma, AZ</channel>
+  <channel site="tvpassport.com" site_id="abc-kesq-palm-springs-ca-hd/4933" lang="en" xmltv_id="KESQTV421.us@HD">ABC (KESQ) Palm Springs, CA HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-ketc-st-louis-mo-hd/6607" lang="en" xmltv_id="KETC.us@HD">PBS (KETC) St. Louis, MO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ketk-east-texas-tx-hd/6266" lang="en" xmltv_id="KETKTV561.us@HD">NBC (KETK) East Texas, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ketv-omaha-ne-hd/4739" lang="en" xmltv_id="KETV71.us@HD">ABC (KETV) Omaha, NE HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kevn-rapid-city-sd-hd/6672" lang="en" xmltv_id="KEVNLD71.us@HD">FOX (KEVN) Rapid City, SD HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-keye-austin-tx-hd/4831" lang="en" xmltv_id="KEYETV421.us@HD">CBS (KEYE) Austin, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-keyt-santa-barbara-ca-hd/6647" lang="en" xmltv_id="KEYTTV31.us@HD">ABC (KEYT) Santa Barbara, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kezi-eugene-or-hd/5776" lang="en" xmltv_id="KEZI91.us@HD">ABC (KEZI) Eugene, OR HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kfbb-great-falls-mt-hd/8927" lang="en" xmltv_id="KFBBTV51.us@HD">ABC (KFBB) Great Falls, MT HD</channel>
+  <channel site="tvpassport.com" site_id="mnt-kfbi-medford-or-hd/32121" lang="en" xmltv_id="KFBI.us@HD">MNT (KFBI) Medford, OR HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kfda-amarillo-tx-hd/6557" lang="en" xmltv_id="KFDATV101.us@HD">CBS (KFDA) Amarillo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kfdm-beaumont-tx-hd/4748" lang="en" xmltv_id="KFDM61.us@HD">CBS (KFDM) Beaumont, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kfdx-wichita-falls-tx-hd/6267" lang="en" xmltv_id="KFDXTV31.us@HD">NBC (KFDX) Wichita Falls, TX HD</channel>
+  <channel site="tvpassport.com" site_id="news-channel-nebraska-kfdy-ld-lincoln-ne/34794" lang="en" xmltv_id="KFDY.us@HD">Telemundo (KFDY-LD) Lincoln, NE</channel>
+  <channel site="tvpassport.com" site_id="fox-kffx-yakima-wa-hd/7973" lang="en" xmltv_id="KFFXTV111.us@HD">FOX (KFFX) Yakima, WA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfjx-pittsburg-ks-hd/8138" lang="en" xmltv_id="KFJX141.us@HD">FOX (KFJX) Pittsburg, KS HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kfmb-san-diego-ca-hd/5836" lang="en" xmltv_id="KFMBTV81.us@HD">CBS (KFMB) San Diego, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfnb-casper-wy-hd/9917" lang="en" xmltv_id="KFNB201.us@HD">FOX (KFNB) Casper, WY HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kfor-oklahoma-city-ok-hd/6268" lang="en" xmltv_id="KFORTV431.us@HD">NBC (KFOR) Oklahoma City, OK HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfox-el-paso-tx-hd/13535" lang="en" xmltv_id="KFOXTV91.us@HD">FOX (KFOX) El Paso, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfqx-grand-junction-co/1986" lang="en" xmltv_id="KFQX41.us@HD">FOX (KFQX) Grand Junction, CO</channel>
+  <channel site="tvpassport.com" site_id="cw-kfre-fresno-ca-hd/7002" lang="en" xmltv_id="KFRE.us@HD">CW (KFRE) Fresno, CA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kfsm-ft-smith-ar-hd/8079" lang="en" xmltv_id="KFSMTV51.us@HD">CBS (KFSM-TV) Ft. Smith, AR HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kfsn-fresno-ca-hd/5744" lang="en" xmltv_id="KFSNTV301.us@HD">ABC (KFSN) Fresno, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfta-fayetteville-ar-hd/6407" lang="en" xmltv_id="KFTATV341.us@HD">FOX (KFTA) Fayetteville, AR HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kfvs-cape-girardeau-mo-hd/6152" lang="en" xmltv_id="KFVSTV121.us@HD">CBS (KFVS) Cape Girardeau, MO HD</channel>
+  <channel site="tvpassport.com" site_id="dabl-kfxa-cedar-rapids-ia-hd/6405" lang="en" xmltv_id="KFXA.us@HD">DABL (KFXA) Cedar Rapids, IA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfxk-longview-tx-hd/7277" lang="en" xmltv_id="KFXKTV511.us@HD">FOX (KFXK) Longview, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfxl-lincoln-ne-hd/7273" lang="en" xmltv_id="KFXLTV511.us@HD">FOX (KFXL) Lincoln, NE HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfxo-bend-or-hd/7274" lang="en" xmltv_id="KFXO.us@HD">FOX (KFXO) Bend, OR HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kfxv-ld-mcallen-tx-hd/16311" lang="en" xmltv_id="KFXV.us@HD">FOX (KFXV-LD) McAllen, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kfyr-bismarck-nd-hd/8334" lang="en" xmltv_id="KFYRTV51.us@HD">NBC (KFYR) Bismarck, ND HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kgan-cedar-rapids-ia-hd/19338" lang="en" xmltv_id="KGAN21.us@HD">CBS (KGAN) Cedar Rapids, IA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kget-bakersfield-ca-hd/7562" lang="en" xmltv_id="KGETTV171.us@HD">NBC (KGET) Bakersfield, CA HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kget-tv2--bakersfield-ca-hd/16321" lang="en" xmltv_id="KGETDT2.us@HD">CW (KGET-TV2) + Bakersfield, CA HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kgkc-ld-lawrence-ks/27742" lang="en" xmltv_id="KGKC.us@HD">Telemundo (KGKC-LD) Lawrence, KS</channel>
+  <channel site="tvpassport.com" site_id="cbs-kgmb-honolulu-hi-hd/7673" lang="en" xmltv_id="KGMB91.us@HD">CBS (KGMB) Honolulu, HI HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kgns-laredo-tx-hd/9482" lang="en" xmltv_id="KGNSTV81.us@HD">NBC (KGNS) Laredo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kgns-tv2-laredo-tx-hd/34781" lang="en" xmltv_id="KGNSDT2.us@HD">ABC (KGNS-TV2) Laredo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kgpe-fresno-ca-hd/9361" lang="en" xmltv_id="KGPE591.us@HD">CBS (KGPE) Fresno, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kgtv-san-diego-ca-hd/5729" lang="en" xmltv_id="KGTV101.us@HD">ABC (KGTV) San Diego, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kgun-tucson-az-hd/5754" lang="en" xmltv_id="KGUNTV91.us@HD">ABC (KGUN) Tucson, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kgwc-casper-wy/4288" lang="en" xmltv_id="KGWCTV141.us@HD">CBS (KGWC) Casper, WY</channel>
+  <channel site="tvpassport.com" site_id="cbs-kgwn-cheyenne-wy-hd/7546" lang="en" xmltv_id="KGWNTV51.us@HD">CBS (KGWN) Cheyenne, WY HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kgwn-dt2-cheyenne-wy/13511" lang="en" xmltv_id="KGWNDT2.us@HD">NBC (KGWN-DT2) Cheyenne, WY</channel>
+  <channel site="tvpassport.com" site_id="abc-khbb-helena-mt-hd/8928" lang="en" xmltv_id="KHBBLD211.us@HD">ABC (KHBB) Helena, MT HD</channel>
+  <channel site="tvpassport.com" site_id="abc-khbs-ft-smith-ar-hd/5766" lang="en" xmltv_id="KHBS401.us@HD">ABC (KHBS) Ft. Smith, AR HD</channel>
+  <channel site="tvpassport.com" site_id="fox-khmt-hardin-mt-hd/7276" lang="en" xmltv_id="KHMT41.us@HD">FOX (KHMT) Hardin, MT HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-khnl-honolulu-hi-hd/7674" lang="en" xmltv_id="KHNL131.us@HD">NBC (KHNL) Honolulu, HI HD</channel>
+  <channel site="tvpassport.com" site_id="fox-khon-lihue-hi-hd/7670" lang="en" xmltv_id="KHONTV21.us@HD">FOX (KHON) Lihue, HI HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-khqa-quincy-mo-hd/8016" lang="en" xmltv_id="KHQATV71.us@HD">CBS (KHQA) Quincy, MO HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-khrr-tucson-az-hd/10103" lang="en" xmltv_id="KHRR.us@HD">Telemundo (KHRR) Tucson, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kidy-san-angelo-tx-hd/17157" lang="en" xmltv_id="KIDY61.us@HD">FOX (KIDY) San Angelo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kiem-eureka-ca-hd/6982" lang="en" xmltv_id="KIEMTV31.us@HD">NBC (KIEM) Eureka, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kifi-idaho-falls-id-hd/6648" lang="en" xmltv_id="KIFITV81.us@HD">ABC (KIFI) Idaho Falls, ID HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kiii-corpus-christi-tx-hd/6649" lang="en" xmltv_id="KIII31.us@HD">ABC (KIII) Corpus Christi, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kima-yakima-wa-hd/7985" lang="en" xmltv_id="KIMATV291.us@HD">CBS (KIMA) Yakima, WA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kimt-mason-city-ia-hd/7868" lang="en" xmltv_id="KIMT31.us@HD">CBS (KIMT) Mason City, IA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-king-seattle-wa-hd/2831" lang="en" xmltv_id="KINGTV51.us@HD">NBC (KING) Seattle, WA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kion-salinas-ca-hd/13482" lang="en" xmltv_id="KIONTV461.us@HD">CBS (KION) Salinas, CA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kiro-seattle-wa-hd/2830" lang="en" xmltv_id="KIROTV71.us@HD">CBS (KIRO) Seattle, WA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kitv-honolulu-hl-hd/7672" lang="en" xmltv_id="KITV41.us@HD">ABC (KITV) Honolulu, HL HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kixe-redding-ca-hd/11602" lang="en" xmltv_id="KIXE.us@HD">PBS (KIXE) Redding, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kjct-grand-junction-co-hd/9470" lang="en" xmltv_id="KJCTLP1.us@SD">ABC (KJCT) Grand Junction, CO HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kjnb-ld-jonesboro-ar-hd/20008" lang="en" xmltv_id="KJNBLD1.us@SD">FOX (KJNB-LD) Jonesboro, AR HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kjnb-dt2-jonesboro-ar-hd/20007" lang="en" xmltv_id="KJNBLD2.us@SD">CBS (KJNB-DT2) Jonesboro, AR HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kjrh-tulsa-ok-hd/6271" lang="en" xmltv_id="KJRHTV21.us@HD">NBC (KJRH) Tulsa, OK HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kjtl-wichita-falls-tx-hd/7481" lang="en" xmltv_id="KJTL181.us@HD">FOX (KJTL) Wichita Falls, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kjtv-lubbock-tx-hd/6147" lang="en" xmltv_id="KJTVTV341.us@HD">FOX (KJTV) Lubbock, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kkco-grand-junction-co-hd/6983" lang="en" xmltv_id="KKCO111.us@HD">NBC (KKCO) Grand Junction, CO HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kkfx-santa-barbara-ca-hd/8098" lang="en" xmltv_id="KKFXCD241.us@HD">FOX (KKFX) Santa Barbara, CA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kktv-colorado-springs-co-hd/7995" lang="en" xmltv_id="KKTV111.us@HD">CBS (KKTV) Colorado Springs, CO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-klaf-lafayette-la-hd/9927" lang="en" xmltv_id="KLAFLD141.us@HD">NBC (KLAF) Lafayette, LA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-klas-las-vegas-nv-hd/6968" lang="en" xmltv_id="KLASTV81.us@HD">CBS (KLAS) Las Vegas, NV HD</channel>
+  <channel site="tvpassport.com" site_id="abc-klax-alexandria-la-hd/9473" lang="en" xmltv_id="KLAXTV311.us@HD">ABC (KLAX) Alexandria, LA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-klbk-lubbock-tx-hd/6145" lang="en" xmltv_id="KLBKTV131.us@HD">CBS (KLBK) Lubbock, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-klfy-lafayette-la-hd/6967" lang="en" xmltv_id="KLFYTV101.us@HD">CBS (KLFY) Lafayette, LA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kljb-davenport-ia-hd/4490" lang="en" xmltv_id="KLJB261.us@HD">FOX (KLJB) Davenport, IA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-klkn-lincoln-ne-hd/5489" lang="en" xmltv_id="KLKN81.us@HD">ABC (KLKN) Lincoln, NE HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-klrn-san-antonio-tx-hd/4888" lang="en" xmltv_id="KLRN.us@HD">PBS (KLRN) San Antonio, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-klrt-little-rock-ar-hd/9285" lang="en" xmltv_id="KLRTTV421.us@HD">FOX (KLRT) Little Rock, AR HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-klru-austin-tx-hd/4832" lang="en" xmltv_id="KLRU.us@HD">PBS (KLRU) Austin, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-klsr-eugene-or-hd/19102" lang="en" xmltv_id="KLSRTV341.us@HD">FOX (KLSR) Eugene, OR HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-klst-san-angelo-tx-hd/17155" lang="en" xmltv_id="KLST81.us@HD">CBS (KLST) San Angelo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kltv-tyler-tx-hd/9474" lang="en" xmltv_id="KLTV71.us@HD">ABC (KLTV) Tyler, TX HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-klvx-las-vegas-nv-hd/8211" lang="en" xmltv_id="KLVX.us@HD">PBS (KLVX) Las Vegas, NV HD</channel>
+  <channel site="tvpassport.com" site_id="fox-klwy-cheyenne-wy-hd/7547" lang="en" xmltv_id="KLWY271.us@HD">FOX (KLWY) Cheyenne, WY HD</channel>
+  <channel site="tvpassport.com" site_id="kmax-sacramento-ca-hd/6285" lang="en" xmltv_id="KMAX.us@HD">KMAX Sacramento, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kmbc-kansas-city-mo-hd/8877" lang="en" xmltv_id="KMBCTV91.us@HD">ABC (KMBC) Kansas City, MO HD</channel>
+  <channel site="tvpassport.com" site_id="vegas-34-kmcc-laughlin-nv/7876" lang="en" xmltv_id="KMCC.us@HD">Vegas 34 (KMCC) Laughlin, NV</channel>
+  <channel site="tvpassport.com" site_id="abc-kmgh-denver-co-hd/5723" lang="en" xmltv_id="KMGHTV71.us@HD">ABC (KMGH) Denver, CO HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kmid-midland-tx-hd/7999" lang="en" xmltv_id="KMID21.us@HD">ABC (KMID) Midland, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kmir-palm-springs-ca-hd/4934" lang="en" xmltv_id="KMIRTV361.us@HD">NBC (KMIR) Palm Springs, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kmiz-columbia-mo-hd/5786" lang="en" xmltv_id="KMIZ171.us@HD">ABC (KMIZ) Columbia, MO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kmol-victoria-tx-hd/17151" lang="en" xmltv_id="KMOLLD171.us@HD">NBC (KMOL) Victoria, TX HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kmos-warrensburg-mo-hd/8882" lang="en" xmltv_id="KMOS.us@HD">PBS (KMOS) Warrensburg, MO HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kmov-st-louis-mo-hd/6619" lang="en" xmltv_id="KMOV41.us@HD">CBS (KMOV) St. Louis, MO HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kmph-fresno-ca-hd/9360" lang="en" xmltv_id="KMPHTV261.us@HD">FOX (KMPH) Fresno, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kmsb-tucson-az-hd/7637" lang="en" xmltv_id="KMSB111.us@HD">FOX (KMSB) Tucson, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kmsp-minneapolis-mn-hd/4776" lang="en" xmltv_id="KMSPDT1.us@SD">FOX (KMSP) Minneapolis, MN HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kmss-shreveport-la-hd/7887" lang="en" xmltv_id="KMSSTV451.us@HD">FOX (KMSS) Shreveport, LA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kmtr-eugene-or-hd/19100" lang="en" xmltv_id="KMTR161.us@HD">NBC (KMTR) Eugene, OR HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kmtr2-eugene-or/13175" lang="en" xmltv_id="KMTRDT2.us@HD">CW+ (KMTR2) Eugene, OR</channel>
+  <channel site="tvpassport.com" site_id="cbs-kmtv-omaha-ne-hd/6620" lang="en" xmltv_id="KMTVTV31.us@HD">CBS (KMTV) Omaha, NE HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kmvt-twin-falls-id-hd/10139" lang="en" xmltv_id="KMVT111.us@HD">CBS (KMVT) Twin Falls, ID HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kmvu-medford-or-hd/7966" lang="en" xmltv_id="KMVUDT261.us@HD">FOX (KMVU) Medford, OR HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-knbn-rapid-city-sd-hd/6182" lang="en" xmltv_id="KNBN211.us@HD">NBC (KNBN) Rapid City, SD HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kndo-tri-cities-wa-hd/8625" lang="en" xmltv_id="KNDO231.us@HD">NBC (KNDO) Tri-Cities, WA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-knin-boise-id-hd/6286" lang="en" xmltv_id="KNINTV91.us@HD">FOX (KNIN) Boise, ID HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-knme-albuquerque-nm-hd/13522" lang="en" xmltv_id="KNME.us@HD">PBS (KNME) Albuquerque, NM HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-knoe-monroe-la-hd/6621" lang="en" xmltv_id="KNOETV81.us@HD">CBS (KNOE) Monroe, LA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-knoe-dt2-monroe-la-hd/6640" lang="en" xmltv_id="KNOEDT2.us@HD">ABC (KNOE-DT2) Monroe, LA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-knop-north-platte-ne-hd/9566" lang="en" xmltv_id="KNOPTV21.us@HD">NBC (KNOP-TV) North Platte, NE HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-knpb-reno-nv-hd/6232" lang="en" xmltv_id="KNPB.us@HD">PBS (KNPB) Reno, NV HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-knpg-ld-st-joseph-mo-hd/32323" lang="en" xmltv_id="KNPG.us@HD">NBC (KNPG-LD) St. Joseph, MO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-knsd-san-diego-ca-hd/6929" lang="en" xmltv_id="KNSD481.us@HD">NBC (KNSD) San Diego, CA HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-knso-fresno-ca-hd/16285" lang="en" xmltv_id="KNSO.us@HD">Telemundo (KNSO) Fresno, CA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-knvn-chico-ca-hd/6872" lang="en" xmltv_id="KNVN241.us@HD">NBC (KNVN) Chico, CA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-knwa-ft-smith-ar-hd/6873" lang="en" xmltv_id="KNWATV511.us@HD">NBC (KNWA) Ft. Smith, AR HD</channel>
+  <channel site="tvpassport.com" site_id="abc-knxv-phoenix-az-hd/5721" lang="en" xmltv_id="KNXVTV611.us@HD">ABC (KNXV) Phoenix, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-koaa-colorado-springs-co-hd/6874" lang="en" xmltv_id="KOAATV51.us@HD">NBC (KOAA) Colorado Springs, CO HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-koam-pittsburg-ks-hd/8143" lang="en" xmltv_id="KOAMTV71.us@HD">CBS (KOAM) Pittsburg, KS HD</channel>
+  <channel site="tvpassport.com" site_id="abc-koat-albuquerque-nm-hd/5739" lang="en" xmltv_id="KOATTV71.us@HD">ABC (KOAT) Albuquerque, NM HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kobi-medford-or-hd/10330" lang="en" xmltv_id="KOBI51.us@HD">NBC (KOBI) Medford, OR HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kocb-oklahoma-city-ok-hd/6288" lang="en" xmltv_id="KOCB.us@HD">CW (KOCB) Oklahoma City, OK HD</channel>
+  <channel site="tvpassport.com" site_id="abc-koco-oklahoma-city-ok-hd/5738" lang="en" xmltv_id="KOCOTV51.us@HD">ABC (KOCO) Oklahoma City, OK HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kode-joplin-mo-hd/8139" lang="en" xmltv_id="KODETV121.us@HD">ABC (KODE) Joplin, MO HD</channel>
+  <channel site="tvpassport.com" site_id="daystar-koha-ld-omaha-ne/27026" lang="en" xmltv_id="KOHA.us@HD">Telemundo (KOHA-LD) Omaha, NE</channel>
+  <channel site="tvpassport.com" site_id="abc-kohd-bend-or/4632" lang="en" xmltv_id="KOHD181.us@HD">ABC (KOHD) Bend, OR</channel>
+  <channel site="tvpassport.com" site_id="cbs-koin-portland-or-hd/3728" lang="en" xmltv_id="KOIN61.us@HD">CBS (KOIN) Portland, OR HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kokh-oklahoma-city-ok-hd/8199" lang="en" xmltv_id="KOKHTV251.us@HD">FOX (KOKH) Oklahoma City, OK HD</channel>
+  <channel site="tvpassport.com" site_id="fox-koki-tulsa-ok-hd/8151" lang="en" xmltv_id="KOKITV231.us@HD">ROAR (KOKI) Tulsa, OK HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kold-tucson-az-hd/7638" lang="en" xmltv_id="KOLDTV131.us@HD">CBS (KOLD) Tucson, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-koln-lincoln-ne-hd/4740" lang="en" xmltv_id="KOLN101.us@HD">CBS (KOLN) Lincoln, NE HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kolo-reno-nv-hd/5770" lang="en" xmltv_id="KOLOTV81.us@HD">ABC (KOLO) Reno, NV HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kolr-springfield-mo-hd/8085" lang="en" xmltv_id="KOLR101.us@HD">CBS (KOLR) Springfield, MO HD</channel>
+  <channel site="tvpassport.com" site_id="abc-komo-seattle-wa-hd/2829" lang="en" xmltv_id="KOMOTV511.us@HD">ABC (KOMO) Seattle, WA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-komu-columbia-mo-hd/6877" lang="en" xmltv_id="KOMUTV81.us@HD">NBC (KOMU) Columbia, MO HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kopb-portland-or-hd/19103" lang="en" xmltv_id="KOPB.us@HD">PBS (KOPB) Portland, OR HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kosa-midland-tx-hd/8000" lang="en" xmltv_id="KOSATV71.us@HD">CBS (KOSA) Midland, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kota-rapid-city-sd-hd/5791" lang="en" xmltv_id="KOTATV71.us@HD">ABC (KOTA) Rapid City, SD HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kotv-tulsa-ok-hd/8152" lang="en" xmltv_id="KOTVDT61.us@HD">CBS (KOTV) Tulsa, OK HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kovr-sacramento-ca-hd/6298" lang="en" xmltv_id="KOVR131.us@HD">CBS (KOVR) Sacramento, CA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kpax-missoula-mt-hd/6299" lang="en" xmltv_id="KPAXTV81.us@HD">CBS (KPAX) Missoula, MT HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kpbs-san-diego-ca-hd/6935" lang="en" xmltv_id="KPBS.us@HD">PBS (KPBS) San Diego, CA HD</channel>
+  <channel site="tvpassport.com" site_id="basin-pbs-kpbt-tv-odessa-tx-hd/8003" lang="en" xmltv_id="KPBT.us@HD">Basin PBS (KPBT-TV) Odessa, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kpej-midland-tx-hd/6159" lang="en" xmltv_id="KPEJTV241.us@HD">FOX (KPEJ) Midland, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kpho-phoenix-az-hd/6300" lang="en" xmltv_id="KPHOTV51.us@HD">CBS (KPHO) Phoenix, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kplc-lake-charles-la-hd/6878" lang="en" xmltv_id="KPLC71.us@HD">NBC (KPLC) Lake Charles, LA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kpnx-phoenix-az-hd/6318" lang="en" xmltv_id="KPNX121.us@HD">NBC (KPNX) Phoenix, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kpth-sioux-city-ia-hd/4650" lang="en" xmltv_id="KPTH441.us@HD">FOX (KPTH) Sioux City, IA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kptm-omaha-ne-hd/4741" lang="en" xmltv_id="KPTM421.us@HD">FOX (KPTM) Omaha, NE HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kptv-portland-or-hd/3731" lang="en" xmltv_id="KPTV491.us@HD">FOX (KPTV) Portland, OR HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kpvi-pocatello-id-hd/7555" lang="en" xmltv_id="KPVIDT61.us@HD">NBC (KPVI) Pocatello, ID HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kpxj-shreveport-la-hd/6290" lang="en" xmltv_id="KPXJ.us@HD">CW (KPXJ) Shreveport, LA HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kqcw-tulsa-ok-hd/6291" lang="en" xmltv_id="KQCW.us@HD">CW (KQCW) Tulsa, OK HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kqds-duluth-mn-hd/6744" lang="en" xmltv_id="KQDSTV211.us@HD">FOX (KQDS) Duluth, MN HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kqfx-columbia-mo-hd/8012" lang="en" xmltv_id="KQFXLD221.us@HD">FOX (KQFX) Columbia, MO HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kqre-ld-bend-or/29811" lang="en" xmltv_id="KQRE.us@HD">Telemundo (KQRE-LD) Bend, OR</channel>
+  <channel site="tvpassport.com" site_id="abc-kqtv-st-joseph-mo-hd/17187" lang="en" xmltv_id="KQTV21.us@HD">ABC (KQTV) St. Joseph, MO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-krbc-abilene-tx-hd/17135" lang="en" xmltv_id="KRBCTV91.us@HD">NBC (KRBC) Abilene, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-krbk-osage-beach-mo-hd/10111" lang="en" xmltv_id="KRBK491.us@HD">FOX (KRBK) Osage Beach, MO HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-krcg-jefferson-mo-hd/6301" lang="en" xmltv_id="KRCG131.us@HD">CBS (KRCG) Jefferson, MO HD</channel>
+  <channel site="tvpassport.com" site_id="abc-krcr-redding-ca-hd/5782" lang="en" xmltv_id="KRCRTV71.us@HD">ABC (KRCR) Redding, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-krdo-colorado-springs-co-hd/7996" lang="en" xmltv_id="KRDOTV131.us@HD">ABC (KRDO) Colorado Springs, CO HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-krem-spokane-wa-hd/6302" lang="en" xmltv_id="KREM21.us@HD">CBS (KREM) Spokane, WA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-krex-tv-glenwood-springs-co/6303" lang="en" xmltv_id="KREX.us@HD">CBS (KREX-TV) Glenwood Springs, CO</channel>
+  <channel site="tvpassport.com" site_id="abc-krgv-weslaco-tx-hd/4688" lang="en" xmltv_id="KRGVTV51.us@HD">ABC (KRGV) Weslaco, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kris-corpus-christi-tx-hd/4750" lang="en" xmltv_id="KRISTV61.us@HD">NBC (KRIS) Corpus Christi, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-krqe-albuquerque-nm-hd/6102" lang="en" xmltv_id="KRQE131.us@HD">CBS (KRQE) Albuquerque, NM HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-krtv-grand-falls-mt/575" lang="en" xmltv_id="KRTV31.us@HD">CBS (KRTV) Grand Falls, MT</channel>
+  <channel site="tvpassport.com" site_id="pbs-krwg-las-cruces-nm-hd/6884" lang="en" xmltv_id="KRWG.us@HD">PBS (KRWG) Las Cruces, NM HD</channel>
+  <channel site="tvpassport.com" site_id="fox-krxi-reno-nv-hd/6233" lang="en" xmltv_id="KRXITV211.us@HD">FOX (KRXI) Reno, NV HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksan-san-angelo-tx-hd/17156" lang="en" xmltv_id="KSANTV31.us@HD">NBC (KSAN) San Angelo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-ksas-tv-wichita-ks-hd/6746" lang="en" xmltv_id="KSASTV361.us@SD">FOX (KSAS-TV) Wichita, KS HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ksat-san-antonio-tx-hd/9764" lang="en" xmltv_id="KSATTV91.us@HD">ABC (KSAT) San Antonio, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ksaw-twin-falls-id-hd/10137" lang="en" xmltv_id="KSAWLD61.us@HD">ABC (KSAW) Twin Falls, ID HD</channel>
+  <channel site="tvpassport.com" site_id="fox-ksaz-phoenix-az-hd/6331" lang="en" xmltv_id="KSAZTV101.us@HD">FOX (KSAZ) Phoenix, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksbw-monterey-ca-hd/13483" lang="en" xmltv_id="KSBW81.us@HD">NBC (KSBW) Monterey, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ksbw-dt2-monterey-ca-hd/13484" lang="en" xmltv_id="KSBW82.us@HD">ABC (KSBW-DT2) Monterey, CA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksby-santa-barbara-ca-hd/8097" lang="en" xmltv_id="KSBY61.us@HD">NBC (KSBY) Santa Barbara, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kscc-corpus-christi-tx-hd/6613" lang="en" xmltv_id="KSCC.us@HD">FOX (KSCC) Corpus Christi, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksdk-st-louis-mo-hd/6623" lang="en" xmltv_id="KSDK51.us@HD">NBC (KSDK) St. Louis, MO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksee-dt1-fresno-ca-hd/6624" lang="en" xmltv_id="KSEE241.us@HD">NBC (KSEE-DT1) Fresno, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ksfy-sioux-falls-sd-hd/5771" lang="en" xmltv_id="KSFYTV131.us@HD">ABC (KSFY) Sioux Falls, SD HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kshb-kansas-city-mo-hd/6625" lang="en" xmltv_id="KSHBTV411.us@HD">NBC (KSHB) Kansas City, MO HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-ksin-sioux-city-ia-hd/4649" lang="en" xmltv_id="KSIN.us@HD">PBS (KSIN) Sioux City, IA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-ksla-shreveport-la-hd/7883" lang="en" xmltv_id="KSLA121.us@HD">CBS (KSLA) Shreveport, LA HD</channel>
+  <channel site="tvpassport.com" site_id="mnt-ksmo-kansas-city-mo-hd/6944" lang="en" xmltv_id="KSMO.us@HD">MNT (KSMO) Kansas City, MO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksnb-hastings-ne-hd/6269" lang="en" xmltv_id="KSNBTV41.us@HD">NBC (KSNB) Hastings, NE HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksnf-joplin-mo-hd/6626" lang="en" xmltv_id="KSNF161.us@HD">NBC (KSNF) Joplin, MO HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksnt-topeka-ks-hd/6627" lang="en" xmltv_id="KSNT271.us@HD">NBC (KSNT) Topeka, KS HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksnv-las-vegas-nv-hd/17245" lang="en" xmltv_id="KSNV31.us@HD">NBC (KSNV) Las Vegas, NV HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ksnw-wichita-ks-hd/8134" lang="en" xmltv_id="KSNW31.us@HD">NBC (KSNW) Wichita, KS HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kspr-springfield-mo-hd/8084" lang="en" xmltv_id="KSPRDT1.us@SD">ABC (KSPR) Springfield, MO HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kstp-st-paul-mn-hd/4773" lang="en" xmltv_id="KSTPTV51.us@HD">ABC (KSTP) St. Paul, MN HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kstu-salt-lake-city-ut-hd/4465" lang="en" xmltv_id="KSTU131.us@HD">FOX (KSTU) Salt Lake City, UT HD</channel>
+  <channel site="tvpassport.com" site_id="seattle-11-kstw-tacoma-wa-hd/6252" lang="en" xmltv_id="KSTW.us@HD">Seattle 11 (KSTW) Tacoma, WA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ksvi-billings-mt-hd/8922" lang="en" xmltv_id="KSVI61.us@HD">ABC (KSVI) Billings, MT HD</channel>
+  <channel site="tvpassport.com" site_id="fox-ksvt-twin-falls-id-hd/17282" lang="en" xmltv_id="KSVTLD1.us@SD">FOX (KSVT) Twin Falls, ID HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kswb-san-diego-ca-hd/6749" lang="en" xmltv_id="KSWBTV691.us@HD">FOX (KSWB) San Diego, CA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kswl-ld-lake-charles-la-hd/32330" lang="en" xmltv_id="KSWL.us@HD">CBS (KSWL-LD) Lake Charles, LA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kswo-tv-lawton-ok-hd/4727" lang="en" xmltv_id="KSWOTV71.us@HD">ABC (KSWO-TV) Lawton, OK HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-ktab-abilene-tx-hd/17136" lang="en" xmltv_id="KTABTV321.us@HD">CBS (KTAB) Abilene, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktal-shreveport-la-hd/6628" lang="en" xmltv_id="KTALTV61.us@HD">NBC (KTAL) Shreveport, LA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-ktbc-austin-tx-hd/4827" lang="en" xmltv_id="KTBC71.us@HD">FOX (KTBC) Austin, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktbs-shreveport-la-hd/5757" lang="en" xmltv_id="KTBSTV31.us@HD">ABC (KTBS) Shreveport, LA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-ktby-anchorage-ak-hd/9446" lang="en" xmltv_id="KTBY41.us@HD">FOX (KTBY) Anchorage, AK HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-ktca-tv-tpt2-st-paul-mn-hd/8570" lang="en" xmltv_id="KTCA.us@HD">PBS (KTCA-TV) tpt2 St. Paul, MN HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kten-ada-ok-hd/8044" lang="en" xmltv_id="KTEN101.us@HD">NBC (KTEN) Ada, OK HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktft-twin-falls-id-hd/10136" lang="en" xmltv_id="KTFT.us@HD">NBC (KTFT) Twin Falls, ID HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktgf-ld-helena-mt-hd/34838" lang="en" xmltv_id="KTGF.us@HD">NBC (KTGF-LD) Helena, MT HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kthv-little-rock-ar-hd/8077" lang="en" xmltv_id="KTHV111.us@HD">CBS (KTHV) Little Rock, AR HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktiv-sioux-city-ia-hd/4636" lang="en" xmltv_id="KTIV41.us@HD">NBC (KTIV) Sioux City, IA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktka-topeka-ks-hd/8148" lang="en" xmltv_id="KTKATV491.us@HD">ABC (KTKA) Topeka, KS HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-ktlm-brownsville-tx-hd/16314" lang="en" xmltv_id="KTLM.us@HD">Telemundo (KTLM) Brownsville, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktmf-missoula-mt-hd/8926" lang="en" xmltv_id="KTMF231.us@HD">ABC (KTMF) Missoula, MT HD</channel>
+  <channel site="tvpassport.com" site_id="fox-ktmf-ld2-kalispell-mt/31186" lang="en" xmltv_id="KTMFLD422.us@HD">FOX (KTMF-LD2) Kalispell, MT</channel>
+  <channel site="tvpassport.com" site_id="fox-ktmj-topeka-ks-hd/8147" lang="en" xmltv_id="KTMJCD431.us@HD">FOX (KTMJ) Topeka, KS HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktnv-las-vegas-nv-hd/5740" lang="en" xmltv_id="KTNVTV331.us@HD">ABC (KTNV) Las Vegas, NV HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktsm-el-paso-tx-hd/13534" lang="en" xmltv_id="KTSMTV91.us@HD">NBC (KTSM) El Paso, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kttc-rochester-mn-hd/7870" lang="en" xmltv_id="KTTC101.us@HD">NBC (KTTC) Rochester, MN HD</channel>
+  <channel site="tvpassport.com" site_id="tct-kttw-huron-sd/36909" lang="en" xmltv_id="KTTW.us@HD">TCT (KTTW) Huron, SD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktul-tulsa-ok-hd/5748" lang="en" xmltv_id="KTUL81.us@HD">ABC (KTUL) Tulsa, OK HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktuu-anchorage-ak-hd/9443" lang="en" xmltv_id="KTUUTV21.us@HD">NBC (KTUU) Anchorage, AK HD</channel>
+  <channel site="tvpassport.com" site_id="rewind-tv-us-ktva-anchorage-ak/9456" lang="en" xmltv_id="KTVA.us@HD">Rewind TV US (KTVA) Anchorage, AK</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktvb-boise-id-hd/10384" lang="en" xmltv_id="KTVB71.us@HD">NBC (KTVB) Boise, ID HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktve-monroe-la-hd/7900" lang="en" xmltv_id="KTVE101.us@HD">NBC (KTVE) Monroe, LA HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktvf-fairbanks-ak/5121" lang="en" xmltv_id="KTVF111.us@HD">NBC (KTVF) Fairbanks, AK</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktvh-helena-mt-hd/9199" lang="en" xmltv_id="KTVHDT121.us@HD">NBC (KTVH) Helena, MT HD</channel>
+  <channel site="tvpassport.com" site_id="fox-ktvi-st-louis-mo-hd/6611" lang="en" xmltv_id="KTVI21.us@HD">FOX (KTVI) St. Louis, MO HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-ktvl-medford-or-hd/7963" lang="en" xmltv_id="KTVL101.us@HD">CBS (KTVL) Medford, OR HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktvm-butte-mt-hd/8925" lang="en" xmltv_id="KTVMTV71.us@SD">NBC (KTVM) Butte, MT HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-ktvn-reno-nv-hd/6229" lang="en" xmltv_id="KTVN21.us@HD">CBS (KTVN) Reno, NV HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-ktvq-billings-mt-hd/7549" lang="en" xmltv_id="KTVQ21.us@HD">CBS (KTVQ) Billings, MT HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktvx-salt-lake-city-ut-hd/4461" lang="en" xmltv_id="KTVX41.us@HD">ABC (KTVX) Salt Lake City, UT HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-ktvz-bend-or-hd/8222" lang="en" xmltv_id="KTVZ211.us@HD">NBC (KTVZ) Bend, OR HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktwo-casper-wy-hd/7543" lang="en" xmltv_id="KTWOTV21.us@HD">ABC (KTWO) Casper, WY HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-ktwu-topeka-ks-hd/8146" lang="en" xmltv_id="KTWU.us@HD">PBS (KTWU) Topeka, KS HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktxe-ld-san-angelo-tx-hd/17175" lang="en" xmltv_id="KTXE.us@HD">ABC (KTXE-LD) San Angelo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-ktxl-sacramento-ca-hd/6272" lang="en" xmltv_id="KTXL401.us@HD">FOX (KTXL) Sacramento, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-ktxs-abilene-tx-hd/17142" lang="en" xmltv_id="KTXSTV121.us@HD">ABC (KTXS) Abilene, TX HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kuac-fairbanks-ak-hd/33314" lang="en" xmltv_id="KUAC.us@HD">PBS (KUAC) Fairbanks, AK HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kued-salt-lake-city-ut-hd/4463" lang="en" xmltv_id="KUED.us@HD">PBS (KUED) Salt Lake City, UT HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kulr-billings-mt-hd/7548" lang="en" xmltv_id="KULRTV81.us@HD">NBC (KULR) Billings, MT HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kusa-denver-co-hd/8024" lang="en" xmltv_id="KUSA91.us@HD">NBC (KUSA) Denver, CO HD</channel>
+  <channel site="tvpassport.com" site_id="kusi--san-diego-ca-hd/6930" lang="en" xmltv_id="KUSI.us@HD">KUSI - San Diego, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-10-extra-kutp-phoenix-az-hd/6281" lang="en" xmltv_id="KUTP.us@HD">Fox 10 Extra (KUTP) Phoenix, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="univision-kutu-tulsa-ok-hd/17252" lang="en" xmltv_id="KUTU.us@HD">Univision (KUTU) Tulsa, OK HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kutv-salt-lake-city-ut-hd/4460" lang="en" xmltv_id="KUTV21.us@HD">CBS (KUTV) Salt Lake City, UT HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kval-eugene-or-hd/19104" lang="en" xmltv_id="KVALTV131.us@HD">CBS (KVAL) Eugene, OR HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kvct-victoria-tx-hd/6614" lang="en" xmltv_id="KVCT191.us@HD">FOX (KVCT) Victoria, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kvcw-las-vegas-nv-hd/17246" lang="en" xmltv_id="KVCW.us@HD">CW (KVCW) Las Vegas, NV HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kvda-san-antonio-tx-hd/9352" lang="en" xmltv_id="KVDA.us@HD">Telemundo (KVDA) San Antonio, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kveo-brownsville-tx-hd/4686" lang="en" xmltv_id="KVEOTV231.us@HD">NBC (KVEO) Brownsville, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kvew-tri-cities-wa-hd/7971" lang="en" xmltv_id="KVEW421.us@HD">ABC (KVEW) Tri-Cities, WA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kvhp-lake-charles-la-hd/6615" lang="en" xmltv_id="KVHP291.us@HD">FOX (KVHP) Lake Charles, LA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kvia-el-paso-tx-hd/13533" lang="en" xmltv_id="KVIATV71.us@HD">ABC (KVIA) El Paso, TX HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kvie-sacramento-ca-hd/6259" lang="en" xmltv_id="KVIE.us@HD">PBS (KVIE) Sacramento, CA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kvii-amarillo-tx-hd/17132" lang="en" xmltv_id="KVIITV71.us@HD">ABC (KVII) Amarillo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kvly-fargo-nd-hd/7517" lang="en" xmltv_id="KVLYTV111.us@HD">NBC (KVLY) Fargo, ND HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kvoa-tucson-az-hd/7633" lang="en" xmltv_id="KVOA41.us@HD">NBC (KVOA) Tucson, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-kvpt-fresno-ca-hd/6972" lang="en" xmltv_id="KVPT.us@HD">PBS (KVPT) Fresno, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kvrr-fargo-nd-hd/7516" lang="en" xmltv_id="KVRR151.us@HD">FOX (KVRR) Fargo, ND HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kvue-austin-tx-hd/7914" lang="en" xmltv_id="KVUE241.us@HD">ABC (KVUE) Austin, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kvvu-las-vegas-nv-hd/6616" lang="en" xmltv_id="KVVUTV51.us@HD">FOX (KVVU) Las Vegas, NV HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kwch-wichita-ks-hd/8129" lang="en" xmltv_id="KWCHDT331.us@HD">CBS (KWCH) Wichita, KS HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kwes-midland-tx-hd/6161" lang="en" xmltv_id="KWESTV91.us@HD">NBC (KWES) Midland, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cw-kwgn-denver-co-hd/14403" lang="en" xmltv_id="KWGN.us@HD">CW (KWGN) Denver, CO HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kwkt-waco-tx-hd/6274" lang="en" xmltv_id="KWKTTV441.us@HD">FOX (KWKT) Waco, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kwqc-quad-cities-ia-hd/4487" lang="en" xmltv_id="KWQCTV61.us@HD">NBC (KWQC) Quad Cities, IA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kwtv-oklahoma-city-ok-hd/8198" lang="en" xmltv_id="KWTVDT91.us@HD">CBS (KWTV) Oklahoma City, OK HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kwtx-waco-tx-hd/5848" lang="en" xmltv_id="KWTXTV101.us@HD">CBS (KWTX) Waco, TX HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kwwl-waterloo-ia-hd/8225" lang="en" xmltv_id="KWWL71.us@HD">NBC (KWWL) Waterloo, IA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kwyb-butte-mt-hd/8930" lang="en" xmltv_id="KWYB181.us@HD">ABC (KWYB) Butte, MT HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-kxan-austin-tx-hd/7913" lang="en" xmltv_id="KXANTV361.us@HD">NBC (KXAN) Austin, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kxfx-brownsville-tx/5389" lang="en" xmltv_id="KXFXCD671.us@HD">FOX (KXFX) Brownsville, TX</channel>
+  <channel site="tvpassport.com" site_id="cbs-kxii-sherman-tx-hd/8043" lang="en" xmltv_id="KXII121.us@HD">CBS (KXII) Sherman, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kxjb-fargo-nd-hd/33800" lang="en" xmltv_id="KXJB.us@HD">CBS (KXJB) Fargo, ND HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kxlf-butte-mt-hd/8920" lang="en" xmltv_id="KXLFTV41.us@HD">CBS (KXLF) Butte, MT HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kxlt-rochester-mn-hd/6617" lang="en" xmltv_id="KXLTTV471.us@HD">FOX (KXLT) Rochester, MN HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kxly-spokane-wa-hd/5332" lang="en" xmltv_id="KXLYTV41.us@HD">ABC (KXLY) Spokane, WA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kxmc-minot-nd-hd/8321" lang="en" xmltv_id="KXMCTV131.us@HD">CBS (KXMC) Minot, ND HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kxof-laredo-tx-hd/6618" lang="en" xmltv_id="KXOFCD311.us@HD">FOX (KXOF) Laredo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kxpi-hd-pocatello-id/8603" lang="en" xmltv_id="KXPILD31.us@SD">FOX (KXPI) HD Pocatello, ID</channel>
+  <channel site="tvpassport.com" site_id="fox-kxrm-colorado-springs-co-hd/7994" lang="en" xmltv_id="KXRMTV211.us@HD">FOX (KXRM) Colorado Springs, CO HD</channel>
+  <channel site="tvpassport.com" site_id="telemundo-kxtq-lubbock-tx-hd/9344" lang="en" xmltv_id="KXTQ.us@HD">Telemundo (KXTQ) Lubbock, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kxtv-sacramento-ca-hd/5724" lang="en" xmltv_id="KXTV101.us@HD">ABC (KXTV) Sacramento, CA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kxva-abilene-tx-hd/17138" lang="en" xmltv_id="KXVA151.us@HD">FOX (KXVA) Abilene, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kxxv-waco-tx-hd/5763" lang="en" xmltv_id="KXXV251.us@HD">ABC (KXXV) Waco, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kylx-ld-laredo-tx-hd/10346" lang="en" xmltv_id="KYLXLD1.us@SD">CBS (KYLX-LD) Laredo, TX HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kyma-yuma-az/1813" lang="en" xmltv_id="KYMA.us@HD">CBS (KYMA) Yuma, AZ</channel>
+  <channel site="tvpassport.com" site_id="nbc-kytv-springfield-mo-hd/8083" lang="en" xmltv_id="KYTV331.us@HD">NBC (KYTV) Springfield, MO HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kytx-tyler-tx-hd/11007" lang="en" xmltv_id="KYTX191.us@HD">CBS (KYTX) Tyler, TX HD</channel>
+  <channel site="tvpassport.com" site_id="abc-kyur-anchorage-ak-hd/9458" lang="en" xmltv_id="KYUR131.us@HD">ABC (KYUR) Anchorage, AK HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kztv-corpus-christi-tx-hd/7064" lang="en" xmltv_id="KZTV101.us@HD">CBS (KZTV) Corpus Christi, TX HD</channel>
+  <channel site="tvpassport.com" site_id="uni-kdtv-san-francisco-ca-hd/10627" lang="en" xmltv_id="KDTV.us@HD">UNI (KDTV) San Francisco, CA HD</channel>
+  <channel site="tvpassport.com" site_id="uni-kuvs-modesto-ca-hd/9032" lang="en" xmltv_id="KUVS.us@HD">UNI (KUVS) Modesto, CA HD</channel>
+  <channel site="tvpassport.com" site_id="uni-ktvw-phoenix-az-hd/7640" lang="en" xmltv_id="KTVW.us@HD">UNI (KTVW) Phoenix, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="uni-kwex-san-antonio-tx-hd/9763" lang="en" xmltv_id="KWEX.us@HD">UNI (KWEX) San Antonio, TX HD</channel>
+  <channel site="tvpassport.com" site_id="uni-kxln-houston-tx-hd/7905" lang="en" xmltv_id="KXLN.us@HD">UNI (KXLN) Houston, TX HD</channel>
+</channels>

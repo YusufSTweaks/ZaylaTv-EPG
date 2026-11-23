@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="ontvtonight.com" site_id="ca#69034716/crave-2-hdtv-east" lang="en" xmltv_id="Crave2.ca@HD">Crave 2 HDTV (East)</channel>
+  <channel site="ontvtonight.com" site_id="ca#69034718/crave-3-hdtv-east" lang="en" xmltv_id="Crave3.ca@HD">Crave 3 HDTV (East)</channel>
+  <channel site="ontvtonight.com" site_id="ca#302047156/crave-4-hdtv-east" lang="en" xmltv_id="Crave4.ca@HD">Crave 4 HDTV (East)</channel>
+  <channel site="ontvtonight.com" site_id="ca#69042494/ici-tele-colombie-britannique-yukon-hdtv" lang="fr" xmltv_id="ICITeleCBYukon.ca@HD">ICI Télé CB-Yukon</channel>
+  <channel site="ontvtonight.com" site_id="ca#69041354/ici-tele-est-du-quebec-hdtv" lang="fr" xmltv_id="ICITeleEstQuebec.ca@HD">ICI Télé Est-Québec</channel>
+  <channel site="ontvtonight.com" site_id="ca#69041350/ici-tele-estrie-hdtv" lang="fr" xmltv_id="ICITeleEstrie.ca@HD">ICI Télé Estrie</channel>
+  <channel site="ontvtonight.com" site_id="ca#69042502/ici-tele-manitoba-hdtv" lang="fr" xmltv_id="ICITeleManitoba.ca@HD">ICI Télé Manitoba</channel>
+  <channel site="ontvtonight.com" site_id="ca#69041351/ici-tele-mauricie-centre-du-quebec-hdtv" lang="fr" xmltv_id="ICITeleMauricie.ca@HD">ICI Télé Mauricie</channel>
+  <channel site="ontvtonight.com" site_id="ca#69026573/ici-tele-ontario-hdtv" lang="fr" xmltv_id="ICITeleOntario.ca@HD">ICI Télé Ontario</channel>
+  <channel site="ontvtonight.com" site_id="ca#69041353/ici-tele-saguenay-lac-saint-jean-hdtv" lang="fr" xmltv_id="ICITeleSaguenay.ca@HD">ICI Télé Saguenay</channel>
+  <channel site="ontvtonight.com" site_id="ca#69034523/ici-tele-acadie-hdtv" lang="fr" xmltv_id="ICITeleAcadie.ca@HD">ICI Télé Acadie</channel>
+  <channel site="ontvtonight.com" site_id="ca#69043536/cbxft-ici-radio-canada-edmonton" lang="fr" xmltv_id="ICITeleAlberta.ca@SD">ICI Télé Alberta</channel>
+  <channel site="ontvtonight.com" site_id="ca#69030708/the-miracle-channel" lang="en" xmltv_id="TheMiracleChannel.ca@SD">The Miracle Channel</channel>
+  <channel site="ontvtonight.com" site_id="ca#69027804/faithtv" lang="en" xmltv_id="FaithTV.ca@SD">FaithTV</channel>
+  <channel site="ontvtonight.com" site_id="ca#69021243/one-tv" lang="en" xmltv_id="OneGetFit.ca@SD">One TV</channel>
+  <channel site="ontvtonight.com" site_id="ca#69035382/bbc-world-news" lang="en" xmltv_id="BBCWorldNewsCanada.ca@SD">BBC World News Canada</channel>
+  <channel site="ontvtonight.com" site_id="ca#69047126/mtv2-east" lang="en" xmltv_id="MTV2Canada.ca@East">MTV2 Canada</channel>
+  <channel site="ontvtonight.com" site_id="ca#69041261/france-24-north-america-french" lang="fr" xmltv_id="France24Canada.ca@SD">France 24 Canada</channel>
+  <channel site="ontvtonight.com" site_id="ca#997821382/stingray-naturescape-hdtv" lang="en" xmltv_id="StingrayNaturescape.ca@HD">Stingray Naturescape</channel>
+  <channel site="ontvtonight.com" site_id="ca#8119295166/stingray-country-hdtv" lang="en" xmltv_id="StingrayCountry.ca@HD">Stingray Country</channel>
+  <channel site="ontvtonight.com" site_id="ca#6107834882/palmaresadisq-par-stingray" lang="fr" xmltv_id="PalmaresADISQ.ca@HD">PalmarèsADISQ par Stingray</channel>
+  <channel site="ontvtonight.com" site_id="ca#10637697770/teletoon-east-descriptive-video" lang="en" xmltv_id="Teletoon.ca@East">Teletoon East</channel>
+</channels>

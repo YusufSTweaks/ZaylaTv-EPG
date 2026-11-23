@@ -11,20 +11,62 @@
     "AECanada.ca@HD": [
       "aande.ca"
     ],
+    "AHCCanada.ca@HD": [
+      "AHC"
+    ],
     "AMCCanada.ca@HD": [
       "amc.ca"
+    ],
+    "AMIAudio.ca@East": [
+      "AMI Audio"
+    ],
+    "AquariumChannel.ca@HD": [
+      "Aquarium"
     ],
     "AssembleenationaleduQuebec.ca@SD": [
       "assembleenationale.ca"
     ],
+    "BBCEarthCanada.ca@HD": [
+      "bbcearth.ca",
+      "BBC Earth"
+    ],
+    "BBCFirstCanada.ca@HD": [
+      "bbcfirst.ca",
+      "BBC First"
+    ],
+    "BBCWorldNewsCanada.ca@SD": [
+      "bbcworld.ca",
+      "BBC World News"
+    ],
+    "BETCanada.ca@SD": [
+      "bet.ca",
+      "BET"
+    ],
     "BNNBloomberg.ca@SD": [
       "bnn.ca"
+    ],
+    "BravoCanada.ca@HD": [
+      "bravo.ca",
+      "Bravo"
     ],
     "CBATDT.ca@SD": [
       "cbcfredericton.ca"
     ],
+    "CBCCBCTCharlottetownPE.ca@HD": [
+      "cbccharlottetown.ca",
+      "CBC Charlottetown"
+    ],
     "CBCCBKTReginaSK.ca@HD": [
       "cbcregina.ca"
+    ],
+    "CBCCBNTStJohnsNL.ca@HD": [
+      "cbccbnt.ca",
+      "CBC St Johns",
+      "CBC St. John's"
+    ],
+    "CBCCFYKYellowknifeNWT.ca@HD": [
+      "cbccfykyellowknife.ca",
+      "CBC Yellowknife"
     ],
     "CBCNewsNetwork.ca@SD": [
       "cbcnews.ca"
@@ -115,7 +157,9 @@
       "citytvmontrealqc.ca"
     ],
     "CITYTorontoON.ca@HD": [
-      "citytvtoronto.ca"
+      "citytvtoronto.ca",
+      "City Toronto",
+      "Citytv Toronto"
     ],
     "CITYVancouverBC.ca@HD": [
       "citytvvancouverqc.ca"
@@ -134,12 +178,27 @@
       "ntvcjon.ca",
       "NTV St. John's"
     ],
-    "CKCWDT.ca@SD": [
-      "CTV2 Atlantic"
+    "CKALDT.ca@SD": [
+      "City TV Calgary"
     ],
     "CKMIDT1.ca@SD": [
       "globalmontreal.ca",
       "Global Montreal"
+    ],
+    "CMTMusicCanada.ca@SD": [
+      "CMT Music"
+    ],
+    "CNBCCanada.ca@HD": [
+      "cnbc.ca",
+      "CNBC"
+    ],
+    "CNNCanada.ca@SD": [
+      "cnn.ca",
+      "CNN"
+    ],
+    "CNNInternationalCanada.ca@SD": [
+      "cnninternationalna.ca",
+      "CNN International"
     ],
     "CP24.ca@SD": [
       "cp24.ca"
@@ -153,6 +212,10 @@
     "CTV2.ca@CHRODT": [
       "ctv2ottawa.ca"
     ],
+    "CTV2AtlanticRegion.ca@HD": [
+      "ctv2atlantic.ca",
+      "CTV2 Atlantic"
+    ],
     "CTV2BarrieONCKVR.ca@HD": [
       "ctv2barrie.ca"
     ],
@@ -164,6 +227,10 @@
     ],
     "CTV2TorontoON.ca@HD": [
       "ctv2toronto.ca"
+    ],
+    "CTV2VancouverIslandBC.ca@HD": [
+      "ctv2victoria.ca",
+      "CTV2 Victoria"
     ],
     "CTV2WindsorON.ca@HD": [
       "ctv2windsor.ca"
@@ -192,6 +259,10 @@
     "CTVCITOTimminsON.ca@HD": [
       "ctvtimmins.ca"
     ],
+    "CTVCJCBSydneyNS.ca@HD": [
+      "ctvsydney.ca",
+      "CTV Sydney"
+    ],
     "CTVCJCHHalifax.ca@HD": [
       "ctvhalifax.ca"
     ],
@@ -216,14 +287,62 @@
     "CTVSciFi.ca@HD": [
       "space.ca"
     ],
+    "CartoonNetworkCanada.ca@East": [
+      "cartoonnetwork.ca",
+      "Cartoon Network"
+    ],
     "Casa.ca@SD": [
       "casatv.ca"
+    ],
+    "CookingChannelCanada.ca@SD": [
+      "cookingchannel.ca",
+      "Cooking Channel"
+    ],
+    "Crave1.ca@SD": [
+      "tmn1e.ca",
+      "TMN1E (Crave TV 1)"
+    ],
+    "Crave2.ca@HD": [
+      "crave2.ca",
+      "Crave 2",
+      "TMN 2",
+      "TMN2E (Crave TV 2)"
+    ],
+    "Crave3.ca@HD": [
+      "crave3.ca",
+      "Crave 3",
+      "TMN 3",
+      "TMN3E (Crave TV 3)"
+    ],
+    "Crave4.ca@HD": [
+      "crave4.ca",
+      "Crave 4",
+      "TMN4E (Crave TV 4)"
     ],
     "CrimePlusInvestigation.ca@SD": [
       "crimeinvestigation.ca"
     ],
+    "DaystarCanada.ca@HD": [
+      "daystar.ca",
+      "Daystar TV"
+    ],
+    "DiscoveryChannel.ca@SD": [
+      "usanetworkcanada.ca",
+      "USA Network Canada"
+    ],
+    "DisneyJunior.ca@HD": [
+      "disneyjunior.ca",
+      "Disney Junior",
+      "Disney Jr"
+    ],
     "E.ca@SD": [
-      "eentertainment.ca"
+      "eentertainment.ca",
+      "E! Canada"
+    ],
+    "EWTNCanada.ca@SD": [
+      "ewtn.ca",
+      "EWTN",
+      "Eternal Word Television Network"
     ],
     "Evasion.ca@SD": [
       "canalevasion.ca"
@@ -234,9 +353,27 @@
     "FairchildTV2.ca@SD": [
       "fairchild2.ca"
     ],
+    "FaithTV.ca@SD": [
+      "Faith TV"
+    ],
     "FoodNetwork.ca@SD": [
       "flavournetwork.ca",
       "Food Network Canada"
+    ],
+    "FoxNewsCanada.ca@SD": [
+      "Fox News"
+    ],
+    "FoxSportsRacingCanada.ca@HD": [
+      "foxsportsracing.ca",
+      "Fox Sports Racing"
+    ],
+    "France24Canada.ca@SD": [
+      "France 24"
+    ],
+    "GSNCanada.ca@HD": [
+      "gameshownetwork.ca",
+      "Game Show Network",
+      "GSN"
     ],
     "GlobalCFREReginaSK.ca@HD": [
       "globalregina.ca"
@@ -247,22 +384,60 @@
     "GlobalCICTCalgaryAB.ca@HD": [
       "globalcalgary.ca"
     ],
+    "GlobalCIHFMaritimesNBOnly.ca@HD": [
+      "Global Maritimes"
+    ],
     "GlobalCIIIDT41Toronto.ca@HD": [
       "globaltoronto.ca"
     ],
     "GlobalCITVEdmontonAB.ca@HD": [
       "globaledmonton.ca"
     ],
+    "GolfChannelCanada.ca@HD": [
+      "golf.ca",
+      "Golf",
+      "Golf Channel"
+    ],
     "HBO1.ca@SD": [
       "hbo.ca",
       "HBO 1"
     ],
+    "HBOCanada2.ca@West": [
+      "hbo2.ca",
+      "HBO 2"
+    ],
+    "HLNCanada.ca@HD": [
+      "hln.ca",
+      "HLN"
+    ],
     "History.ca@SD": [
       "historychannel.ca"
     ],
+    "HopeChannelCanada.ca@HD": [
+      "Hope TV"
+    ],
+    "HpitvCanada.ca@SD": [
+      "hpitv.ca",
+      "HPI TV",
+      "HPItv East",
+      "HPItv West"
+    ],
+    "ICICBAFTMonctonNB.ca@HD": [
+      "ICI Radio Canada Tele Moncton",
+      "ICI Télé Moncton"
+    ],
+    "ICITeleOntario.ca@HD": [
+      "iciradiocanadatoronto.ca",
+      "ICI Radio-Canada Tele Toronto",
+      "ICI Tele Ontario"
+    ],
     "ICITelevisionQuebec.ca@HD": [
       "ICI Télé Québec",
-      "ICI Radio-Canada Télé Québec"
+      "ICI Radio-Canada Télé Québec",
+      "ICI Television"
+    ],
+    "IFCCanada.ca@HD": [
+      "IFC"
     ],
     "IciARTV.ca@SD": [
       "artv.ca",
@@ -286,8 +461,30 @@
     "Lifetime.ca@SD": [
       "lifetimetv.ca"
     ],
+    "MLBNetworkCanada.ca@HD": [
+      "mlbnetwork.ca",
+      "MLB Network"
+    ],
+    "MTV2Canada.ca@East": [
+      "mtv2.ca",
+      "MTV 2"
+    ],
+    "MTVCanada.ca@SD": [
+      "mtv.ca",
+      "MTV"
+    ],
     "MagnoliaNetworkCanada.ca@SD": [
       "magnolianetwork.ca"
+    ],
+    "MediasetItalia.ca@SD": [
+      "Mediaset Italia Canada"
+    ],
+    "MezzoLiveCanada.ca@HD": [
+      "Mezzo Live"
+    ],
+    "MovieTime.ca@SD": [
+      "MTime",
+      "MovieTime"
     ],
     "Much.ca@SD": [
       "muchmusic.ca"
@@ -295,20 +492,87 @@
     "NBATVCanada.ca@SD": [
       "nbatv.ca"
     ],
+    "NHLNetworkCanada.ca@HD": [
+      "NHL Network"
+    ],
     "NationalGeographic.ca@SD": [
       "natgeo.ca"
     ],
     "NationalGeographicWild.ca@SD": [
       "natgeowild.ca"
     ],
+    "NatyfTVCAN.ca@HD": [
+      "natyftv.ca",
+      "Natyf TV"
+    ],
+    "NoovoCFAPQuebecQC.ca@HD": [
+      "Noovo Quebec City"
+    ],
     "NoovoCFJPMontrealQC.ca@HD": [
       "cfjpmontreal.ca"
+    ],
+    "NoovoCFKMTroisRivieresQC.ca@HD": [
+      "Noovo Trois-Rivieres"
+    ],
+    "NoovoCFKSSherbrookeQC.ca@HD": [
+      "Noovo Sherbrooke"
+    ],
+    "NoovoCFVSValDorQC.ca@SD": [
+      "Noovo Abitibi-Temiscamingue",
+      "Noovo Abitibi-Témiscamingue"
+    ],
+    "OMNIVancouver.ca@HD": [
+      "omnivancouver.ca",
+      "OMNI BC"
+    ],
+    "OWNCanada.ca@SD": [
+      "OWN"
+    ],
+    "OneGetFit.ca@SD": [
+      "onegetfit.ca",
+      "One Get Fit",
+      "One"
+    ],
+    "OneSoccer.ca@SD": [
+      "onesoccer.ca",
+      "One Soccer"
+    ],
+    "PalmaresADISQ.ca@HD": [
+      "PalmaresADISQ par Stingray"
+    ],
+    "ParamountNetworkCanada.ca@East": [
+      "paramountnetwork.ca",
+      "Paramount Canada",
+      "Paramount"
     ],
     "PeachtreeTVCanada.ca@HD": [
       "peachtree.ca"
     ],
+    "PlanetePlusCanada.ca@HD": [
+      "planeteplus.ca",
+      "Planete+"
+    ],
+    "Prise2.ca@SD": [
+      "prise.ca",
+      "Prise"
+    ],
+    "RogersOttawaEnglish.ca@HD": [
+      "Rogers TV Ottawa",
+      "Rogers TV (Ottawa)"
+    ],
+    "RogersOwenSound.ca@SD": [
+      "Rogers TV Grey County"
+    ],
     "SaisonsCanada.ca@SD": [
       "Seasons"
+    ],
+    "SaltPlusLightTelevision.ca@SD": [
+      "Salt"
+    ],
+    "Showcase.ca@SD": [
+      "showcase.ca",
+      "Showcase",
+      "Showcase East"
     ],
     "Sportsnet.ca@East": [
       "sportsneteast.ca"
@@ -322,8 +586,28 @@
     "Sportsnet.ca@West": [
       "sportsnetwest.ca"
     ],
+    "SportsnetOne.ca@SD": [
+      "Rogers TV Sportsnet One"
+    ],
+    "Starz2Canada.ca@East": [
+      "starz2.ca",
+      "Starz 2"
+    ],
+    "StingrayClassica.ca@HD": [
+      "Stingray Classica"
+    ],
+    "StingrayCountry.ca@HD": [
+      "Stingray Country",
+      "Stingray Hot Country"
+    ],
+    "StingrayNaturescape.ca@HD": [
+      "Stingray Nature"
+    ],
     "SuperChannelHeartHome.ca@HD": [
       "superchannelheartandhome.ca"
+    ],
+    "SuperChannelQuest.ca@HD": [
+      "Super Channel Ginx"
     ],
     "SuperEcran1.ca@SD": [
       "superecran.ca"
@@ -344,9 +628,38 @@
     "TVACFCMQuebec.ca@HD": [
       "TVA Québec City"
     ],
+    "TVACFEMRouynQC.ca@HD": [
+      "TVA Abitibi-Temiscamingue",
+      "TVA Abitibi-Témiscamingue"
+    ],
+    "TVACFERRimouski.ca@HD": [
+      "TVA Rimouski"
+    ],
+    "TVACHEMTroisRivieresMauricie.ca@HD": [
+      "TVA Trois-Rivieres",
+      "TVA Trois Revieres"
+    ],
+    "TVACHLTSherbrooke.ca@HD": [
+      "TVA Sherbrooke"
+    ],
+    "TVACIMTRiviereDuLoup.ca@HD": [
+      "TVA Riviere-du-Loup"
+    ],
+    "TVACJPMSaguenayChicoutimiQC.ca@HD": [
+      "TVA Saguenay"
+    ],
     "TVPassport.24": [
       "Global News Kingston",
       "Global Kingston"
+    ],
+    "Teletoon.ca@East": [
+      "teletoon.ca",
+      "Teletoon",
+      "Tele Toon East"
+    ],
+    "TheMiracleChannel.ca@SD": [
+      "themiraclechannel.ca",
+      "Miracle"
     ],
     "TheWeatherNetwork.ca@SD": [
       "The Weather Network",
@@ -362,6 +675,10 @@
     "VisionTV.ca@SD": [
       "vision.ca"
     ],
+    "WildBrainTV.ca@HD": [
+      "Family CHRGD",
+      "WildBrain TV"
+    ],
     "WildTV.ca@SD": [
       "wild.ca"
     ],
@@ -370,11 +687,18 @@
       "YTV East",
       "YTV West"
     ],
+    "YoopaCanada.ca@SD": [
+      "Yoopa"
+    ],
     "Z.ca@SD": [
       "Z Télé"
     ],
     "ZeeTVCanada.ca@HD": [
       "zeetv.ca"
+    ],
+    "beINSportsCanada.ca@SD": [
+      "beinsport.ca",
+      "beIN Sports"
     ]
   },
   "DE": {
@@ -412,15 +736,34 @@
       "Cinemax 5StarMax",
       "Cinemax Classics"
     ],
+    "AE.us@West": [
+      "A&E West"
+    ],
+    "AWE.us@HD": [
+      "awe.us",
+      "AWE"
+    ],
     "ActionMax.us@East": [
       "Cinemax Action",
       "Cinemax ActionMax"
+    ],
+    "AmericanHeroesChannel.us@HD": [
+      "AHC"
     ],
     "BBCNews.uk@NorthAmerica": [
       "BBC World News",
       "BBC News North America",
       "bbcworldnews.us",
       "bbcworldnewsnorthamerica.us"
+    ],
+    "ChicagoSportsNetwork.us@HD": [
+      "chsn.us",
+      "Chicago Sports Network"
+    ],
+    "DOGTV.us@HD": [
+      "dogtv.us",
+      "Dog TV",
+      "DOGTV"
     ],
     "ESPNU.us@SD": [
       "ESPNU College Sports"
@@ -429,9 +772,17 @@
       "ESPN News",
       "espnnews.us"
     ],
+    "GAMEPlus.us@HD": [
+      "gameplus.us",
+      "GAME+"
+    ],
     "HBO2.us@East": [
       "HBO 2",
       "HBO Hits"
+    ],
+    "HBOLatino.us@West": [
+      "hbolatinopacific.us",
+      "HBO Latino West"
     ],
     "HBOSignature.us@East": [
       "HBO Drama"
@@ -439,20 +790,202 @@
     "HBOZone.us@East": [
       "HBO Movies"
     ],
+    "INSP.us@HD": [
+      "insp.us",
+      "INSP"
+    ],
+    "KDTV.us@HD": [
+      "univision14kdtv.us",
+      "Univision 14 San Francisco"
+    ],
+    "KTVW.us@HD": [
+      "Univision 33 Phoenix"
+    ],
+    "KUVS.us@HD": [
+      "univision19kuvs.us",
+      "Univision 19 Sacramento"
+    ],
+    "KWEX.us@HD": [
+      "univisionkwex.us",
+      "Univision 41 San Antonio"
+    ],
+    "KXLN.us@HD": [
+      "univision45kxln.us",
+      "Univision 45 Houston",
+      "Univision 45 Houston TX"
+    ],
+    "Localish.us@HD": [
+      "localish.us",
+      "ABC Localish",
+      "Localish"
+    ],
+    "MASN.us@HD": [
+      "masn.us",
+      "MASN"
+    ],
+    "MASN2.us@HD": [
+      "masn2.us",
+      "MASN 2"
+    ],
+    "MGMHD.us@SD": [
+      "MGM+ East"
+    ],
     "MSNBC.us@SD": [
       "MSNBC",
       "MS NOW"
+    ],
+    "MeTVPlus.us@HD": [
+      "metvplus.us",
+      "Me TV+",
+      "MeTV+"
     ],
     "MoreMax.us@East": [
       "Cinemax MoreMax",
       "Cinemax More Max"
     ],
+    "NBCNewsNow.us@HD": [
+      "NBC News Now"
+    ],
+    "NBCSportsChicago.us@HD": [
+      "nbcsportschicago.us",
+      "NBC Sports Chicago"
+    ],
+    "NBCSportsPhiladelphia.us@HD": [
+      "nbcsportsphiladelphia.us",
+      "NBC Sports Philadelphia"
+    ],
+    "NESN.us@HD": [
+      "nesn.us",
+      "NESN"
+    ],
+    "NESNPlus.us@HD": [
+      "nesnplus.us",
+      "NESN+",
+      "NESN Plus"
+    ],
+    "NFLRedZone.us@HD": [
+      "nflredzone.us",
+      "NFL RedZone"
+    ],
+    "ParamountNetwork.us@West": [
+      "Paramount Network West"
+    ],
+    "SNY.us@HD": [
+      "sny.us",
+      "SNY"
+    ],
+    "ScreenPix.us@SD": [
+      "screenpix.us",
+      "ScreenPix"
+    ],
+    "ScreenPixAction.us@SD": [
+      "screenpixaction.us",
+      "ScreenPix Action"
+    ],
+    "ScreenPixVoices.us@SD": [
+      "screenpixvoices.us",
+      "ScreenPix Voices"
+    ],
+    "ScreenPixWesterns.us@SD": [
+      "screenpixwesterns.us",
+      "ScreenPix Westerns"
+    ],
+    "ScrippsNews.us@HD": [
+      "scrippsnews.us",
+      "Scripps News"
+    ],
     "Showtime.us@East": [
       "Showtime",
       "Showtime East"
     ],
+    "Showtime2.us@West": [
+      "Showtime 2 West"
+    ],
+    "ShowtimeNext.us@West": [
+      "Showtime Next West"
+    ],
+    "ShowtimeShowcase.us@West": [
+      "Showtime Showcase West"
+    ],
+    "ShowtimeWomen.us@West": [
+      "Showtime Women West"
+    ],
+    "SpectrumNewsNY1.us@HD": [
+      "Spectrum News - NY1",
+      "Spectrum News NY1",
+      "NY1"
+    ],
+    "Stadium.us@HD": [
+      "stadium.us",
+      "Stadium"
+    ],
+    "TVGuide.9200004988.us": [
+      "atandtsportsnetsouthwest.us",
+      "AT&T SportsNet Southwest"
+    ],
+    "TVGuide.9200011799.us": [
+      "Willow Cricket",
+      "Willow Sports",
+      "willowcricket.us"
+    ],
+    "TVGuide.9200018577.us": [
+      "Univision Deportes",
+      "univisiondeportes.us"
+    ],
+    "TVGuide.9233003520.us": [
+      "AT&T SportsNet Pittsburgh",
+      "SportsNet Pittsburgh"
+    ],
+    "TVGuide.9233013492.us": [
+      "HBO Hits East"
+    ],
+    "TVGuide.9233015873.us": [
+      "Spectrum SportsNet Lakers",
+      "Spectrum SportsNet"
+    ],
+    "TVGuide.9266071827.us": [
+      "Spectrum SportsNet LA",
+      "spectrumsportsnetla.us"
+    ],
+    "WLTV.us@HD": [
+      "Univision 23 Miami",
+      "Univision 23 Miami Florida"
+    ],
+    "WUVG.us@HD": [
+      "univision34wuvg.us",
+      "Univision 34 Atlanta"
+    ],
+    "WXTV.us@HD": [
+      "Univision 41 New York"
+    ],
+    "YesNetwork.us@HD": [
+      "yesnetwork.us",
+      "YES Network"
+    ],
+    "beINSports3.us@SD": [
+      "beinsports3.us"
+    ],
+    "beINSports4.us@SD": [
+      "beinsports4.us"
+    ],
+    "beINSports5.us@SD": [
+      "beinsports5.us"
+    ],
+    "beINSports6.us@SD": [
+      "beinsports6.us"
+    ],
+    "beINSports7.us@SD": [
+      "beinsports7.us"
+    ],
+    "beINSports8.us@SD": [
+      "beinsports8.us"
+    ],
     "beINSportsUSA.us@SD": [
       "beIN Sports USA"
+    ],
+    "beINSportsenEspanol.us@HD": [
+      "beinsportespanol.us",
+      "beIN Sports en Espanol"
     ]
   }
 }
