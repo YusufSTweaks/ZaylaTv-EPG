@@ -134,5 +134,65 @@
     "SVTBarn.se@SD": [
       "svtb.se"
     ]
+  },
+  "UK": {
+    "BBCParliament.uk@HD": [
+      "BBC Parliament"
+    ],
+    "CartoonNetwork.uk@HD": [
+      "Cartoon Network"
+    ],
+    "SkySportsPlus.uk@HD": [
+      "Sky Sports+",
+      "Sky Sports Plus"
+    ]
+  },
+  "US": {
+    "5StarMax.us@East": [
+      "Cinemax 5StarMax",
+      "Cinemax Classics"
+    ],
+    "ActionMax.us@East": [
+      "Cinemax Action",
+      "Cinemax ActionMax"
+    ],
+    "BBCNews.uk@NorthAmerica": [
+      "BBC World News",
+      "BBC News North America",
+      "bbcworldnews.us",
+      "bbcworldnewsnorthamerica.us"
+    ],
+    "ESPNews.us@SD": [
+      "ESPN News",
+      "espnnews.us"
+    ],
+    "ESPNU.us@SD": [
+      "ESPNU College Sports"
+    ],
+    "HBO2.us@East": [
+      "HBO 2",
+      "HBO Hits"
+    ],
+    "HBOSignature.us@East": [
+      "HBO Drama"
+    ],
+    "HBOZone.us@East": [
+      "HBO Movies"
+    ],
+    "MSNBC.us@SD": [
+      "MSNBC",
+      "MS NOW"
+    ],
+    "MoreMax.us@East": [
+      "Cinemax MoreMax",
+      "Cinemax More Max"
+    ],
+    "Showtime.us@East": [
+      "Showtime",
+      "Showtime East"
+    ],
+    "beINSportsUSA.us@SD": [
+      "beIN Sports USA"
+    ]
   }
 }

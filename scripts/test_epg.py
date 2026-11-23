@@ -261,10 +261,17 @@ class OfficialAdapterTests(unittest.TestCase):
    {'channel':{'sourceId':300,'fullName':'KTRK-DT Houston, Texas (ABC)','name':'KTRK-DT'},'programSchedules':[{'title':'ABC13 News','startTime':st,'endTime':en}]},
    {'channel':{'sourceId':400,'fullName':'Music Choice Hit List','name':'MC01'},'programSchedules':[{'title':'Music','startTime':st,'endTime':en}]},
    {'channel':{'sourceId':401,'fullName':'On Demand Television','name':'OnDmd'},'programSchedules':[{'title':'VOD','startTime':st,'endTime':en}]},
+   {'channel':{'sourceId':500,'fullName':'MS NOW HD','name':'MSNOWHD'},'programSchedules':[{'title':'Morning Joe','startTime':st,'endTime':en}]},
+   {'channel':{'sourceId':501,'fullName':'Discovery Channel West','name':'DSCW'},'programSchedules':[{'title':'Gold Rush','startTime':st,'endTime':en}]},
   ]
-  channels,programmes,stats=build_tvguide([batch],self.SAMPLE_NOW,canonical_map=canonical)
+  name_map={'msnow':('MSNBC.us@SD','MS NOW HD'),'discoverychannel':('DiscoveryChannel.us@East','Discovery Channel')}
+  channels,programmes,stats=build_tvguide([batch],self.SAMPLE_NOW,canonical_map=canonical,canonical_name_map=name_map)
   self.assertIn('CNN.us@SD',channels)
   self.assertIn('ESPN.us@SD',channels)
+  self.assertIn('MSNBC.us@SD',channels)
+  self.assertNotIn('TVGuide.500.us',channels)
+  # West feeds must stay separate and never collapse onto an East canonical ID
+  self.assertIn('TVGuide.501.us',channels)
   self.assertIn('TVGuide.300.us',channels)
   self.assertEqual(channels['TVGuide.300.us'],['KTRK-DT','KTRK-DT Houston, Texas (ABC)'])
   self.assertNotIn('TVGuide.101.us',channels)
