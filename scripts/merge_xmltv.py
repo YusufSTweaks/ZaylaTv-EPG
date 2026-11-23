@@ -60,7 +60,10 @@ def add_channel_aliases(channels, aliases):
                 continue
             if updated[channel_id] is channels[channel_id]:
                 updated[channel_id] = copy.deepcopy(channels[channel_id])
-            ET.SubElement(updated[channel_id], 'display-name').text = value
+            channel = updated[channel_id]
+            alias = ET.Element('display-name')
+            alias.text = value
+            channel.insert(len(channel.findall('display-name')), alias)
             names.add(folded)
             added += 1
     return updated, added

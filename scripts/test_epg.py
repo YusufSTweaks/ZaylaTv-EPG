@@ -38,13 +38,14 @@ class MergeTests(unittest.TestCase):
  def test_channel_aliases_follow_regional_membership(self):
   with tempfile.TemporaryDirectory() as d:
    p=Path(d)
-   (p/'a.xml').write_text(GOOD.replace('<display-name>A</display-name>','<display-name>Original A</display-name>'))
+   (p/'a.xml').write_text(GOOD.replace('<display-name>A</display-name>','<display-name>Original A</display-name><icon src="https://example.com/icon.png"/>'))
    aliases={'CA':{'a':['station.ca','STATION.CA'],'missing':['missing.ca']},'US':{'a':['station.us']}}
    manifest=[{'id':'ca','region':'CA','output':'a.xml'},{'id':'us','region':'US','output':'a.xml'}]
    report=merge(p,manifest,['CA'],p/'public',now=NOW,aliases_by_region=aliases)
    for path,expected in [('regions/ca.xml',['station.ca']),('regions/us.xml',['station.us']),('guide.xml',['station.ca','station.us'])]:
     root=ET.parse(p/'public'/path).getroot()
     self.assertEqual([x.text for x in root.findall('channel/display-name')],['Original A',*expected])
+    self.assertEqual([x.tag for x in root.find('channel')],['display-name']*(1+len(expected))+['icon'])
     self.assertEqual(root.find('programme').get('channel'),'a')
    self.assertEqual(report['channel_aliases_added'],2)
    self.assertEqual(report['regions']['CA']['channel_aliases_added'],1)
