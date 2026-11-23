@@ -1012,6 +1012,10 @@
     "France3.fr@NoA": [
       "France 3 NoA"
     ],
+    "GameOne.fr@SD": [
+      "gameone.fr",
+      "Game One"
+    ],
     "LEquipe.fr@SD": [
       "lequipe21.fr",
       "La Chaine L'Equipe"
@@ -1028,6 +1032,10 @@
       "moselletv.fr",
       "Moselle TV"
     ],
+    "NationalGeographic.fr@SD": [
+      "natgeo.fr",
+      "National Geo"
+    ],
     "NauticalChannel.it@SD": [
       "nauticalchannel.fr",
       "Nautical Channel"
@@ -1041,6 +1049,10 @@
     ],
     "PiwiPlus.fr@SD": [
       "piwi.fr"
+    ],
+    "PlanetePlusCrime.fr@SD": [
+      "planetecrimeinvestigation.fr",
+      "Planete Crime"
     ],
     "PublicSenat2424.fr@SD": [
       "publicsenat.fr",
@@ -1095,34 +1107,275 @@
     ]
   },
   "MENA": {
+    "AbuDhabiTV.ae@SD": [
+      "abudhabitv.ae",
+      "Abu Dhabi TV"
+    ],
+    "AlArabyTV2.qa@SD": [
+      "alaraby2.qa",
+      "Al Araby 2"
+    ],
+    "AlDafrahTV.ae@SD": [
+      "aldafrah.ae",
+      "Al Dafrah"
+    ],
+    "AlEkhbariya.sa@SD": [
+      "alekhbariya.sa",
+      "Al Ekhbariya"
+    ],
+    "AlHadath.sa@SD": [
+      "alhadath.sa",
+      "Al Hadath"
+    ],
+    "AlJadeed.lb@SD": [
+      "aljadeed.lb",
+      "Al Jadeed"
+    ],
+    "AlJazeeraDocumentary.qa@SD": [
+      "aljazeeradoc.qa",
+      "Al Jazeera Documentary"
+    ],
+    "AlMasriyah.eg@SD": [
+      "almasriyah.eg",
+      "Al Masriyah"
+    ],
+    "AlNaharDrama.eg@SD": [
+      "alnahardrama.eg",
+      "Al Nahar Drama"
+    ],
+    "AlQuranAlKareemTV.sa@SD": [
+      "saudiquran.sa",
+      "Saudi Quran",
+      "Al Quran Al Kareem"
+    ],
+    "AlRasheedTV.iq@SD": [
+      "alrasheed.iq",
+      "Al Rasheed"
+    ],
+    "AlSaeedah.eg@SD": [
+      "alsaeedah.eg",
+      "Al Saeedah"
+    ],
     "AlSaudiya.sa@SD": [
       "saudi1.sa",
       "Saudi 1"
+    ],
+    "AlSouriyaTV.sy@HD": [
+      "Syria TV"
+    ],
+    "AlSunnahAlNabawiyahTV.sa@SD": [
+      "saudisunnah.sa",
+      "Saudi Sunnah",
+      "Al Sunnah"
     ],
     "Alarabiya.ae@SD": [
       "alarabiya.sa",
       "Al Arabiya"
     ],
+    "AlkassOne.qa@SD": [
+      "alkass1.qa",
+      "Alkass 1",
+      "Al Kass 1",
+      "Alkass One"
+    ],
+    "AlkassThree.qa@SD": [
+      "alkass3.qa",
+      "Alkass 3",
+      "Al Kass 3",
+      "Alkass Three"
+    ],
+    "AlkassTwo.qa@SD": [
+      "alkass2.qa",
+      "Alkass 2",
+      "Al Kass 2",
+      "Alkass Two"
+    ],
+    "AmmanTV.jo@SD": [
+      "ammantv.jo",
+      "Amman TV"
+    ],
+    "AsharqDiscovery.sa@SD": [
+      "asharqdiscovery.sa",
+      "Asharq Discovery"
+    ],
+    "AsharqNews.sa@SD": [
+      "asharqnews.sa",
+      "Asharq News"
+    ],
     "BBCArabic.uk@SD": [
       "bbcarabic.sa",
       "BBC Arabic"
+    ],
+    "Baraem.qa@SD": [
+      "baraem.qa",
+      "Baraem",
+      "beIN Baraem",
+      "beIN Baraeam"
+    ],
+    "BeJunior.qa@SD": [
+      "bejunior.qa",
+      "beJunior",
+      "beIN Junior"
+    ],
+    "BloombergTV.us@MiddleEast": [
+      "Bloomberg",
+      "Bloomberg TV"
+    ],
+    "CBC.eg@SD": [
+      "cbc.eg",
+      "CBC Egypt"
+    ],
+    "CBeebiesMiddleEast.uk@SD": [
+      "CBeebies"
+    ],
+    "CNNArabic.ae@SD": [
+      "CNN Arabic"
+    ],
+    "CartoonNetworkArabic.ae@SD": [
+      "Cartoon Network Arabic"
     ],
     "CartoonNetworkMENA.uk@SD": [
       "cartoonnetwork.qa",
       "Cartoon Network"
     ],
+    "ClubMTVEurope.uk@SD": [
+      "Club MTV"
+    ],
+    "DMCDrama.eg@SD": [
+      "dmcdrama.eg",
+      "DMC Drama"
+    ],
+    "DiscoveryChannelMiddleEastAfrica.us@SD": [
+      "Discovery Channel",
+      "Discovery"
+    ],
+    "DubaiTV.ae@SD": [
+      "dubaitv.ae",
+      "Dubai TV"
+    ],
+    "EchoroukTV.dz@SD": [
+      "echorouktv.dz",
+      "Echorouk TV"
+    ],
+    "Fatafeat.ae@SD": [
+      "fatafeat.ae",
+      "Fatafeat"
+    ],
+    "FoodNetworkEMEA.us@SD": [
+      "Food Network"
+    ],
+    "FoxActionMoviesMENA.hk@SD": [
+      "Fox Action Movies",
+      "Star Action"
+    ],
+    "FoxArabia.ae@SD": [
+      "Fox",
+      "Star Series"
+    ],
+    "FoxLifeMiddleEast.ae@SD": [
+      "Fox Life",
+      "Star Life"
+    ],
+    "HGTVArabia.us@SD": [
+      "HGTV"
+    ],
     "HistoryMiddleEast.us@SD": [
       "history.sa"
+    ],
+    "IqraaArabic.sa": [
+      "iqraa.sa",
+      "Iqraa"
+    ],
+    "JeemTV.qa@SD": [
+      "jeem.qa",
+      "Jeem TV",
+      "beIN Jeem",
+      "Jeem"
+    ],
+    "LBC.sa@SD": [
+      "lbc.sa",
+      "LBC"
     ],
     "LBCInternational.lb@SD": [
       "lbcinternational.lb"
     ],
+    "MBC1.ae@SD": [
+      "mbc1.sa",
+      "MBC 1"
+    ],
+    "MBC2.ae@SD": [
+      "mbc2.sa",
+      "MBC 2"
+    ],
     "MBC3.ae@SD": [
       "mbc3.sa"
+    ],
+    "MBC4.ae@SD": [
+      "mbc4.sa",
+      "MBC 4"
+    ],
+    "MBCAction.ae@SD": [
+      "mbcaction.sa",
+      "MBC Action"
+    ],
+    "MBCDrama.ae@SD": [
+      "mbcdrama.sa",
+      "MBC Drama"
+    ],
+    "MBCIraq.iq@SD": [
+      "mbciraq.iq",
+      "MBC Iraq"
+    ],
+    "MBCMasrDrama.sa@SD": [
+      "mbcmasrdrama.eg",
+      "MBC Masr Drama"
+    ],
+    "MBCMax.ae@SD": [
+      "mbcmax.sa",
+      "MBC Max"
+    ],
+    "MTV.lb@SD": [
+      "mtv.lb",
+      "MTV Lebanon"
+    ],
+    "MTV80s.uk@SD": [
+      "MTV 80s"
+    ],
+    "MTV90s.uk@SD": [
+      "MTV 90s"
     ],
     "NationalGeographicMiddleEast.uk@SD": [
       "Nat Geo AD",
       "National Geographic Abu Dhabi"
+    ],
+    "OmanTV.om@SD": [
+      "omantv.om",
+      "Oman TV"
+    ],
+    "OnDrama.eg@SD": [
+      "ondrama.eg",
+      "ON Drama"
+    ],
+    "RotanaCinemaEgypt.eg@SD": [
+      "rotanacinemaegypt.eg",
+      "Rotana Cinema Egypt"
+    ],
+    "RotanaClassic.sa@SD": [
+      "rotanaclassic.sa",
+      "Rotana Classic"
+    ],
+    "RotanaComedy.sa@SD": [
+      "rotanacomedy.sa",
+      "Rotana Comedy"
+    ],
+    "RotanaDrama.sa@SD": [
+      "rotanadrama.sa",
+      "Rotana Drama"
+    ],
+    "RotanaKhalijia.sa@SD": [
+      "rotanakhalijia.sa",
+      "Rotana Khalijia",
+      "Khalijyat"
     ],
     "SkyNewsArabia.ae@SD": [
       "skynewsarabia.sa",
@@ -1136,6 +1389,37 @@
       "mbcwanasah.eg",
       "Wanasah",
       "Wanasah TV"
+    ],
+    "beINDrama1.qa@SD": [
+      "beindrama.qa",
+      "beIN Drama",
+      "beIN Drama 1"
+    ],
+    "beINMovies1Premiere.qa@SD": [
+      "beinmovies1.qa",
+      "beIN Movies 1",
+      "beIN Movies Premiere",
+      "beIN Premiere"
+    ],
+    "beINMovies2Action.qa@SD": [
+      "beinmovies2.qa",
+      "beIN Movies 2",
+      "beIN Movies Action",
+      "beIN Action"
+    ],
+    "beINMovies3Drama.qa@SD": [
+      "beinmovies3.qa",
+      "beIN Movies 3",
+      "beIN Movies Drama"
+    ],
+    "beINMovies4Family.qa@SD": [
+      "beinmovies4.qa",
+      "beIN Movies 4",
+      "beIN Movies Family"
+    ],
+    "beINSeries2.qa@SD": [
+      "beinseries2.qa",
+      "beIN Series 2"
     ]
   },
   "NL": {
@@ -1279,33 +1563,94 @@
       "BBC 4",
       "BBC 4 / CBeebies"
     ],
+    "BBCOne.uk@ChannelIslandsHD": [
+      "bbconechannelislands.uk",
+      "BBC One Channel Islands"
+    ],
+    "BBCOne.uk@East": [
+      "bbconecambridgeshire.uk",
+      "BBC One Cambridge"
+    ],
     "BBCOne.uk@London": [
       "bbc1.uk",
-      "BBC 1"
+      "BBC 1",
+      "bbconelondon.uk",
+      "BBC One London"
+    ],
+    "BBCOne.uk@NorthernIreland": [
+      "bbc1northernireland.uk",
+      "BBC One Northen Ireland"
+    ],
+    "BBCOne.uk@Yorkshire": [
+      "bbcyorkshire.uk",
+      "BBC One York"
+    ],
+    "BBCOne.uk@YorkshireLincolnshireHD": [
+      "bbcyourkshirelincolnshire.uk",
+      "BBC One Yorkshire & Lincolnshire"
     ],
     "BBCParliament.uk@HD": [
       "BBC Parliament"
+    ],
+    "BBCThree.uk@HD": [
+      "bbc3.uk",
+      "BBC Three CBBC",
+      "BBC Three"
     ],
     "BBCTwo.uk@HD": [
       "bbc2.uk",
       "BBC 2"
     ],
+    "BBCTwo.uk@NorthernIreland": [
+      "bbc2northernireland.uk",
+      "BBC Two Northen Ireland Tow"
+    ],
     "CartoonNetwork.uk@HD": [
       "Cartoon Network"
+    ],
+    "ITV1.uk@Anglia": [
+      "itvanglia.uk",
+      "ITV Anglia East"
+    ],
+    "ITV1.uk@BorderScotlandHD": [
+      "itvborderscotland.uk",
+      "Border Scotland TV"
     ],
     "ITV1.uk@Central": [
       "itvcentral.uk",
       "ITV Central",
       "ITV Central East"
     ],
+    "ITV1.uk@Granada": [
+      "itvgranada.uk",
+      "ITV Granada"
+    ],
     "ITV1.uk@London": [
       "itv1.uk",
-      "ITV 1"
+      "ITV 1",
+      "itvlondon.uk",
+      "ITV London"
     ],
     "ITV1.uk@Meridian": [
       "itvmeridian.uk",
       "ITV Meridian",
       "ITV Meridian TV North"
+    ],
+    "ITV1.uk@TyneTees": [
+      "itvtynetees.uk",
+      "ITV Tyne Tees"
+    ],
+    "ITV1.uk@Wales": [
+      "itvwales.uk",
+      "ITV Wales"
+    ],
+    "ITV1.uk@WestCountry": [
+      "itvwestcountry.uk",
+      "ITV Westcountry West"
+    ],
+    "ITV1.uk@Yorkshire": [
+      "itvyorkshire.uk",
+      "ITV Yorkshire West"
     ],
     "Now80s.uk@SD": [
       "now80s.uk"
@@ -1313,6 +1658,51 @@
     "RacingTV.uk@HD": [
       "racinguk.uk",
       "Racing UK"
+    ],
+    "SkyCinemaAction.uk@HD": [
+      "skycinemaaction.uk",
+      "Sky Cinema Action"
+    ],
+    "SkyCinemaComedy.uk@HD": [
+      "skycinemacomedy.uk",
+      "Sky Cinema Comedy"
+    ],
+    "SkyCinemaDrama.uk@HD": [
+      "skycinemadrama.uk",
+      "Sky Cinema Drama"
+    ],
+    "SkyCinemaFamily.uk@HD": [
+      "skycinemafamily.uk",
+      "Sky Cinema Family"
+    ],
+    "SkyCinemaGreats.uk@SD": [
+      "skycinemagreats.uk",
+      "Sky Cinema Greats"
+    ],
+    "SkyCinemaHits.uk@SD": [
+      "skycinemahits.uk",
+      "Sky Cinema Hits"
+    ],
+    "SkyCinemaPremiere.uk@HD": [
+      "skycinemapremiere.uk",
+      "Sky Cinema Premiere"
+    ],
+    "SkyCinemaSciFiHorror.uk@HD": [
+      "skycinemascifihorror.uk",
+      "Sky Cinema Sci-Fi & Horror",
+      "Sky Cinema Sci-Fi"
+    ],
+    "SkyCinemaSelect.uk@HD": [
+      "skycinemaselect.uk",
+      "Sky Cinema Select"
+    ],
+    "SkyCinemaSelect.uk@SD": [
+      "skycinemaanimation.uk",
+      "Sky Cinema Animation"
+    ],
+    "SkyCinemaThriller.uk@HD": [
+      "skycinemathriller.uk",
+      "Sky Cinema Thriller"
     ],
     "SkyHistory.uk@HD": [
       "historychannel.uk",
@@ -1327,9 +1717,64 @@
       "Sky Sci-Fi & Horror",
       "Sky Sci-Fi & Hor"
     ],
+    "SkySportsArena.uk@HD": [
+      "skysportsarena.uk",
+      "Sky Sports Arena"
+    ],
+    "SkySportsBoxOffice.uk@HD": [
+      "skysportsboxoffice.uk",
+      "Sky Sports Box Office"
+    ],
+    "SkySportsCricket.uk@HD": [
+      "skysportscricket.uk",
+      "Sky Sports Cricket"
+    ],
+    "SkySportsF1.uk@HD": [
+      "skysportsf1.uk",
+      "Sky Sports F1"
+    ],
+    "SkySportsFootball.uk@HD": [
+      "skysportsfootball.uk",
+      "Sky Sports Football"
+    ],
+    "SkySportsGolf.uk@HD": [
+      "skysportsgolf.uk",
+      "Sky Sports Golf"
+    ],
+    "SkySportsMainEvent.uk@HD": [
+      "skysportsmainevent.uk",
+      "Sky Sports Main Event"
+    ],
+    "SkySportsMix.uk@HD": [
+      "skysportsmix.uk",
+      "Sky Sports Mix"
+    ],
+    "SkySportsNFL.uk@HD": [
+      "skysportsaction.uk",
+      "skysportsnfl.uk",
+      "Sky Sports Action",
+      "Sky Sports NFL"
+    ],
+    "SkySportsNews.uk@HD": [
+      "skysportsnews.uk",
+      "Sky Sports News"
+    ],
     "SkySportsPlus.uk@HD": [
       "Sky Sports+",
-      "Sky Sports Plus"
+      "Sky Sports Plus",
+      "skysportsplus.uk"
+    ],
+    "SkySportsPremierLeague.uk@HD": [
+      "skysportspremierleague.uk",
+      "Sky Sports Premier League"
+    ],
+    "SkySportsRacing.uk@UKHD": [
+      "skysportsracing.uk",
+      "Sky Sports Racing"
+    ],
+    "SkySportsTennis.uk@SD": [
+      "skysportstennis.uk",
+      "Sky Sports Tennis"
     ],
     "TNTSportsUltimate.uk@SD": [
       "tntsportsultimateuhd.uk",
@@ -1352,6 +1797,10 @@
       "drama.uk",
       "Drama"
     ],
+    "UEden.uk@SD": [
+      "eden.uk",
+      "Eden"
+    ],
     "UGold.uk@HD": [
       "gold.uk",
       "Gold"
@@ -1363,6 +1812,18 @@
     "UYesterday.uk@SD": [
       "yesterday.uk",
       "Yesterday"
+    ],
+    "VirginMediaFour.ie@HD": [
+      "Virgin Media Four"
+    ],
+    "VirginMediaOne.ie@HD": [
+      "Virgin Media One"
+    ],
+    "VirginMediaThree.ie@SD": [
+      "Virgin Media Three"
+    ],
+    "VirginMediaTwo.ie@HD": [
+      "Virgin Media Two"
     ]
   },
   "US": {
@@ -1480,6 +1941,9 @@
     "KUATDT1.us@HD": [
       "pbskuat.us",
       "PBS AZPM Tucson"
+    ],
+    "KUSI.us@HD": [
+      "News 9 San Diego"
     ],
     "KUVS.us@HD": [
       "univision19kuvs.us",
@@ -1624,6 +2088,9 @@
       "Willow Sports",
       "willowcricket.us"
     ],
+    "TVGuide.9200015981.us": [
+      "nbckprc.us"
+    ],
     "TVGuide.9200017875.us": [
       "my9wwor.us",
       "My 9",
@@ -1642,6 +2109,11 @@
       "nbcwrc.us",
       "NBC 4 Washington DC",
       "NBC Washington DC News"
+    ],
+    "TVGuide.9233003502.us": [
+      "nbc4knbc.us",
+      "NBC Los Angeles News",
+      "NBC Los Angles News"
     ],
     "TVGuide.9233003520.us": [
       "AT&T SportsNet Pittsburgh",
@@ -1670,6 +2142,18 @@
       "grio.us",
       "TheGrio",
       "The Grio"
+    ],
+    "TelemundoOrlandoWRDQ.us@SD": [
+      "telemundowrdq.us",
+      "Telemundo 31"
+    ],
+    "WCAU621.us@HD": [
+      "nbc10wcau.us",
+      "NBC Philadelphia News",
+      "NBC Philedelphia News"
+    ],
+    "WFMZTV691.us@HD": [
+      "News 69 Philadelphia"
     ],
     "WHODT1.us@SD": [
       "nbc13who.us"
