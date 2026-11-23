@@ -9,4 +9,7 @@
   <channel site="tv.sfr.fr" site_id="3950" lang="fr" xmltv_id="RMCWOW.fr@SD">RMC WOW</channel>
   <channel site="tv.sfr.fr" site_id="809" lang="fr" xmltv_id="Weo.fr@SD">Wéo TV</channel>
   <channel site="tv.sfr.fr" site_id="2013" lang="fr" xmltv_id="PublicSenat2424.fr@SD">Public Sénat 24/24</channel>
+  <channel site="tv.sfr.fr" site_id="87" lang="fr" xmltv_id="GameOne.fr@SD">Game One</channel>
+  <channel site="tv.sfr.fr" site_id="1167" lang="fr" xmltv_id="GameOne.fr@Plus1">Game One+1</channel>
+  <channel site="tv.sfr.fr" site_id="1939" lang="fr" xmltv_id="France3ParisIDF.fr@SD">France 3 Paris IDF</channel>
 </channels>

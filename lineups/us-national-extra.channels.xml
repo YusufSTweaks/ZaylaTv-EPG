@@ -120,4 +120,5 @@
   <channel site="tvpassport.com" site_id="nasa-4k/33492" lang="en" xmltv_id="NASATV4K.us@HD">NASA 4K</channel>
   <channel site="tvpassport.com" site_id="court-tv-kpxe-tv2-kansas-city-mo/12029" lang="en" xmltv_id="IONMystery.us@SD">ION Mystery</channel>
   <channel site="tvpassport.com" site_id="court-tv-wlne-tv4-new-bedford-ma/33660" lang="en" xmltv_id="IONPlus.us@SD">ION Plus</channel>
+  <channel site="tvpassport.com" site_id="telemundo-wrdq-dt3-orlando-fl/17603" lang="es" xmltv_id="TelemundoOrlandoWRDQ.us@SD">Telemundo (WRDQ-DT3) Orlando, FL</channel>
 </channels>
