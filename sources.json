@@ -13,7 +13,7 @@
       "id": "us-espn-official",
       "region": "US",
       "adapter": "espn",
-      "include_espn_plus": true,
+      "include_espn_plus": false,
       "espn_plus_map": "lineups/espn-plus-map.json"
     },
     {

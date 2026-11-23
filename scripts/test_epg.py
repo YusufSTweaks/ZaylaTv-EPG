@@ -56,6 +56,25 @@ class MergeTests(unittest.TestCase):
    aliases={'US':{'a':['Original B','shared.us'],'b':['shared.US']}}
    report=merge(p,[{'id':'us','region':'US','output':'a.xml'}],['US'],p/'public',now=NOW,aliases_by_region=aliases)
    self.assertEqual(report['channel_aliases_added'],0)
+ def test_derived_provider_id_aliases_only_keep_unique_slugs(self):
+  xml=(
+   '<tv>'
+   '<channel id="WDRFernsehen.de@HD"><display-name>WDR HD</display-name></channel>'
+   '<channel id="Dup1.ca@HD"><display-name>City News HD</display-name></channel>'
+   '<channel id="Dup2.ca@SD"><display-name>City News</display-name></channel>'
+   '<programme channel="WDRFernsehen.de@HD" start="20300101000000 +0000" stop="20300101010000 +0000"><title>Aktuelle Stunde</title></programme>'
+   '<programme channel="Dup1.ca@HD" start="20300101000000 +0000" stop="20300101010000 +0000"><title>News 1</title></programme>'
+   '<programme channel="Dup2.ca@SD" start="20300101000000 +0000" stop="20300101010000 +0000"><title>News 2</title></programme>'
+   '</tv>'
+  )
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d);(p/'de.xml').write_text(xml)
+   merge(p,[{'id':'de','region':'DE','output':'de.xml'}],['DE'],p/'public',now=NOW)
+   root=ET.parse(p/'public/guide.xml').getroot()
+   by_id={c.get('id'):[n.text for n in c.findall('display-name')] for c in root.findall('channel')}
+   self.assertIn('wdr.de',by_id['WDRFernsehen.de@HD'])
+   self.assertNotIn('citynews.ca',by_id['Dup1.ca@HD'])
+   self.assertNotIn('citynews.ca',by_id['Dup2.ca@SD'])
  def test_selector_scopes_deduplicates_and_caps(self):
   with tempfile.TemporaryDirectory() as d:
    p=Path(d);site=p/'sites/demo';site.mkdir(parents=True)
