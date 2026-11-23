@@ -86,4 +86,45 @@
   <channel site="tvpassport.com" site_id="magnolia-network-canada/2034" lang="en" xmltv_id="MagnoliaNetworkCanada.ca@SD">Magnolia Network Canada</channel>
   <channel site="tvpassport.com" site_id="ctv-cipa-prince-albert-sk/276" lang="en" xmltv_id="CTVCIPAPrinceAlbertSK.ca@SD">CTV (CIPA) Prince Albert, SK</channel>
   <channel site="tvpassport.com" site_id="ctv2-civi-dt2-vancouver-bc/13841" lang="en" xmltv_id="CTV2CIVIDT2VancouverBC.ca@SD">CTV2 (CIVI-DT2) Vancouver, BC</channel>
+  <channel site="tvpassport.com" site_id="ctv-cjcb-sydney-cape-breton-ns-hd/6813" lang="en" xmltv_id="CTVCJCBSydneyNS.ca@HD">CTV (CJCB) Sydney/ Cape Breton, NS HD</channel>
+  <channel site="tvpassport.com" site_id="cbc-cfyk-yellowknife-nwt-hd/8028" lang="en" xmltv_id="CBCCFYKYellowknifeNWT.ca@HD">CBC (CFYK) Yellowknife, NWT HD</channel>
+  <channel site="tvpassport.com" site_id="cbc-cbct-charlottetown-pe-hd/6803" lang="en" xmltv_id="CBCCBCTCharlottetownPE.ca@HD">CBC (CBCT) Charlottetown, PE HD</channel>
+  <channel site="tvpassport.com" site_id="cbc-cbnt-st-johns-nl-hd/6807" lang="en" xmltv_id="CBCCBNTStJohnsNL.ca@HD">CBC (CBNT) St-John's, NL HD</channel>
+  <channel site="tvpassport.com" site_id="ctv2-atlantic-region-hd/8383" lang="en" xmltv_id="CTV2AtlanticRegion.ca@HD">CTV2 Atlantic Region HD</channel>
+  <channel site="tvpassport.com" site_id="ctv2-ottawa-on-hd/9698" lang="en" xmltv_id="CTV2OttawaON.ca@HD">CTV2 Ottawa, ON HD</channel>
+  <channel site="tvpassport.com" site_id="omni-vancouver-hd/9611" lang="en" xmltv_id="OMNIVancouver.ca@HD">OMNI Vancouver HD</channel>
+  <channel site="tvpassport.com" site_id="rogers-ottawa-english-hd/11313" lang="en" xmltv_id="RogersOttawaEnglish.ca@HD">Rogers Ottawa English HD</channel>
+  <channel site="tvpassport.com" site_id="rogers-owen-sound/9852" lang="en" xmltv_id="RogersOwenSound.ca@SD">Rogers Owen Sound</channel>
+  <channel site="tvpassport.com" site_id="tva-cfem-rouyn-hd/15399" lang="fr" xmltv_id="TVACFEMRouynQC.ca@HD">TVA (CFEM) Rouyn HD</channel>
+  <channel site="tvpassport.com" site_id="noovo-cfvs-val-dor-qc/2184" lang="fr" xmltv_id="NoovoCFVSValDorQC.ca@SD">Noovo (CFVS) Val-d'Or, QC</channel>
+  <channel site="tvpassport.com" site_id="ici-cbaft-moncton-nb-hd/6816" lang="fr" xmltv_id="ICICBAFTMonctonNB.ca@HD">ICI (CBAFT) Moncton, NB HD</channel>
+  <channel site="tvpassport.com" site_id="weather-network-toronto-hd/19272" lang="en" xmltv_id="TheWeatherNetworkToronto.ca@HD">Weather Network (Toronto) HD</channel>
+  <channel site="tvpassport.com" site_id="hbo-canada-2--west/292" lang="en" xmltv_id="HBOCanada2.ca@West">HBO Canada 2 - West</channel>
+  <channel site="tvpassport.com" site_id="starz2--east-hd/10783" lang="en" xmltv_id="Starz2Canada.ca@East">STARZ2 - East HD</channel>
+  <channel site="tvpassport.com" site_id="disney-junior-canada-hd/17225" lang="en" xmltv_id="DisneyJunior.ca@HD">Disney Junior Canada HD</channel>
+  <channel site="tvpassport.com" site_id="cartoon-network-canada--east-hd/10331" lang="en" xmltv_id="CartoonNetworkCanada.ca@East">Cartoon Network Canada - East HD</channel>
+  <channel site="tvpassport.com" site_id="cartoon-network-canada--west-hd/10332" lang="en" xmltv_id="CartoonNetworkCanada.ca@West">Cartoon Network Canada - West HD</channel>
+  <channel site="tvpassport.com" site_id="wildbraintv-hd/10240" lang="en" xmltv_id="WildBrainTV.ca@HD">WildBrainTV HD</channel>
+  <channel site="tvpassport.com" site_id="golf-channel-canada-hd/9901" lang="en" xmltv_id="GolfChannelCanada.ca@HD">Golf Channel Canada HD</channel>
+  <channel site="tvpassport.com" site_id="one-soccer/37452" lang="en" xmltv_id="OneSoccer.ca@SD">One Soccer</channel>
+  <channel site="tvpassport.com" site_id="fox-sports-racing-hd/5488" lang="en" xmltv_id="FoxSportsRacingCanada.ca@HD">Fox Sports Racing HD</channel>
+  <channel site="tvpassport.com" site_id="bbc-earth-hd/3908" lang="en" xmltv_id="BBCEarthCanada.ca@HD">BBC Earth HD</channel>
+  <channel site="tvpassport.com" site_id="bbc-first-hd/3906" lang="en" xmltv_id="BBCFirstCanada.ca@HD">BBC First HD</channel>
+  <channel site="tvpassport.com" site_id="ginx-esports-tv-canada-hd/10894" lang="en" xmltv_id="SuperChannelQuest.ca@HD">Super Channel Quest HD</channel>
+  <channel site="tvpassport.com" site_id="planete-hd/6765" lang="fr" xmltv_id="PlanetePlusCanada.ca@HD">Planète+ HD</channel>
+  <channel site="tvpassport.com" site_id="ami-audio--east/3414" lang="en" xmltv_id="AMIAudio.ca@East">AMI-Audio - East</channel>
+  <channel site="tvpassport.com" site_id="aquarium-channel-hd/7820" lang="en" xmltv_id="AquariumChannel.ca@HD">Aquarium Channel HD</channel>
+  <channel site="tvpassport.com" site_id="mezzo-live-hd/15259" lang="fr" xmltv_id="MezzoLiveCanada.ca@HD">Mezzo Live HD</channel>
+  <channel site="tvpassport.com" site_id="stingray-classica-hd/33594" lang="en" xmltv_id="StingrayClassica.ca@HD">Stingray Classica HD</channel>
+  <channel site="tvpassport.com" site_id="paramount-network-usa--eastern-feed/1030" lang="en" xmltv_id="ParamountNetworkCanada.ca@East">Paramount Network Canada</channel>
+  <channel site="tvpassport.com" site_id="cnn--west/33621" lang="en" xmltv_id="CNNCanada.ca@SD">CNN Canada</channel>
+  <channel site="tvpassport.com" site_id="fox-news--west/33623" lang="en" xmltv_id="FoxNewsCanada.ca@SD">Fox News Canada</channel>
+  <channel site="tvpassport.com" site_id="hln-hd/6994" lang="en" xmltv_id="HLNCanada.ca@HD">HLN Canada HD</channel>
+  <channel site="tvpassport.com" site_id="nhl-network-usa-hd/14157" lang="en" xmltv_id="NHLNetworkCanada.ca@HD">NHL Network Canada HD</channel>
+  <channel site="tvpassport.com" site_id="american-heroes-channel-hd/10881" lang="en" xmltv_id="AHCCanada.ca@HD">American Heroes Channel Canada HD</channel>
+  <channel site="tvpassport.com" site_id="hope-channel-hd/35211" lang="en" xmltv_id="HopeChannelCanada.ca@HD">Hope Channel Canada HD</channel>
+  <channel site="tvpassport.com" site_id="dominicana/18871" lang="es" xmltv_id="DominicanaCanada.ca@SD">Dominicana</channel>
+  <channel site="tvpassport.com" site_id="cnn-international-asia-pacific/3011" lang="en" xmltv_id="CNNInternationalCanada.ca@SD">CNN International Canada</channel>
+  <channel site="tvpassport.com" site_id="cmt-music/2288" lang="en" xmltv_id="CMTMusicCanada.ca@SD">CMT Music Canada</channel>
+  <channel site="tvpassport.com" site_id="game-show-network--east-hd/7055" lang="en" xmltv_id="GSNCanada.ca@HD">Game Show Network Canada HD</channel>
 </channels>

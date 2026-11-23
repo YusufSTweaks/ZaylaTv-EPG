@@ -357,6 +357,14 @@ class OfficialAdapterTests(unittest.TestCase):
     self.assertTrue(ch.get('site') and ch.get('site_id') and (ch.text or '').strip())
   cfg=json.loads((repo/'sources.json').read_text())
   self.assertEqual(cfg['required_regions'],['US','CA','FR','UK','MENA','ZA'])
+  aliases=json.loads((repo/'lineups/channel-id-aliases.json').read_text())
+  for region,mapping in aliases.items():
+   seen_alias={}
+   for cid,names in mapping.items():
+    for alias in names:
+     key=alias.strip().lower()
+     self.assertNotIn(key,seen_alias,f'Duplicate alias {alias!r} in {region}: {seen_alias.get(key)} vs {cid}')
+     seen_alias[key]=cid
   with tempfile.TemporaryDirectory() as d:
    p=Path(d)
    c1=p/'c1.xml';c1.write_text('<channels><channel site="tvpassport.com" site_id="1" lang="en" xmltv_id="A.ca@SD">A</channel></channels>')

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="tvpassport.com" site_id="abc-news-live/36224" lang="en" xmltv_id="ABCNewsLive.us@SD">ABC News Live</channel>
+  <channel site="tvpassport.com" site_id="amc--pacific-feed-hd/10757" lang="en" xmltv_id="AMC.us@West">AMC - Pacific Feed HD</channel>
+  <channel site="tvpassport.com" site_id="accuweather-hd/7335" lang="en" xmltv_id="AccuWeatherNOW.us@SD">AccuWeather HD</channel>
+  <channel site="tvpassport.com" site_id="bet-gospel/6191" lang="en" xmltv_id="BETGospel.us@SD">BET Gospel</channel>
+  <channel site="tvpassport.com" site_id="bet-jams/2113" lang="en" xmltv_id="BETJams.us@SD">BET Jams</channel>
+  <channel site="tvpassport.com" site_id="bet-soul/3229" lang="en" xmltv_id="BETSoul.us@SD">BET Soul</channel>
+  <channel site="tvpassport.com" site_id="bravo-usa--pacific-feed/1320" lang="en" xmltv_id="Bravo.us@West">Bravo USA - Pacific Feed</channel>
+  <channel site="tvpassport.com" site_id="cmt-us--pacific-feed-hd/6345" lang="en" xmltv_id="CMT.us@West">CMT US - Pacific Feed HD</channel>
+  <channel site="tvpassport.com" site_id="cnn-international-north-america/3008" lang="en" xmltv_id="CNNInternational.us@NorthAmerica">CNN International North America</channel>
+  <channel site="tvpassport.com" site_id="charge/15228" lang="en" xmltv_id="Charge.us@SD">CHARGE!</channel>
+  <channel site="tvpassport.com" site_id="comet-tv/16811" lang="en" xmltv_id="Comet.us@SD">Comet TV</channel>
+  <channel site="tvpassport.com" site_id="court-tv-network/33650" lang="en" xmltv_id="CourtTV.us@SD">Court TV Network</channel>
+  <channel site="tvpassport.com" site_id="disney-junior-usa--west/16220" lang="en" xmltv_id="DisneyJunior.us@West">Disney Junior USA - West</channel>
+  <channel site="tvpassport.com" site_id="disney-xd-usa--pacific-feed/1208" lang="en" xmltv_id="DisneyXD.us@West">Disney XD USA - Pacific Feed</channel>
+  <channel site="tvpassport.com" site_id="e-entertainment-usa--pacific-feed/1213" lang="en" xmltv_id="E.us@West">E! Entertainment USA - Pacific Feed</channel>
+  <channel site="tvpassport.com" site_id="ewtn-usa/620" lang="en" xmltv_id="EWTN.us@English">EWTN USA</channel>
+  <channel site="tvpassport.com" site_id="fx-networks-west-coast/1449" lang="en" xmltv_id="FX.us@West">FX Networks West Coast</channel>
+  <channel site="tvpassport.com" site_id="food-network-usa--pacific-feed/2032" lang="en" xmltv_id="FoodNetwork.us@West">Food Network USA - Pacific Feed</channel>
+  <channel site="tvpassport.com" site_id="fox-deportes-hd/10502" lang="en" xmltv_id="FoxDeportes.us@SD">Fox Deportes HD</channel>
+  <channel site="tvpassport.com" site_id="fox-soccer-plus-hd/11551" lang="en" xmltv_id="FoxSoccerPlus.us@SD">FOX Soccer Plus HD</channel>
+  <channel site="tvpassport.com" site_id="fox-weather/37620" lang="en" xmltv_id="FoxWeather.us@SD">Fox Weather</channel>
+  <channel site="tvpassport.com" site_id="freeform--pacific-feed/1197" lang="en" xmltv_id="Freeform.us@West">Freeform - Pacific Feed</channel>
+  <channel site="tvpassport.com" site_id="gettv/11258" lang="en" xmltv_id="GetTV.us@SD">Great</channel>
+  <channel site="tvpassport.com" site_id="grit-network/14377" lang="en" xmltv_id="Grit.us@SD">Grit Network</channel>
+  <channel site="tvpassport.com" site_id="hdnet-movies/4267" lang="en" xmltv_id="HDNetMovies.us@SD">HDNet Movies</channel>
+  <channel site="tvpassport.com" site_id="hgtv-usa--pacific-feed/1277" lang="en" xmltv_id="HGTV.us@West">HGTV USA - Pacific Feed</channel>
+  <channel site="tvpassport.com" site_id="hsn--home-shopping-network/14985" lang="en" xmltv_id="HSN.us@East">HSN - Home Shopping Network</channel>
+  <channel site="tvpassport.com" site_id="investigation-discovery-usa--pacific/19949" lang="en" xmltv_id="InvestigationDiscovery.us@West">Investigation Discovery USA - Pacific</channel>
+  <channel site="tvpassport.com" site_id="jewelry-television/3000" lang="en" xmltv_id="JewelryTV.us@SD">Jewelry Television</channel>
+  <channel site="tvpassport.com" site_id="abc-kivi-boise-id/3397" lang="en" xmltv_id="KIVITV61.us@HD">ABC (KIVI) Boise, ID</channel>
+  <channel site="tvpassport.com" site_id="yes-network-hd/4696" lang="en" xmltv_id="YesNetwork.us@HD">YES Network HD</channel>
+  <channel site="tvpassport.com" site_id="new-england-sports-network-hd/3600" lang="en" xmltv_id="NESN.us@HD">NESN HD</channel>
+  <channel site="tvpassport.com" site_id="new-england-sports-network-plus-hd/15024" lang="en" xmltv_id="NESNPlus.us@HD">NESN Plus HD</channel>
+  <channel site="tvpassport.com" site_id="sny-sportsnet-new-york-comcast/4186" lang="en" xmltv_id="SNY.us@HD">SNY</channel>
+  <channel site="tvpassport.com" site_id="mid-atlantic-sports-network-hd/7233" lang="en" xmltv_id="MASN.us@HD">MASN HD</channel>
+  <channel site="tvpassport.com" site_id="mid-atlantic-sports-network-2hd/7234" lang="en" xmltv_id="MASN2.us@HD">MASN 2 HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-sports-chicago-hd/6409" lang="en" xmltv_id="NBCSportsChicago.us@HD">NBC Sports Chicago HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-sports-philadelphia-hd/6413" lang="en" xmltv_id="NBCSportsPhiladelphia.us@HD">NBC Sports Philadelphia HD</channel>
+  <channel site="tvpassport.com" site_id="monumental-sports-network-2-hd/9067" lang="en" xmltv_id="MonumentalSportsNetwork2.us@HD">Monumental Sports Network 2 HD</channel>
+  <channel site="tvpassport.com" site_id="root-sports-northwest--boise-hd/5701" lang="en" xmltv_id="RootSportsNorthwest.us@HD">Root Sports Northwest HD</channel>
+  <channel site="tvpassport.com" site_id="nfl-redzone-hd/7536" lang="en" xmltv_id="NFLRedZone.us@HD">NFL RedZone HD</channel>
+  <channel site="tvpassport.com" site_id="stadium-hd/31947" lang="en" xmltv_id="Stadium.us@HD">Stadium HD</channel>
+  <channel site="tvpassport.com" site_id="sportsgrid-hd/35210" lang="en" xmltv_id="SportsGrid.us@HD">SportsGrid HD</channel>
+  <channel site="tvpassport.com" site_id="game-hd/14465" lang="en" xmltv_id="GAMEPlus.us@HD">GAME+ HD</channel>
+  <channel site="tvpassport.com" site_id="bein-sports-3/37182" lang="en" xmltv_id="beINSports3.us@SD">beIN Sports 3</channel>
+  <channel site="tvpassport.com" site_id="bein-sports-4/37183" lang="en" xmltv_id="beINSports4.us@SD">beIN Sports 4</channel>
+  <channel site="tvpassport.com" site_id="bein-sports-5/37184" lang="en" xmltv_id="beINSports5.us@SD">beIN Sports 5</channel>
+  <channel site="tvpassport.com" site_id="bein-sports-6/37185" lang="en" xmltv_id="beINSports6.us@SD">beIN Sports 6</channel>
+  <channel site="tvpassport.com" site_id="bein-sports-7/37186" lang="en" xmltv_id="beINSports7.us@SD">beIN Sports 7</channel>
+  <channel site="tvpassport.com" site_id="bein-sports-8/37187" lang="en" xmltv_id="beINSports8.us@SD">beIN Sports 8</channel>
+  <channel site="tvpassport.com" site_id="screenpix/34659" lang="en" xmltv_id="ScreenPix.us@SD">ScreenPix</channel>
+  <channel site="tvpassport.com" site_id="screenpix-action/34660" lang="en" xmltv_id="ScreenPixAction.us@SD">ScreenPix Action</channel>
+  <channel site="tvpassport.com" site_id="screenpix-voices/34662" lang="en" xmltv_id="ScreenPixVoices.us@SD">ScreenPix Voices</channel>
+  <channel site="tvpassport.com" site_id="screenpix-westerns/34661" lang="en" xmltv_id="ScreenPixWesterns.us@SD">ScreenPix Westerns</channel>
+  <channel site="tvpassport.com" site_id="hollywood-suite-70s-hd/20017" lang="en" xmltv_id="HollywoodSuite70s.us@HD">Hollywood Suite 70s HD</channel>
+  <channel site="tvpassport.com" site_id="hollywood-suite-80s-hd/20018" lang="en" xmltv_id="HollywoodSuite80s90s.us@HD">Hollywood Suite 80s &amp; 90s HD</channel>
+  <channel site="tvpassport.com" site_id="hollywood-suite-90s-hd/20019" lang="en" xmltv_id="HollywoodSuite2000s.us@HD">Hollywood Suite 2000s HD</channel>
+  <channel site="tvpassport.com" site_id="ny1-new-york-hd/7127" lang="en" xmltv_id="SpectrumNewsNY1.us@HD">Spectrum News NY1 HD</channel>
+  <channel site="tvpassport.com" site_id="news-12-long-island/20180" lang="en" xmltv_id="News12LongIsland.us@HD">News 12 Long Island</channel>
+  <channel site="tvpassport.com" site_id="news-12-connecticut/20178" lang="en" xmltv_id="News12Connecticut.us@HD">News 12 Connecticut</channel>
+  <channel site="tvpassport.com" site_id="scripps-news-hd/16417" lang="en" xmltv_id="ScrippsNews.us@HD">Scripps News HD</channel>
+  <channel site="tvpassport.com" site_id="american-heroes-channel-hd/10881" lang="en" xmltv_id="AmericanHeroesChannel.us@HD">American Heroes Channel HD</channel>
+  <channel site="tvpassport.com" site_id="insp-hd/11446" lang="en" xmltv_id="INSP.us@HD">INSP HD</channel>
+  <channel site="tvpassport.com" site_id="awe-tv-network-hd/6306" lang="en" xmltv_id="AWE.us@HD">AWE HD</channel>
+  <channel site="tvpassport.com" site_id="bbc-earth-hd/3908" lang="en" xmltv_id="BBCEarthUS.us@HD">BBC Earth HD</channel>
+  <channel site="tvpassport.com" site_id="love-nature-hd/31482" lang="en" xmltv_id="LoveNature.us@HD">Love Nature HD</channel>
+  <channel site="tvpassport.com" site_id="paramount-network-usa--pacific-feed/1199" lang="en" xmltv_id="ParamountNetwork.us@West">Paramount Network West</channel>
+  <channel site="tvpassport.com" site_id="localish-kabc-tv2-hd-los-angeles-ca/6543" lang="en" xmltv_id="Localish.us@HD">ABC Localish HD</channel>
+  <channel site="tvpassport.com" site_id="metv-kazd3-lake-dallas-tx-hd/15042" lang="en" xmltv_id="MeTVPlus.us@HD">MeTV+ HD</channel>
+  <channel site="tvpassport.com" site_id="showtime-showcase-hd--pacific/19981" lang="en" xmltv_id="ShowtimeShowcase.us@West">Showtime Showcase West</channel>
+  <channel site="tvpassport.com" site_id="showtime-2-hd--pacific/7566" lang="en" xmltv_id="Showtime2.us@West">Showtime 2 West</channel>
+  <channel site="tvpassport.com" site_id="showtime-next--pacific/2597" lang="en" xmltv_id="ShowtimeNext.us@West">Showtime Next West</channel>
+  <channel site="tvpassport.com" site_id="showtime-women--pacific/2598" lang="en" xmltv_id="ShowtimeWomen.us@West">Showtime Women West</channel>
+  <channel site="tvpassport.com" site_id="ae-us--pacific-feed/1202" lang="en" xmltv_id="AE.us@West">A&amp;E West</channel>
+  <channel site="tvpassport.com" site_id="hbo-latino-hbo-7--pacific/2579" lang="en" xmltv_id="HBOLatino.us@West">HBO Latino West</channel>
+  <channel site="tvpassport.com" site_id="3abn-dare-to-dream/16481" lang="en" xmltv_id="3ABNDareToDream.us@SD">3ABN Dare to Dream</channel>
+  <channel site="tvpassport.com" site_id="3abn-proclaim/32980" lang="en" xmltv_id="3ABNProclaim.us@SD">3ABN Proclaim</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-detroit-hd/4514" lang="en" xmltv_id="FanDuelSportsNetworkDetroitHD.us@HD">FanDuel Sports Network Detroit HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-florida-1-hd/31558" lang="en" xmltv_id="FanDuelSportsNetworkFloridaNorthFloridaHD.us@HD">FanDuel Sports Network Florida - North Florida HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-florida-hd/4516" lang="en" xmltv_id="FanDuelSportsNetworkFloridaHD.us@HD">FanDuel Sports Network Florida HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-midwest--centralsouth-illinois-hd/19555" lang="en" xmltv_id="FanDuelSportsNetworkCentralSouthIllinoisHD.us@HD">FanDuel Sports Network - Central/South Illinois HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-midwest--fort-wayne-hd/5696" lang="en" xmltv_id="FanDuelSportsNetworkFortWayneHD.us@HD">FanDuel Sports Network - Fort Wayne HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-midwest--iowa-hd/19658" lang="en" xmltv_id="FanDuelSportsNetworkMidwestIowaHD.us@HD">FanDuel Sports Network Midwest - Iowa HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-midwest-hd/11394" lang="en" xmltv_id="FanDuelSportsNetworkMidwestHD.us@HD">FanDuel Sports Network Midwest HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-north-hd/4517" lang="en" xmltv_id="FanDuelSportsNetworkNorthHD.us@HD">FanDuel Sports Network North HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-ohio-hd/4518" lang="en" xmltv_id="FanDuelSportsNetworkOhioHD.us@HD">FanDuel Sports Network Ohio HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-oklahoma-hd/11520" lang="en" xmltv_id="FanDuelSportsNetworkOklahomaHD.us@HD">FanDuel Sports Network Oklahoma HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-san-diego-hd/10273" lang="en" xmltv_id="FanDuelSportsNetworkSanDiegoHD.us@HD">FanDuel Sports Network San Diego HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-socal-hd/5704" lang="en" xmltv_id="FanDuelSportsNetworkSoCalHD.us@HD">FanDuel Sports Network SoCal HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-south--carolinas-hd/9981" lang="en" xmltv_id="FanDuelSportsNetworkSouthCarolinasHD.us@HD">FanDuel Sports Network South- Carolinas HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-south--tn-nashville-hd/11590" lang="en" xmltv_id="FanDuelSportsNetworkSouthTennesseeHD.us@HD">FanDuel Sports Network South- Tennessee HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-south-hd/4520" lang="en" xmltv_id="FanDuelSportsNetworkSouthHD.us@HD">FanDuel Sports Network South HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-southeast--georgia-hd/16243" lang="en" xmltv_id="FanDuelSportsNetworkSoutheastGeorgiaHD.us@HD">FanDuel Sports Network Southeast Georgia HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-southeast--tennessee-hd/16248" lang="en" xmltv_id="FanDuelSportsNetworkSoutheastTennesseeHD.us@HD">FanDuel Sports Network Southeast - Tennessee HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-southeast-hd/6685" lang="en" xmltv_id="FanDuelSportsNetworkSoutheastHD.us@HD">FanDuel Sports Network Southeast HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-southwest-extra-ok2-hd/31585" lang="en" xmltv_id="FanDuelSportsNetworkSouthwestHDOK2HD.us@HD">FanDuel Sports Network Southwest HD OK2 HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-southwest-hd/4521" lang="en" xmltv_id="FanDuelSportsNetworkSouthwestHD.us@HD">FanDuel Sports Network Southwest HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-west-hd/4522" lang="en" xmltv_id="FanDuelSportsNetworkWestHD.us@HD">FanDuel Sports Network West HD</channel>
+  <channel site="tvpassport.com" site_id="bally-sports-wisconsin-hd/7282" lang="en" xmltv_id="FanDuelSportsNetworkWisconsinHD.us@HD">FanDuel Sports Network Wisconsin HD</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-austin/32005" lang="en" xmltv_id="SpectrumNewsAustin.us@HD">Spectrum News Austin</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-buffalo/32006" lang="en" xmltv_id="SpectrumNewsBuffalo.us@HD">Spectrum News Buffalo</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-ca--west-la/34650" lang="en" xmltv_id="SpectrumNewsCAWestLA.us@HD">Spectrum News CA - West LA</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-central-new-york/32009" lang="en" xmltv_id="SpectrumNewsCentralNewYork.us@HD">Spectrum News Central New York</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-coastal--nc/34643" lang="en" xmltv_id="SpectrumNewsCoastalNC.us@HD">Spectrum News Coastal - NC</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-hd/12628" lang="en" xmltv_id="SpectrumNewsHD.us@HD">Spectrum News HD</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-hudson-valley/32008" lang="en" xmltv_id="SpectrumNewsHudsonValley.us@HD">Spectrum News Hudson Valley</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-kentucky/32014" lang="en" xmltv_id="SpectrumNewsKentucky.us@HD">Spectrum News Kentucky</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-north-carolina/32012" lang="en" xmltv_id="SpectrumNewsNorthCarolina.us@HD">Spectrum News North Carolina</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-north-country/32011" lang="en" xmltv_id="SpectrumNewsNorthCountry.us@HD">Spectrum News North Country</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-ohio--clevelandakron/33945" lang="en" xmltv_id="SpectrumNewsOhioClevelandAkron.us@HD">Spectrum News Ohio - Cleveland/Akron</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-ohio--toledolima/34774" lang="en" xmltv_id="SpectrumNewsOhioToledoLima.us@HD">Spectrum News Ohio - Toledo/Lima</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-rochester/32013" lang="en" xmltv_id="SpectrumNewsRochester.us@HD">Spectrum News Rochester</channel>
+  <channel site="tvpassport.com" site_id="spectrum-news-southern-tier/32010" lang="en" xmltv_id="SpectrumNewsSouthernTier.us@HD">Spectrum News Southern Tier</channel>
+  <channel site="tvpassport.com" site_id="bein-sport-espanol-canada-hd/13249" lang="en" xmltv_id="beINSportsenEspanol.us@HD">beIN Sports en Espanol</channel>
+</channels>

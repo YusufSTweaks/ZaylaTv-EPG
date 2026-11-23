@@ -22,18 +22,36 @@
       "adapter": "tvguide"
     },
     {
-      "id": "us-tvpassport",
+      "id": "us-tvpassport-national",
       "region": "US",
       "files": [
-        "tvpassport.com/*.channels.xml"
+        "us-national-extra.channels.xml"
       ],
-      "countries": [
-        "us"
+      "limit": 300
+    },
+    {
+      "id": "us-tvpassport-affiliates-east",
+      "region": "US",
+      "files": [
+        "us-affiliates-east.channels.xml"
       ],
-      "languages": [
-        "en"
+      "limit": 500
+    },
+    {
+      "id": "us-tvpassport-affiliates-west",
+      "region": "US",
+      "files": [
+        "us-affiliates-west.channels.xml"
       ],
-      "limit": 400
+      "limit": 500
+    },
+    {
+      "id": "us-ontvtonight-extra",
+      "region": "US",
+      "files": [
+        "us-ontvtonight-extra.channels.xml"
+      ],
+      "limit": 50
     },
     {
       "id": "ca-tsn-official",
@@ -69,7 +87,7 @@
       "files": [
         "canada-extra.channels.xml"
       ],
-      "limit": 120
+      "limit": 200
     },
     {
       "id": "ca-tvhebdo",
@@ -83,6 +101,14 @@
       "limit": 200
     },
     {
+      "id": "ca-tvhebdo-extra",
+      "region": "CA",
+      "files": [
+        "canada-tvhebdo-extra.channels.xml"
+      ],
+      "limit": 50
+    },
+    {
       "id": "ca-ontvtonight",
       "region": "CA",
       "files": [
@@ -92,6 +118,14 @@
         "ca"
       ],
       "limit": 100
+    },
+    {
+      "id": "ca-ontvtonight-extra",
+      "region": "CA",
+      "files": [
+        "canada-ontvtonight-extra.channels.xml"
+      ],
+      "limit": 50
     },
     {
       "id": "fr-programme-tv",
