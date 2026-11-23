@@ -136,6 +136,44 @@ def load_canonical_tvguide_map(upstream_dir):
     return mapping
 
 
+def load_canonical_us_name_map(upstream_dir):
+    """Load normalized US national channel name -> (xmltv_id, display_name) from iptv-org catalogs."""
+    mapping = {}
+    if not upstream_dir:
+        return mapping
+    sites_root = Path(upstream_dir) / 'sites'
+    if not sites_root.exists():
+        return mapping
+    globs = (
+        'tvguide.com/*.channels.xml',
+        'tvpassport.com/*.channels.xml',
+        'directv.com/*.channels.xml',
+        'ontvtonight.com/ontvtonight.com_us.channels.xml',
+    )
+    for pattern in globs:
+        for path in sorted(sites_root.glob(pattern)):
+            try:
+                root = ET.parse(path).getroot()
+            except (OSError, ET.ParseError):
+                continue
+            for ch in root.findall('channel'):
+                cid = _clean_text(ch.get('xmltv_id'))
+                name = _clean_text(ch.text)
+                if not cid or not name:
+                    continue
+                if not cid.split('@', 1)[0].lower().endswith('.us'):
+                    continue
+                # Never map an unqualified national name onto a West/Pacific-only ID.
+                if ('@west' in cid.lower() or 'pacific' in cid.lower()) and not re.search(r'\b(west|pacific)\b', name, re.I):
+                    continue
+                dkey = _normalize_dedup_key(name, '')
+                if not dkey or len(dkey) < 3 or dkey.startswith('call:'):
+                    continue
+                if dkey not in mapping:
+                    mapping[dkey] = (cid, name)
+    return mapping
+
+
 def fetch_window(provider_id, start_ts, duration=WINDOW_MINUTES):
     params = urlencode({
         'start': int(start_ts),
@@ -162,9 +200,10 @@ def fetch_window(provider_id, start_ts, duration=WINDOW_MINUTES):
     return items
 
 
-def build_guide_data(lineup_batches, now, canonical_map=None, max_channels=None):
+def build_guide_data(lineup_batches, now, canonical_map=None, canonical_name_map=None, max_channels=None):
     """Merge multi-lineup TV Guide schedule items into deduplicated XMLTV structures."""
     canonical_map = canonical_map or {}
+    canonical_name_map = canonical_name_map or {}
     window_start = now.astimezone(timezone.utc) - timedelta(hours=6)
     window_end = now.astimezone(timezone.utc) + timedelta(hours=54)
 
@@ -228,6 +267,21 @@ def build_guide_data(lineup_batches, now, canonical_map=None, max_channels=None)
                             continue
                         cid = existing_cid
                         names = [full_name or short_name]
+                    elif (
+                        dkey
+                        and not dkey.startswith('call:')
+                        and not re.search(r'\b(west|pacific)\b', f'{full_name} {short_name}', re.I)
+                        and dkey in canonical_name_map
+                    ):
+                        cid, canon_name = canonical_name_map[dkey]
+                        if cid in channels:
+                            deduplicated_simulcasts += 1
+                            source_to_cid[sid] = ''
+                            continue
+                        names = [canon_name]
+                        if full_name and full_name.lower() != canon_name.lower():
+                            names.append(full_name)
+                        dedup_to_cid[dkey] = cid
                     else:
                         if max_channels is not None and len(channels) >= max_channels:
                             continue
@@ -285,6 +339,7 @@ def write_guide(output, now=None, upstream=None, lineups=None, max_channels=None
     base_ts = int(now.astimezone(timezone.utc).replace(minute=0, second=0, microsecond=0).timestamp())
     lineups = tuple(lineups) if lineups else DEFAULT_LINEUPS
     canonical_map = load_canonical_tvguide_map(upstream)
+    canonical_name_map = load_canonical_us_name_map(upstream)
 
     tasks = []
     for idx, pid in enumerate(lineups):
@@ -313,6 +368,7 @@ def write_guide(output, now=None, upstream=None, lineups=None, max_channels=None
         ordered_batches,
         now,
         canonical_map=canonical_map,
+        canonical_name_map=canonical_name_map,
         max_channels=max_channels,
     )
     if not any(stop > now for _, _, stop in programmes):
