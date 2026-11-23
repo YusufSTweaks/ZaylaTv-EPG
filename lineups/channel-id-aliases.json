@@ -1,10 +1,87 @@
 {
+  "AL": {
+    "ATV.xk@SD": [
+      "atv.al"
+    ],
+    "KSport1.xk@SD": [
+      "k-sport1.al"
+    ],
+    "KSport2.xk@SD": [
+      "k-sport2.al"
+    ],
+    "Kohavision.xk@SD": [
+      "ktv.al",
+      "KTV Kohavision",
+      "TV Koha"
+    ],
+    "RTK1.xk@SD": [
+      "rtk1.al",
+      "RTK Sat 1"
+    ],
+    "RTK2.xk@SD": [
+      "rtk2.al"
+    ],
+    "RTK3.xk@SD": [
+      "rtk3.al"
+    ],
+    "RTK4.xk@SD": [
+      "rtk4.al"
+    ],
+    "RTV21.xk@SD": [
+      "rtv21.al"
+    ],
+    "T7.xk@SD": [
+      "t7.al"
+    ]
+  },
+  "BALKANS": {
+    "24Kitchen.us@Slovenia": [
+      "24kitchen.bg"
+    ],
+    "AlfaTV.ba@SD": [
+      "alfa.bg",
+      "alfa.mk"
+    ],
+    "EpicDrama.uk@Sweden": [
+      "epicdrama.bg"
+    ],
+    "NickJr.si@SD": [
+      "nickjr.bg"
+    ],
+    "Nickelodeon.si@SD": [
+      "nickelodeon.bg"
+    ],
+    "TLC.si@SD": [
+      "tlc.bg"
+    ],
+    "ViasatExplore.se@SD": [
+      "viasatexplore.bg",
+      "Viasat Explorer"
+    ],
+    "ViasatHistory.se@SD": [
+      "viasathistory.bg"
+    ]
+  },
   "BR": {
+    "DiscoveryHomeHealthLatinAmerica.mx@Brazil": [
+      "discoveryhomehealth.br",
+      "Discovery H&H"
+    ],
+    "LifetimeLatinAmerica.us@Brazil": [
+      "lifetime.br",
+      "Lifetime"
+    ],
     "TVGloboRiodeJaneiro.br@SD": [
       "globorj.br"
     ],
     "TVGloboSaoPaulo.br@SD": [
       "globosp.br"
+    ],
+    "Tooncast.us@SD": [
+      "tooncast.br"
+    ],
+    "ZooMoo.sg@SD": [
+      "zoomoo.br"
     ]
   },
   "CA": {
@@ -330,10 +407,11 @@
       "usanetworkcanada.ca",
       "USA Network Canada"
     ],
-    "DisneyJunior.ca@HD": [
+    "DisneyJunior.ca@SD": [
+      "disneyjr.ca",
       "disneyjunior.ca",
-      "Disney Junior",
-      "Disney Jr"
+      "Disney Jr",
+      "Disney Junior"
     ],
     "E.ca@SD": [
       "eentertainment.ca",
@@ -702,33 +780,589 @@
     ]
   },
   "DE": {
+    "Boomerang.de@SD": [
+      "cartoonito.de"
+    ],
+    "DasErste.de@HD": [
+      "ard.de"
+    ],
+    "HSE.de@HD": [
+      "hse24.de",
+      "HSE 24"
+    ],
+    "HSEExtra.de@HD": [
+      "hse24extra.de",
+      "HSE 24 Extra"
+    ],
+    "ORF1.at@HD": [
+      "orf1.de"
+    ],
+    "ORF2.at@SD": [
+      "orf2.de"
+    ],
     "ProSieben.de@SD": [
       "pro7.de"
+    ],
+    "SkySportBundesliga.de@HD": [
+      "skybundesliga.de",
+      "Sky Bundesliga"
+    ],
+    "SonyChannel.de@SD": [
+      "sonyentertainmenttv.de"
     ],
     "kabeleins.de@SD": [
       "kabel1.de"
     ]
   },
+  "ES": {
+    "BabyTV.uk@UK": [
+      "babytv.es"
+    ],
+    "CineporMovistarPlusPlus.es@SD": [
+      "movistarestrenos.es",
+      "movistardcine.es",
+      "Movistar Estrenos",
+      "Movistar Cine"
+    ],
+    "Clan.es@SD": [
+      "clantve.es"
+    ],
+    "ClasicosporMovistarPlusPlus.es@SD": [
+      "Movistar Clasicos"
+    ],
+    "Classica.us@SD": [
+      "classica.es"
+    ],
+    "DAZN1.uk@UKHD": [
+      "dazn1.es"
+    ],
+    "DAZN2.uk@Belgium": [
+      "dazn2.es"
+    ],
+    "DAZN3.uk@Belgium": [
+      "dazn3.es"
+    ],
+    "DAZN4.uk@Portugal": [
+      "dazn4.es"
+    ],
+    "DAZNF1.uk@Spain": [
+      "daznf1.es",
+      "DAZN Formula 1"
+    ],
+    "Decasa.es@SD": [
+      "canaldecasa.es",
+      "Canal Decasa"
+    ],
+    "Deportes2porMovistarPlus.es@SD": [
+      "mdeportes2.es",
+      "M. Deportes 2",
+      "Movistar Deportes 2"
+    ],
+    "Deportes3porMovistarPlus.es@SD": [
+      "mdeportes3.es",
+      "M. Deportes 3",
+      "Movistar Deportes 3"
+    ],
+    "Deportes4porMovistarPlus.es@SD": [
+      "mdeportes4.es",
+      "M. Deportes 4",
+      "Movistar Deportes 4"
+    ],
+    "Deportes5porMovistarPlus.es@SD": [
+      "mdeportes5.es",
+      "M. Deportes 5"
+    ],
+    "Deportes6porMovistarPlus.es@SD": [
+      "mdeportes6.es",
+      "M. Deportes 6"
+    ],
+    "DeportesporMovistarPlusPlus.es@SD": [
+      "mdeportes1.es",
+      "M. Deportes 1",
+      "Movistar Deportes 1"
+    ],
+    "DocumentalesporMovistarPlusPlus.es@SD": [
+      "Movistar Documentales"
+    ],
+    "DramaporMovistarPlusPlus.es@SD": [
+      "moviestardrama.es",
+      "Movistar Drama"
+    ],
+    "DreamWorks.fr@SD": [
+      "dreamworks.es"
+    ],
+    "IndieporMovistarPlusPlus.es@SD": [
+      "Movistar Indie"
+    ],
+    "LaLigaTV2porMovistarPlusPlus.es@SD": [
+      "mlaliga2.es",
+      "Movistar LaLiga 2",
+      "M. LaLiga 2"
+    ],
+    "LaLigaTV3porMovistarPlusPlus.es@SD": [
+      "mlaliga3.es",
+      "Movistar LaLiga 3"
+    ],
+    "LaLigaTV4porMovistarPlusPlus.es@SD": [
+      "mlaliga4.es",
+      "Movistar LaLiga 4"
+    ],
+    "LaLigaTVporMovistarPlusPlus.es@SD": [
+      "mlaliga1.es",
+      "Movistar LaLiga",
+      "M. LaLiga"
+    ],
+    "LigadeCampeones2porMovistarPlusPlus.es@SD": [
+      "mligadecampeones2.es",
+      "M. Liga de Campeones 2",
+      "Movistar Liga de Campeones 2"
+    ],
+    "LigadeCampeones3porMovistarPlusPlus.es@SD": [
+      "mligadecampeones3.es",
+      "M. Liga de Campeones 3",
+      "Movistar Liga de Campeones 3"
+    ],
+    "LigadeCampeones4porMovistarPlusPlus.es@SD": [
+      "mligadecampeones4.es",
+      "M. Liga de Campeones 4",
+      "Movistar Liga de Campeones 4"
+    ],
+    "LigadeCampeones5porMovistarPlusPlus.es@SD": [
+      "mligadecampeones5.es",
+      "M. Liga de Campeones 5"
+    ],
+    "LigadeCampeones6porMovistarPlusPlus.es@SD": [
+      "mligadecampeones6.es",
+      "M. Liga de Campeones 6"
+    ],
+    "LigadeCampeones7porMovistarPlusPlus.es@SD": [
+      "mligadecampeones7.es",
+      "M. Liga de Campeones 7"
+    ],
+    "LigadeCampeones8porMovistarPlusPlus.es@SD": [
+      "mligadecampeones8.es",
+      "M. Liga de Campeones 8"
+    ],
+    "LigadeCampeonesporMovistarPlusPlus.es@SD": [
+      "mligadecampeones1.es",
+      "M. Liga de Campeones 1",
+      "Movistar Liga de Campeones 1"
+    ],
+    "Mezzo.fr@SD": [
+      "mezzo.es"
+    ],
+    "OriginalesporMovistarPlusPlus.es@SD": [
+      "mplusorginales.es",
+      "Movistar Originales"
+    ],
+    "Telesur.ve@SD": [
+      "telesur.es"
+    ],
+    "VamosporMovistarPlusPlus.es@SD": [
+      "vamos.es",
+      "#Vamos",
+      "Movistar Vamos"
+    ]
+  },
   "FR": {
+    "AB3.be@SD": [
+      "ab3.fr",
+      "AB 3",
+      "AB3"
+    ],
+    "BabyTV.uk@UK": [
+      "babytv.fr"
+    ],
+    "CanalPlusCinema.fr@SD": [
+      "canalpluscinema.fr",
+      "Canal+ Cinema"
+    ],
+    "CanalPlusLive1.fr@SD": [
+      "Canal+ Live 1"
+    ],
+    "CanalPlusLive2.fr@SD": [
+      "Canal+ Live 2"
+    ],
+    "CanalPlusLive3.fr@SD": [
+      "Canal+ Live 3"
+    ],
+    "CanalPlusLive4.fr@SD": [
+      "Canal+ Live 4"
+    ],
+    "CanalPlusLive5.fr@SD": [
+      "Canal+ Live 5"
+    ],
+    "CanalPlusLive6.fr@SD": [
+      "Canal+ Live 6"
+    ],
+    "CanalPlusLive7.fr@SD": [
+      "Canal+ Live 7"
+    ],
+    "CartoonNetworkWesternEurope.uk@SD": [
+      "cartoonnetwork.fr"
+    ],
+    "CinePlusFamiz.fr@SD": [
+      "cineplusfamiz.fr",
+      "cineplusamiz.fr",
+      "Cine+ Famiz"
+    ],
     "France3.fr@Aquitaine": [
       "france3nouvelleaquitaine.fr"
+    ],
+    "France3.fr@NoA": [
+      "France 3 NoA"
+    ],
+    "LEquipe.fr@SD": [
+      "lequipe21.fr",
+      "La Chaine L'Equipe"
+    ],
+    "LuxeTV.lu@SD": [
+      "luxetv.fr",
+      "Luxe TV"
+    ],
+    "MCM.fr@SD": [
+      "mcm.fr",
+      "MCM"
+    ],
+    "MoselleTV.fr@SD": [
+      "moselletv.fr",
+      "Moselle TV"
+    ],
+    "NauticalChannel.it@SD": [
+      "nauticalchannel.fr",
+      "Nautical Channel"
+    ],
+    "NollywoodTV.fr@SD": [
+      "nollywood.fr"
+    ],
+    "OlympiaTV.fr@SD": [
+      "olympiatv.fr",
+      "Olympia"
+    ],
+    "PiwiPlus.fr@SD": [
+      "piwi.fr"
+    ],
+    "PublicSenat2424.fr@SD": [
+      "publicsenat.fr",
+      "Public Senat"
+    ],
+    "RMCLife.fr@SD": [
+      "cherie25.fr",
+      "rmclife.fr",
+      "RMC Life",
+      "Cherie 25"
+    ],
+    "RTL9.lu@SD": [
+      "rtl9.fr",
+      "RTL 9",
+      "RTL9"
+    ],
+    "TV5MondeFranceBelgiumSwitzerlandMonaco.fr@SD": [
+      "tv5mondeameriquelatineetcaraibes.fr",
+      "tv5mondeetatsunis.fr",
+      "tv5mondefrancebelgiquesuisse.fr",
+      "tv5monde.fr"
+    ],
+    "Weo.fr@SD": [
+      "weo.fr",
+      "Weo"
+    ],
+    "ZoukTV.mq@SD": [
+      "zouktv.fr",
+      "Zouk TV"
+    ],
+    "i24NEWSFrench.il@SD": [
+      "i24news.fr",
+      "i24 News"
+    ]
+  },
+  "IN": {
+    "RajMusixTelugu.in@SD": [
+      "rajmusix.in"
+    ],
+    "SonyEntertainmentTelevision.in@HD": [
+      "sonyhd.in",
+      "Sony HD"
+    ]
+  },
+  "IT": {
+    "Rete4.it@HD": [
+      "retequattro.it"
+    ],
+    "Twentyseven.it@HD": [
+      "27mediaset.it",
+      "Mediaset Twentyseven"
+    ]
+  },
+  "MENA": {
+    "AlSaudiya.sa@SD": [
+      "saudi1.sa",
+      "Saudi 1"
+    ],
+    "Alarabiya.ae@SD": [
+      "alarabiya.sa",
+      "Al Arabiya"
+    ],
+    "BBCArabic.uk@SD": [
+      "bbcarabic.sa",
+      "BBC Arabic"
+    ],
+    "CartoonNetworkMENA.uk@SD": [
+      "cartoonnetwork.qa",
+      "Cartoon Network"
+    ],
+    "HistoryMiddleEast.us@SD": [
+      "history.sa"
+    ],
+    "LBCInternational.lb@SD": [
+      "lbcinternational.lb"
+    ],
+    "MBC3.ae@SD": [
+      "mbc3.sa"
+    ],
+    "NationalGeographicMiddleEast.uk@SD": [
+      "Nat Geo AD",
+      "National Geographic Abu Dhabi"
+    ],
+    "SkyNewsArabia.ae@SD": [
+      "skynewsarabia.sa",
+      "skynewsarabiaen.sa",
+      "Sky News Arabia"
+    ],
+    "TLCArabia.us@SD": [
+      "tlc.sa"
+    ],
+    "Wanasah.ae@SD": [
+      "mbcwanasah.eg",
+      "Wanasah",
+      "Wanasah TV"
+    ]
+  },
+  "NL": {
+    "BabyTV.uk@UK": [
+      "babytv.nl"
+    ],
+    "Mezzo.fr@SD": [
+      "mezzo.nl"
+    ],
+    "MyZenTV.fr@SD": [
+      "myzen.nl",
+      "My Zen"
+    ],
+    "NPOPolitiekenNieuws.nl@SD": [
+      "npopolitiek.nl",
+      "NPO Politiek"
+    ],
+    "Njam.be@SD": [
+      "njam.nl"
+    ],
+    "OmroepWest.nl@SD": [
+      "tvwest.nl",
+      "TV West"
+    ],
+    "RTVNoord.nl@SD": [
+      "tvnoord.nl",
+      "TV Noord"
+    ],
+    "SLAMTV.nl@SD": [
+      "slam.nl",
+      "SLAM FM"
+    ],
+    "VRT1.be@SD": [
+      "een.nl",
+      "VRT 1"
+    ],
+    "VeronicaDisneyJr.nl@SD": [
+      "veronicadisneyxd.nl",
+      "Veronica / Disney XD",
+      "Veronica / DinseyXD"
+    ]
+  },
+  "PT": {
+    "BabyTV.uk@UK": [
+      "babytv.pt"
+    ],
+    "BloombergTV.us@Europe": [
+      "bloomberg.pt"
+    ],
+    "CNBCEurope.uk@SD": [
+      "cnbc.pt"
+    ],
+    "CNNInternational.us@MENA": [
+      "cnn.pt"
+    ],
+    "Cartoonito.pt@SD": [
+      "boomerang.pt",
+      "Boomerang"
+    ],
+    "DAZN1.uk@Portugal": [
+      "elevensports1.pt",
+      "Eleven Sports 1"
+    ],
+    "DAZN2.uk@Portugal": [
+      "elevensports2.pt",
+      "Eleven Sports 2"
+    ],
+    "DAZN3.uk@Portugal": [
+      "elevensports3.pt",
+      "Eleven Sports 3"
+    ],
+    "DAZN4.uk@Portugal": [
+      "elevensports4.pt",
+      "Eleven Sports 4"
+    ],
+    "DAZN5.uk@Portugal": [
+      "elevensports5.pt",
+      "Eleven Sports 5"
+    ],
+    "EuronewsPortuguese.fr@SD": [
+      "euronews.pt",
+      "Euronews Portugal"
+    ],
+    "MCMPop.fr@SD": [
+      "mcmpop.pt"
+    ],
+    "Nickelodeon.es@SD": [
+      "nickelodeon.pt"
+    ],
+    "RedeGlobo.br@SD": [
+      "globo.pt",
+      "Globo"
+    ],
+    "SkyNewsInternational.uk@SD": [
+      "skynews.pt"
+    ]
+  },
+  "RO": {
+    "AlfaOmegaTV.ro@SD": [
+      "alfaomega.ro",
+      "Alfa & Omega"
+    ],
+    "CNNInternational.us@MENA": [
+      "cnn.ro"
+    ],
+    "CinemaxCentralEurope.hu@HD": [
+      "cinemax.ro"
+    ],
+    "DocuBox.nl@SD": [
+      "docubox.ro"
+    ],
+    "MinimaxCEE.cz@SD": [
+      "minimax.ro"
     ]
   },
   "SE": {
+    "Eurosport1.fr@France": [
+      "eurosport1.se"
+    ],
+    "Eurosport2.fr@France": [
+      "eurosport2.se"
+    ],
     "SVTBarn.se@SD": [
       "svtb.se"
     ]
   },
+  "TR": {
+    "BabyTV.uk@UK": [
+      "babytv.tr"
+    ],
+    "Eurosport1.fr@France": [
+      "eurosport1.tr"
+    ],
+    "Eurosport2.fr@France": [
+      "eurosport2.tr"
+    ]
+  },
   "UK": {
+    "BBCFour.uk@UKHD": [
+      "bbc4.uk",
+      "BBC 4",
+      "BBC 4 / CBeebies"
+    ],
+    "BBCOne.uk@London": [
+      "bbc1.uk",
+      "BBC 1"
+    ],
     "BBCParliament.uk@HD": [
       "BBC Parliament"
+    ],
+    "BBCTwo.uk@HD": [
+      "bbc2.uk",
+      "BBC 2"
     ],
     "CartoonNetwork.uk@HD": [
       "Cartoon Network"
     ],
+    "ITV1.uk@Central": [
+      "itvcentral.uk",
+      "ITV Central",
+      "ITV Central East"
+    ],
+    "ITV1.uk@London": [
+      "itv1.uk",
+      "ITV 1"
+    ],
+    "ITV1.uk@Meridian": [
+      "itvmeridian.uk",
+      "ITV Meridian",
+      "ITV Meridian TV North"
+    ],
+    "Now80s.uk@SD": [
+      "now80s.uk"
+    ],
+    "RacingTV.uk@HD": [
+      "racinguk.uk",
+      "Racing UK"
+    ],
+    "SkyHistory.uk@HD": [
+      "historychannel.uk",
+      "History"
+    ],
+    "SkyHistory2.uk@HD": [
+      "history2.uk",
+      "History 2"
+    ],
+    "SkySciFi.uk@HD": [
+      "skyscifihorror.uk",
+      "Sky Sci-Fi & Horror",
+      "Sky Sci-Fi & Hor"
+    ],
     "SkySportsPlus.uk@HD": [
       "Sky Sports+",
       "Sky Sports Plus"
+    ],
+    "TNTSportsUltimate.uk@SD": [
+      "tntsportsultimateuhd.uk",
+      "TNT Sport Ultimate",
+      "TNT Sports Ultimate"
+    ],
+    "TrueCrime.uk@SD": [
+      "cbsreality.uk",
+      "CBS Reality"
+    ],
+    "UAlibi.uk@HD": [
+      "alibi.uk",
+      "Alibi"
+    ],
+    "UDave.uk@HD": [
+      "dave.uk",
+      "Dave"
+    ],
+    "UDrama.uk@SD": [
+      "drama.uk",
+      "Drama"
+    ],
+    "UGold.uk@HD": [
+      "gold.uk",
+      "Gold"
+    ],
+    "UW.uk@SD": [
+      "w.uk",
+      "W"
+    ],
+    "UYesterday.uk@SD": [
+      "yesterday.uk",
+      "Yesterday"
     ]
   },
   "US": {
@@ -738,6 +1372,10 @@
     ],
     "AE.us@West": [
       "A&E West"
+    ],
+    "AMCPlus.us@SD": [
+      "amcplus.us",
+      "AMC+"
     ],
     "AWE.us@HD": [
       "awe.us",
@@ -756,6 +1394,10 @@
       "bbcworldnews.us",
       "bbcworldnewsnorthamerica.us"
     ],
+    "BEKSports247.us@SD": [
+      "beksports247.us",
+      "BEK Sports News"
+    ],
     "ChicagoSportsNetwork.us@HD": [
       "chsn.us",
       "Chicago Sports Network"
@@ -765,6 +1407,9 @@
       "Dog TV",
       "DOGTV"
     ],
+    "ESPNDeportes.us@SD": [
+      "espndeportes.us"
+    ],
     "ESPNU.us@SD": [
       "ESPNU College Sports"
     ],
@@ -772,9 +1417,20 @@
       "ESPN News",
       "espnnews.us"
     ],
+    "FXMovieChannel.us@SD": [
+      "fxm.us",
+      "FXM"
+    ],
+    "FoxDeportes.us@SD": [
+      "foxdeportes.us"
+    ],
     "GAMEPlus.us@HD": [
       "gameplus.us",
       "GAME+"
+    ],
+    "GreatAmericanFamily.us@SD": [
+      "gacfamily.us",
+      "Great American Country"
     ],
     "HBO2.us@East": [
       "HBO 2",
@@ -794,12 +1450,36 @@
       "insp.us",
       "INSP"
     ],
+    "IONMystery.us@SD": [
+      "ionmystery.us",
+      "ION Mystery"
+    ],
+    "IONPlus.us@SD": [
+      "ionplus.us",
+      "ION Plus"
+    ],
     "KDTV.us@HD": [
       "univision14kdtv.us",
       "Univision 14 San Francisco"
     ],
+    "KGWDT1.us@SD": [
+      "nbc8kgw.us"
+    ],
+    "KHQDT1.us@SD": [
+      "nbc6khq.us"
+    ],
+    "KOBDT1.us@SD": [
+      "nbc4kob.us"
+    ],
+    "KSLDT1.us@SD": [
+      "nbc5ksl.us"
+    ],
     "KTVW.us@HD": [
       "Univision 33 Phoenix"
+    ],
+    "KUATDT1.us@HD": [
+      "pbskuat.us",
+      "PBS AZPM Tucson"
     ],
     "KUVS.us@HD": [
       "univision19kuvs.us",
@@ -813,6 +1493,9 @@
       "univision45kxln.us",
       "Univision 45 Houston",
       "Univision 45 Houston TX"
+    ],
+    "KYWDT1.us@SD": [
+      "cbs3kyw.us"
     ],
     "Localish.us@HD": [
       "localish.us",
@@ -842,6 +1525,10 @@
     "MoreMax.us@East": [
       "Cinemax MoreMax",
       "Cinemax More Max"
+    ],
+    "NASATV4K.us@HD": [
+      "nasachannel.us",
+      "NASA TV"
     ],
     "NBCNewsNow.us@HD": [
       "NBC News Now"
@@ -919,22 +1606,54 @@
       "stadium.us",
       "Stadium"
     ],
+    "TVGuide.9200002896.us": [
+      "movieplex.us",
+      "MoviePlex",
+      "Movie Plex"
+    ],
     "TVGuide.9200004988.us": [
       "atandtsportsnetsouthwest.us",
       "AT&T SportsNet Southwest"
+    ],
+    "TVGuide.9200008811.us": [
+      "cbs4wbz.us",
+      "CBS 4 Boston"
     ],
     "TVGuide.9200011799.us": [
       "Willow Cricket",
       "Willow Sports",
       "willowcricket.us"
     ],
+    "TVGuide.9200017875.us": [
+      "my9wwor.us",
+      "My 9",
+      "MY 9 (WWOR)"
+    ],
+    "TVGuide.9200017894.us": [
+      "my20ktxh.us",
+      "My 20 Houston",
+      "MY 20 (KTXH)"
+    ],
     "TVGuide.9200018577.us": [
       "Univision Deportes",
       "univisiondeportes.us"
     ],
+    "TVGuide.9233000015.us": [
+      "nbcwrc.us",
+      "NBC 4 Washington DC",
+      "NBC Washington DC News"
+    ],
     "TVGuide.9233003520.us": [
       "AT&T SportsNet Pittsburgh",
       "SportsNet Pittsburgh"
+    ],
+    "TVGuide.9233006790.us": [
+      "abckgo.us",
+      "ABC 7 San Francisco"
+    ],
+    "TVGuide.9233013223.us": [
+      "abc7wlstv.us",
+      "ABC 7 Chicago"
     ],
     "TVGuide.9233013492.us": [
       "HBO Hits East"
@@ -947,13 +1666,42 @@
       "Spectrum SportsNet LA",
       "spectrumsportsnetla.us"
     ],
+    "TVGuide.9266079155.us": [
+      "grio.us",
+      "TheGrio",
+      "The Grio"
+    ],
+    "WHODT1.us@SD": [
+      "nbc13who.us"
+    ],
+    "WHPDT1.us@SD": [
+      "cbs21whp.us"
+    ],
+    "WISDT1.us@SD": [
+      "nb10wis.us"
+    ],
+    "WJWDT1.us@SD": [
+      "foxwjw.us"
+    ],
+    "WJZDT1.us@SD": [
+      "cbs13wjz.us"
+    ],
     "WLTV.us@HD": [
       "Univision 23 Miami",
       "Univision 23 Miami Florida"
     ],
+    "WMCDT1.us@SD": [
+      "nbc5wmc.us"
+    ],
     "WUVG.us@HD": [
       "univision34wuvg.us",
       "Univision 34 Atlanta"
+    ],
+    "WWJDT1.us@SD": [
+      "cbs62wwj.us"
+    ],
+    "WWLDT1.us@SD": [
+      "cbs4wwl.us"
     ],
     "WXTV.us@HD": [
       "Univision 41 New York"
@@ -986,6 +1734,12 @@
     "beINSportsenEspanol.us@HD": [
       "beinsportespanol.us",
       "beIN Sports en Espanol"
+    ]
+  },
+  "ZA": {
+    "DStvZA.135.za": [
+      "tlcentertainment.za",
+      "TLC Entertainment"
     ]
   }
 }

@@ -114,4 +114,10 @@
   <channel site="tvpassport.com" site_id="spectrum-news-rochester/32013" lang="en" xmltv_id="SpectrumNewsRochester.us@HD">Spectrum News Rochester</channel>
   <channel site="tvpassport.com" site_id="spectrum-news-southern-tier/32010" lang="en" xmltv_id="SpectrumNewsSouthernTier.us@HD">Spectrum News Southern Tier</channel>
   <channel site="tvpassport.com" site_id="bein-sport-espanol-canada-hd/13249" lang="en" xmltv_id="beINSportsenEspanol.us@HD">beIN Sports en Espanol</channel>
+  <channel site="tvpassport.com" site_id="pbs-6-kuat-tucson-az-hd/7635" lang="en" xmltv_id="KUATDT1.us@HD">PBS 6 (KUAT) Tucson, AZ HD</channel>
+  <channel site="tvpassport.com" site_id="bek-sports-247/14544" lang="en" xmltv_id="BEKSports247.us@SD">BEK Sports 24/7</channel>
+  <channel site="tvpassport.com" site_id="amc/35317" lang="en" xmltv_id="AMCPlus.us@SD">AMC+</channel>
+  <channel site="tvpassport.com" site_id="nasa-4k/33492" lang="en" xmltv_id="NASATV4K.us@HD">NASA 4K</channel>
+  <channel site="tvpassport.com" site_id="court-tv-kpxe-tv2-kansas-city-mo/12029" lang="en" xmltv_id="IONMystery.us@SD">ION Mystery</channel>
+  <channel site="tvpassport.com" site_id="court-tv-wlne-tv4-new-bedford-ma/33660" lang="en" xmltv_id="IONPlus.us@SD">ION Plus</channel>
 </channels>

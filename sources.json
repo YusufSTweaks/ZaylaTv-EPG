@@ -143,6 +143,15 @@
       "probe_url": "https://www.programme-tv.net/programme/chaine/{date}/programme-france-2-6.html"
     },
     {
+      "id": "fr-programme-tv-extra",
+      "region": "FR",
+      "files": [
+        "france-extra.channels.xml"
+      ],
+      "limit": 50,
+      "probe_url": "https://www.programme-tv.net/programme/chaine/{date}/programme-france-2-6.html"
+    },
+    {
       "id": "fr-sfr",
       "region": "FR",
       "files": [
@@ -152,6 +161,14 @@
         "fr"
       ],
       "limit": 450
+    },
+    {
+      "id": "fr-sfr-extra",
+      "region": "FR",
+      "files": [
+        "france-sfr-extra.channels.xml"
+      ],
+      "limit": 50
     },
     {
       "id": "uk-sky",
@@ -224,12 +241,15 @@
       "limit": 220
     },
     {
-      "id": "ch-teleboy",
+      "id": "ch-blue",
       "region": "CH",
       "files": [
-        "teleboy.ch/teleboy.ch.channels.xml"
+        "tv.blue.ch/tv.blue.ch.channels.xml"
       ],
-      "limit": 300
+      "countries": [
+        "ch"
+      ],
+      "limit": 200
     },
     {
       "id": "be-telenet",
