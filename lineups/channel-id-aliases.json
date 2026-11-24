@@ -498,7 +498,9 @@
       "hpitv.ca",
       "HPI TV",
       "HPItv East",
-      "HPItv West"
+      "HPItv West",
+      "hpitvinternational.ca",
+      "HPItv International"
     ],
     "ICICBAFTMonctonNB.ca@HD": [
       "ICI Radio Canada Tele Moncton",
@@ -1045,7 +1047,8 @@
     ],
     "OlympiaTV.fr@SD": [
       "olympiatv.fr",
-      "Olympia"
+      "Olympia",
+      "Olympia TV"
     ],
     "PiwiPlus.fr@SD": [
       "piwi.fr"
@@ -1086,6 +1089,11 @@
     "i24NEWSFrench.il@SD": [
       "i24news.fr",
       "i24 News"
+    ],
+    "NickelodeonJunior.fr@SD": [
+      "nickjr.fr",
+      "Nickelodeon Junior",
+      "Nick Jr"
     ]
   },
   "IN": {
@@ -1247,7 +1255,8 @@
     ],
     "DiscoveryChannelMiddleEastAfrica.us@SD": [
       "Discovery Channel",
-      "Discovery"
+      "Discovery",
+      "discovery.sa"
     ],
     "DubaiTV.ae@SD": [
       "dubaitv.ae",
@@ -1420,6 +1429,39 @@
     "beINSeries2.qa@SD": [
       "beinseries2.qa",
       "beIN Series 2"
+    ],
+    "AlKaheraWalNas.eg@SD": [
+      "alkaherawalnas.eg",
+      "Al Kahera Wal Nas",
+      "Al Kahera Walnas"
+    ],
+    "AlKaheraWalNas2.eg@SD": [
+      "alkaherawalnas2.eg",
+      "Al Kahera Wal Nas 2"
+    ],
+    "ElWatania1.tn@SD": [
+      "watania1.tn",
+      "Tunisia National 1",
+      "El Watania 1",
+      "Watania 1"
+    ],
+    "ThikrayatTV.sa@SD": [
+      "thikrayat.sa",
+      "Thikrayat",
+      "Thikrayat TV"
+    ],
+    "CNNInternational.us@MENA": [
+      "CNN",
+      "CNN International"
+    ],
+    "RTArabic.ru@SD": [
+      "RTArab.ru",
+      "RT Arabic",
+      "Russia Today Arabic"
+    ],
+    "InvestigationDiscovery.uk@SD": [
+      "Discovery ID",
+      "Investigation Discovery"
     ]
   },
   "NL": {
@@ -1824,6 +1866,34 @@
     ],
     "VirginMediaTwo.ie@HD": [
       "Virgin Media Two"
+    ],
+    "RTE2.ie@HD": [
+      "rtetwo.ie",
+      "RTE Two",
+      "RTE 2",
+      "RTÉ Two"
+    ],
+    "PremierSports1.ie@HD": [
+      "premiersports1.uk",
+      "Premier Sports 1"
+    ],
+    "PremierSports2.ie@HD": [
+      "premiersports2.uk",
+      "Premier Sports 2"
+    ],
+    "CrimePlusInvestigation.uk@HD": [
+      "crimeandinvestigationnetwork.uk",
+      "Crime & Investigation",
+      "Crime+Investigation",
+      "Crime and Investigation"
+    ],
+    "DiscoveryScienceEurope.uk@UKHD": [
+      "discoveryscience.uk",
+      "Discovery Science"
+    ],
+    "DisneyJr.uk@HD": [
+      "disneyjunior.uk",
+      "Disney Junior"
     ]
   },
   "US": {
@@ -2218,6 +2288,49 @@
     "beINSportsenEspanol.us@HD": [
       "beinsportespanol.us",
       "beIN Sports en Espanol"
+    ],
+    "Science.us@East": [
+      "discoveryscience.us",
+      "Discovery Science",
+      "Science Channel"
+    ],
+    "TVGuide.9200018040.us": [
+      "militaryhistory.us",
+      "Military Heroes",
+      "Military History"
+    ],
+    "NationalGeographic.us@East": [
+      "natgeo.us",
+      "National Geographic West",
+      "Nat Geo",
+      "Nat Geo West"
+    ],
+    "TVGuide.9200016152.us": [
+      "wapa.us",
+      "WAPA TV",
+      "WAPA"
+    ],
+    "TVGuide.9233001663.us": [
+      "cbs2wbbm.us"
+    ],
+    "TVGuide.9233011201.us": [
+      "cbs2wcbs.us"
+    ],
+    "KCNCTV41.us@HD": [
+      "cbs4kcnc.us"
+    ],
+    "KDKATV21.us@HD": [
+      "cbs2kdka.us"
+    ],
+    "TVGuide.9200008813.us": [
+      "fox25wfxt.us",
+      "News 25 Boston"
+    ],
+    "TVGuide.9200000057.us": [
+      "abcwabc.us"
+    ],
+    "Univision.us@East": [
+      "univision.us"
     ]
   },
   "ZA": {
