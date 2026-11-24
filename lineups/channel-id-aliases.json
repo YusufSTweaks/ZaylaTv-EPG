@@ -456,6 +456,9 @@
     "GlobalCFREReginaSK.ca@HD": [
       "globalregina.ca"
     ],
+    "GlobalCHBCOkanaganBC.ca@HD": [
+      "Global Okanagan News"
+    ],
     "GlobalCHEXTV2DurhamON.ca@HD": [
       "globaldurham.ca"
     ],
@@ -534,6 +537,15 @@
     "IciRadioCanadaTele.ca@CBOFTDT": [
       "ICI Radio-Canada Télé Ottawa",
       "ICI Télé Ottawa-Gatineau"
+    ],
+    "KCPQ.us@HD": [
+      "FOX 13 (KCPQ) Seattle"
+    ],
+    "KOMOTV511.us@HD": [
+      "ABC 4 (KOMO) Seattle"
+    ],
+    "KTLA51.us@HD": [
+      "KTLA"
     ],
     "LCN.ca@SD": [
       "nouvelles.ca"
@@ -754,6 +766,30 @@
     ],
     "VisionTV.ca@SD": [
       "vision.ca"
+    ],
+    "WCVBTV501.us@SD": [
+      "ABC 5 (WCVB) Boston"
+    ],
+    "WJBK21.us@HD": [
+      "FOX 2 (WJBK) Detroit"
+    ],
+    "WKBWTV71.us@HD": [
+      "ABC 7 (WKBW) Buffalo"
+    ],
+    "WNEDTV171.us@HD": [
+      "PBS 17 (WNED) Buffalo"
+    ],
+    "WNLO.us@HD": [
+      "CW 23 (WNLO) Buffalo"
+    ],
+    "WNYOTV71.us@HD": [
+      "MY 49 (WNYO) Buffalo"
+    ],
+    "WPIX71.us@HD": [
+      "WPIX 11 New York"
+    ],
+    "WUTV491.us@HD": [
+      "FOX 29 (WUTV) Buffalo"
     ],
     "WildBrainTV.ca@HD": [
       "Family CHRGD",
