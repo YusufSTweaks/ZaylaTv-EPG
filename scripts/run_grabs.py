@@ -14,6 +14,7 @@ from urllib.error import URLError
 from urllib.request import urlopen
 
 from grab_beinsports import write_guide as write_beinsports_guide
+from grab_dazn import write_guide as write_dazn_guide
 from grab_dstv_za import write_guide as write_dstv_za_guide
 from grab_espn import write_guide as write_espn_guide
 from grab_fast import write_guide as write_fast_guide
@@ -150,6 +151,23 @@ def run_grab(source, upstream, output):
             return {'exit_code': 0, 'selected_channels': channels}
         except (OSError, ValueError) as error:
             message = f'Official beIN SPORTS schedule failed: {error}'
+            print(message, flush=True)
+            return {'exit_code': None, 'error': message}
+
+    if source.get('adapter') == 'dazn':
+        try:
+            channels, programmes, stats = write_dazn_guide(
+                output / source['output'],
+                countries=source.get('countries'),
+            )
+            print(
+                f'DAZN official schedule ({source["id"]}): {channels} channels and {programmes} programmes '
+                f'(countries={",".join(stats["countries"])}, fetch_errors={stats["fetch_errors"]})',
+                flush=True,
+            )
+            return {'exit_code': 0, 'selected_channels': channels, 'stats': stats}
+        except (OSError, ValueError) as error:
+            message = f'Official DAZN schedule failed: {error}'
             print(message, flush=True)
             return {'exit_code': None, 'error': message}
 
