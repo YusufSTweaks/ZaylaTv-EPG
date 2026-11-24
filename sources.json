@@ -563,6 +563,36 @@
       ]
     },
     {
+      "id": "sports-dazn-official",
+      "region": "SPORTS",
+      "adapter": "dazn",
+      "countries": [
+        "de",
+        "es",
+        "it",
+        "fr",
+        "pt",
+        "gb",
+        "us"
+      ]
+    },
+    {
+      "id": "sports-es-movistar-dazn",
+      "region": "SPORTS",
+      "files": [
+        "spain-dazn.channels.xml"
+      ],
+      "limit": 20
+    },
+    {
+      "id": "sports-be-telenet-dazn",
+      "region": "SPORTS",
+      "files": [
+        "belgium-dazn.channels.xml"
+      ],
+      "limit": 20
+    },
+    {
       "id": "mena-elcinema",
       "region": "MENA",
       "files": [

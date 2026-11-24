@@ -1242,6 +1242,11 @@
     ]
   },
   "MENA": {
+    "AbuDhabiSports1.ae@SD": [
+      "adsports1.ae",
+      "Abu Dhabi Sports 1",
+      "AD Sports 1"
+    ],
     "AbuDhabiTV.ae@SD": [
       "abudhabitv.ae",
       "Abu Dhabi TV"
@@ -1307,23 +1312,69 @@
       "alarabiya.sa",
       "Al Arabiya"
     ],
+    "AlkassEight.qa@SD": [
+      "alkass8.qa",
+      "alkasseight.qa",
+      "Alkass 8",
+      "Al Kass 8",
+      "QR - Al Kass 8",
+      "Alkass Eight"
+    ],
+    "AlkassFive.qa@SD": [
+      "alkass5.qa",
+      "alkassfive.qa",
+      "Alkass 5",
+      "Al Kass 5",
+      "Alkass Five"
+    ],
+    "AlkassFour.qa@SD": [
+      "alkass4.qa",
+      "alkassfour.qa",
+      "Alkass 4",
+      "Al Kass 4",
+      "Alkass Four"
+    ],
     "AlkassOne.qa@SD": [
       "alkass1.qa",
+      "alkassone.qa",
       "Alkass 1",
       "Al Kass 1",
       "Alkass One"
     ],
+    "AlkassSeven.qa@SD": [
+      "alkass7.qa",
+      "alkassseven.qa",
+      "Alkass 7",
+      "Al Kass 7",
+      "QR - Al Kass 7",
+      "Alkass Seven"
+    ],
+    "AlkassSix.qa@SD": [
+      "alkass6.qa",
+      "alkasssix.qa",
+      "Alkass 6",
+      "Al Kass 6",
+      "QR - Al Kass 6",
+      "Alkass Six"
+    ],
     "AlkassThree.qa@SD": [
       "alkass3.qa",
+      "alkassthree.qa",
       "Alkass 3",
       "Al Kass 3",
       "Alkass Three"
     ],
     "AlkassTwo.qa@SD": [
       "alkass2.qa",
+      "alkasstwo.qa",
       "Alkass 2",
       "Al Kass 2",
       "Alkass Two"
+    ],
+    "KSASports1.sa@SD": [
+      "ksasports1.sa",
+      "KSA Sports 1",
+      "Saudi Sports 1"
     ],
     "AmmanTV.jo@SD": [
       "ammantv.jo",
@@ -1772,6 +1823,77 @@
       "beinsportespanol.us",
       "beIN Sports en Espanol",
       "beIN SPORTS Ñ"
+    ],
+    "DAZN1.de@SD": [
+      "dazn1.de",
+      "DAZN Bar 1"
+    ],
+    "DAZN2.de@SD": [
+      "dazn2.de",
+      "DAZN Bar 2"
+    ],
+    "DAZNFAST.de@HD": [
+      "dazn.de"
+    ],
+    "DAZN1.es@SD": [
+      "dazn1.es",
+      "DAZN 1 Bar"
+    ],
+    "DAZN2.es@SD": [
+      "dazn2.es",
+      "DAZN 2 Bar"
+    ],
+    "DAZN3.es@SD": [
+      "dazn3.es"
+    ],
+    "DAZN4.es@SD": [
+      "dazn4.es"
+    ],
+    "DAZNBaloncesto1.es@SD": [
+      "DAZN Baloncesto"
+    ],
+    "DAZNF1.uk@Spain": [
+      "daznf1.es",
+      "daznf14k.es",
+      "DAZN Formula 1"
+    ],
+    "DAZNLaLiga.uk@Spain": [
+      "daznlaliga.es"
+    ],
+    "DAZNLaLiga2.uk@Spain": [
+      "daznlaliga2.es"
+    ],
+    "DAZN1FR.be@SD": [
+      "Eleven Sports 1 FR",
+      "Eleven Sports 1 (FR)"
+    ],
+    "Ligue1Plus.fr@SD": [
+      "daznligue1.fr",
+      "Ligue 1+ 1"
+    ],
+    "ZonaDAZN.it@SD": [
+      "zonadazn.it",
+      "Zona DAZN"
+    ],
+    "DAZN1.uk@Portugal": [
+      "elevensports1.pt",
+      "Eleven Sports 1"
+    ],
+    "DAZN2.uk@Portugal": [
+      "elevensports2.pt",
+      "Eleven Sports 2"
+    ],
+    "DAZN3.uk@Portugal": [
+      "elevensports3.pt",
+      "Eleven Sports 3"
+    ],
+    "DAZN4.uk@Portugal": [
+      "elevensports4.pt",
+      "Eleven Sports 4"
+    ],
+    "DAZN5.uk@Portugal": [
+      "elevensports5.pt",
+      "Eleven Sports 5"
     ]
   },
   "TR": {

@@ -38,6 +38,8 @@ jobs:
         run: git -C epg-grabber apply "$GITHUB_WORKSPACE/patches/dstv-schedules-only.patch"
       - name: Use public Programme-TV.net listings without a saved cookie
         run: python3 scripts/configure_programme_tv.py epg-grabber
+      - name: Fix OnTVTonight carry-over overnight schedule shift
+        run: python3 scripts/configure_ontvtonight.py epg-grabber
       - name: Install verified custom channel lineups
         run: cp lineups/*.channels.xml epg-grabber/sites/
       - uses: actions/setup-node@v4

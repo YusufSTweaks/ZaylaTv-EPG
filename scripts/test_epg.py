@@ -381,7 +381,7 @@ class OfficialAdapterTests(unittest.TestCase):
    saved=json.loads((p/'out/grab-results.json').read_text())
    self.assertEqual([r['id'] for r in saved],['first','second'])
  def test_western_hemisphere_grab_start_date(self):
-  from run_grabs import grab_start_date,run_grab
+  from run_grabs import grab_days,grab_start_date,run_grab
   evening_utc=dt.datetime(2026,11,23,3,30,tzinfo=dt.timezone.utc)
   self.assertEqual(grab_start_date({'region':'CA'},now=evening_utc),'2026-11-22')
   self.assertEqual(grab_start_date({'region':'US'},now=evening_utc),'2026-11-22')
@@ -392,6 +392,21 @@ class OfficialAdapterTests(unittest.TestCase):
   after_ny_midnight=dt.datetime(2026,11,23,5,30,tzinfo=dt.timezone.utc)
   self.assertEqual(grab_start_date({'region':'FR'},now=after_ny_midnight),'2026-11-23')
   self.assertEqual(grab_start_date({'region':'CA'},now=after_ny_midnight),'2026-11-22')
+  self.assertEqual(grab_days({'region':'CA'},'2026-11-22',now=after_ny_midnight),3)
+  # 5:15 AM EST (10:15 UTC) is still inside TV Passport's previous broadcast day (6 AM -> 6 AM ET)
+  before_6am_est=dt.datetime(2026,11,24,10,15,tzinfo=dt.timezone.utc)
+  self.assertEqual(grab_start_date({'region':'CA'},now=before_6am_est),'2026-11-23')
+  self.assertEqual(grab_start_date({'region':'US'},now=before_6am_est),'2026-11-23')
+  self.assertEqual(grab_days({'region':'CA'},'2026-11-23',now=before_6am_est),3)
+  # 6:17 AM EST (11:17 UTC) rolls cleanly to current broadcast day with 2-day horizon
+  after_6am_est=dt.datetime(2026,11,24,11,17,tzinfo=dt.timezone.utc)
+  self.assertEqual(grab_start_date({'region':'CA'},now=after_6am_est),'2026-11-24')
+  self.assertEqual(grab_days({'region':'CA'},'2026-11-24',now=after_6am_est),2)
+  # Daylight Saving Time (EDT = UTC-4): 5:15 AM EDT = 09:15 UTC; 6:15 AM EDT = 10:15 UTC
+  before_6am_edt=dt.datetime(2026,7,15,9,15,tzinfo=dt.timezone.utc)
+  after_6am_edt=dt.datetime(2026,7,15,10,15,tzinfo=dt.timezone.utc)
+  self.assertEqual(grab_start_date({'region':'CA'},now=before_6am_edt),'2026-07-14')
+  self.assertEqual(grab_start_date({'region':'CA'},now=after_6am_edt),'2026-07-15')
   daytime_utc=dt.datetime(2026,11,23,14,0,tzinfo=dt.timezone.utc)
   self.assertEqual(grab_start_date({'region':'CA'},now=daytime_utc),'2026-11-23')
   captured={}
@@ -399,15 +414,46 @@ class OfficialAdapterTests(unittest.TestCase):
    pid=12345
    def wait(self,timeout=None):return 0
   def fake_popen(cmd,cwd=None,env=None,start_new_session=False):
+   captured['cmd']=cmd
    captured['env']=env
    return FakeProc()
   with tempfile.TemporaryDirectory() as d:
    p=Path(d)
    src={'id':'ca-tvpassport','region':'CA','channels_file':'ca.xml','output':'ca.xml','selected_channels':5}
-   with patch('run_grabs.grab_start_date',return_value='2026-11-22'),patch('run_grabs.subprocess.Popen',side_effect=fake_popen):
+   with patch('run_grabs.grab_start_date',return_value='2026-11-22'),patch('run_grabs.grab_days',return_value=3),patch('run_grabs.subprocess.Popen',side_effect=fake_popen):
     res=run_grab(src,p,p)
    self.assertEqual(res['exit_code'],0)
    self.assertEqual(captured['env']['CURR_DATE'],'2026-11-22')
+   self.assertIn('--days=3',captured['cmd'])
+ def test_configure_ontvtonight_patcher(self):
+  from configure_ontvtonight import patch_ontvtonight
+  sample=(
+   "module.exports = {\r\n"
+   "  parser({ content, date, channel }) {\r\n"
+   "    const programs = []\r\n"
+   "    const [$, items] = parseItems(content)\r\n"
+   "    items.forEach(item => {\r\n"
+   "      const prev = programs[programs.length - 1]\r\n"
+   "      const $item = $(item)\r\n"
+   "      let start = parseStart($item, date, channel)\r\n"
+   "      if (prev) {\r\n"
+   "        if (start.isBefore(prev.start)) {\r\n"
+   "          start = start.add(1, 'd')\r\n"
+   "          date = date.add(1, 'd')\r\n"
+   "        }\r\n"
+   "        prev.stop = start\r\n"
+   "      }\r\n"
+   "      const stop = start.add(1, 'h')\r\n"
+  )
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   target=p/'sites/ontvtonight.com/ontvtonight.com.config.js'
+   target.parent.mkdir(parents=True)
+   target.write_bytes(sample.encode('utf-8'))
+   patch_ontvtonight(p)
+   patched=target.read_text('utf-8')
+   self.assertIn('prevNightCount',patched)
+   self.assertIn("start = start.subtract(1, 'd')",patched)
  def test_pro_teams_selector_aliases_overlaps_and_offseason(self):
   from grab_pro_teams import build_guide_data as build_pro_teams, write_guide as write_pro_teams
   with tempfile.TemporaryDirectory() as d:
