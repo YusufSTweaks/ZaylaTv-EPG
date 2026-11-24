@@ -27,6 +27,8 @@ def select(upstream,config,out,config_dir=None):
    elif source['adapter']=='beinsports':
     if source.get('regions'):
      entry['regions']=list(source['regions'])
+    if source.get('countries'):
+     entry['countries']=list(source['countries'])
    elif source['adapter']=='fast':
     if source.get('feeds'):
      entry['feeds']=list(source['feeds'])

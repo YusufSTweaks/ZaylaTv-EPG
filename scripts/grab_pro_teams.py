@@ -1,4 +1,4 @@
-"""Export official NBA, NHL, NFL, and MLB team game schedules from ESPN's public scoreboard API."""
+"""Export official NBA, NHL, NFL, MLB, and UK football club schedules from ESPN's public scoreboard API."""
 
 import json
 import re
@@ -23,40 +23,123 @@ LEAGUE_CONFIG = {
     'nba': {
         'label': 'NBA',
         'id_prefix': 'NBATeams',
+        'country': 'us',
         'sport_path': 'basketball/nba',
         'duration_minutes': 150,
         'default_days': 7,
+        'name_prefixes': ('NBA Teams - ',),
     },
     'nhl': {
         'label': 'NHL',
         'id_prefix': 'NHLTeams',
+        'country': 'us',
         'sport_path': 'hockey/nhl',
         'duration_minutes': 150,
         'default_days': 7,
+        'name_prefixes': ('NHL Teams - ',),
     },
     'nfl': {
         'label': 'NFL',
         'id_prefix': 'NFLTeams',
+        'country': 'us',
         'sport_path': 'football/nfl',
         'duration_minutes': 195,
         'default_days': 14,
+        'name_prefixes': ('NFL Teams - ',),
     },
     'mlb': {
         'label': 'MLB',
         'id_prefix': 'MLBTeams',
+        'country': 'us',
         'sport_path': 'baseball/mlb',
         'duration_minutes': 180,
         'default_days': 7,
+        'name_prefixes': ('MLB Teams - ',),
+    },
+    'epl': {
+        'label': 'Premier League',
+        'id_prefix': 'EPLTeams',
+        'country': 'uk',
+        'sport_path': 'soccer/eng.1',
+        'duration_minutes': 120,
+        'default_days': 14,
+        'name_prefixes': ('EPL - ', 'Premier League - '),
+        'supplemental_paths': (
+            'soccer/uefa.champions',
+            'soccer/uefa.europa',
+            'soccer/uefa.europa.conf',
+            'soccer/eng.fa',
+            'soccer/eng.league_cup',
+        ),
+    },
+    'efl_champ': {
+        'label': 'EFL Championship',
+        'id_prefix': 'EFLChampTeams',
+        'country': 'uk',
+        'sport_path': 'soccer/eng.2',
+        'duration_minutes': 120,
+        'default_days': 14,
+        'name_prefixes': ('EFL-CHAMP - ', 'EFL Championship - '),
+        'supplemental_paths': (
+            'soccer/eng.fa',
+            'soccer/eng.league_cup',
+        ),
+    },
+    'sco_prem': {
+        'label': 'Scottish Premiership',
+        'id_prefix': 'ScottishPremTeams',
+        'country': 'uk',
+        'sport_path': 'soccer/sco.1',
+        'duration_minutes': 120,
+        'default_days': 14,
+        'name_prefixes': ('Scottish Prem - ',),
+        'supplemental_paths': (
+            'soccer/uefa.champions',
+            'soccer/uefa.europa',
+            'soccer/uefa.europa.conf',
+        ),
     },
 }
 
-# Franchise display-name aliases matching common playlist naming variants and recent relocations.
+SUPPLEMENTAL_LABELS = {
+    'soccer/uefa.champions': 'UEFA Champions League',
+    'soccer/uefa.europa': 'UEFA Europa League',
+    'soccer/uefa.europa.conf': 'UEFA Conference League',
+    'soccer/eng.fa': 'FA Cup',
+    'soccer/eng.league_cup': 'EFL Cup',
+}
+
+# Disambiguate ESPN team IDs that share an abbreviation within the same league (e.g. Dundee vs Dundee United).
+TEAM_ID_ABBR_OVERRIDES = {
+    ('sco_prem', '264'): 'DUNU',
+}
+
+# Franchise / club display-name aliases matching common playlist naming variants and relocations.
 EXTRA_TEAM_ALIASES = {
     ('nba', 'LAC'): ('Los Angeles Clippers',),
     ('nhl', 'UTA'): ('Utah Hockey Club', 'Arizona Coyotes'),
     ('nhl', 'UTAH'): ('Utah Hockey Club', 'Arizona Coyotes'),
     ('mlb', 'ATH'): ('Oakland Athletics', 'Sacramento Athletics'),
     ('mlb', 'OAK'): ('Oakland Athletics', 'Sacramento Athletics'),
+    ('epl', 'BHA'): ('Brighton',),
+    ('epl', 'MAN'): ('Manchester Utd',),
+    ('epl', 'NEW'): ('Newcastle Utd',),
+    ('epl', 'TOT'): ('Tottenham',),
+    ('efl_champ', 'BOL'): ('Bolton',),
+    ('efl_champ', 'WHU'): ('West Ham',),
+    ('efl_champ', 'WOL'): ('Wolves',),
+    ('sco_prem', 'ABE'): ('Aberdeen FC', 'Aberdeen FC (Reds TV)'),
+    ('sco_prem', 'CEL'): ('Celtic TV', 'Celtic FC'),
+    ('sco_prem', 'DUN'): ('Dundee FC',),
+    ('sco_prem', 'DUNU'): ('Dundee United FC',),
+    ('sco_prem', 'FALK'): ('Falkirk FC',),
+    ('sco_prem', 'HIBS'): ('Hibs', 'Hibs FC', 'Hibernian FC'),
+    ('sco_prem', 'HOM'): ('Hearts', 'Hearts FC'),
+    ('sco_prem', 'KIL'): ('Kilmarnock FC', 'Kilimarnock FC'),
+    ('sco_prem', 'MOT'): ('Motherwell FC',),
+    ('sco_prem', 'RAN'): ('Rangers TV', 'Rangers FC'),
+    ('sco_prem', 'STJ'): ('St. Johnstone', 'St. Johnstone FC'),
+    ('sco_prem', 'STM'): ('St. Mirren', 'St. Mirren FC'),
 }
 
 NON_FRANCHISE_ABBRS = frozenset({
@@ -191,7 +274,7 @@ def _extract_venue(competition):
     return full_name
 
 
-def _team_display_names(league_key, label, abbr, display_name, short_name):
+def _team_display_names(league_key, name_prefixes, abbr, display_name, short_name):
     names = []
     seen = set()
 
@@ -204,11 +287,13 @@ def _team_display_names(league_key, label, abbr, display_name, short_name):
             seen.add(folded)
             names.append(text)
 
-    _append(f'{label} Teams - {display_name}')
+    variants = [display_name]
     if short_name:
-        _append(f'{label} Teams - {short_name}')
-    for alias in EXTRA_TEAM_ALIASES.get((league_key, abbr), ()):
-        _append(f'{label} Teams - {alias}')
+        variants.append(short_name)
+    variants.extend(EXTRA_TEAM_ALIASES.get((league_key, abbr), ()))
+    for prefix in name_prefixes:
+        for variant in variants:
+            _append(f'{prefix}{variant}')
     return names
 
 
@@ -222,102 +307,116 @@ def _build_description(label, title, venue=None, broadcast=None):
     return '. '.join(parts) + '.'
 
 
-def build_guide_data(events_by_league, now, leagues=DEFAULT_LEAGUES):
+def _iter_valid_events(events, duration, cutoff_stop):
+    seen_event_ids = set()
+    for event in events:
+        if not isinstance(event, dict):
+            continue
+        event_id = _clean_text(event.get('id'))
+        if event_id:
+            if event_id in seen_event_ids:
+                continue
+            seen_event_ids.add(event_id)
+
+        competitions = event.get('competitions')
+        if not isinstance(competitions, list) or not competitions or not isinstance(competitions[0], dict):
+            continue
+        competition = competitions[0]
+
+        status_obj = competition.get('status') or event.get('status')
+        status_name = ''
+        if isinstance(status_obj, dict) and isinstance(status_obj.get('type'), dict):
+            status_name = _clean_text(status_obj['type'].get('name'))
+        if status_name in SKIPPED_STATUSES:
+            continue
+
+        start = _parse_iso(competition.get('date') or event.get('date'))
+        if start is None:
+            continue
+        start_utc = start.astimezone(timezone.utc)
+        stop_utc = start_utc + duration
+        if stop_utc <= cutoff_stop:
+            continue
+
+        competitors = competition.get('competitors')
+        if not isinstance(competitors, list) or len(competitors) < 2:
+            continue
+
+        title = _clean_text(event.get('name'))
+        venue = _extract_venue(competition)
+
+        parsed_competitors = []
+        away_name = ''
+        home_name = ''
+        for comp in competitors:
+            if not isinstance(comp, dict):
+                continue
+            team = comp.get('team')
+            if not isinstance(team, dict):
+                continue
+            team_id = _clean_text(team.get('id'))
+            abbr = re.sub(r'[^A-Za-z0-9]', '', _clean_text(team.get('abbreviation'))).upper()
+            display_name = _clean_text(team.get('displayName'))
+            short_name = _clean_text(team.get('shortDisplayName') or team.get('name'))
+            home_away = _clean_text(comp.get('homeAway')).lower()
+            if home_away == 'away' and display_name:
+                away_name = display_name
+            elif home_away == 'home' and display_name:
+                home_name = display_name
+            if (
+                not abbr
+                or abbr in NON_FRANCHISE_ABBRS
+                or not display_name
+                or display_name.upper() in {'TBD', 'TBA'}
+                or display_name.lower().startswith('team ')
+                or 'all-star' in display_name.lower()
+                or 'all star' in display_name.lower()
+                or team_id.startswith('-')
+            ):
+                continue
+            parsed_competitors.append((team_id, abbr, display_name, short_name, home_away))
+
+        if not title:
+            if away_name and home_name:
+                title = f'{away_name} at {home_name}'
+            else:
+                continue
+
+        yield start_utc, stop_utc, title, venue, competition, parsed_competitors
+
+
+def build_guide_data(events_by_league, now, leagues=DEFAULT_LEAGUES, supplemental_events_by_path=None):
     selected_leagues = _normalize_leagues(leagues)
+    supplemental_events_by_path = supplemental_events_by_path or {}
     now_utc = now.astimezone(timezone.utc)
     cutoff_stop = now_utc - timedelta(hours=12)
 
     channel_names = {}
     channel_league = {}
     raw_by_channel = {}
+    league_team_ids = {key: {} for key in selected_leagues}
     league_stats = {key: {'channels': 0, 'programmes': 0} for key in selected_leagues}
 
     for league_key in selected_leagues:
         cfg = LEAGUE_CONFIG[league_key]
         label = cfg['label']
         id_prefix = cfg['id_prefix']
+        country = cfg.get('country', 'us')
+        name_prefixes = cfg.get('name_prefixes', (f'{label} Teams - ',))
         duration = timedelta(minutes=cfg['duration_minutes'])
-        seen_event_ids = set()
 
-        for event in events_by_league.get(league_key, ()):
-            if not isinstance(event, dict):
-                continue
-            event_id = _clean_text(event.get('id'))
-            if event_id:
-                if event_id in seen_event_ids:
-                    continue
-                seen_event_ids.add(event_id)
-
-            competitions = event.get('competitions')
-            if not isinstance(competitions, list) or not competitions or not isinstance(competitions[0], dict):
-                continue
-            competition = competitions[0]
-
-            status_obj = competition.get('status') or event.get('status')
-            status_name = ''
-            if isinstance(status_obj, dict) and isinstance(status_obj.get('type'), dict):
-                status_name = _clean_text(status_obj['type'].get('name'))
-            if status_name in SKIPPED_STATUSES:
-                continue
-
-            start = _parse_iso(competition.get('date') or event.get('date'))
-            if start is None:
-                continue
-            start_utc = start.astimezone(timezone.utc)
-            stop_utc = start_utc + duration
-            if stop_utc <= cutoff_stop:
-                continue
-
-            competitors = competition.get('competitors')
-            if not isinstance(competitors, list) or len(competitors) < 2:
-                continue
-
-            title = _clean_text(event.get('name'))
-            venue = _extract_venue(competition)
-
-            valid_competitors = []
-            away_name = ''
-            home_name = ''
-            for comp in competitors:
-                if not isinstance(comp, dict):
-                    continue
-                team = comp.get('team')
-                if not isinstance(team, dict):
-                    continue
-                team_id = _clean_text(team.get('id'))
-                abbr = re.sub(r'[^A-Za-z0-9]', '', _clean_text(team.get('abbreviation'))).upper()
-                display_name = _clean_text(team.get('displayName'))
-                short_name = _clean_text(team.get('shortDisplayName') or team.get('name'))
-                home_away = _clean_text(comp.get('homeAway')).lower()
-                if home_away == 'away' and display_name:
-                    away_name = display_name
-                elif home_away == 'home' and display_name:
-                    home_name = display_name
-                if (
-                    not abbr
-                    or abbr in NON_FRANCHISE_ABBRS
-                    or not display_name
-                    or display_name.upper() in {'TBD', 'TBA'}
-                    or display_name.lower().startswith('team ')
-                    or 'all-star' in display_name.lower()
-                    or 'all star' in display_name.lower()
-                    or team_id.startswith('-')
-                ):
-                    continue
-                valid_competitors.append((abbr, display_name, short_name, home_away))
-
-            if not title:
-                if away_name and home_name:
-                    title = f'{away_name} at {home_name}'
-                else:
-                    continue
-
-            for abbr, display_name, short_name, home_away in valid_competitors:
-                channel_id = f'{id_prefix}.{abbr}.us'
+        for start_utc, stop_utc, title, venue, competition, competitors in _iter_valid_events(
+            events_by_league.get(league_key, ()), duration, cutoff_stop
+        ):
+            for team_id, abbr, display_name, short_name, home_away in competitors:
+                resolved_abbr = TEAM_ID_ABBR_OVERRIDES.get((league_key, team_id), abbr)
+                channel_id = f'{id_prefix}.{resolved_abbr}.{country}'
                 channel_names[channel_id] = _team_display_names(
-                    league_key, label, abbr, display_name, short_name
+                    league_key, name_prefixes, resolved_abbr, display_name, short_name
                 )
                 channel_league[channel_id] = league_key
+                if team_id:
+                    league_team_ids[league_key][team_id] = channel_id
                 broadcast = _extract_broadcasts(competition, home_away=home_away)
                 desc = _build_description(label, title, venue=venue, broadcast=broadcast)
                 raw_by_channel.setdefault(channel_id, []).append({
@@ -327,6 +426,32 @@ def build_guide_data(events_by_league, now, leagues=DEFAULT_LEAGUES):
                     'sub_title': broadcast,
                     'desc': desc,
                 })
+
+        # Attach supplemental competition fixtures (e.g. UEFA Champions/Europa League, FA/EFL Cup)
+        # strictly to clubs already discovered in this primary league — never create foreign club channels.
+        known_clubs = league_team_ids[league_key]
+        if known_clubs:
+            for supp_path in cfg.get('supplemental_paths', ()):
+                supp_events = supplemental_events_by_path.get(supp_path, ())
+                if not supp_events:
+                    continue
+                supp_label = SUPPLEMENTAL_LABELS.get(supp_path, label)
+                for start_utc, stop_utc, title, venue, competition, competitors in _iter_valid_events(
+                    supp_events, duration, cutoff_stop
+                ):
+                    for team_id, _, _, _, home_away in competitors:
+                        channel_id = known_clubs.get(team_id)
+                        if not channel_id:
+                            continue
+                        broadcast = _extract_broadcasts(competition, home_away=home_away)
+                        desc = _build_description(supp_label, title, venue=venue, broadcast=broadcast)
+                        raw_by_channel.setdefault(channel_id, []).append({
+                            'start': start_utc,
+                            'stop': stop_utc,
+                            'title': title,
+                            'sub_title': broadcast,
+                            'desc': desc,
+                        })
 
     channels = {}
     programmes = {}
@@ -388,30 +513,49 @@ def write_guide(output, now=None, leagues=None, days=None):
         league_key: (days_override if days_override is not None else LEAGUE_CONFIG[league_key]['default_days'])
         for league_key in selected_leagues
     }
+
+    # Deduplicate (sport_path, day_date) requests across primary leagues and shared supplemental cups.
+    path_max_days = {}
+    for league_key in selected_leagues:
+        cfg = LEAGUE_CONFIG[league_key]
+        d = days_by_league[league_key]
+        path_max_days[cfg['sport_path']] = max(path_max_days.get(cfg['sport_path'], 0), d)
+        for supp_path in cfg.get('supplemental_paths', ()):
+            path_max_days[supp_path] = max(path_max_days.get(supp_path, 0), d)
+
     requests = [
-        (league_key, LEAGUE_CONFIG[league_key]['sport_path'], start_day + timedelta(days=offset))
-        for league_key in selected_leagues
-        for offset in range(days_by_league[league_key])
+        (sport_path, start_day + timedelta(days=offset))
+        for sport_path, max_d in path_max_days.items()
+        for offset in range(max_d)
     ]
 
-    events_by_league = {key: [] for key in selected_leagues}
+    events_by_path = {sport_path: [] for sport_path in path_max_days}
     fetch_errors = 0
 
     def _fetch_one(task):
-        league_key, sport_path, day_date = task
+        sport_path, day_date = task
         try:
-            return league_key, fetch_scoreboard_day(sport_path, day_date), False
+            return sport_path, fetch_scoreboard_day(sport_path, day_date), False
         except (OSError, ValueError):
-            return league_key, [], True
+            return sport_path, [], True
 
     with ThreadPoolExecutor(max_workers=4) as executor:
-        for league_key, events, failed in executor.map(_fetch_one, requests):
+        for sport_path, events, failed in executor.map(_fetch_one, requests):
             if failed:
                 fetch_errors += 1
             else:
-                events_by_league[league_key].extend(events)
+                events_by_path[sport_path].extend(events)
 
-    channels, programmes, stats = build_guide_data(events_by_league, now, leagues=selected_leagues)
+    events_by_league = {
+        league_key: events_by_path.get(LEAGUE_CONFIG[league_key]['sport_path'], [])
+        for league_key in selected_leagues
+    }
+    channels, programmes, stats = build_guide_data(
+        events_by_league,
+        now,
+        leagues=selected_leagues,
+        supplemental_events_by_path=events_by_path,
+    )
     stats['days_by_league'] = days_by_league
     stats['fetch_errors'] = fetch_errors
 

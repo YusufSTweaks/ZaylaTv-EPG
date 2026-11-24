@@ -28,6 +28,17 @@
       ]
     },
     {
+      "id": "us-beinsports",
+      "region": "US",
+      "adapter": "beinsports",
+      "regions": [
+        "en-us"
+      ],
+      "countries": [
+        "us"
+      ]
+    },
+    {
       "id": "us-tvguide",
       "region": "US",
       "adapter": "tvguide"
@@ -68,6 +79,17 @@
       "id": "ca-tsn-official",
       "region": "CA",
       "adapter": "tsn"
+    },
+    {
+      "id": "ca-beinsports",
+      "region": "CA",
+      "adapter": "beinsports",
+      "regions": [
+        "en-us"
+      ],
+      "countries": [
+        "ca"
+      ]
     },
     {
       "id": "ca-tvpassport",
@@ -219,6 +241,16 @@
         "ie"
       ],
       "limit": 350
+    },
+    {
+      "id": "uk-football-teams-official",
+      "region": "UK",
+      "adapter": "pro_teams",
+      "leagues": [
+        "epl",
+        "efl_champ",
+        "sco_prem"
+      ]
     },
     {
       "id": "eu-sky-de",
@@ -414,6 +446,14 @@
       "limit": 120
     },
     {
+      "id": "mena-beinsports",
+      "region": "MENA",
+      "adapter": "beinsports",
+      "regions": [
+        "ar-mena"
+      ]
+    },
+    {
       "id": "mena-bein",
       "region": "MENA",
       "files": [
@@ -423,14 +463,6 @@
         "ar"
       ],
       "limit": 80
-    },
-    {
-      "id": "mena-beinsports",
-      "region": "MENA",
-      "adapter": "beinsports",
-      "regions": [
-        "ar-mena"
-      ]
     },
     {
       "id": "mena-bein-english",
@@ -527,6 +559,14 @@
         "au/Brisbane/epg",
         "au/Adelaide/epg",
         "Binge/epg"
+      ]
+    },
+    {
+      "id": "au-beinsports",
+      "region": "AU",
+      "adapter": "beinsports",
+      "regions": [
+        "en-au"
       ]
     },
     {

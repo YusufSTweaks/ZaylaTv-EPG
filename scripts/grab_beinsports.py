@@ -3,6 +3,7 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import re
+import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -31,6 +32,31 @@ REGION_META = {
 
 DEFAULT_REGIONS = ('ar-mena',)
 
+# Verified canonical XMLTV mappings for Opta UUIDs where upstream iptv-org XML is
+# blank, uses cryptic provider codes (BEINC/BEINSSC), or assigns a .qa ID to US/SG feeds.
+BUILTIN_CANONICAL_OVERRIDES = {
+    '84f7e0c1-d47a-4444-bba8-c50bb8d2c5a8': ('beINSports.qa@MENA', 'beIN SPORTS', 'ar'),
+    '7836fea9-6b39-4a1a-8352-dc5fcb97a16c': ('beINSports1.qa@MENA', 'beIN SPORTS 1', 'ar'),
+    '5c08d9d3-c713-4f1f-947e-87c761428b9b': ('beINSports9.qa@MENA', 'beIN SPORTS 9', 'ar'),
+    '5ed9e1c4-bef4-4ac2-8f90-28b3dca26375': ('beINSportsCanada.ca@SD', 'beIN SPORTS Canada', 'en'),
+    '5824c394-7211-4004-ac46-35bd58b9d1ee': ('beINSportsenEspanolCanada.ca@SD', 'beIN SPORTS en Español Canada', 'es'),
+    '520d107a-71d4-4cb7-b141-1c6b089a7ffc': ('beINSports8Canada.ca@SD', 'beIN SPORTS 8 Canada', 'en'),
+    'c244c48d-3b54-406a-94c9-d63b16318267': ('beINSportsUSA.us@SD', 'beIN SPORTS', 'en'),
+    '1acadcf1-dfac-480b-872c-53d51fe1b45d': ('beINSPORTSXTRA.us@SD', 'beIN SPORTS XTRA', 'en'),
+    '5223e3d7-fb4e-4155-885a-9165996b22fa': ('beINSPORTSXTRAenEspanol.us@SD', 'beIN SPORTS XTRA ñ', 'es'),
+    '4083661e-f588-4700-943c-8fdf65f1b5eb': ('beINSportsenEspanol.us@HD', 'beIN SPORTS en Español', 'es'),
+    '90e69fc7-aa8c-40f2-b35f-ebd174495f76': ('beINSports3.us@SD', 'beIN SPORTS 3', 'en'),
+    'd0546ed7-9db2-4924-9e32-c4f077e7bfc7': ('beINSports4.us@SD', 'beIN SPORTS 4', 'en'),
+    'a5a48db1-c00b-4db9-9fc6-5e5f25c18830': ('beINSports5.us@SD', 'beIN SPORTS 5', 'en'),
+    'e56b0905-f99f-4db1-931e-e6002b530867': ('beINSports6.us@SD', 'beIN SPORTS 6', 'en'),
+    '831591c8-da65-4528-b837-0e5a147887fb': ('beINSports7.us@SD', 'beIN SPORTS 7', 'en'),
+    '9a424246-ec89-43c3-9239-aa3a40540f94': ('beINSports8.us@SD', 'beIN SPORTS 8', 'en'),
+    '164c0eda-ebce-4aa6-9dda-d603e0948b9f': ('beINSports1.qa@Australia', 'beIN SPORTS 1', 'en'),
+    '63a30d9c-609d-4a30-8730-2ca391df287a': ('beINSports2.qa@Australia', 'beIN SPORTS 2', 'en'),
+    '2e8a6222-8d90-4291-81e3-af2f72557746': ('beINSports3.qa@Australia', 'beIN SPORTS 3', 'en'),
+    '0fa3def0-234b-4e25-934f-392df2c3162c': ('beINSports1.qa@Malaysia', 'beIN SPORTS 1', 'en'),
+}
+
 
 def _clean_text(value):
     if value is None or isinstance(value, bool):
@@ -56,30 +82,35 @@ def _slug(value, max_len=24):
     return cleaned[:max_len] or 'ch'
 
 
+def _channel_country(channel_id):
+    base = channel_id.split('@', 1)[0]
+    match = re.search(r'\.([a-z]{2})$', base, re.I)
+    return match.group(1).lower() if match else ''
+
+
 def load_canonical_beinsports_map(upstream_dir):
     """Load site_id UUID -> (xmltv_id, display_name, lang) from iptv-org beinsports.com."""
     mapping = {}
-    if not upstream_dir:
-        return mapping
-    sites_dir = Path(upstream_dir) / 'sites' / 'beinsports.com'
-    if not sites_dir.exists():
-        return mapping
-    for path in sorted(sites_dir.glob('*.channels.xml')):
-        try:
-            root = ET.parse(path).getroot()
-        except (OSError, ET.ParseError):
-            continue
-        for ch in root.findall('channel'):
-            sid = _clean_text(ch.get('site_id'))
-            cid = _clean_text(ch.get('xmltv_id'))
-            name = _clean_text(ch.text)
-            lang = _clean_text(ch.get('lang')) or 'en'
-            if sid and cid and name and sid.lower() not in mapping:
-                mapping[sid.lower()] = (cid, name, lang)
+    if upstream_dir:
+        sites_dir = Path(upstream_dir) / 'sites' / 'beinsports.com'
+        if sites_dir.exists():
+            for path in sorted(sites_dir.glob('*.channels.xml')):
+                try:
+                    root = ET.parse(path).getroot()
+                except (OSError, ET.ParseError):
+                    continue
+                for ch in root.findall('channel'):
+                    sid = _clean_text(ch.get('site_id'))
+                    cid = _clean_text(ch.get('xmltv_id'))
+                    name = _clean_text(ch.text)
+                    lang = _clean_text(ch.get('lang')) or 'en'
+                    if sid and cid and name and sid.lower() not in mapping:
+                        mapping[sid.lower()] = (cid, name, lang)
+    mapping.update(BUILTIN_CANONICAL_OVERRIDES)
     return mapping
 
 
-def _get_json(url):
+def _get_json(url, retries=2):
     request = Request(
         url,
         headers={
@@ -87,11 +118,20 @@ def _get_json(url):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         },
     )
-    with urlopen(request, timeout=15) as response:
-        payload = response.read(MAX_PAYLOAD_BYTES + 1)
-    if len(payload) > MAX_PAYLOAD_BYTES:
-        raise ValueError('beIN SPORTS response exceeded limit')
-    return json.loads(payload)
+    for attempt in range(retries + 1):
+        try:
+            with urlopen(request, timeout=15) as response:
+                payload = response.read(MAX_PAYLOAD_BYTES + 1)
+            if len(payload) > MAX_PAYLOAD_BYTES:
+                raise ValueError('beIN SPORTS response exceeded limit')
+            return json.loads(payload)
+        except HTTPError as error:
+            if attempt >= retries or (error.code < 500 and error.code != 429):
+                raise
+        except (OSError, URLError):
+            if attempt >= retries:
+                raise
+        time.sleep(0.5 * (attempt + 1))
 
 
 def fetch_region_channels(region):
@@ -138,9 +178,10 @@ def _extract_event_desc(event):
     return ' - '.join(parts) or None
 
 
-def build_guide_data(channel_event_pairs, now, canonical_map=None):
+def build_guide_data(channel_event_pairs, now, canonical_map=None, countries=None):
     """Convert (region, channel_dict, events_list) tuples into XMLTV channel/programme dicts."""
     canonical_map = canonical_map or {}
+    country_filter = {c.strip().lower() for c in countries if c and str(c).strip()} if countries else None
     now_utc = now.astimezone(timezone.utc)
     window_start = now_utc - timedelta(hours=6)
     window_end = now_utc + timedelta(days=2, hours=6)
@@ -163,7 +204,11 @@ def build_guide_data(channel_event_pairs, now, canonical_map=None):
         if uuid.lower() in canonical_map:
             cid, canon_name, lang = canonical_map[uuid.lower()]
             names = [canon_name]
-            if api_name and api_name.lower() != canon_name.lower():
+            if (
+                api_name
+                and api_name.lower() != canon_name.lower()
+                and not re.fullmatch(r'BEIN[A-Z0-9]{0,4}C', api_name)
+            ):
                 names.append(api_name)
         else:
             if not api_name:
@@ -172,6 +217,9 @@ def build_guide_data(channel_event_pairs, now, canonical_map=None):
             cid = f'beINSports.{reg_tag}.{_slug(ext_id, 18)}.{country}'
             names = [api_name]
             lang = default_lang
+
+        if country_filter and _channel_country(cid) not in country_filter:
+            continue
 
         added = False
         for ev in events:
@@ -198,13 +246,14 @@ def build_guide_data(channel_event_pairs, now, canonical_map=None):
     return channels, programmes
 
 
-def write_guide(output, now=None, upstream=None, regions=None):
+def write_guide(output, now=None, upstream=None, regions=None, countries=None):
     now = now or datetime.now(timezone.utc)
     now_utc = now.astimezone(timezone.utc)
     day_start = now_utc.replace(hour=0, minute=0, second=0, microsecond=0)
     day_end = day_start + timedelta(days=2)
     regions = tuple(regions) if regions else DEFAULT_REGIONS
     canonical_map = load_canonical_beinsports_map(upstream)
+    country_filter = {c.strip().lower() for c in countries if c and str(c).strip()} if countries else None
 
     discovered = []
     seen = set()
@@ -213,11 +262,18 @@ def write_guide(output, now=None, upstream=None, regions=None):
             rows = fetch_region_channels(reg)
         except (OSError, HTTPError, URLError, ValueError, json.JSONDecodeError):
             continue
+        reg_country = REGION_META.get(reg, ('qa', 'en', 'intl'))[0]
         for ch in rows:
             uid = _clean_text(ch.get('id')).lower() if isinstance(ch, dict) else ''
-            if uid and uid not in seen:
-                seen.add(uid)
-                discovered.append((reg, ch))
+            if not uid or uid in seen:
+                continue
+            if country_filter:
+                mapped = canonical_map.get(uid)
+                ch_country = _channel_country(mapped[0]) if mapped else reg_country
+                if ch_country not in country_filter:
+                    continue
+            seen.add(uid)
+            discovered.append((reg, ch))
 
     if not discovered:
         raise ValueError(f'beIN SPORTS returned no channels for regions: {", ".join(regions)}')
@@ -237,7 +293,9 @@ def write_guide(output, now=None, upstream=None, regions=None):
                 ordered[idx] = (reg, ch, [])
         pairs = [ordered[i] for i in sorted(ordered)]
 
-    channels, programmes = build_guide_data(pairs, now, canonical_map=canonical_map)
+    channels, programmes = build_guide_data(
+        pairs, now, canonical_map=canonical_map, countries=countries
+    )
     if not any(stop > now_utc for _, _, stop in programmes):
         raise ValueError('beIN SPORTS returned no usable current or upcoming programmes')
 

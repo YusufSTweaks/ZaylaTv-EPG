@@ -574,4 +574,95 @@ class OfficialAdapterTests(unittest.TestCase):
    root=ET.parse(out).getroot()
    self.assertEqual(len(root.findall('channel')),2)
    self.assertEqual(len(root.findall('programme')),2)
+ def test_pro_teams_uk_football_and_supplemental_cups(self):
+  from grab_pro_teams import build_guide_data as build_pro_teams
+  events_by_league={
+   'epl':[{
+    'id':'epl-1',
+    'name':'Arsenal at Manchester United',
+    'date':'2030-01-02T15:00Z',
+    'competitions':[{
+     'date':'2030-01-02T15:00Z',
+     'status':{'type':{'name':'STATUS_SCHEDULED'}},
+     'competitors':[
+      {'homeAway':'away','team':{'id':'359','abbreviation':'ARS','displayName':'Arsenal','shortDisplayName':'Arsenal'}},
+      {'homeAway':'home','team':{'id':'360','abbreviation':'MAN','displayName':'Manchester United','shortDisplayName':'Man Utd'}},
+     ],
+    }],
+   }],
+   'efl_champ':[{
+    'id':'efl-1',
+    'name':'West Ham United at Wolverhampton Wanderers',
+    'date':'2030-01-02T15:00Z',
+    'competitions':[{
+     'date':'2030-01-02T15:00Z',
+     'status':{'type':{'name':'STATUS_SCHEDULED'}},
+     'competitors':[
+      {'homeAway':'away','team':{'id':'371','abbreviation':'WHU','displayName':'West Ham United','shortDisplayName':'West Ham'}},
+      {'homeAway':'home','team':{'id':'380','abbreviation':'WOL','displayName':'Wolverhampton Wanderers','shortDisplayName':'Wolves'}},
+     ],
+    }],
+   }],
+   'sco_prem':[{
+    'id':'sco-1',
+    'name':'Dundee at Dundee United',
+    'date':'2030-01-02T15:00Z',
+    'competitions':[{
+     'date':'2030-01-02T15:00Z',
+     'status':{'type':{'name':'STATUS_SCHEDULED'}},
+     'competitors':[
+      {'homeAway':'away','team':{'id':'261','abbreviation':'DUN','displayName':'Dundee','shortDisplayName':'Dundee'}},
+      {'homeAway':'home','team':{'id':'264','abbreviation':'DUN','displayName':'Dundee United','shortDisplayName':'Dundee Utd'}},
+     ],
+    }],
+   }],
+  }
+  supplemental={
+   'soccer/uefa.champions':[{
+    'id':'ucl-1',
+    'name':'Arsenal at Real Madrid',
+    'date':'2030-01-05T20:00Z',
+    'competitions':[{
+     'date':'2030-01-05T20:00Z',
+     'status':{'type':{'name':'STATUS_SCHEDULED'}},
+     'competitors':[
+      {'homeAway':'away','team':{'id':'359','abbreviation':'ARS','displayName':'Arsenal','shortDisplayName':'Arsenal'}},
+      {'homeAway':'home','team':{'id':'86','abbreviation':'RMA','displayName':'Real Madrid','shortDisplayName':'Real Madrid'}},
+     ],
+    }],
+   }],
+  }
+  channels,programmes,_=build_pro_teams(
+   events_by_league,
+   self.SAMPLE_NOW,
+   leagues=['epl','efl_champ','sco_prem'],
+   supplemental_events_by_path=supplemental,
+  )
+  self.assertIn('EPL - Manchester Utd',channels['EPLTeams.MAN.uk'])
+  self.assertIn('EFL-CHAMP - Wolves',channels['EFLChampTeams.WOL.uk'])
+  self.assertIn('EFL-CHAMP - West Ham',channels['EFLChampTeams.WHU.uk'])
+  # Dundee (261) and Dundee United (264) share ESPN abbr DUN and must stay distinct
+  self.assertIn('ScottishPremTeams.DUN.uk',channels)
+  self.assertIn('ScottishPremTeams.DUNU.uk',channels)
+  self.assertIn('Scottish Prem - Dundee United',channels['ScottishPremTeams.DUNU.uk'])
+  # UCL fixture attaches to Arsenal but must NOT create a Real Madrid channel
+  self.assertIn(('EPLTeams.ARS.uk',dt.datetime(2030,1,5,20,0,tzinfo=dt.timezone.utc),dt.datetime(2030,1,5,22,0,tzinfo=dt.timezone.utc)),programmes)
+  self.assertFalse(any('RMA' in cid for cid in channels))
+ def test_beinsports_country_filter_and_overrides(self):
+  from grab_beinsports import build_guide_data as build_beinsports, load_canonical_beinsports_map
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   cfg={'sources':[{'id':'ca-beinsports','region':'CA','adapter':'beinsports','regions':['en-us'],'countries':['ca']}]}
+   manifest=select(p,cfg,p/'selected',config_dir=p)
+   self.assertEqual(manifest[0]['countries'],['ca'])
+  cmap=load_canonical_beinsports_map(None)
+  ev=[{'title':'Live Match','startDate':'2030-01-01T15:00:00Z','endDate':'2030-01-01T17:00:00Z'}]
+  pairs=[
+   ('en-us',{'id':'5ED9E1C4-BEF4-4AC2-8F90-28B3DCA26375','externalId':'92061','name':'BEINC'},ev),
+   ('en-us',{'id':'C244C48D-3B54-406A-94C9-D63B16318267','externalId':'76942','name':'beIN SPORTS'},ev),
+  ]
+  ca_ch,_=build_beinsports(pairs,self.SAMPLE_NOW,canonical_map=cmap,countries=['ca'])
+  us_ch,_=build_beinsports(pairs,self.SAMPLE_NOW,canonical_map=cmap,countries=['us'])
+  self.assertEqual(ca_ch,{'beINSportsCanada.ca@SD':['beIN SPORTS Canada']})
+  self.assertEqual(us_ch,{'beINSportsUSA.us@SD':['beIN SPORTS']})
 if __name__=='__main__':unittest.main()

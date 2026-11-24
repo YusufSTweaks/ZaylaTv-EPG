@@ -144,6 +144,7 @@ def run_grab(source, upstream, output):
                 output / source['output'],
                 upstream=upstream,
                 regions=source.get('regions'),
+                countries=source.get('countries'),
             )
             print(f'beIN SPORTS official schedule ({source["id"]}): {channels} channels and {programmes} programmes', flush=True)
             return {'exit_code': 0, 'selected_channels': channels}
