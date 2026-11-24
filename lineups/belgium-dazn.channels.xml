@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<channels>
+  <channel site="telenet.tv" site_id="jplfr01" lang="fr" xmltv_id="DAZNProLeague1FR.be@SD">DAZN Pro League 1 FR</channel>
+  <channel site="telenet.tv" site_id="jplfr02" lang="fr" xmltv_id="DAZNProLeague2FR.be@SD">DAZN Pro League 2 FR</channel>
+  <channel site="telenet.tv" site_id="jplfr03" lang="fr" xmltv_id="DAZNProLeague3FR.be@SD">DAZN Pro League 3 FR</channel>
+  <channel site="telenet.tv" site_id="jplnl01" lang="nl" xmltv_id="DAZNProLeague1NL.be@SD">DAZN Pro League 1 NL</channel>
+  <channel site="telenet.tv" site_id="jplnl02" lang="nl" xmltv_id="DAZNProLeague2NL.be@SD">DAZN Pro League 2 NL</channel>
+  <channel site="telenet.tv" site_id="jplnl03" lang="nl" xmltv_id="DAZNProLeague3NL.be@SD">DAZN Pro League 3 NL</channel>
+  <channel site="telenet.tv" site_id="11football" lang="nl" xmltv_id="DAZN1NL.be@SD">DAZN 1 NL</channel>
+  <channel site="telenet.tv" site_id="11footbetv" lang="fr" xmltv_id="DAZN1FR.be@SD">DAZN 1 FR</channel>
+  <channel site="telenet.tv" site_id="11sports" lang="nl" xmltv_id="DAZN2NL.be@SD">DAZN 2 NL</channel>
+  <channel site="telenet.tv" site_id="11sportsbetv" lang="fr" xmltv_id="DAZN2FR.be@SD">DAZN 2 FR</channel>
+  <channel site="telenet.tv" site_id="11sports3" lang="nl" xmltv_id="DAZN3NL.be@SD">DAZN 3 NL</channel>
+  <channel site="telenet.tv" site_id="11sports3betv" lang="fr" xmltv_id="DAZN3FR.be@SD">DAZN 3 FR</channel>
+</channels>

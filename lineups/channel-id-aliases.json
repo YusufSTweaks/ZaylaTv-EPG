@@ -73,6 +73,12 @@
       "viasathistory.bg"
     ]
   },
+  "BE": {
+    "DAZN1FR.be@SD": [
+      "Eleven Sports 1 FR",
+      "Eleven Sports 1 (FR)"
+    ]
+  },
   "BR": {
     "DiscoveryHomeHealthLatinAmerica.mx@Brazil": [
       "discoveryhomehealth.br",
@@ -875,6 +881,17 @@
     "Boomerang.de@SD": [
       "cartoonito.de"
     ],
+    "DAZN1.de@SD": [
+      "dazn1.de",
+      "DAZN Bar 1"
+    ],
+    "DAZN2.de@SD": [
+      "dazn2.de",
+      "DAZN Bar 2"
+    ],
+    "DAZNFAST.de@HD": [
+      "dazn.de"
+    ],
     "DasErste.de@HD": [
       "ard.de"
     ],
@@ -925,21 +942,33 @@
     "Classica.us@SD": [
       "classica.es"
     ],
-    "DAZN1.uk@UKHD": [
-      "dazn1.es"
+    "DAZN1.es@SD": [
+      "dazn1.es",
+      "DAZN 1 Bar"
     ],
-    "DAZN2.uk@Belgium": [
-      "dazn2.es"
+    "DAZN2.es@SD": [
+      "dazn2.es",
+      "DAZN 2 Bar"
     ],
-    "DAZN3.uk@Belgium": [
+    "DAZN3.es@SD": [
       "dazn3.es"
     ],
-    "DAZN4.uk@Portugal": [
+    "DAZN4.es@SD": [
       "dazn4.es"
+    ],
+    "DAZNBaloncesto1.es@SD": [
+      "DAZN Baloncesto"
     ],
     "DAZNF1.uk@Spain": [
       "daznf1.es",
+      "daznf14k.es",
       "DAZN Formula 1"
+    ],
+    "DAZNLaLiga.uk@Spain": [
+      "daznlaliga.es"
+    ],
+    "DAZNLaLiga2.uk@Spain": [
+      "daznlaliga2.es"
     ],
     "Decasa.es@SD": [
       "canaldecasa.es",
@@ -1184,6 +1213,10 @@
       "nickjr.fr",
       "Nickelodeon Junior",
       "Nick Jr"
+    ],
+    "Ligue1Plus.fr@SD": [
+      "daznligue1.fr",
+      "Ligue 1+ 1"
     ]
   },
   "IN": {
@@ -1202,6 +1235,10 @@
     "Twentyseven.it@HD": [
       "27mediaset.it",
       "Mediaset Twentyseven"
+    ],
+    "ZonaDAZN.it@SD": [
+      "zonadazn.it",
+      "Zona DAZN"
     ]
   },
   "MENA": {

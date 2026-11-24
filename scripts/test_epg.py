@@ -665,4 +665,55 @@ class OfficialAdapterTests(unittest.TestCase):
   us_ch,_=build_beinsports(pairs,self.SAMPLE_NOW,canonical_map=cmap,countries=['us'])
   self.assertEqual(ca_ch,{'beINSportsCanada.ca@SD':['beIN SPORTS Canada']})
   self.assertEqual(us_ch,{'beINSportsUSA.us@SD':['beIN SPORTS']})
+ def test_dazn_selector_curated_filtering_and_xmltv(self):
+  from grab_dazn import build_guide_data as build_dazn, write_guide as write_dazn
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   cfg={'sources':[{'id':'de-dazn-official','region':'DE','adapter':'dazn','countries':['de']}]}
+   manifest=select(p,cfg,p/'selected',config_dir=p)
+   self.assertEqual(manifest[0]['adapter'],'dazn')
+   self.assertEqual(manifest[0]['countries'],['de'])
+   de_tiles=[
+    {
+     'AssetId':'bj5o60qt6uoe1clfdsev239pr',
+     'Title':'DAZN 1',
+     'LinearSchedule':{
+      'Now':{'Title':'Bundesliga','EpisodeTitle':'Bayern vs Dortmund','Description':'Live from Munich','Start':'2030-01-01T15:00:00Z','End':'2030-01-01T17:00:00Z'},
+      'Next':{'Title':'Bundesliga Highlights','EpisodeTitle':'Bundesliga Highlights','Start':'2030-01-01T17:00:00Z','End':'2030-01-01T18:00:00Z'},
+      'Later':[{'Title':'UEFA Champions League','Start':'2030-01-01T18:00:00Z','End':'2030-01-01T20:00:00Z'}],
+     },
+    },
+    # Non-DAZN third-party channel must be excluded to prevent collisions
+    {
+     'AssetId':'1l82wc10vjal91887wfmdhvcsp',
+     'Title':'Eurosport 1',
+     'LinearSchedule':{
+      'Now':{'Title':'Cycling','Start':'2030-01-01T15:00:00Z','End':'2030-01-01T17:00:00Z'},
+     },
+    },
+   ]
+   # Rotated AssetId still matches via normalized title fallback
+   fr_tiles=[
+    {
+     'AssetId':'rotated-asset-id',
+     'Title':'Ligue 1+ : Émissions et Matches en Direct',
+     'LinearSchedule':{
+      'Now':{'Title':'Ligue 1','EpisodeTitle':'PSG - OM','Start':'2030-01-01T19:00:00Z','End':'2030-01-01T21:00:00Z'},
+     },
+    },
+   ]
+   channels,programmes=build_dazn([('de',de_tiles),('fr',fr_tiles)],self.SAMPLE_NOW)
+   self.assertEqual(channels,{'DAZN1.de@SD':['DAZN 1'],'Ligue1Plus.fr@SD':['Ligue 1+']})
+   self.assertEqual(len(programmes),4)
+   # Matching EpisodeTitle == Title suppresses redundant sub-title
+   next_prog=programmes[('DAZN1.de@SD',dt.datetime(2030,1,1,17,0,tzinfo=dt.timezone.utc),dt.datetime(2030,1,1,18,0,tzinfo=dt.timezone.utc))]
+   self.assertIsNone(next_prog[1])
+   out=p/'dazn.xml'
+   with patch('grab_dazn.fetch_country_tiles',return_value=de_tiles):
+    ch_count,pr_count,stats=write_dazn(out,now=self.SAMPLE_NOW,countries=['de'])
+   self.assertEqual((ch_count,pr_count),(1,3))
+   self.assertEqual(stats['fetch_errors'],0)
+   root=ET.parse(out).getroot()
+   self.assertEqual([c.get('id') for c in root.findall('channel')],['DAZN1.de@SD'])
+   self.assertEqual(root.findtext('programme/sub-title'),'Bayern vs Dortmund')
 if __name__=='__main__':unittest.main()

@@ -39,6 +39,14 @@
       ]
     },
     {
+      "id": "us-dazn-official",
+      "region": "US",
+      "adapter": "dazn",
+      "countries": [
+        "us"
+      ]
+    },
+    {
       "id": "us-tvguide",
       "region": "US",
       "adapter": "tvguide"
@@ -161,6 +169,14 @@
       "limit": 50
     },
     {
+      "id": "fr-dazn-official",
+      "region": "FR",
+      "adapter": "dazn",
+      "countries": [
+        "fr"
+      ]
+    },
+    {
       "id": "fr-programme-tv",
       "region": "FR",
       "files": [
@@ -253,6 +269,22 @@
       ]
     },
     {
+      "id": "uk-dazn-official",
+      "region": "UK",
+      "adapter": "dazn",
+      "countries": [
+        "gb"
+      ]
+    },
+    {
+      "id": "de-dazn-official",
+      "region": "DE",
+      "adapter": "dazn",
+      "countries": [
+        "de"
+      ]
+    },
+    {
       "id": "eu-sky-de",
       "region": "DE",
       "files": [
@@ -295,12 +327,28 @@
       "limit": 200
     },
     {
+      "id": "be-telenet-dazn",
+      "region": "BE",
+      "files": [
+        "belgium-dazn.channels.xml"
+      ],
+      "limit": 20
+    },
+    {
       "id": "be-telenet",
       "region": "BE",
       "files": [
         "telenet.tv/telenet.tv.channels.xml"
       ],
       "limit": 120
+    },
+    {
+      "id": "it-dazn-official",
+      "region": "IT",
+      "adapter": "dazn",
+      "countries": [
+        "it"
+      ]
     },
     {
       "id": "eu-sky-it",
@@ -315,6 +363,22 @@
         "it"
       ],
       "limit": 220
+    },
+    {
+      "id": "es-dazn-official",
+      "region": "ES",
+      "adapter": "dazn",
+      "countries": [
+        "es"
+      ]
+    },
+    {
+      "id": "es-movistar-dazn",
+      "region": "ES",
+      "files": [
+        "spain-dazn.channels.xml"
+      ],
+      "limit": 20
     },
     {
       "id": "es-elpais",
@@ -352,6 +416,14 @@
       ],
       "languages": [
         "pl"
+      ]
+    },
+    {
+      "id": "pt-dazn-official",
+      "region": "PT",
+      "adapter": "dazn",
+      "countries": [
+        "pt"
       ]
     },
     {
