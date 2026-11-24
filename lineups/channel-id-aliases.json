@@ -34,6 +34,17 @@
       "t7.al"
     ]
   },
+  "AU": {
+    "beINSports1.qa@Australia": [
+      "beinsports1hd.au"
+    ],
+    "beINSports2.qa@Australia": [
+      "beinsports2hd.au"
+    ],
+    "beINSports3.qa@Australia": [
+      "beinsports3hd.au"
+    ]
+  },
   "BALKANS": {
     "24Kitchen.us@Slovenia": [
       "24kitchen.bg"
@@ -1541,6 +1552,30 @@
     "InvestigationDiscovery.uk@SD": [
       "Discovery ID",
       "Investigation Discovery"
+    ],
+    "beINSports.qa@MENA": [
+      "beinsportsglobal.qa",
+      "beIN SPORTS Global"
+    ],
+    "beINSports.mena.10803.qa": [
+      "beinsports1en.qa",
+      "beIN SPORTS 1 English",
+      "beIN SPORTS English 1"
+    ],
+    "beINSports.mena.10804.qa": [
+      "beinsports2en.qa",
+      "beIN SPORTS 2 English",
+      "beIN SPORTS English 2"
+    ],
+    "beINSports.mena.10702.qa": [
+      "beinsports1fr.qa",
+      "beIN SPORTS 1 French",
+      "beIN SPORTS French 1"
+    ],
+    "beINSports.mena.10703.qa": [
+      "beinsports2fr.qa",
+      "beIN SPORTS 2 French",
+      "beIN SPORTS French 2"
     ]
   },
   "NL": {
@@ -1665,6 +1700,41 @@
     ],
     "SVTBarn.se@SD": [
       "svtb.se"
+    ]
+  },
+  "SPORTS": {
+    "beINSports1.qa@Malaysia": [
+      "beinsports.my",
+      "beinsports1.my"
+    ],
+    "beINSports.my.sg3.my": [
+      "beinsport3.my"
+    ],
+    "beINSports1.qa@Australia": [
+      "beinsports1hd.au"
+    ],
+    "beINSports2.qa@Australia": [
+      "beinsports2hd.au"
+    ],
+    "beINSports3.qa@Australia": [
+      "beinsports3hd.au"
+    ],
+    "beINSportsUSA.us@SD": [
+      "beinsports.us",
+      "beIN Sports USA"
+    ],
+    "beINSPORTSXTRA.us@SD": [
+      "beinsportsxtra.us"
+    ],
+    "beINSPORTSXTRAenEspanol.us@SD": [
+      "beinsportsxtran.us",
+      "beIN SPORTS XTRA N",
+      "beIN SPORTS Extra Ñ"
+    ],
+    "beINSportsenEspanol.us@HD": [
+      "beinsportespanol.us",
+      "beIN Sports en Espanol",
+      "beIN SPORTS Ñ"
     ]
   },
   "TR": {
@@ -2362,11 +2432,13 @@
       "beinsports8.us"
     ],
     "beINSportsUSA.us@SD": [
-      "beIN Sports USA"
+      "beIN Sports USA",
+      "beinsports.us"
     ],
     "beINSportsenEspanol.us@HD": [
       "beinsportespanol.us",
-      "beIN Sports en Espanol"
+      "beIN Sports en Espanol",
+      "beIN SPORTS Ñ"
     ],
     "Science.us@East": [
       "discoveryscience.us",
@@ -2410,6 +2482,14 @@
     ],
     "Univision.us@East": [
       "univision.us"
+    ],
+    "beINSPORTSXTRA.us@SD": [
+      "beinsportsxtra.us"
+    ],
+    "beINSPORTSXTRAenEspanol.us@SD": [
+      "beinsportsxtran.us",
+      "beIN SPORTS XTRA N",
+      "beIN SPORTS Extra Ñ"
     ]
   },
   "ZA": {

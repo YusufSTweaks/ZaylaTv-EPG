@@ -25,6 +25,7 @@ Edit `sources.json` before running if you want different regions or channels:
 | France, primary | Programme-TV.net public listings | 180 | 129 |
 | France, fallback | SFR (`tv.sfr.fr`, French + European/MENA channels on SFR) | 450 | 438 |
 | UK & Ireland | Sky (`sky.com`), Virgin Media (`virgintvgo.virginmedia.com`) & MyTelly (`mytelly.co.uk`) | 500 / 200 / 350 | UK & Ireland Sky + Virgin + Freeview/regional coverage |
+| UK, football clubs | ESPN public scoreboard API for Premier League, EFL Championship & Scottish Premiership clubs (`pro_teams`) | — | 56 UK football club channels (14d + UEFA/FA/EFL Cup matches) |
 | Germany / Austria (optional) | Sky DE/AT (`sky.com`) + Swisscom Blue (`tv.blue.ch`) | 300 / 220 | German & DACH channels |
 | Switzerland (optional) | Teleboy (`teleboy.ch`) | 300 | Swiss German/French/Italian channels |
 | Belgium (optional) | Telenet (`telenet.tv`) | 120 | Belgian channels |
@@ -58,7 +59,7 @@ The [TSN schedule](https://www.tsn.ca/live/schedule/) supplies explicit start an
 
 The Ottawa list is a snapshot of the [TV Passport Ottawa broadcast lineup](https://www.tvpassport.com/lineups/browse/ca/on/12088/ottawa). It captures 45 distinct XMLTV IDs from 46 station entries and includes nearby U.S. affiliates listed by TV Passport. The workflow fetches current schedules from the individual station pages. Entries without an upstream XMLTV ID use a stable `TVPassport.<station number>` ID. Update the checked-in list when the provider changes its lineup.
 
-The beIN SPORTS international list combines the pinned MENA, France, U.S., Australia, and Malaysia mappings. Earlier beIN sources retain priority for matching channel IDs. The pinned New Zealand list has no mapped IDs.
+The beIN SPORTS Opta API adapter (`grab_beinsports.py`) runs ahead of `bein.com` for MENA (`beIN SPORTS 1–9`, `MAX 1–6`, `EN 1–2`, `FR 1–2`, `XTRA 1–9`, `NEWS`, `4K`, and Global FTA while `bein.com` supplies Alkass, beIN Movies/Series/Drama, and fallback), publishes US (`us-beinsports`), Canada (`ca-beinsports`), and Australia (`au-beinsports`) directly into their regional guides, and combines international feeds (France, U.S., Australia, Singapore/Malaysia, Hong Kong, Philippines, New Zealand) in `regions/sports.xml.gz`. Earlier sources retain priority for matching channel IDs.
 
 MENA sources are regional lineups, so a foreign broadcaster carried there may still be included. Broadcaster domicile and delivery-region lineup are distinct concepts. Source lists/regions should be checked against your actual playlist.
 
