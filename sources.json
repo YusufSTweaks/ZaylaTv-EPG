@@ -303,7 +303,13 @@
       "files": [
         "programtv.onet.pl/programtv.onet.pl.channels.xml"
       ],
-      "limit": 80
+      "limit": 25,
+      "countries": [
+        "pl"
+      ],
+      "languages": [
+        "pl"
+      ]
     },
     {
       "id": "pt-meo",
@@ -327,7 +333,10 @@
       "files": [
         "tv24.se/tv24.se.channels.xml"
       ],
-      "limit": 160
+      "limit": 80,
+      "languages": [
+        "sv"
+      ]
     },
     {
       "id": "cz-mujtvprogram",
@@ -585,14 +594,6 @@
         "gatotv.com/gatotv.com.channels.xml"
       ],
       "limit": 250
-    },
-    {
-      "id": "latam-siba",
-      "region": "LATAM",
-      "files": [
-        "siba.com.co/siba.com.co.channels.xml"
-      ],
-      "limit": 100
     }
   ]
 }
