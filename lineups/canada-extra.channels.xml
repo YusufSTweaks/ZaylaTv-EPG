@@ -18,7 +18,6 @@
   <channel site="tvpassport.com" site_id="daystar-canada-hd/35543" lang="en" xmltv_id="DaystarCanada.ca@HD">Daystar Canada HD</channel>
   <channel site="tvpassport.com" site_id="natyf-tv-hd-can/673" lang="en" xmltv_id="NatyfTVCAN.ca@HD">Natyf TV HD (CAN)</channel>
   <channel site="tvpassport.com" site_id="ctv2-london-on-hd/9701" lang="en" xmltv_id="CTV2LondonON.ca@HD">CTV2 London, ON HD</channel>
-  <channel site="tvpassport.com" site_id="city-calgary-ab-hd/8488" lang="en" xmltv_id="CITYCalgaryAB.ca@HD">CITY Calgary, AB HD</channel>
   <channel site="tvpassport.com" site_id="city-toronto-on-hd/2825" lang="en" xmltv_id="CITYTorontoON.ca@HD">CITY Toronto, ON HD</channel>
   <channel site="tvpassport.com" site_id="ctv2-toronto-on-hd/7901" lang="en" xmltv_id="CTV2TorontoON.ca@HD">CTV2 Toronto, ON HD</channel>
   <channel site="tvpassport.com" site_id="ctv2-windsor-on-hd/9702" lang="en" xmltv_id="CTV2WindsorON.ca@HD">CTV2 Windsor, ON HD</channel>
@@ -118,7 +117,7 @@
   <channel site="tvpassport.com" site_id="stingray-classica-hd/33594" lang="en" xmltv_id="StingrayClassica.ca@HD">Stingray Classica HD</channel>
   <channel site="tvpassport.com" site_id="paramount-network-usa--eastern-feed/1030" lang="en" xmltv_id="ParamountNetworkCanada.ca@East">Paramount Network Canada</channel>
   <channel site="tvpassport.com" site_id="cnn/70" lang="en" xmltv_id="CNNCanada.ca@SD">CNN Canada</channel>
-  <channel site="tvpassport.com" site_id="fox-news--west/33623" lang="en" xmltv_id="FoxNewsCanada.ca@SD">Fox News Canada</channel>
+  <channel site="tvpassport.com" site_id="fox-news/1083" lang="en" xmltv_id="FoxNewsCanada.ca@SD">Fox News Canada</channel>
   <channel site="tvpassport.com" site_id="hln-hd/6994" lang="en" xmltv_id="HLNCanada.ca@HD">HLN Canada HD</channel>
   <channel site="tvpassport.com" site_id="nhl-network-usa-hd/14157" lang="en" xmltv_id="NHLNetworkCanada.ca@HD">NHL Network Canada HD</channel>
   <channel site="tvpassport.com" site_id="american-heroes-channel-hd/10881" lang="en" xmltv_id="AHCCanada.ca@HD">American Heroes Channel Canada HD</channel>
@@ -139,4 +138,16 @@
   <channel site="tvpassport.com" site_id="pbs-wned-buffalo-ny/92" lang="en" xmltv_id="WNEDTV171.us@HD">PBS (WNED) Buffalo, NY</channel>
   <channel site="tvpassport.com" site_id="cw-wnlo-buffalo-ny-hd/7172" lang="en" xmltv_id="WNLO.us@HD">CW (WNLO) Buffalo, NY HD</channel>
   <channel site="tvpassport.com" site_id="ktla-los-angeles-ca-hd/5682" lang="en" xmltv_id="KTLA51.us@HD">KTLA Los Angeles, CA HD</channel>
+  <channel site="tvpassport.com" site_id="cbs-kiro-seattle-wa-hd/2830" lang="en" xmltv_id="KIROTV71.us@HD">CBS (KIRO) Seattle, WA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-wxyz-detroit-mi-hd/11380" lang="en" xmltv_id="WXYZTV71.us@HD">ABC (WXYZ) Detroit, MI HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-wdiv-detroit-mi-hd/2816" lang="en" xmltv_id="WDIVTV41.us@HD">NBC (WDIV) Detroit, MI HD</channel>
+  <channel site="tvpassport.com" site_id="nbc-king-seattle-wa-hd/2831" lang="en" xmltv_id="KINGTV51.us@HD">NBC (KING) Seattle, WA HD</channel>
+  <channel site="tvpassport.com" site_id="bet-hd--eastern-feed/6205" lang="en" xmltv_id="BETCanada.ca@SD">BET Canada</channel>
+  <channel site="tvpassport.com" site_id="the-cooking-channel-hd/8113" lang="en" xmltv_id="CookingChannelCanada.ca@SD">Cooking Channel Canada</channel>
+  <channel site="tvpassport.com" site_id="oprah-winfrey-network-usa-eastern/1159" lang="en" xmltv_id="OWNCanada.ca@SD">OWN Canada</channel>
+  <channel site="tvpassport.com" site_id="mtv-usa-hd--eastern/4525" lang="en" xmltv_id="MTVCanada.ca@SD">MTV Canada</channel>
+  <channel site="tvpassport.com" site_id="independent-film-channel-us-hd/6215" lang="en" xmltv_id="IFCCanada.ca@HD">IFC Canada</channel>
+  <channel site="tvpassport.com" site_id="euronews--francais/3900" lang="fr" xmltv_id="EuronewsCanada.ca@SD">Euronews Canada</channel>
+  <channel site="tvpassport.com" site_id="baby-tv/4443" lang="en" xmltv_id="BabyTVCanada.ca@SD">Baby TV Canada</channel>
+  <channel site="tvpassport.com" site_id="hola-tv/18868" lang="es" xmltv_id="HolaTVCanada.ca@SD">Hola TV Canada</channel>
 </channels>

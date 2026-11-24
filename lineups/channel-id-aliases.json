@@ -206,7 +206,9 @@
       "CHEK TV"
     ],
     "CHEXDT.ca@SD": [
-      "Global Peterborough"
+      "Global Peterborough",
+      "Global Peterborough News",
+      "Global News Peterborough"
     ],
     "CHLFTV.ca@SD": [
       "tfo.ca"
@@ -226,9 +228,6 @@
     "CITSDT.ca@SD": [
       "yestv.ca",
       "Yes TV"
-    ],
-    "CITYCalgaryAB.ca@HD": [
-      "citytvcalgary.ca"
     ],
     "CITYMontrealQC.ca@HD": [
       "citytvmontrealqc.ca"
@@ -256,7 +255,9 @@
       "NTV St. John's"
     ],
     "CKALDT.ca@SD": [
-      "City TV Calgary"
+      "City TV Calgary",
+      "citytvcalgary.ca",
+      "Citytv Calgary"
     ],
     "CKMIDT1.ca@SD": [
       "globalmontreal.ca",
@@ -520,7 +521,8 @@
       "ICI Television"
     ],
     "IFCCanada.ca@HD": [
-      "IFC"
+      "IFC",
+      "ifc.ca"
     ],
     "IciARTV.ca@SD": [
       "artv.ca",
@@ -542,7 +544,8 @@
       "FOX 13 (KCPQ) Seattle"
     ],
     "KOMOTV511.us@HD": [
-      "ABC 4 (KOMO) Seattle"
+      "ABC 4 (KOMO) Seattle",
+      "ABC West"
     ],
     "KTLA51.us@HD": [
       "KTLA"
@@ -566,7 +569,10 @@
       "MTV"
     ],
     "MagnoliaNetworkCanada.ca@SD": [
-      "magnolianetwork.ca"
+      "magnolianetwork.ca",
+      "DIY",
+      "DIY Network",
+      "DIY Network Canada"
     ],
     "MediasetItalia.ca@SD": [
       "Mediaset Italia Canada"
@@ -618,7 +624,9 @@
       "OMNI BC"
     ],
     "OWNCanada.ca@SD": [
-      "OWN"
+      "OWN",
+      "own.ca",
+      "Oprah Winfrey Network"
     ],
     "OneGetFit.ca@SD": [
       "onegetfit.ca",
@@ -786,7 +794,8 @@
       "MY 49 (WNYO) Buffalo"
     ],
     "WPIX71.us@HD": [
-      "WPIX 11 New York"
+      "WPIX 11 New York",
+      "CW 11"
     ],
     "WUTV491.us@HD": [
       "FOX 29 (WUTV) Buffalo"
@@ -815,6 +824,40 @@
     "beINSportsCanada.ca@SD": [
       "beinsport.ca",
       "beIN Sports"
+    ],
+    "KIROTV71.us@HD": [
+      "CBS West",
+      "CBS 7 (KIRO) Seattle"
+    ],
+    "WXYZTV71.us@HD": [
+      "ABC East",
+      "ABC 7 (WXYZ) Detroit"
+    ],
+    "WDIVTV41.us@HD": [
+      "NBC East",
+      "NBC 4 (WDIV) Detroit"
+    ],
+    "KINGTV51.us@HD": [
+      "NBC West",
+      "NBC 5 (KING) Seattle"
+    ],
+    "AdultSwim.ca@SD": [
+      "action.ca",
+      "Action",
+      "Action Canada",
+      "Adult Swim"
+    ],
+    "EuronewsCanada.ca@SD": [
+      "euronews.ca",
+      "Euronews"
+    ],
+    "BabyTVCanada.ca@SD": [
+      "babytv.ca",
+      "Baby TV"
+    ],
+    "HolaTVCanada.ca@SD": [
+      "holatv.ca",
+      "Hola TV"
     ]
   },
   "DE": {
