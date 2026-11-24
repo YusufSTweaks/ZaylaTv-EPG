@@ -117,14 +117,26 @@
   <channel site="tvpassport.com" site_id="mezzo-live-hd/15259" lang="fr" xmltv_id="MezzoLiveCanada.ca@HD">Mezzo Live HD</channel>
   <channel site="tvpassport.com" site_id="stingray-classica-hd/33594" lang="en" xmltv_id="StingrayClassica.ca@HD">Stingray Classica HD</channel>
   <channel site="tvpassport.com" site_id="paramount-network-usa--eastern-feed/1030" lang="en" xmltv_id="ParamountNetworkCanada.ca@East">Paramount Network Canada</channel>
-  <channel site="tvpassport.com" site_id="cnn--west/33621" lang="en" xmltv_id="CNNCanada.ca@SD">CNN Canada</channel>
+  <channel site="tvpassport.com" site_id="cnn/70" lang="en" xmltv_id="CNNCanada.ca@SD">CNN Canada</channel>
   <channel site="tvpassport.com" site_id="fox-news--west/33623" lang="en" xmltv_id="FoxNewsCanada.ca@SD">Fox News Canada</channel>
   <channel site="tvpassport.com" site_id="hln-hd/6994" lang="en" xmltv_id="HLNCanada.ca@HD">HLN Canada HD</channel>
   <channel site="tvpassport.com" site_id="nhl-network-usa-hd/14157" lang="en" xmltv_id="NHLNetworkCanada.ca@HD">NHL Network Canada HD</channel>
   <channel site="tvpassport.com" site_id="american-heroes-channel-hd/10881" lang="en" xmltv_id="AHCCanada.ca@HD">American Heroes Channel Canada HD</channel>
   <channel site="tvpassport.com" site_id="hope-channel-hd/35211" lang="en" xmltv_id="HopeChannelCanada.ca@HD">Hope Channel Canada HD</channel>
   <channel site="tvpassport.com" site_id="dominicana/18871" lang="es" xmltv_id="DominicanaCanada.ca@SD">Dominicana</channel>
-  <channel site="tvpassport.com" site_id="cnn-international-asia-pacific/3011" lang="en" xmltv_id="CNNInternationalCanada.ca@SD">CNN International Canada</channel>
+  <channel site="tvpassport.com" site_id="cnn-international-north-america/3008" lang="en" xmltv_id="CNNInternationalCanada.ca@SD">CNN International Canada</channel>
   <channel site="tvpassport.com" site_id="cmt-music/2288" lang="en" xmltv_id="CMTMusicCanada.ca@SD">CMT Music Canada</channel>
   <channel site="tvpassport.com" site_id="game-show-network--east-hd/7055" lang="en" xmltv_id="GSNCanada.ca@HD">Game Show Network Canada HD</channel>
+  <channel site="tvpassport.com" site_id="global-chbc-okanagan-valley-bc-hd/6601" lang="en" xmltv_id="GlobalCHBCOkanaganBC.ca@HD">Global (CHBC) Okanagan Valley, BC HD</channel>
+  <channel site="tvpassport.com" site_id="abc-komo-seattle-wa-hd/2829" lang="en" xmltv_id="KOMOTV511.us@HD">ABC (KOMO) Seattle, WA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-wcvb-boston-ma-hd/3661" lang="en" xmltv_id="WCVBTV501.us@SD">ABC (WCVB) Boston, MA HD</channel>
+  <channel site="tvpassport.com" site_id="abc-wkbw-buffalo-ny-hd/3581" lang="en" xmltv_id="WKBWTV71.us@HD">ABC (WKBW) Buffalo, NY HD</channel>
+  <channel site="tvpassport.com" site_id="fox-kcpq-tacoma-wa-hd/32825" lang="en" xmltv_id="KCPQ.us@HD">FOX (KCPQ) Tacoma, WA HD</channel>
+  <channel site="tvpassport.com" site_id="fox-wjbk-detroit-mi-hd/2815" lang="en" xmltv_id="WJBK21.us@HD">FOX (WJBK) Detroit, MI HD</channel>
+  <channel site="tvpassport.com" site_id="fox-wutv-buffalo-ny-hd/3584" lang="en" xmltv_id="WUTV491.us@HD">FOX (WUTV) Buffalo, NY HD</channel>
+  <channel site="tvpassport.com" site_id="mnt-wnyo-buffalo-ny/324" lang="en" xmltv_id="WNYOTV71.us@HD">MNT (WNYO) Buffalo, NY</channel>
+  <channel site="tvpassport.com" site_id="wpix-new-york-superstation-hd/4794" lang="en" xmltv_id="WPIX71.us@HD">WPIX New York (SUPERSTATION) HD</channel>
+  <channel site="tvpassport.com" site_id="pbs-wned-buffalo-ny/92" lang="en" xmltv_id="WNEDTV171.us@HD">PBS (WNED) Buffalo, NY</channel>
+  <channel site="tvpassport.com" site_id="cw-wnlo-buffalo-ny-hd/7172" lang="en" xmltv_id="WNLO.us@HD">CW (WNLO) Buffalo, NY HD</channel>
+  <channel site="tvpassport.com" site_id="ktla-los-angeles-ca-hd/5682" lang="en" xmltv_id="KTLA51.us@HD">KTLA Los Angeles, CA HD</channel>
 </channels>
