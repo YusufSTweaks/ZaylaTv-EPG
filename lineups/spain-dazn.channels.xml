@@ -4,6 +4,7 @@
   <channel site="movistarplus.es" site_id="M2SD" lang="es" xmltv_id="DAZN2.es@SD">DAZN 2</channel>
   <channel site="movistarplus.es" site_id="DAZN3" lang="es" xmltv_id="DAZN3.es@SD">DAZN 3</channel>
   <channel site="movistarplus.es" site_id="DAZN4" lang="es" xmltv_id="DAZN4.es@SD">DAZN 4</channel>
+  <channel site="movistarplus.es" site_id="DAZNL2" lang="es" xmltv_id="DAZNLaLiga2.uk@Spain">DAZN LALIGA 2</channel>
   <channel site="movistarplus.es" site_id="DAZMOT" lang="es" xmltv_id="DAZNMotoGP.es@SD">DAZN MotoGP</channel>
   <channel site="movistarplus.es" site_id="DAZBA" lang="es" xmltv_id="DAZNBaloncesto1.es@SD">DAZN Baloncesto 1</channel>
   <channel site="movistarplus.es" site_id="DAZB2" lang="es" xmltv_id="DAZNBaloncesto2.es@SD">DAZN Baloncesto 2</channel>

@@ -27,9 +27,8 @@ from zoneinfo import ZoneInfo
 
 
 EASTERN_TZ = ZoneInfo('America/New_York')
+BROADCAST_DAY_ROLLOVER_REGIONS = {'US', 'CA'}
 WESTERN_REGION_OFFSETS = {
-    'US': -8,
-    'CA': -8,
     'MX': -6,
     'BR': -6,
     'LATAM': -6,
@@ -39,16 +38,29 @@ WESTERN_REGION_OFFSETS = {
 def grab_start_date(source, now=None):
     """Return the calendar date (YYYY-MM-DD) for an iptv-org grabber.
 
-    The Zayla TV app converts all guide listings (including France and Europe)
-    to Eastern NY time (America/New_York) by default. Anchor non-Pacific/Central
-    regions to America/New_York so no feed rolls over to tomorrow's date before
-    midnight Eastern time.
+    TV Passport's North American broadcast day runs 06:00 AM -> 06:00 AM Eastern
+    (America/New_York), so US/CA grabs roll over at 06:00 AM Eastern rather than
+    midnight or UTC-8 (which left CNN Canada and 1,000+ US/CA stations blank
+    between midnight and 06:00 AM Eastern). Non-Western regions stay anchored to
+    midnight America/New_York to match Zayla TV's default Eastern display clock.
     """
     now_utc = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
-    offset_hours = WESTERN_REGION_OFFSETS.get(source.get('region'))
+    region = source.get('region')
+    if region in BROADCAST_DAY_ROLLOVER_REGIONS:
+        return (now_utc.astimezone(EASTERN_TZ) - timedelta(hours=6)).date().isoformat()
+    offset_hours = WESTERN_REGION_OFFSETS.get(region)
     if offset_hours is not None:
         return (now_utc + timedelta(hours=offset_hours)).date().isoformat()
     return now_utc.astimezone(EASTERN_TZ).date().isoformat()
+
+
+def grab_days(source, curr_date, now=None):
+    """Return grab horizon in days (3 when anchored to yesterday overnight, else 2)."""
+    now_utc = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
+    today_et = now_utc.astimezone(EASTERN_TZ).date().isoformat()
+    if source.get('region') in BROADCAST_DAY_ROLLOVER_REGIONS and curr_date < today_et:
+        return 3
+    return 2
 
 
 def run_grab(source, upstream, output):
@@ -195,6 +207,7 @@ def run_grab(source, upstream, output):
         return {'exit_code': None, 'error': 'No channels selected'}
 
     curr_date = grab_start_date(source)
+    days = grab_days(source, curr_date)
     probe_url = source.get('probe_url')
     if probe_url:
         try:
@@ -207,7 +220,7 @@ def run_grab(source, upstream, output):
 
     command = [
         'npm', 'run', 'grab', '--', f"--channels={source['channels_file']}",
-        '--days=2', '--timeout=15000', '--maxConnections=2',
+        f'--days={days}', '--timeout=15000', '--maxConnections=2',
         f"--output={output / source['output']}",
     ]
     env = os.environ.copy()
