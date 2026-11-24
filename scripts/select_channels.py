@@ -7,13 +7,18 @@ def select(upstream,config,out,config_dir=None):
  manifest=[]
  for index,source in enumerate(config['sources']):
   name=f'{index:02d}-{source["id"]}'
-  if source.get('adapter') in {'tsn','espn','tvguide','dstv_za','beinsports','fast'}:
+  if source.get('adapter') in {'tsn','espn','pro_teams','tvguide','dstv_za','beinsports','fast'}:
    entry={'id':source['id'],'region':source['region'],'adapter':source['adapter'],'output':name+'.xml','selected_channels':None}
    if source['adapter']=='espn':
     entry['include_espn_plus']=bool(source.get('include_espn_plus',False))
     if source.get('espn_plus_map'):
      map_path=Path(source['espn_plus_map'])
      entry['espn_plus_map']=str((map_path if map_path.is_absolute() else base_dir/map_path).resolve())
+   elif source['adapter']=='pro_teams':
+    if source.get('leagues'):
+     entry['leagues']=list(source['leagues'])
+    if source.get('days') is not None:
+     entry['days']=int(source['days'])
    elif source['adapter']=='tvguide':
     if source.get('lineups'):
      entry['lineups']=list(source['lineups'])

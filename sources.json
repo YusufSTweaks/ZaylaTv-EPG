@@ -17,6 +17,17 @@
       "espn_plus_map": "lineups/espn-plus-map.json"
     },
     {
+      "id": "us-pro-teams-official",
+      "region": "US",
+      "adapter": "pro_teams",
+      "leagues": [
+        "nba",
+        "nhl",
+        "nfl",
+        "mlb"
+      ]
+    },
+    {
       "id": "us-tvguide",
       "region": "US",
       "adapter": "tvguide"

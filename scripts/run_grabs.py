@@ -17,6 +17,7 @@ from grab_beinsports import write_guide as write_beinsports_guide
 from grab_dstv_za import write_guide as write_dstv_za_guide
 from grab_espn import write_guide as write_espn_guide
 from grab_fast import write_guide as write_fast_guide
+from grab_pro_teams import write_guide as write_pro_teams_guide
 from grab_tsn import write_guide
 from grab_tvguide import write_guide as write_tvguide_guide
 
@@ -79,6 +80,28 @@ def run_grab(source, upstream, output):
             return {'exit_code': 0, 'selected_channels': channels, 'stats': stats}
         except (OSError, ValueError) as error:
             message = f'Official ESPN schedule failed: {error}'
+            print(message, flush=True)
+            return {'exit_code': None, 'error': message}
+
+    if source.get('adapter') == 'pro_teams':
+        try:
+            channels, programmes, stats = write_pro_teams_guide(
+                output / source['output'],
+                leagues=source.get('leagues'),
+                days=source.get('days'),
+            )
+            league_summary = ', '.join(
+                f'{league.upper()}={counts["channels"]}ch/{counts["programmes"]}p'
+                for league, counts in stats['leagues'].items()
+            )
+            print(
+                f'Pro teams official schedule: {channels} team channels and {programmes} programmes '
+                f'({league_summary}, fetch_errors={stats["fetch_errors"]})',
+                flush=True,
+            )
+            return {'exit_code': 0, 'selected_channels': channels, 'stats': stats}
+        except (OSError, ValueError) as error:
+            message = f'Official pro teams schedule failed: {error}'
             print(message, flush=True)
             return {'exit_code': None, 'error': message}
 

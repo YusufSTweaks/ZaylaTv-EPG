@@ -408,4 +408,170 @@ class OfficialAdapterTests(unittest.TestCase):
     res=run_grab(src,p,p)
    self.assertEqual(res['exit_code'],0)
    self.assertEqual(captured['env']['CURR_DATE'],'2026-11-22')
+ def test_pro_teams_selector_aliases_overlaps_and_offseason(self):
+  from grab_pro_teams import build_guide_data as build_pro_teams, write_guide as write_pro_teams
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)
+   cfg={'sources':[{'id':'us-pro-teams-official','region':'US','adapter':'pro_teams','leagues':['nba','nhl','nfl','mlb'],'days':7}]}
+   manifest=select(p,cfg,p/'selected',config_dir=p)
+   self.assertEqual(manifest[0]['adapter'],'pro_teams')
+   self.assertEqual(manifest[0]['leagues'],['nba','nhl','nfl','mlb'])
+   self.assertEqual(manifest[0]['days'],7)
+   events_by_league={
+    'nba':[
+     {
+      'id':'nba-1',
+      'name':'LA Clippers at Los Angeles Lakers',
+      'date':'2030-01-02T03:00Z',
+      'competitions':[{
+       'date':'2030-01-02T03:00Z',
+       'status':{'type':{'name':'STATUS_SCHEDULED'}},
+       'venue':{'fullName':'Toyota Center (Houston)','address':{'city':'Houston','state':'TX'}},
+       'broadcasts':[{'market':'national','names':['ESPN']},{'market':'away','names':['ClipperVision']}],
+       'competitors':[
+        {'homeAway':'away','team':{'id':'12','abbreviation':'LAC','displayName':'LA Clippers','shortDisplayName':'Clippers'}},
+        {'homeAway':'home','team':{'id':'13','abbreviation':'LAL','displayName':'Los Angeles Lakers','shortDisplayName':'Lakers'}},
+       ],
+      }],
+     },
+     # Duplicate event id across adjacent date fetches must deduplicate cleanly
+     {
+      'id':'nba-1',
+      'name':'LA Clippers at Los Angeles Lakers',
+      'date':'2030-01-02T03:00Z',
+      'competitions':[{
+       'date':'2030-01-02T03:00Z',
+       'status':{'type':{'name':'STATUS_SCHEDULED'}},
+       'competitors':[
+        {'homeAway':'away','team':{'id':'12','abbreviation':'LAC','displayName':'LA Clippers','shortDisplayName':'Clippers'}},
+        {'homeAway':'home','team':{'id':'13','abbreviation':'LAL','displayName':'Los Angeles Lakers','shortDisplayName':'Lakers'}},
+       ],
+      }],
+     },
+    ],
+    'nhl':[
+     {
+      'id':'nhl-1',
+      'name':'Utah Mammoth at Montreal Canadiens',
+      'date':'2030-01-02T00:00Z',
+      'competitions':[{
+       'date':'2030-01-02T00:00Z',
+       'status':{'type':{'name':'STATUS_SCHEDULED'}},
+       'competitors':[
+        {'homeAway':'away','team':{'id':'129764','abbreviation':'UTA','displayName':'Utah Mammoth','shortDisplayName':'Mammoth'}},
+        {'homeAway':'home','team':{'id':'10','abbreviation':'MTL','displayName':'Montreal Canadiens','shortDisplayName':'Canadiens'}},
+       ],
+      }],
+     },
+     # Postponed game must be ignored
+     {
+      'id':'nhl-postponed',
+      'name':'Boston Bruins at Toronto Maple Leafs',
+      'date':'2030-01-02T00:00Z',
+      'competitions':[{
+       'date':'2030-01-02T00:00Z',
+       'status':{'type':{'name':'STATUS_POSTPONED'}},
+       'competitors':[
+        {'homeAway':'away','team':{'id':'1','abbreviation':'BOS','displayName':'Boston Bruins','shortDisplayName':'Bruins'}},
+        {'homeAway':'home','team':{'id':'21','abbreviation':'TOR','displayName':'Toronto Maple Leafs','shortDisplayName':'Maple Leafs'}},
+       ],
+      }],
+     },
+    ],
+    'nfl':[
+     {
+      'id':'nfl-1',
+      'name':'Minnesota Vikings at San Francisco 49ers',
+      'date':'2030-01-02T18:00Z',
+      'competitions':[{
+       'date':'2030-01-02T18:00Z',
+       'status':{'type':{'name':'STATUS_SCHEDULED'}},
+       'competitors':[
+        {'homeAway':'away','team':{'id':'16','abbreviation':'MIN','displayName':'Minnesota Vikings','shortDisplayName':'Vikings'}},
+        {'homeAway':'home','team':{'id':'25','abbreviation':'SF','displayName':'San Francisco 49ers','shortDisplayName':'49ers'}},
+       ],
+      }],
+     },
+     # Non-franchise Pro Bowl AFC vs NFC must be ignored
+     {
+      'id':'nfl-pb',
+      'name':'AFC at NFC',
+      'date':'2030-01-03T18:00Z',
+      'competitions':[{
+       'date':'2030-01-03T18:00Z',
+       'status':{'type':{'name':'STATUS_SCHEDULED'}},
+       'competitors':[
+        {'homeAway':'away','team':{'id':'31','abbreviation':'AFC','displayName':'AFC','shortDisplayName':'AFC'}},
+        {'homeAway':'home','team':{'id':'32','abbreviation':'NFC','displayName':'NFC','shortDisplayName':'NFC'}},
+       ],
+      }],
+     },
+    ],
+    # MLB doubleheader overlapping default 3h window clamps Game 1 stop to Game 2 start
+    'mlb':[
+     {
+      'id':'mlb-1',
+      'name':'Athletics at New York Yankees',
+      'date':'2030-01-02T17:00Z',
+      'competitions':[{
+       'date':'2030-01-02T17:00Z',
+       'status':{'type':{'name':'STATUS_SCHEDULED'}},
+       'competitors':[
+        {'homeAway':'away','team':{'id':'11','abbreviation':'ATH','displayName':'Athletics','shortDisplayName':'Athletics'}},
+        {'homeAway':'home','team':{'id':'10','abbreviation':'NYY','displayName':'New York Yankees','shortDisplayName':'Yankees'}},
+       ],
+      }],
+     },
+     {
+      'id':'mlb-2',
+      'name':'Athletics at New York Yankees',
+      'date':'2030-01-02T19:30Z',
+      'competitions':[{
+       'date':'2030-01-02T19:30Z',
+       'status':{'type':{'name':'STATUS_SCHEDULED'}},
+       'competitors':[
+        {'homeAway':'away','team':{'id':'11','abbreviation':'ATH','displayName':'Athletics','shortDisplayName':'Athletics'}},
+        {'homeAway':'home','team':{'id':'10','abbreviation':'NYY','displayName':'New York Yankees','shortDisplayName':'Yankees'}},
+       ],
+      }],
+     },
+    ],
+   }
+   channels,programmes,stats=build_pro_teams(events_by_league,self.SAMPLE_NOW)
+   self.assertIn('NBA Teams - Los Angeles Clippers',channels['NBATeams.LAC.us'])
+   self.assertIn('NBA Teams - Clippers',channels['NBATeams.LAC.us'])
+   self.assertIn('NHL Teams - Utah Hockey Club',channels['NHLTeams.UTA.us'])
+   self.assertIn('NHL Teams - Arizona Coyotes',channels['NHLTeams.UTA.us'])
+   self.assertIn('NFL Teams - Vikings',channels['NFLTeams.MIN.us'])
+   self.assertIn('NFL Teams - 49ers',channels['NFLTeams.SF.us'])
+   self.assertIn('MLB Teams - Oakland Athletics',channels['MLBTeams.ATH.us'])
+   self.assertNotIn('NHLTeams.BOS.us',channels)
+   self.assertNotIn('NFLTeams.AFC.us',channels)
+   # Check NBA away broadcast includes national + away (ESPN, ClipperVision), home gets national (ESPN)
+   lac_prog=programmes[('NBATeams.LAC.us',dt.datetime(2030,1,2,3,0,tzinfo=dt.timezone.utc),dt.datetime(2030,1,2,5,30,tzinfo=dt.timezone.utc))]
+   self.assertEqual(lac_prog[1],'ESPN, ClipperVision')
+   self.assertIn('Toyota Center (Houston, TX)',lac_prog[2])
+   self.assertNotIn('(Houston) (Houston',lac_prog[2])
+   lal_prog=programmes[('NBATeams.LAL.us',dt.datetime(2030,1,2,3,0,tzinfo=dt.timezone.utc),dt.datetime(2030,1,2,5,30,tzinfo=dt.timezone.utc))]
+   self.assertEqual(lal_prog[1],'ESPN')
+   # Check MLB doubleheader Game 1 stop clamped to 19:30Z instead of 20:00Z
+   self.assertIn(('MLBTeams.ATH.us',dt.datetime(2030,1,2,17,0,tzinfo=dt.timezone.utc),dt.datetime(2030,1,2,19,30,tzinfo=dt.timezone.utc)),programmes)
+   self.assertIn(('MLBTeams.ATH.us',dt.datetime(2030,1,2,19,30,tzinfo=dt.timezone.utc),dt.datetime(2030,1,2,22,30,tzinfo=dt.timezone.utc)),programmes)
+   # Offseason MLB returning empty succeeds when other leagues have games
+   out=p/'pro_teams.xml'
+   def fake_fetch(sport_path,day_date):
+    if sport_path=='basketball/nba' and day_date==dt.date(2030,1,1):
+     return events_by_league['nba']
+    return []
+   with patch('grab_pro_teams.fetch_scoreboard_day',side_effect=fake_fetch):
+    ch_count,pr_count,wstats=write_pro_teams(out,now=self.SAMPLE_NOW,leagues=['nba','mlb'],days=2)
+   self.assertEqual((ch_count,pr_count),(2,2))
+   self.assertEqual(wstats['leagues']['mlb']['channels'],0)
+   self.assertEqual(wstats['days_by_league'],{'nba':2,'mlb':2})
+   with patch('grab_pro_teams.fetch_scoreboard_day',side_effect=fake_fetch):
+    _,_,default_stats=write_pro_teams(out,now=self.SAMPLE_NOW,leagues=['nba','nfl'])
+   self.assertEqual(default_stats['days_by_league'],{'nba':7,'nfl':14})
+   root=ET.parse(out).getroot()
+   self.assertEqual(len(root.findall('channel')),2)
+   self.assertEqual(len(root.findall('programme')),2)
 if __name__=='__main__':unittest.main()
